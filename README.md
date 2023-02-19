@@ -5,8 +5,6 @@ Por otro lado, tanto el usuario como el conductor podrán calificar su experienc
 
 ## Herramientas
 
->Visual Studio Code
-
 >github
 
 >Git
