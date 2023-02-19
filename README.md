@@ -1,4 +1,4 @@
-# PROYECTODPS2022
+# PROYECTODSM2023
 Desarrollaremos un software para móviles, el cual en rasgos generales estará enfocado al transporte privado y seguro de usuarios, llamada “Ooober”, que contará con dos versiones: una para clientes con el mismo nombre, y otra para conductores llamada “Ooober Driver”.
 La aplicación permitirá a los usuarios conectarse con los conductores más cercanos a su ubicación, quienes podrán aceptar o rechazar las solicitudes de los usuarios.Una vez que el conductor acepte la solicitud, tanto el usuario como el conductor podrán ver la distancia y tiempo recorrido en tiempo real, tanto desde el punto en donde se encuentre el conductor hasta el punto de recogida del usuario, como del punto de recogida hasta el lugar de destino. Además, la aplicación calculará el costo del viaje, tomando en cuenta la distancia y tiempo recorrido.
 Por otro lado, tanto el usuario como el conductor podrán calificar su experiencia en el viaje y tendrán acceso  a su historial de viajes realizados.
@@ -31,15 +31,15 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 
 ## Autores
 
->Morales López, Jony Edenilson 01T
+>Morales López, Jony Edenilson 01T --> Jony-07
 
->Portán Pineda, William Fernando 01T
+>Portán Pineda, William Fernando 01T --> portan17
 
->Serrano López, Gissela Verenice 01T
+>Serrano López, Gissela Verenice 01T --> Gissela25
 
->Alfaro Ortiz, Aurus Moises 01T
+>Alfaro Ortiz, Aurus Moises 01T --> horusxci
 
->Zelaya Flores, Susan Abigail 01T
+>Zelaya Flores, Susan Abigail 01T --> susan749
 
 ## Enlaces de Interes
 
