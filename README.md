@@ -29,15 +29,15 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 
 ## Autores
 
->Morales López, Jony Edenilson 01T --> Jony-07
+>Morales López, Jony Edenilson 01T --> [Jony-07](https://github.com/Jony-07)
 
->Portán Pineda, William Fernando 01T --> portan17
+>Portán Pineda, William Fernando 01T --> [portan17](https://github.com/portan17)
 
->Serrano López, Gissela Verenice 01T --> Gissela25
+>Serrano López, Gissela Verenice 01T --> [Gissela25](https://github.com/Gissela25)
 
->Alfaro Ortiz, Aurus Moises 01T --> horusxci
+>Alfaro Ortiz, Aurus Moises 01T --> [horusxci](https://github.com/horusxci)
 
->Zelaya Flores, Susan Abigail 01T --> susan749
+>Zelaya Flores, Susan Abigail 01T --> [susan749](https://github.com/susan749)
 
 ## Enlaces de Interes
 
