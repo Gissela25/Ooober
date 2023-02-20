@@ -31,15 +31,15 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 
 ## Autores
 
->Morales López, Jony Edenilson 01T
+>Morales López, Jony Edenilson 01T --> Jony-07
 
->Portán Pineda, William Fernando 01T
+>Portán Pineda, William Fernando 01T --> portan17
 
->Serrano López, Gissela Verenice 01T
+>Serrano López, Gissela Verenice 01T --> Gissela25
 
->Alfaro Ortiz, Aurus Moises 01T
+>Alfaro Ortiz, Aurus Moises 01T --> horusxci
 
->Zelaya Flores, Susan Abigail 01T
+>Zelaya Flores, Susan Abigail 01T --> susan749
 
 ## Enlaces de Interes
 
