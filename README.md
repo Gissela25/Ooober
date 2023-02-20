@@ -49,4 +49,4 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 
 > [Enlace de Figma con los Mock Ups Ooober Drive](https://www.figma.com/file/d5modQM7hS3zCsyasHf4Ph/Untitled?node-id=3%3A28&t=aO9oDKsQCt5endiM-1)
 
-> [Docuemento Primer Avance]()
+> [Documento Primer Avance](https://drive.google.com/file/d/1E_lgPc7cNiLXpOvKuuJ0yXaOEGhIrH6T/view?usp=sharing)
