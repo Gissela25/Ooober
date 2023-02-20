@@ -47,6 +47,6 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 
 > [Enlace de Figma con los Mock Ups Ooober](https://www.figma.com/proto/d5modQM7hS3zCsyasHf4Ph/Untitled?page-id=0%3A1&node-id=47%3A82&viewport=-1955%2C296%2C0.65&scaling=scale-down)
 
-> [Enlace de Figma con los Mock Ups Ooober Drive](https://www.figma.com/file/d5modQM7hS3zCsyasHf4Ph/Untitled?node-id=3%3A28&t=aO9oDKsQCt5endiM-1)
+> [Enlace de Figma con los Mock Ups Ooober Drive](https://www.figma.com/proto/d5modQM7hS3zCsyasHf4Ph/Untitled?node-id=6%3A46&scaling=scale-down&page-id=3%3A28)
 
 > [Documento Primer Avance](https://drive.google.com/file/d/16TXhkyaWW0Rw4typ13Yt6zRCYa79KvDW/view?usp=sharing)
