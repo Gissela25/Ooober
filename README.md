@@ -1,4 +1,4 @@
-# PROYECTODPS2022
+# PROYECTODSM2023
 Desarrollaremos un software para móviles, el cual en rasgos generales estará enfocado al transporte privado y seguro de usuarios, llamada “Ooober”, que contará con dos versiones: una para clientes con el mismo nombre, y otra para conductores llamada “Ooober Driver”.
 La aplicación permitirá a los usuarios conectarse con los conductores más cercanos a su ubicación, quienes podrán aceptar o rechazar las solicitudes de los usuarios.Una vez que el conductor acepte la solicitud, tanto el usuario como el conductor podrán ver la distancia y tiempo recorrido en tiempo real, tanto desde el punto en donde se encuentre el conductor hasta el punto de recogida del usuario, como del punto de recogida hasta el lugar de destino. Además, la aplicación calculará el costo del viaje, tomando en cuenta la distancia y tiempo recorrido.
 Por otro lado, tanto el usuario como el conductor podrán calificar su experiencia en el viaje y tendrán acceso  a su historial de viajes realizados.
@@ -49,4 +49,4 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 
 > [Enlace de Figma con los Mock Ups Ooober Drive](https://www.figma.com/file/d5modQM7hS3zCsyasHf4Ph/Untitled?node-id=3%3A28&t=aO9oDKsQCt5endiM-1)
 
-> [Documento Primer Avance](https://drive.google.com/file/d/1E_lgPc7cNiLXpOvKuuJ0yXaOEGhIrH6T/view?usp=sharing)
+> [Documento Primer Avance](https://drive.google.com/file/d/16TXhkyaWW0Rw4typ13Yt6zRCYa79KvDW/view?usp=sharing)
