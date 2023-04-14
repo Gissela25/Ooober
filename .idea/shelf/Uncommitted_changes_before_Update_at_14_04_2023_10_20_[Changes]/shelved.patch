@@ -1,0 +1,2568 @@
+Index: OooberDriver/app/src/main/res/drawable/ic_email_white.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/drawable/ic_email_white.xml b/OooberDriver/app/src/main/res/drawable/ic_email_white.xml
+new file mode 100644
+--- /dev/null	(date 1681452075872)
++++ b/OooberDriver/app/src/main/res/drawable/ic_email_white.xml	(date 1681452075872)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#FFFFFF"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white" android:pathData="M20,4L4,4c-1.1,0 -1.99,0.9 -1.99,2L2,18c0,1.1 0.9,2 2,2h16c1.1,0 2,-0.9 2,-2L22,6c0,-1.1 -0.9,-2 -2,-2zM20,8l-8,5 -8,-5L4,6l8,5 8,-5v2z"/>
++</vector>
+Index: OooberDriver/app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.OooberDriver\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".activities.MapActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.RegisterActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.MainActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/AndroidManifest.xml b/OooberDriver/app/src/main/AndroidManifest.xml
+--- a/OooberDriver/app/src/main/AndroidManifest.xml	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/AndroidManifest.xml	(date 1681457573916)
+@@ -2,6 +2,11 @@
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools">
+ 
++    <uses-permission android:name="android.permission.INTERNET" />
++    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
++    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
++    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
++
+     <application
+         android:allowBackup="true"
+         android:dataExtractionRules="@xml/data_extraction_rules"
+@@ -26,6 +31,10 @@
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
++
++        <meta-data
++            android:name="com.google.android.geo.API_KEY"
++            android:value="AIzaSyCFLPag2eAgdL-gcQsfRW1w9oZ-Bck5FzQ" />
+     </application>
+ 
+ </manifest>
+\ No newline at end of file
+Index: OooberDriver/app/src/main/res/drawable/rounded_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/drawable/rounded_layout.xml b/OooberDriver/app/src/main/res/drawable/rounded_layout.xml
+new file mode 100644
+--- /dev/null	(date 1681452075865)
++++ b/OooberDriver/app/src/main/res/drawable/rounded_layout.xml	(date 1681452075865)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++
++    <corners android:radius="30dp"/>
++    <solid android:color="@color/white"/>
++
++</shape>
+\ No newline at end of file
+Index: OooberDriver/app/src/main/res/drawable/ic_person_small_lastname.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/drawable/ic_person_small_lastname.xml b/OooberDriver/app/src/main/res/drawable/ic_person_small_lastname.xml
+new file mode 100644
+--- /dev/null	(date 1681452075903)
++++ b/OooberDriver/app/src/main/res/drawable/ic_person_small_lastname.xml	(date 1681452075903)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#FFFFFF"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white" android:pathData="M12,5.9c1.16,0 2.1,0.94 2.1,2.1s-0.94,2.1 -2.1,2.1S9.9,9.16 9.9,8s0.94,-2.1 2.1,-2.1m0,9c2.97,0 6.1,1.46 6.1,2.1v1.1L5.9,18.1L5.9,17c0,-0.64 3.13,-2.1 6.1,-2.1M12,4C9.79,4 8,5.79 8,8s1.79,4 4,4 4,-1.79 4,-4 -1.79,-4 -4,-4zM12,13c-2.67,0 -8,1.34 -8,4v3h16v-3c0,-2.66 -5.33,-4 -8,-4z"/>
++</vector>
+Index: OooberDriver/app/src/main/res/drawable/ic_person_small.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/drawable/ic_person_small.xml b/OooberDriver/app/src/main/res/drawable/ic_person_small.xml
+new file mode 100644
+--- /dev/null	(date 1681452075898)
++++ b/OooberDriver/app/src/main/res/drawable/ic_person_small.xml	(date 1681452075898)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#FFFFFF"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white" android:pathData="M12,12c2.21,0 4,-1.79 4,-4s-1.79,-4 -4,-4 -4,1.79 -4,4 1.79,4 4,4zM12,14c-2.67,0 -8,1.34 -8,4v2h16v-2c0,-2.66 -5.33,-4 -8,-4z"/>
++</vector>
+Index: OooberDriver/app/src/main/res/drawable/ic_lock_white.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/drawable/ic_lock_white.xml b/OooberDriver/app/src/main/res/drawable/ic_lock_white.xml
+new file mode 100644
+--- /dev/null	(date 1681452075929)
++++ b/OooberDriver/app/src/main/res/drawable/ic_lock_white.xml	(date 1681452075929)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#FFFFFF"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white" android:pathData="M18,8h-1L17,6c0,-2.76 -2.24,-5 -5,-5S7,3.24 7,6v2L6,8c-1.1,0 -2,0.9 -2,2v10c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2L20,10c0,-1.1 -0.9,-2 -2,-2zM12,17c-1.1,0 -2,-0.9 -2,-2s0.9,-2 2,-2 2,0.9 2,2 -0.9,2 -2,2zM15.1,8L8.9,8L8.9,6c0,-1.71 1.39,-3.1 3.1,-3.1 1.71,0 3.1,1.39 3.1,3.1v2z"/>
++</vector>
+Index: OooberDriver/app/src/main/res/drawable/ic_phone_white.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/drawable/ic_phone_white.xml b/OooberDriver/app/src/main/res/drawable/ic_phone_white.xml
+new file mode 100644
+--- /dev/null	(date 1681452075909)
++++ b/OooberDriver/app/src/main/res/drawable/ic_phone_white.xml	(date 1681452075909)
+@@ -0,0 +1,5 @@
++<vector android:height="24dp" android:tint="#FFFFFF"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white" android:pathData="M6.62,10.79c1.44,2.83 3.76,5.14 6.59,6.59l2.2,-2.2c0.27,-0.27 0.67,-0.36 1.02,-0.24 1.12,0.37 2.33,0.57 3.57,0.57 0.55,0 1,0.45 1,1V20c0,0.55 -0.45,1 -1,1 -9.39,0 -17,-7.61 -17,-17 0,-0.55 0.45,-1 1,-1h3.5c0.55,0 1,0.45 1,1 0,1.25 0.2,2.45 0.57,3.57 0.11,0.35 0.03,0.74 -0.25,1.02l-2.2,2.2z"/>
++</vector>
+Index: OooberDriver/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/.idea/misc.xml b/OooberDriver/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1681452075967)
++++ b/OooberDriver/.idea/misc.xml	(date 1681452075967)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/build/classes" />
++  </component>
++  <component name="ProjectType">
++    <option name="id" value="Android" />
++  </component>
++</project>
+\ No newline at end of file
+Index: OooberDriver/app/src/main/res/drawable/ic_person_whitr.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/drawable/ic_person_whitr.xml b/OooberDriver/app/src/main/res/drawable/ic_person_whitr.xml
+new file mode 100644
+--- /dev/null	(date 1681452075961)
++++ b/OooberDriver/app/src/main/res/drawable/ic_person_whitr.xml	(date 1681452075961)
+@@ -0,0 +1,5 @@
++<vector android:height="300dp" android:tint="#FFFFFF"
++    android:viewportHeight="24" android:viewportWidth="24"
++    android:width="300dp" xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="@android:color/white" android:pathData="M12,12c2.21,0 4,-1.79 4,-4s-1.79,-4 -4,-4 -4,1.79 -4,4 1.79,4 4,4zM12,14c-2.67,0 -8,1.34 -8,4v2h16v-2c0,-2.66 -5.33,-4 -8,-4z"/>
++</vector>
+Index: OooberDriver/app/src/main/res/values-night/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources xmlns:tools=\"http://schemas.android.com/tools\">\r\n    <!-- Base application theme. -->\r\n    <style name=\"Theme.OooberDriver\" parent=\"Theme.MaterialComponents.DayNight.DarkActionBar\">\r\n        <!-- Primary brand color. -->\r\n        <item name=\"colorPrimary\">@color/purple_200</item>\r\n        <item name=\"colorPrimaryVariant\">@color/purple_700</item>\r\n        <item name=\"colorOnPrimary\">@color/black</item>\r\n        <!-- Secondary brand color. -->\r\n        <item name=\"colorSecondary\">@color/teal_200</item>\r\n        <item name=\"colorSecondaryVariant\">@color/teal_200</item>\r\n        <item name=\"colorOnSecondary\">@color/black</item>\r\n        <!-- Status bar color. -->\r\n        <item name=\"android:statusBarColor\">?attr/colorPrimaryVariant</item>\r\n        <!-- Customize your theme here. -->\r\n    </style>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/values-night/themes.xml b/OooberDriver/app/src/main/res/values-night/themes.xml
+--- a/OooberDriver/app/src/main/res/values-night/themes.xml	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/res/values-night/themes.xml	(date 1681453531854)
+@@ -1,6 +1,6 @@
+ <resources xmlns:tools="http://schemas.android.com/tools">
+     <!-- Base application theme. -->
+-    <style name="Theme.OooberDriver" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++    <style name="Theme.OooberDriver" parent="Theme.AppCompat.Light.NoActionBar">
+         <!-- Primary brand color. -->
+         <item name="colorPrimary">@color/purple_200</item>
+         <item name="colorPrimaryVariant">@color/purple_700</item>
+Index: OooberDriver/app/src/main/res/layout/activity_map.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".activities.MapActivity\">\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/layout/activity_map.xml b/OooberDriver/app/src/main/res/layout/activity_map.xml
+--- a/OooberDriver/app/src/main/res/layout/activity_map.xml	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/res/layout/activity_map.xml	(date 1681457201247)
+@@ -1,9 +1,16 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++<androidx.coordinatorlayout.widget.CoordinatorLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:context=".activities.MapActivity">
+ 
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
++    <fragment
++        android:id="@+id/map"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:name="com.google.android.gms.maps.SupportMapFragment"/>
++
++</androidx.coordinatorlayout.widget.CoordinatorLayout>
+\ No newline at end of file
+Index: OooberDriver/app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".activities.MainActivity\">\r\n\r\n    <TextView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Hello World!\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/layout/activity_main.xml b/OooberDriver/app/src/main/res/layout/activity_main.xml
+--- a/OooberDriver/app/src/main/res/layout/activity_main.xml	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/res/layout/activity_main.xml	(date 1681454798058)
+@@ -1,18 +1,153 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:context=".activities.MainActivity">
+ 
+-    <TextView
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:text="Hello World!"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
++    <FrameLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent">
++
++        <ImageView
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:scaleType="centerCrop"
++            android:src="@drawable/home" />
++
++        <View
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:alpha="0.7"
++            android:background="@color/black" />
++    </FrameLayout>
++
++    <FrameLayout
++        android:layout_width="match_parent"
++        android:layout_height="480dp"
++        android:layout_marginLeft="40dp"
++        android:layout_marginRight="40dp"
++        android:layout_gravity="center">
++
++        <View
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:alpha="0.3"
++            android:background="@drawable/rounded_layout"
++
++            />
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:orientation="vertical">
++
++            <ImageView
++                android:layout_width="match_parent"
++                android:layout_height="100dp"
++                android:layout_marginTop="10dp"
++                android:src="@drawable/ic_person_whitr" />
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="LOGIN DRIVER"
++                android:textAlignment="center"
++                android:textColor="@color/white"
++                android:textSize="18sp"
++                android:textStyle="bold" />
++
++            <com.google.android.material.textfield.TextInputLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                app:startIconDrawable="@drawable/ic_email_white"
++                app:startIconTint="@color/white">
++
++                <com.google.android.material.textfield.TextInputEditText
++                    android:id="@+id/tvEmail"
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:hint="Correo electronico"
++                    android:inputType="textEmailAddress"
++                    android:textColor="@color/white"
++                    android:textSize="13sp"
++
++                    />
++
++            </com.google.android.material.textfield.TextInputLayout>
++
++            <com.google.android.material.textfield.TextInputLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                app:startIconDrawable="@drawable/ic_lock_white"
++                app:startIconTint="@color/white">
++
++                <com.google.android.material.textfield.TextInputEditText
++                    android:id="@+id/tvclave"
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:hint="Contraseña"
++                    android:inputType="textPassword"
++                    android:textColor="@color/white"
++                    android:textSize="13sp" />
++
++            </com.google.android.material.textfield.TextInputLayout>
++
++            <Button
++                android:id="@+id/btnSingIn"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="INCIAR SESION"
++                android:layout_marginRight="30dp"
++                android:layout_marginLeft="30dp"
++                android:layout_marginTop="30dp"
++                android:background="@drawable/rounded_button"/>
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:orientation="horizontal"
++                android:gravity="center"
++                android:layout_marginTop="10dp">
++
++                <View
++                    android:layout_width="70dp"
++                    android:layout_height="1dp"
++                    android:background="@color/white"/>
++
++                <TextView
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:text="¿No tienes cuenta?"
++                    android:textColor="@color/white"
++                    android:layout_marginLeft="5dp"
++                    android:layout_marginRight="5dp"/>
++
++                <View
++                    android:layout_width="70dp"
++                    android:layout_height="1dp"
++                    android:background="@color/white"/>
++
++            </LinearLayout>
++
++            <Button
++                android:id="@+id/btnRegiser"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="REGISTRARSE"
++                android:layout_marginRight="30dp"
++                android:layout_marginLeft="30dp"
++                android:layout_marginTop="10dp"
++                android:background="@drawable/rounded_button"
++                app:backgroundTint="@color/white"/>
++
++        </LinearLayout>
++
++    </FrameLayout>
+ 
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
++</androidx.coordinatorlayout.widget.CoordinatorLayout>
+\ No newline at end of file
+Index: OooberDriver/app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'com.android.application'\r\n    id 'org.jetbrains.kotlin.android'\r\n    id 'com.google.gms.google-services'\r\n}\r\n\r\nandroid {\r\n    namespace 'com.ooober.driver'\r\n    compileSdk 33\r\n\r\n    defaultConfig {\r\n        applicationId \"com.ooober.driver\"\r\n        minSdk 24\r\n        targetSdk 33\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility JavaVersion.VERSION_1_8\r\n        targetCompatibility JavaVersion.VERSION_1_8\r\n    }\r\n    kotlinOptions {\r\n        jvmTarget = '1.8'\r\n    }\r\n\r\n    buildFeatures {\r\n        viewBinding true\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation 'androidx.core:core-ktx:1.7.0'\r\n    implementation 'androidx.appcompat:appcompat:1.6.1'\r\n    implementation 'com.google.android.material:material:1.8.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'\r\n\r\n    implementation 'com.beust:klaxon:5.5'\r\n    implementation platform('com.google.firebase:firebase-bom:31.2.3')\r\n    implementation 'com.google.firebase:firebase-auth-ktx:21.0.3'\r\n    implementation 'com.google.firebase:firebase-firestore-ktx'\r\n\r\n    testImplementation 'junit:junit:4.13.2'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.5'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/build.gradle b/OooberDriver/app/build.gradle
+--- a/OooberDriver/app/build.gradle	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/build.gradle	(date 1681489213269)
+@@ -44,10 +44,20 @@
+     implementation 'com.google.android.material:material:1.8.0'
+     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+ 
++    //Ooober Project Dependencies
+     implementation 'com.beust:klaxon:5.5'
+     implementation platform('com.google.firebase:firebase-bom:31.2.3')
+     implementation 'com.google.firebase:firebase-auth-ktx:21.0.3'
+     implementation 'com.google.firebase:firebase-firestore-ktx'
++    implementation 'com.google.firebase:firebase-auth:21.3.0'
++
++    //Maps dependencies
++    implementation 'com.google.maps.android:maps-ktx:3.2.0'
++    implementation 'com.google.maps.android:maps-utils-ktx:3.2.0'
++    implementation 'com.google.maps.android:android-maps-utils:2.2.3'
++    implementation 'com.google.android.gms:play-services-maps:18.0.2'
++    implementation 'com.google.android.gms:play-services-location:20.0.0'
++    implementation 'com.github.prabhat1707:EasyWayLocation:2.4'
+ 
+     testImplementation 'junit:junit:4.13.2'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+Index: OooberDriver/app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <color name=\"purple_200\">#FFBB86FC</color>\r\n    <color name=\"purple_500\">#FF6200EE</color>\r\n    <color name=\"purple_700\">#FF3700B3</color>\r\n    <color name=\"teal_200\">#FF03DAC5</color>\r\n    <color name=\"teal_700\">#FF018786</color>\r\n    <color name=\"black\">#FF000000</color>\r\n    <color name=\"white\">#FFFFFFFF</color>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/values/colors.xml b/OooberDriver/app/src/main/res/values/colors.xml
+--- a/OooberDriver/app/src/main/res/values/colors.xml	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/res/values/colors.xml	(date 1681452876483)
+@@ -7,4 +7,5 @@
+     <color name="teal_700">#FF018786</color>
+     <color name="black">#FF000000</color>
+     <color name="white">#FFFFFFFF</color>
++    <color name="green">#D0F629</color>
+ </resources>
+\ No newline at end of file
+Index: OooberDriver/app/src/main/res/layout/activity_register.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".activities.RegisterActivity\">\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/layout/activity_register.xml b/OooberDriver/app/src/main/res/layout/activity_register.xml
+--- a/OooberDriver/app/src/main/res/layout/activity_register.xml	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/res/layout/activity_register.xml	(date 1681452075880)
+@@ -1,9 +1,236 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:context=".activities.RegisterActivity">
+ 
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
++    <FrameLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent">
++
++        <ImageView
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:scaleType="centerCrop"
++            android:src="@drawable/home" />
++
++        <View
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:alpha="0.7"
++            android:background="@color/black" />
++    </FrameLayout>
++
++    <FrameLayout
++        android:layout_width="match_parent"
++        android:layout_height="680dp"
++        android:layout_gravity="center"
++        android:layout_marginLeft="40dp"
++        android:layout_marginRight="40dp">
++
++        <View
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:alpha="0.3"
++            android:background="@drawable/rounded_layout"
++
++            />
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:orientation="vertical">
++
++            <ImageView
++                android:layout_width="match_parent"
++                android:layout_height="100dp"
++                android:layout_marginTop="10dp"
++                android:src="@drawable/ic_person_whitr" />
++
++            <TextView
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:text="REGISTRO"
++                android:textAlignment="center"
++                android:textColor="@color/white"
++                android:textSize="18sp"
++                android:textStyle="bold" />
++
++            <com.google.android.material.textfield.TextInputLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                app:startIconDrawable="@drawable/ic_email_white"
++                app:startIconTint="@color/white">
++
++                <com.google.android.material.textfield.TextInputEditText
++                    android:id="@+id/tvRemail"
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:hint="Correo electronico"
++                    android:inputType="textEmailAddress"
++                    android:textColor="@color/white"
++                    android:textSize="13sp"
++
++                    />
++
++            </com.google.android.material.textfield.TextInputLayout>
++
++            <com.google.android.material.textfield.TextInputLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                app:startIconDrawable="@drawable/ic_person_small"
++                app:startIconTint="@color/white">
++
++                <com.google.android.material.textfield.TextInputEditText
++                    android:id="@+id/tvname"
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:hint="Nombre"
++                    android:inputType="text"
++                    android:textColor="@color/white"
++                    android:textSize="13sp"
++
++                    />
++
++            </com.google.android.material.textfield.TextInputLayout>
++
++            <com.google.android.material.textfield.TextInputLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                app:startIconDrawable="@drawable/ic_person_small_lastname"
++                app:startIconTint="@color/white">
++
++                <com.google.android.material.textfield.TextInputEditText
++                    android:id="@+id/tvlastname"
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:hint="Apellido"
++                    android:inputType="text"
++                    android:textColor="@color/white"
++                    android:textSize="13sp"
++
++                    />
++
++            </com.google.android.material.textfield.TextInputLayout>
++
++            <com.google.android.material.textfield.TextInputLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                app:startIconDrawable="@drawable/ic_phone_white"
++                app:startIconTint="@color/white">
++
++                <com.google.android.material.textfield.TextInputEditText
++                    android:id="@+id/tvphone"
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:hint="Telefono"
++                    android:inputType="phone"
++                    android:textColor="@color/white"
++                    android:textSize="13sp"
++
++                    />
++
++            </com.google.android.material.textfield.TextInputLayout>
++
++            <com.google.android.material.textfield.TextInputLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                app:startIconDrawable="@drawable/ic_lock_white"
++                app:startIconTint="@color/white">
++
++                <com.google.android.material.textfield.TextInputEditText
++                    android:id="@+id/tvpassword"
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:hint="Contraseña"
++                    android:inputType="textPassword"
++                    android:textColor="@color/white"
++                    android:textSize="13sp" />
++
++            </com.google.android.material.textfield.TextInputLayout>
++
++            <com.google.android.material.textfield.TextInputLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="30dp"
++                android:layout_marginRight="30dp"
++                app:startIconDrawable="@drawable/ic_lock_white"
++                app:startIconTint="@color/white">
++
++                <com.google.android.material.textfield.TextInputEditText
++                    android:id="@+id/tvCpassword"
++                    android:layout_width="match_parent"
++                    android:layout_height="wrap_content"
++                    android:hint="Confirmar Contraseña"
++                    android:inputType="textPassword"
++                    android:textColor="@color/white"
++                    android:textSize="13sp" />
++
++            </com.google.android.material.textfield.TextInputLayout>
++
++
++            <Button
++                android:id="@+id/btnSignUp"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="30dp"
++                android:layout_marginTop="30dp"
++                android:layout_marginRight="30dp"
++                android:background="@drawable/rounded_button"
++                android:text="REGISTRATE"
++                app:backgroundTint="@color/white" />
++
++            <LinearLayout
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginTop="10dp"
++                android:gravity="center"
++                android:orientation="horizontal">
++
++                <View
++                    android:layout_width="70dp"
++                    android:layout_height="1dp"
++                    android:background="@color/white" />
++
++                <TextView
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:layout_marginLeft="5dp"
++                    android:layout_marginRight="5dp"
++                    android:text="¿Ya tienes cuenta?"
++                    android:textColor="@color/white" />
++
++                <View
++                    android:layout_width="70dp"
++                    android:layout_height="1dp"
++                    android:background="@color/white" />
++
++            </LinearLayout>
++
++            <Button
++                android:id="@+id/btnLogin"
++                android:layout_width="match_parent"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="30dp"
++                android:layout_marginTop="10dp"
++                android:layout_marginRight="30dp"
++                android:background="@drawable/rounded_button"
++                android:text="INICIAR SESION" />
++
++        </LinearLayout>
++
++    </FrameLayout>
++
++</androidx.coordinatorlayout.widget.CoordinatorLayout>
+\ No newline at end of file
+Index: OooberDriver/app/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources xmlns:tools=\"http://schemas.android.com/tools\">\r\n    <!-- Base application theme. -->\r\n    <style name=\"Theme.OooberDriver\" parent=\"Theme.MaterialComponents.DayNight.DarkActionBar\">\r\n        <!-- Primary brand color. -->\r\n        <item name=\"colorPrimary\">@color/purple_500</item>\r\n        <item name=\"colorPrimaryVariant\">@color/purple_700</item>\r\n        <item name=\"colorOnPrimary\">@color/white</item>\r\n        <!-- Secondary brand color. -->\r\n        <item name=\"colorSecondary\">@color/teal_200</item>\r\n        <item name=\"colorSecondaryVariant\">@color/teal_700</item>\r\n        <item name=\"colorOnSecondary\">@color/black</item>\r\n        <!-- Status bar color. -->\r\n        <item name=\"android:statusBarColor\">?attr/colorPrimaryVariant</item>\r\n        <!-- Customize your theme here. -->\r\n    </style>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/values/themes.xml b/OooberDriver/app/src/main/res/values/themes.xml
+--- a/OooberDriver/app/src/main/res/values/themes.xml	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/res/values/themes.xml	(date 1681453531858)
+@@ -1,16 +1,20 @@
+ <resources xmlns:tools="http://schemas.android.com/tools">
+     <!-- Base application theme. -->
+-    <style name="Theme.OooberDriver" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++    <style name="Theme.OooberDriver" parent="Theme.AppCompat.Light.NoActionBar">
+         <!-- Primary brand color. -->
+-        <item name="colorPrimary">@color/purple_500</item>
+-        <item name="colorPrimaryVariant">@color/purple_700</item>
++        <item name="colorPrimary">@color/green</item>
++        <item name="colorPrimaryVariant">@color/white</item>
+         <item name="colorOnPrimary">@color/white</item>
+         <!-- Secondary brand color. -->
+-        <item name="colorSecondary">@color/teal_200</item>
+-        <item name="colorSecondaryVariant">@color/teal_700</item>
++        <item name="colorSecondary">@color/black</item>
++        <item name="colorSecondaryVariant">@color/green</item>
+         <item name="colorOnSecondary">@color/black</item>
+         <!-- Status bar color. -->
+         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
++        <item name="colorControlNormal">@color/white</item>
++        <item name="colorControlActivated">@color/white</item>
++        <item name="colorControlHighlight">@color/white</item>
++        <item name="android:textColorHint">@color/white</item>
+         <!-- Customize your theme here. -->
+     </style>
+ </resources>
+\ No newline at end of file
+Index: OooberDriver/app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">Ooober Driver</string>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/values/strings.xml b/OooberDriver/app/src/main/res/values/strings.xml
+--- a/OooberDriver/app/src/main/res/values/strings.xml	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/res/values/strings.xml	(date 1681456296258)
+@@ -1,3 +1,4 @@
+ <resources>
+-    <string name="app_name">Ooober Driver</string>
++    <string name="app_name">OooberDriver</string>
++    <string name="google_maps_key">AIzaSyCFLPag2eAgdL-gcQsfRW1w9oZ-Bck5FzQ</string>
+ </resources>
+\ No newline at end of file
+Index: OooberDriver/app/src/main/res/drawable/rounded_button.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/drawable/rounded_button.xml b/OooberDriver/app/src/main/res/drawable/rounded_button.xml
+new file mode 100644
+--- /dev/null	(date 1681452075838)
++++ b/OooberDriver/app/src/main/res/drawable/rounded_button.xml	(date 1681452075838)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++
++    <corners android:radius="50dp"/>
++    <solid android:color="@color/green"/>
++
++</shape>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"70d1792b-b2ef-48a0-874d-efa0d709b0e5\" name=\"Changes\" comment=\"Deleted OooberDriver\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Fase-1\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OP7VM92tDqa7UNuJglqgkqVtot\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.cidr.known.project.marker\": \"true\",\r\n    \"cidr.known.project.marker\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver\",\r\n    \"settings.editor.selected.configurable\": \"AndroidSdkUpdater\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"70d1792b-b2ef-48a0-874d-efa0d709b0e5\" name=\"Changes\" comment=\"\" />\r\n      <created>1681450387058</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681450387058</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Deleted OooberDriver\">\r\n      <created>1681450620925</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681450620925</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Deleted OooberDriver\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Deleted OooberDriver\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/.idea/workspace.xml	(date 1681459912365)
+@@ -4,7 +4,50 @@
+     <option name="autoReloadType" value="NONE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="Deleted OooberDriver" />
++    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="Deleted OooberDriver">
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/fileHashes.lock" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/home.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01__Changes_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/.name" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/compiler.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/gradle.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/google-services.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/home.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_email_white.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_lock_white.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_person_small.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_person_small_lastname.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_person_whitr.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_phone_white.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/rounded_button.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/rounded_layout.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberUser/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/Ooober.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Ooober.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/build.gradle" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/AndroidManifest.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MainActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/RegisterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/RegisterActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/models/Driver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/models/Driver.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/providers/AuthProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/providers/AuthProvider.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_main.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_map.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_map.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_register.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values-night/themes.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values/colors.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values/strings.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values/themes.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -22,20 +65,24 @@
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="2OP7VM92tDqa7UNuJglqgkqVtot" />
++  <component name="ProjectLevelVcsManager">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.cidr.known.project.marker": "true",
+-    "cidr.known.project.marker": "true",
+-    "last_opened_file_path": "C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver",
+-    "settings.editor.selected.configurable": "AndroidSdkUpdater"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
++    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberUser&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -67,6 +114,7 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
++    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="Deleted OooberDriver" />
+     <option name="LAST_COMMIT_MESSAGE" value="Deleted OooberDriver" />
+   </component>
+Index: OooberDriver/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AndroidLayouts\">\r\n    <shared>\r\n      <config />\r\n    </shared>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7aa49cb3-f406-424b-b805-464742b76ddb\" name=\"Changes\" comment=\"?\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"device_and_snapshot_combo_box_target[C:\\Users\\Jony Morales\\.android\\avd\\Pixel_4_API_30.avd]\" />\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Kotlin Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OO1tAw1n62amzJBzDqtzjJ2als\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.cidr.known.project.marker\": \"true\",\r\n    \"cidr.known.project.marker\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY\">\r\n      <recent name=\"com.ooober.driver.activities\" />\r\n    </key>\r\n    <key name=\"android.template.1514215493\">\r\n      <recent name=\"com.ooober.driver.activities\" />\r\n      <recent name=\"com.ooober.driver\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"app\" type=\"AndroidRunConfigurationType\" factoryName=\"Android App\">\r\n      <module name=\"Ooober_Driver.app.main\" />\r\n      <option name=\"DEPLOY\" value=\"true\" />\r\n      <option name=\"DEPLOY_APK_FROM_BUNDLE\" value=\"false\" />\r\n      <option name=\"DEPLOY_AS_INSTANT\" value=\"false\" />\r\n      <option name=\"ARTIFACT_NAME\" value=\"\" />\r\n      <option name=\"PM_INSTALL_OPTIONS\" value=\"\" />\r\n      <option name=\"ALL_USERS\" value=\"false\" />\r\n      <option name=\"ALWAYS_INSTALL_WITH_PM\" value=\"false\" />\r\n      <option name=\"CLEAR_APP_STORAGE\" value=\"false\" />\r\n      <option name=\"DYNAMIC_FEATURES_DISABLED_LIST\" value=\"\" />\r\n      <option name=\"ACTIVITY_EXTRA_FLAGS\" value=\"\" />\r\n      <option name=\"MODE\" value=\"default_activity\" />\r\n      <option name=\"CLEAR_LOGCAT\" value=\"false\" />\r\n      <option name=\"SHOW_LOGCAT_AUTOMATICALLY\" value=\"false\" />\r\n      <option name=\"INSPECTION_WITHOUT_ACTIVITY_RESTART\" value=\"false\" />\r\n      <option name=\"TARGET_SELECTION_MODE\" value=\"DEVICE_AND_SNAPSHOT_COMBO_BOX\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_CONFIGURATION_ID\" value=\"-1\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_PROJECT_ID\" value=\"\" />\r\n      <option name=\"DEBUGGER_TYPE\" value=\"Auto\" />\r\n      <Auto>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Auto>\r\n      <Hybrid>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Hybrid>\r\n      <Java />\r\n      <Native>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Native>\r\n      <Profilers>\r\n        <option name=\"ADVANCED_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_CONFIGURATION_NAME\" value=\"Java/Kotlin Method Sample (legacy)\" />\r\n        <option name=\"STARTUP_NATIVE_MEMORY_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"NATIVE_MEMORY_SAMPLE_RATE_BYTES\" value=\"2048\" />\r\n      </Profilers>\r\n      <option name=\"DEEP_LINK\" value=\"\" />\r\n      <option name=\"ACTIVITY_CLASS\" value=\"\" />\r\n      <option name=\"SEARCH_ACTIVITY_IN_GLOBAL_SCOPE\" value=\"false\" />\r\n      <option name=\"SKIP_ACTIVITY_VALIDATION\" value=\"false\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7aa49cb3-f406-424b-b805-464742b76ddb\" name=\"Changes\" comment=\"\" />\r\n      <created>1681417027207</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681417027207</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"?\">\r\n      <created>1681447198037</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681447198037</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"?\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"?\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/.idea/workspace.xml b/OooberDriver/.idea/workspace.xml
+--- a/OooberDriver/.idea/workspace.xml	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/.idea/workspace.xml	(date 1681489213639)
+@@ -9,19 +9,102 @@
+     <option name="autoReloadType" value="NONE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment="?">
++    <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment=":c">
++      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/fileHashes.lock" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/home.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01__Changes_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/google-services.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/home.jpg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_email_white.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_lock_white.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person_small.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person_small_lastname.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person_whitr.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_phone_white.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_button.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_layout.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../OooberUser/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../.idea/Ooober.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Ooober.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MainActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/RegisterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/RegisterActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/models/Driver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/models/Driver.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/providers/AuthProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/providers/AuthProvider.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Jony Morales\.android\avd\Pixel_4_API_30.avd]" />
++  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Jony Morales\.android\avd\Pixel_4_API_31.avd]" />
+   <component name="ExternalProjectsData">
+     <projectState path="$PROJECT_DIR$">
+       <ProjectState />
+     </projectState>
++  </component>
++  <component name="ExternalProjectsManager">
++    <system id="GRADLE">
++      <state>
++        <task path="$PROJECT_DIR$/app">
++          <activation />
++        </task>
++        <task path="$PROJECT_DIR$">
++          <activation />
++        </task>
++        <projects_view>
++          <tree_state>
++            <expand>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="Ooober Driver" type="f1a62948:ProjectNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="Ooober Driver" type="f1a62948:ProjectNode" />
++                <item name="app" type="2d1252cf:ModuleNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="Ooober Driver" type="f1a62948:ProjectNode" />
++                <item name="app" type="2d1252cf:ModuleNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="Ooober Driver" type="f1a62948:ProjectNode" />
++                <item name="app" type="2d1252cf:ModuleNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++                <item name="other" type="c8890929:TasksNode$1" />
++              </path>
++            </expand>
++            <select />
++          </tree_state>
++        </projects_view>
++      </state>
++    </system>
+   </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+@@ -36,6 +119,9 @@
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
++  <component name="ProblemsViewState">
++    <option name="selectedTabId" value="CurrentFile" />
++  </component>
+   <component name="ProjectId" id="2OO1tAw1n62amzJBzDqtzjJ2als" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+     <ConfirmationsSetting value="2" id="Add" />
+@@ -44,15 +130,17 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.cidr.known.project.marker": "true",
+-    "cidr.known.project.marker": "true",
+-    "last_opened_file_path": "C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
++    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jony Morales/AndroidStudioProjects/Guia 8/Guia08App - Tarea&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;experimental&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+       <recent name="com.ooober.driver.activities" />
+@@ -62,7 +150,12 @@
+       <recent name="com.ooober.driver" />
+     </key>
+   </component>
+-  <component name="RunManager">
++  <component name="RunAnythingCache">
++    <option name="myCommands">
++      <command value="gradle --rerun-tasks" />
++    </option>
++  </component>
++  <component name="RunManager" selected="Android App.app">
+     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+       <module name="Ooober_Driver.app.main" />
+       <option name="DEPLOY" value="true" />
+@@ -119,6 +212,30 @@
+       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+       <method v="2" />
+     </configuration>
++    <configuration name="OooberDriver" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="--rerun-tasks" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list />
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Gradle.OooberDriver" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -136,7 +253,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1681447198037</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary=":c">
++      <created>1681450851687</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1681450851687</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -151,7 +275,9 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
++    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+     <MESSAGE value="?" />
+-    <option name="LAST_COMMIT_MESSAGE" value="?" />
++    <MESSAGE value=":c" />
++    <option name="LAST_COMMIT_MESSAGE" value=":c" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: OooberDriver/.idea/.name
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/.idea/.name b/OooberDriver/.idea/.name
+new file mode 100644
+--- /dev/null	(date 1681452075994)
++++ b/OooberDriver/.idea/.name	(date 1681452075994)
+@@ -0,0 +1,1 @@
++Ooober Driver
+\ No newline at end of file
+Index: OooberDriver/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/.idea/.gitignore b/OooberDriver/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1681452075973)
++++ b/OooberDriver/.idea/.gitignore	(date 1681452075973)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: OooberDriver/.idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/.idea/gradle.xml b/OooberDriver/.idea/gradle.xml
+new file mode 100644
+--- /dev/null	(date 1681452076000)
++++ b/OooberDriver/.idea/gradle.xml	(date 1681452076000)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
++  <component name="GradleSettings">
++    <option name="linkedExternalProjectsSettings">
++      <GradleProjectSettings>
++        <option name="testRunner" value="GRADLE" />
++        <option name="distributionType" value="DEFAULT_WRAPPED" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/gradle-7.5.1" />
++        <option name="modules">
++          <set>
++            <option value="$PROJECT_DIR$" />
++            <option value="$PROJECT_DIR$/app" />
++          </set>
++        </option>
++      </GradleProjectSettings>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/Ooober.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/Ooober.iml b/.idea/Ooober.iml
+--- a/.idea/Ooober.iml	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/.idea/Ooober.iml	(date 1681452076006)
+@@ -1,9 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <module type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="android" name="Android">
++      <configuration />
++    </facet>
++  </component>
+   <component name="NewModuleRootManager" inherit-compiler-output="true">
+     <exclude-output />
+     <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="inheritedJdk" />
++    <orderEntry type="jdk" jdkName="Android API 33, extension level 4 Platform" jdkType="Android SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: OooberDriver/app/src/main/java/com/ooober/driver/providers/AuthProvider.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ooober.driver.providers\r\n\r\nimport com.google.android.gms.tasks.Task\r\nimport com.google.firebase.auth.AuthResult\r\nimport com.google.firebase.auth.FirebaseAuth\r\n\r\nclass AuthProvider {\r\n\r\n    val auth: FirebaseAuth = FirebaseAuth.getInstance()\r\n\r\n    fun login(email: String, password: String): Task<AuthResult>\r\n    {\r\n        return auth.signInWithEmailAndPassword(email, password)\r\n    }\r\n\r\n    fun register(email: String, password: String): Task<AuthResult>\r\n    {\r\n        return auth.createUserWithEmailAndPassword(email, password)\r\n    }\r\n\r\n    fun getId():String{\r\n        return auth.currentUser?.uid ?: \"\"\r\n    }\r\n\r\n    fun existsSession() : Boolean{\r\n        var exists = false\r\n        if(auth.currentUser != null){\r\n            exists = true\r\n        }\r\n        return exists\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/java/com/ooober/driver/providers/AuthProvider.kt b/OooberDriver/app/src/main/java/com/ooober/driver/providers/AuthProvider.kt
+--- a/OooberDriver/app/src/main/java/com/ooober/driver/providers/AuthProvider.kt	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/java/com/ooober/driver/providers/AuthProvider.kt	(date 1681459303360)
+@@ -6,7 +6,7 @@
+ 
+ class AuthProvider {
+ 
+-    val auth: FirebaseAuth = FirebaseAuth.getInstance()
++    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
+ 
+     fun login(email: String, password: String): Task<AuthResult>
+     {
+Index: OooberDriver/app/src/main/java/com/ooober/driver/models/Driver.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ooober.driver.models\r\n\r\nimport com.beust.klaxon.*\r\n\r\nprivate val klaxon = Klaxon()\r\n\r\ndata class Driver (\r\n    val id: String? = null,\r\n    val name: String? = null,\r\n    val lastname: String? = null,\r\n    val email: String? = null,\r\n    val phone: String? = null,\r\n    val image: String? = null\r\n) {\r\n\r\n\r\n\r\n    public fun toJson() = klaxon.toJsonString(this)\r\n\r\n    companion object {\r\n        public fun fromJson(json: String) = klaxon.parse<Driver>(json)\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/java/com/ooober/driver/models/Driver.kt b/OooberDriver/app/src/main/java/com/ooober/driver/models/Driver.kt
+--- a/OooberDriver/app/src/main/java/com/ooober/driver/models/Driver.kt	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/java/com/ooober/driver/models/Driver.kt	(date 1681453003174)
+@@ -10,7 +10,10 @@
+     val lastname: String? = null,
+     val email: String? = null,
+     val phone: String? = null,
+-    val image: String? = null
++    val image: String? = null,
++    val plateNumber: String? = null,
++    val colorCar: String? = null,
++    val brandCar: String? = null
+ ) {
+ 
+ 
+Index: OooberDriver/app/src/main/java/com/ooober/driver/activities/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ooober.driver.activities\r\n\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\nimport com.google.firebase.auth.ktx.oAuthProvider\r\nimport com.ooober.driver.R\r\nimport com.ooober.driver.databinding.ActivityMapBinding\r\nimport com.ooober.driver.providers.AuthProvider\r\n\r\nclass MainActivity : AppCompatActivity() {\r\n\r\n    private lateinit var binding: ActivityMapBinding\r\n    private val authProvider = AuthProvider()\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        binding = ActivityMapBinding.inflate(layoutInflater)\r\n        setContentView(binding.root)\r\n    }\r\n\r\n    override fun onStart() {\r\n        super.onStart()\r\n        if (authProvider.existsSession()) {\r\n            goToMap()\r\n        }\r\n    }\r\n\r\n    private fun goToMap() {\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/java/com/ooober/driver/activities/MainActivity.kt b/OooberDriver/app/src/main/java/com/ooober/driver/activities/MainActivity.kt
+--- a/OooberDriver/app/src/main/java/com/ooober/driver/activities/MainActivity.kt	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/java/com/ooober/driver/activities/MainActivity.kt	(date 1681459627613)
+@@ -1,30 +1,74 @@
+ package com.ooober.driver.activities
+ 
++import android.content.Intent
+ import androidx.appcompat.app.AppCompatActivity
+ import android.os.Bundle
+-import com.google.firebase.auth.ktx.oAuthProvider
+-import com.ooober.driver.R
+-import com.ooober.driver.databinding.ActivityMapBinding
++import android.util.Log
++import android.view.WindowManager
++import android.widget.Toast
++import com.ooober.driver.databinding.ActivityMainBinding
+ import com.ooober.driver.providers.AuthProvider
+ 
+ class MainActivity : AppCompatActivity() {
+ 
+-    private lateinit var binding: ActivityMapBinding
++    private lateinit var binding: ActivityMainBinding
+     private val authProvider = AuthProvider()
++
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+-        binding = ActivityMapBinding.inflate(layoutInflater)
++
++        binding = ActivityMainBinding.inflate(layoutInflater)
+         setContentView(binding.root)
++        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
++
++        binding.btnRegiser.setOnClickListener { goToRegister() }
++        binding.btnSingIn.setOnClickListener { login() }
++    }
++
++    private fun login() {
++        val email = binding.tvEmail.text.toString()
++        val password = binding.tvclave.text.toString()
++
++        if(isValidForm(email, password)){
++            authProvider.login(email, password).addOnCompleteListener {
++                if (it.isSuccessful) {
++                    goToMap()
++                }
++                else{
++                    Toast.makeText(this@MainActivity, "Error al iniciar sesion", Toast.LENGTH_SHORT).show()
++                    Log.d("FIREBASE", "ERRO: ${it.exception.toString()}")
++                }
++            }
++        }
++    }
++
++    private fun goToMap(){
++        val i = Intent(this, MapActivity::class.java)
++        i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
++        startActivity(i)
++    }
++
++    private fun isValidForm(email: String, password: String): Boolean{
++        if (email.isEmpty()) {
++            Toast.makeText(this, "Ingresa tu correo electronico", Toast.LENGTH_SHORT).show()
++            return false
++        }
++        if (password.isEmpty()) {
++            Toast.makeText(this, "Ingresa tu clave", Toast.LENGTH_SHORT).show()
++            return false
++        }
++        return true
++    }
++
++    private fun goToRegister() {
++        val i = Intent(this, RegisterActivity::class.java)
++        startActivity(i)
+     }
+ 
+     override fun onStart() {
+         super.onStart()
+-        if (authProvider.existsSession()) {
++        if(authProvider.existsSession()){
+             goToMap()
+         }
+     }
+-
+-    private fun goToMap() {
+-
+-    }
+ }
+\ No newline at end of file
+Index: OooberDriver/app/src/main/java/com/ooober/driver/activities/RegisterActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ooober.driver.activities\r\n\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\nimport com.ooober.driver.R\r\nimport com.ooober.driver.databinding.ActivityRegisterBinding\r\nimport com.ooober.driver.providers.AuthProvider\r\nimport com.ooober.driver.providers.DriverProvider\r\n\r\nclass RegisterActivity : AppCompatActivity() {\r\n\r\n    private lateinit var binding: ActivityRegisterBinding\r\n    private val authProvider = AuthProvider()\r\n    private val driverProvider = DriverProvider()\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n\r\n        binding = ActivityRegisterBinding.inflate(layoutInflater)\r\n        setContentView(binding.root)\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/java/com/ooober/driver/activities/RegisterActivity.kt b/OooberDriver/app/src/main/java/com/ooober/driver/activities/RegisterActivity.kt
+--- a/OooberDriver/app/src/main/java/com/ooober/driver/activities/RegisterActivity.kt	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/java/com/ooober/driver/activities/RegisterActivity.kt	(date 1681459627610)
+@@ -1,23 +1,126 @@
+ package com.ooober.driver.activities
+ 
++import android.content.Intent
+ import androidx.appcompat.app.AppCompatActivity
+ import android.os.Bundle
+-import com.ooober.driver.R
++import android.util.Log
++import android.view.WindowManager
++import android.widget.Toast
++import com.google.android.gms.common.logging.Logger
++import com.ooober.driver.providers.DriverProvider
+ import com.ooober.driver.databinding.ActivityRegisterBinding
++import com.ooober.driver.models.Driver
+ import com.ooober.driver.providers.AuthProvider
+-import com.ooober.driver.providers.DriverProvider
+ 
+ class RegisterActivity : AppCompatActivity() {
+ 
+     private lateinit var binding: ActivityRegisterBinding
+     private val authProvider = AuthProvider()
+-    private val driverProvider = DriverProvider()
++    private val clientProvider = DriverProvider()
+ 
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+ 
+         binding = ActivityRegisterBinding.inflate(layoutInflater)
+         setContentView(binding.root)
++        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
++
++        binding.btnLogin.setOnClickListener { goToLogin() }
++        binding.btnSignUp.setOnClickListener { register() }
++    }
+ 
++    private fun register() {
++        val name = binding.tvname.text.toString()
++        val lastname = binding.tvlastname.text.toString()
++        val email = binding.tvRemail.text.toString()
++        val phone = binding.tvphone.text.toString()
++        val password = binding.tvpassword.text.toString()
++        val Cpassword = binding.tvCpassword.text.toString()
++
++        if(isValidForm(name,lastname,email,phone,password,Cpassword)){
++            authProvider.register(email, password).addOnCompleteListener {
++                if (it.isSuccessful){
++                    val client = Driver(
++                        id = authProvider.getId(),
++                        name = name,
++                        lastname = lastname,
++                        phone = phone,
++                        email = email
++                    )
++                    clientProvider.create(client).addOnCompleteListener {
++                        if(it.isSuccessful){
++                            Toast.makeText(this@RegisterActivity, "Registro Exitoso", Toast.LENGTH_SHORT).show()
++                            goToMap()
++                        }
++                        else{
++                            Toast.makeText(this@RegisterActivity, "Ocurrio un error al almacenar los datos del usuario ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
++                            Log.d("FIREBASE", "Error: ${it.exception.toString()}")
++                        }
++                    }
++                }
++                else{
++                    Toast.makeText(this@RegisterActivity, "Registro Fallido ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
++                    Log.d("FIREBASE", "Error: ${it.exception.toString()}")
++                }
++            }
++        }
++    }
++
++    private fun goToMap(){
++        val i = Intent(this, MapActivity::class.java)
++        i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
++        startActivity(i)
++    }
++
++    private fun isValidForm(
++        name: String,
++        lastname: String,
++        email: String,
++        phone: String,
++        password: String,
++        Cpassword: String
++    ): Boolean {
++        if (name.isEmpty()) {
++            Toast.makeText(this, "Ingresa tu Nombre", Toast.LENGTH_SHORT).show()
++            return false
++        }
++        if (lastname.isEmpty()) {
++            Toast.makeText(this, "Ingresa tu Apellido", Toast.LENGTH_SHORT).show()
++            return false
++        }
++        if (email.isEmpty()) {
++            Toast.makeText(this, "Ingresa tu Correo Electronico", Toast.LENGTH_SHORT).show()
++            return false
++        }
++        if (phone.isEmpty()) {
++            Toast.makeText(this, "Ingresa tu Telefono", Toast.LENGTH_SHORT).show()
++            return false
++        }
++        if (password.isEmpty()) {
++            Toast.makeText(this, "Ingresa tu Contraseña", Toast.LENGTH_SHORT).show()
++            return false
++        }
++        if (Cpassword.isEmpty()) {
++            Toast.makeText(this, "Ingresa la confirmacion de tu Contraseña", Toast.LENGTH_SHORT)
++                .show()
++            return false
++        }
++        if (password != Cpassword) {
++            Toast.makeText(this, "Las contraseñas deben coincidir", Toast.LENGTH_SHORT).show()
++        }
++        if (password.length < 6) {
++            Toast.makeText(
++                this,
++                "La contraseña debe contener al menos seis caracteres",
++                Toast.LENGTH_LONG
++            ).show()
++            return false
++        }
++        return true
++    }
++
++    private fun goToLogin() {
++        val i = Intent(this, MainActivity::class.java)
++        startActivity(i)
+     }
+ }
+\ No newline at end of file
+Index: OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ooober.driver.activities\r\n\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\nimport com.ooober.driver.R\r\nimport com.ooober.driver.databinding.ActivityMainBinding\r\nimport com.ooober.driver.providers.AuthProvider\r\n\r\nclass MapActivity : AppCompatActivity() {\r\n\r\n    private val authProvider = AuthProvider()\r\n    private lateinit var binding: ActivityMainBinding\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        binding = ActivityMainBinding.inflate(layoutInflater)\r\n        setContentView(binding.root)\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt b/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt
+--- a/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt	(date 1681459627616)
+@@ -2,17 +2,32 @@
+ 
+ import androidx.appcompat.app.AppCompatActivity
+ import android.os.Bundle
++import android.view.WindowManager
++import com.google.android.gms.maps.GoogleMap
++import com.google.android.gms.maps.OnMapReadyCallback
++import com.google.android.gms.maps.SupportMapFragment
+ import com.ooober.driver.R
+-import com.ooober.driver.databinding.ActivityMainBinding
+-import com.ooober.driver.providers.AuthProvider
++import com.ooober.driver.databinding.ActivityMapBinding
+ 
+-class MapActivity : AppCompatActivity() {
++class MapActivity : AppCompatActivity(), OnMapReadyCallback {
+ 
+-    private val authProvider = AuthProvider()
+-    private lateinit var binding: ActivityMainBinding
++    private lateinit var binding: ActivityMapBinding
++    private var googleMap: GoogleMap? = null
++
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+-        binding = ActivityMainBinding.inflate(layoutInflater)
++
++        binding = ActivityMapBinding.inflate(layoutInflater)
+         setContentView(binding.root)
++        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
++
++        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
++        mapFragment.getMapAsync(this)
+     }
++
++    override fun onMapReady(map: GoogleMap) {
++        googleMap = map
++    }
++
++
+ }
+\ No newline at end of file
+Index: OooberDriver/settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>pluginManagement {\r\n    repositories {\r\n        google()\r\n        mavenCentral()\r\n        gradlePluginPortal()\r\n    }\r\n}\r\ndependencyResolutionManagement {\r\n    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)\r\n    repositories {\r\n        google()\r\n        mavenCentral()\r\n    }\r\n}\r\nrootProject.name = \"Ooober Driver\"\r\ninclude ':app'\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/settings.gradle b/OooberDriver/settings.gradle
+--- a/OooberDriver/settings.gradle	(revision 3f647c643a7a12469828d8a2aab3d40ffd80968d)
++++ b/OooberDriver/settings.gradle	(date 1681488863115)
+@@ -3,6 +3,8 @@
+         google()
+         mavenCentral()
+         gradlePluginPortal()
++        //Ooober plugin (EasyLocation)
++        maven { url 'https://jitpack.io' }
+     }
+ }
+ dependencyResolutionManagement {
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1681452075206)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/shelved.patch	(date 1681452075206)
+@@ -0,0 +1,903 @@
++Index: OooberDriver/app/src/main/res/drawable/rounded_button.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/res/drawable/rounded_button.xml b/OooberDriver/app/src/main/res/drawable/rounded_button.xml
++new file mode 100644
++--- /dev/null	(date 1681451617071)
+++++ b/OooberDriver/app/src/main/res/drawable/rounded_button.xml	(date 1681451617071)
++@@ -0,0 +1,7 @@
+++<?xml version="1.0" encoding="utf-8"?>
+++<shape xmlns:android="http://schemas.android.com/apk/res/android">
+++
+++    <corners android:radius="50dp"/>
+++    <solid android:color="@color/green"/>
+++
+++</shape>
++\ No newline at end of file
++Index: OooberDriver/app/src/main/res/layout/activity_main.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".activities.MainActivity\">\r\n\r\n    <TextView\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Hello World!\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/res/layout/activity_main.xml b/OooberDriver/app/src/main/res/layout/activity_main.xml
++--- a/OooberDriver/app/src/main/res/layout/activity_main.xml	(revision 0d510f18f7db18893a335225147c6fdfe7eef72e)
+++++ b/OooberDriver/app/src/main/res/layout/activity_main.xml	(date 1681451474994)
++@@ -1,18 +1,153 @@
++ <?xml version="1.0" encoding="utf-8"?>
++-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+++<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
++     xmlns:app="http://schemas.android.com/apk/res-auto"
++     xmlns:tools="http://schemas.android.com/tools"
++     android:layout_width="match_parent"
++     android:layout_height="match_parent"
++     tools:context=".activities.MainActivity">
++ 
++-    <TextView
++-        android:layout_width="wrap_content"
++-        android:layout_height="wrap_content"
++-        android:text="Hello World!"
++-        app:layout_constraintBottom_toBottomOf="parent"
++-        app:layout_constraintEnd_toEndOf="parent"
++-        app:layout_constraintStart_toStartOf="parent"
++-        app:layout_constraintTop_toTopOf="parent" />
+++    <FrameLayout
+++        android:layout_width="match_parent"
+++        android:layout_height="match_parent">
+++
+++        <ImageView
+++            android:layout_width="match_parent"
+++            android:layout_height="match_parent"
+++            android:scaleType="centerCrop"
+++            android:src="@drawable/home" />
+++
+++        <View
+++            android:layout_width="match_parent"
+++            android:layout_height="match_parent"
+++            android:alpha="0.7"
+++            android:background="@color/black" />
+++    </FrameLayout>
+++
+++    <FrameLayout
+++        android:layout_width="match_parent"
+++        android:layout_height="480dp"
+++        android:layout_marginLeft="40dp"
+++        android:layout_marginRight="40dp"
+++        android:layout_gravity="center">
+++
+++        <View
+++            android:layout_width="match_parent"
+++            android:layout_height="match_parent"
+++            android:alpha="0.3"
+++            android:background="@drawable/rounded_layout"
+++
+++            />
+++
+++        <LinearLayout
+++            android:layout_width="match_parent"
+++            android:layout_height="wrap_content"
+++            android:orientation="vertical">
+++
+++            <ImageView
+++                android:layout_width="match_parent"
+++                android:layout_height="100dp"
+++                android:layout_marginTop="10dp"
+++                android:src="@drawable/ic_person_whitr" />
+++
+++            <TextView
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:text="LOGIN"
+++                android:textAlignment="center"
+++                android:textColor="@color/white"
+++                android:textSize="18sp"
+++                android:textStyle="bold" />
+++
+++            <com.google.android.material.textfield.TextInputLayout
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginRight="30dp"
+++                app:startIconDrawable="@drawable/ic_email_white"
+++                app:startIconTint="@color/white">
+++
+++                <com.google.android.material.textfield.TextInputEditText
+++                    android:id="@+id/tvEmail"
+++                    android:layout_width="match_parent"
+++                    android:layout_height="wrap_content"
+++                    android:hint="Correo electronico"
+++                    android:inputType="textEmailAddress"
+++                    android:textColor="@color/white"
+++                    android:textSize="13sp"
+++
+++                    />
+++
+++            </com.google.android.material.textfield.TextInputLayout>
+++
+++            <com.google.android.material.textfield.TextInputLayout
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginRight="30dp"
+++                app:startIconDrawable="@drawable/ic_lock_white"
+++                app:startIconTint="@color/white">
+++
+++                <com.google.android.material.textfield.TextInputEditText
+++                    android:id="@+id/tvclave"
+++                    android:layout_width="match_parent"
+++                    android:layout_height="wrap_content"
+++                    android:hint="Contraseña"
+++                    android:inputType="textPassword"
+++                    android:textColor="@color/white"
+++                    android:textSize="13sp" />
+++
+++            </com.google.android.material.textfield.TextInputLayout>
+++
+++            <Button
+++                android:id="@+id/btnSingIn"
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:text="INCIAR SESION"
+++                android:layout_marginRight="30dp"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginTop="30dp"
+++                android:background="@drawable/rounded_button"/>
+++
+++            <LinearLayout
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:orientation="horizontal"
+++                android:gravity="center"
+++                android:layout_marginTop="10dp">
+++
+++                <View
+++                    android:layout_width="70dp"
+++                    android:layout_height="1dp"
+++                    android:background="@color/white"/>
+++
+++                <TextView
+++                    android:layout_width="wrap_content"
+++                    android:layout_height="wrap_content"
+++                    android:text="¿No tienes cuenta?"
+++                    android:textColor="@color/white"
+++                    android:layout_marginLeft="5dp"
+++                    android:layout_marginRight="5dp"/>
+++
+++                <View
+++                    android:layout_width="70dp"
+++                    android:layout_height="1dp"
+++                    android:background="@color/white"/>
+++
+++            </LinearLayout>
+++
+++            <Button
+++                android:id="@+id/btnRegiser"
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:text="REGISTRARSE"
+++                android:layout_marginRight="30dp"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginTop="10dp"
+++                android:background="@drawable/rounded_button"
+++                app:backgroundTint="@color/white"/>
+++
+++        </LinearLayout>
+++
+++    </FrameLayout>
++ 
++-</androidx.constraintlayout.widget.ConstraintLayout>
++\ No newline at end of file
+++</androidx.coordinatorlayout.widget.CoordinatorLayout>
++\ No newline at end of file
++Index: OooberDriver/app/src/main/res/drawable/rounded_layout.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/res/drawable/rounded_layout.xml b/OooberDriver/app/src/main/res/drawable/rounded_layout.xml
++new file mode 100644
++--- /dev/null	(date 1681451617071)
+++++ b/OooberDriver/app/src/main/res/drawable/rounded_layout.xml	(date 1681451617071)
++@@ -0,0 +1,7 @@
+++<?xml version="1.0" encoding="utf-8"?>
+++<shape xmlns:android="http://schemas.android.com/apk/res/android">
+++
+++    <corners android:radius="30dp"/>
+++    <solid android:color="@color/white"/>
+++
+++</shape>
++\ No newline at end of file
++Index: OooberDriver/app/src/main/res/drawable/ic_email_white.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/res/drawable/ic_email_white.xml b/OooberDriver/app/src/main/res/drawable/ic_email_white.xml
++new file mode 100644
++--- /dev/null	(date 1681451617069)
+++++ b/OooberDriver/app/src/main/res/drawable/ic_email_white.xml	(date 1681451617069)
++@@ -0,0 +1,5 @@
+++<vector android:height="24dp" android:tint="#FFFFFF"
+++    android:viewportHeight="24" android:viewportWidth="24"
+++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+++    <path android:fillColor="@android:color/white" android:pathData="M20,4L4,4c-1.1,0 -1.99,0.9 -1.99,2L2,18c0,1.1 0.9,2 2,2h16c1.1,0 2,-0.9 2,-2L22,6c0,-1.1 -0.9,-2 -2,-2zM20,8l-8,5 -8,-5L4,6l8,5 8,-5v2z"/>
+++</vector>
++Index: OooberDriver/app/src/main/res/layout/activity_register.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".activities.RegisterActivity\">\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/res/layout/activity_register.xml b/OooberDriver/app/src/main/res/layout/activity_register.xml
++--- a/OooberDriver/app/src/main/res/layout/activity_register.xml	(revision 0d510f18f7db18893a335225147c6fdfe7eef72e)
+++++ b/OooberDriver/app/src/main/res/layout/activity_register.xml	(date 1681451503101)
++@@ -1,9 +1,236 @@
++ <?xml version="1.0" encoding="utf-8"?>
++-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+++<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
++     xmlns:app="http://schemas.android.com/apk/res-auto"
++     xmlns:tools="http://schemas.android.com/tools"
++     android:layout_width="match_parent"
++     android:layout_height="match_parent"
++     tools:context=".activities.RegisterActivity">
++ 
++-</androidx.constraintlayout.widget.ConstraintLayout>
++\ No newline at end of file
+++    <FrameLayout
+++        android:layout_width="match_parent"
+++        android:layout_height="match_parent">
+++
+++        <ImageView
+++            android:layout_width="match_parent"
+++            android:layout_height="match_parent"
+++            android:scaleType="centerCrop"
+++            android:src="@drawable/home" />
+++
+++        <View
+++            android:layout_width="match_parent"
+++            android:layout_height="match_parent"
+++            android:alpha="0.7"
+++            android:background="@color/black" />
+++    </FrameLayout>
+++
+++    <FrameLayout
+++        android:layout_width="match_parent"
+++        android:layout_height="680dp"
+++        android:layout_gravity="center"
+++        android:layout_marginLeft="40dp"
+++        android:layout_marginRight="40dp">
+++
+++        <View
+++            android:layout_width="match_parent"
+++            android:layout_height="match_parent"
+++            android:alpha="0.3"
+++            android:background="@drawable/rounded_layout"
+++
+++            />
+++
+++        <LinearLayout
+++            android:layout_width="match_parent"
+++            android:layout_height="wrap_content"
+++            android:orientation="vertical">
+++
+++            <ImageView
+++                android:layout_width="match_parent"
+++                android:layout_height="100dp"
+++                android:layout_marginTop="10dp"
+++                android:src="@drawable/ic_person_whitr" />
+++
+++            <TextView
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:text="REGISTRO"
+++                android:textAlignment="center"
+++                android:textColor="@color/white"
+++                android:textSize="18sp"
+++                android:textStyle="bold" />
+++
+++            <com.google.android.material.textfield.TextInputLayout
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginRight="30dp"
+++                app:startIconDrawable="@drawable/ic_email_white"
+++                app:startIconTint="@color/white">
+++
+++                <com.google.android.material.textfield.TextInputEditText
+++                    android:id="@+id/tvRemail"
+++                    android:layout_width="match_parent"
+++                    android:layout_height="wrap_content"
+++                    android:hint="Correo electronico"
+++                    android:inputType="textEmailAddress"
+++                    android:textColor="@color/white"
+++                    android:textSize="13sp"
+++
+++                    />
+++
+++            </com.google.android.material.textfield.TextInputLayout>
+++
+++            <com.google.android.material.textfield.TextInputLayout
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginRight="30dp"
+++                app:startIconDrawable="@drawable/ic_person_small"
+++                app:startIconTint="@color/white">
+++
+++                <com.google.android.material.textfield.TextInputEditText
+++                    android:id="@+id/tvname"
+++                    android:layout_width="match_parent"
+++                    android:layout_height="wrap_content"
+++                    android:hint="Nombre"
+++                    android:inputType="text"
+++                    android:textColor="@color/white"
+++                    android:textSize="13sp"
+++
+++                    />
+++
+++            </com.google.android.material.textfield.TextInputLayout>
+++
+++            <com.google.android.material.textfield.TextInputLayout
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginRight="30dp"
+++                app:startIconDrawable="@drawable/ic_person_small_lastname"
+++                app:startIconTint="@color/white">
+++
+++                <com.google.android.material.textfield.TextInputEditText
+++                    android:id="@+id/tvlastname"
+++                    android:layout_width="match_parent"
+++                    android:layout_height="wrap_content"
+++                    android:hint="Apellido"
+++                    android:inputType="text"
+++                    android:textColor="@color/white"
+++                    android:textSize="13sp"
+++
+++                    />
+++
+++            </com.google.android.material.textfield.TextInputLayout>
+++
+++            <com.google.android.material.textfield.TextInputLayout
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginRight="30dp"
+++                app:startIconDrawable="@drawable/ic_phone_white"
+++                app:startIconTint="@color/white">
+++
+++                <com.google.android.material.textfield.TextInputEditText
+++                    android:id="@+id/tvphone"
+++                    android:layout_width="match_parent"
+++                    android:layout_height="wrap_content"
+++                    android:hint="Telefono"
+++                    android:inputType="phone"
+++                    android:textColor="@color/white"
+++                    android:textSize="13sp"
+++
+++                    />
+++
+++            </com.google.android.material.textfield.TextInputLayout>
+++
+++            <com.google.android.material.textfield.TextInputLayout
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginRight="30dp"
+++                app:startIconDrawable="@drawable/ic_lock_white"
+++                app:startIconTint="@color/white">
+++
+++                <com.google.android.material.textfield.TextInputEditText
+++                    android:id="@+id/tvpassword"
+++                    android:layout_width="match_parent"
+++                    android:layout_height="wrap_content"
+++                    android:hint="Contraseña"
+++                    android:inputType="textPassword"
+++                    android:textColor="@color/white"
+++                    android:textSize="13sp" />
+++
+++            </com.google.android.material.textfield.TextInputLayout>
+++
+++            <com.google.android.material.textfield.TextInputLayout
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginRight="30dp"
+++                app:startIconDrawable="@drawable/ic_lock_white"
+++                app:startIconTint="@color/white">
+++
+++                <com.google.android.material.textfield.TextInputEditText
+++                    android:id="@+id/tvCpassword"
+++                    android:layout_width="match_parent"
+++                    android:layout_height="wrap_content"
+++                    android:hint="Confirmar Contraseña"
+++                    android:inputType="textPassword"
+++                    android:textColor="@color/white"
+++                    android:textSize="13sp" />
+++
+++            </com.google.android.material.textfield.TextInputLayout>
+++
+++
+++            <Button
+++                android:id="@+id/btnSignUp"
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginTop="30dp"
+++                android:layout_marginRight="30dp"
+++                android:background="@drawable/rounded_button"
+++                android:text="REGISTRATE"
+++                app:backgroundTint="@color/white" />
+++
+++            <LinearLayout
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:layout_marginTop="10dp"
+++                android:gravity="center"
+++                android:orientation="horizontal">
+++
+++                <View
+++                    android:layout_width="70dp"
+++                    android:layout_height="1dp"
+++                    android:background="@color/white" />
+++
+++                <TextView
+++                    android:layout_width="wrap_content"
+++                    android:layout_height="wrap_content"
+++                    android:layout_marginLeft="5dp"
+++                    android:layout_marginRight="5dp"
+++                    android:text="¿Ya tienes cuenta?"
+++                    android:textColor="@color/white" />
+++
+++                <View
+++                    android:layout_width="70dp"
+++                    android:layout_height="1dp"
+++                    android:background="@color/white" />
+++
+++            </LinearLayout>
+++
+++            <Button
+++                android:id="@+id/btnLogin"
+++                android:layout_width="match_parent"
+++                android:layout_height="wrap_content"
+++                android:layout_marginLeft="30dp"
+++                android:layout_marginTop="10dp"
+++                android:layout_marginRight="30dp"
+++                android:background="@drawable/rounded_button"
+++                android:text="INICIAR SESION" />
+++
+++        </LinearLayout>
+++
+++    </FrameLayout>
+++
+++</androidx.coordinatorlayout.widget.CoordinatorLayout>
++\ No newline at end of file
++Index: OooberDriver/app/src/main/res/drawable/ic_person_small.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/res/drawable/ic_person_small.xml b/OooberDriver/app/src/main/res/drawable/ic_person_small.xml
++new file mode 100644
++--- /dev/null	(date 1681451617070)
+++++ b/OooberDriver/app/src/main/res/drawable/ic_person_small.xml	(date 1681451617070)
++@@ -0,0 +1,5 @@
+++<vector android:height="24dp" android:tint="#FFFFFF"
+++    android:viewportHeight="24" android:viewportWidth="24"
+++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+++    <path android:fillColor="@android:color/white" android:pathData="M12,12c2.21,0 4,-1.79 4,-4s-1.79,-4 -4,-4 -4,1.79 -4,4 1.79,4 4,4zM12,14c-2.67,0 -8,1.34 -8,4v2h16v-2c0,-2.66 -5.33,-4 -8,-4z"/>
+++</vector>
++Index: OooberDriver/app/src/main/res/drawable/ic_person_small_lastname.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/res/drawable/ic_person_small_lastname.xml b/OooberDriver/app/src/main/res/drawable/ic_person_small_lastname.xml
++new file mode 100644
++--- /dev/null	(date 1681451617070)
+++++ b/OooberDriver/app/src/main/res/drawable/ic_person_small_lastname.xml	(date 1681451617070)
++@@ -0,0 +1,5 @@
+++<vector android:height="24dp" android:tint="#FFFFFF"
+++    android:viewportHeight="24" android:viewportWidth="24"
+++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+++    <path android:fillColor="@android:color/white" android:pathData="M12,5.9c1.16,0 2.1,0.94 2.1,2.1s-0.94,2.1 -2.1,2.1S9.9,9.16 9.9,8s0.94,-2.1 2.1,-2.1m0,9c2.97,0 6.1,1.46 6.1,2.1v1.1L5.9,18.1L5.9,17c0,-0.64 3.13,-2.1 6.1,-2.1M12,4C9.79,4 8,5.79 8,8s1.79,4 4,4 4,-1.79 4,-4 -1.79,-4 -4,-4zM12,13c-2.67,0 -8,1.34 -8,4v3h16v-3c0,-2.66 -5.33,-4 -8,-4z"/>
+++</vector>
++Index: OooberDriver/app/src/main/res/drawable/ic_phone_white.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/res/drawable/ic_phone_white.xml b/OooberDriver/app/src/main/res/drawable/ic_phone_white.xml
++new file mode 100644
++--- /dev/null	(date 1681451617071)
+++++ b/OooberDriver/app/src/main/res/drawable/ic_phone_white.xml	(date 1681451617071)
++@@ -0,0 +1,5 @@
+++<vector android:height="24dp" android:tint="#FFFFFF"
+++    android:viewportHeight="24" android:viewportWidth="24"
+++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+++    <path android:fillColor="@android:color/white" android:pathData="M6.62,10.79c1.44,2.83 3.76,5.14 6.59,6.59l2.2,-2.2c0.27,-0.27 0.67,-0.36 1.02,-0.24 1.12,0.37 2.33,0.57 3.57,0.57 0.55,0 1,0.45 1,1V20c0,0.55 -0.45,1 -1,1 -9.39,0 -17,-7.61 -17,-17 0,-0.55 0.45,-1 1,-1h3.5c0.55,0 1,0.45 1,1 0,1.25 0.2,2.45 0.57,3.57 0.11,0.35 0.03,0.74 -0.25,1.02l-2.2,2.2z"/>
+++</vector>
++Index: OooberDriver/app/src/main/res/drawable/ic_lock_white.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/res/drawable/ic_lock_white.xml b/OooberDriver/app/src/main/res/drawable/ic_lock_white.xml
++new file mode 100644
++--- /dev/null	(date 1681451617069)
+++++ b/OooberDriver/app/src/main/res/drawable/ic_lock_white.xml	(date 1681451617069)
++@@ -0,0 +1,5 @@
+++<vector android:height="24dp" android:tint="#FFFFFF"
+++    android:viewportHeight="24" android:viewportWidth="24"
+++    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+++    <path android:fillColor="@android:color/white" android:pathData="M18,8h-1L17,6c0,-2.76 -2.24,-5 -5,-5S7,3.24 7,6v2L6,8c-1.1,0 -2,0.9 -2,2v10c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2L20,10c0,-1.1 -0.9,-2 -2,-2zM12,17c-1.1,0 -2,-0.9 -2,-2s0.9,-2 2,-2 2,0.9 2,2 -0.9,2 -2,2zM15.1,8L8.9,8L8.9,6c0,-1.71 1.39,-3.1 3.1,-3.1 1.71,0 3.1,1.39 3.1,3.1v2z"/>
+++</vector>
++Index: .idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"70d1792b-b2ef-48a0-874d-efa0d709b0e5\" name=\"Changes\" comment=\"Deleted OooberDriver\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Fase-1\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OP7VM92tDqa7UNuJglqgkqVtot\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.cidr.known.project.marker\": \"true\",\r\n    \"cidr.known.project.marker\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver\",\r\n    \"settings.editor.selected.configurable\": \"AndroidSdkUpdater\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"70d1792b-b2ef-48a0-874d-efa0d709b0e5\" name=\"Changes\" comment=\"\" />\r\n      <created>1681450387058</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681450387058</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Deleted OooberDriver\">\r\n      <created>1681450620925</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681450620925</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Deleted OooberDriver\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Deleted OooberDriver\" />\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/workspace.xml b/.idea/workspace.xml
++--- a/.idea/workspace.xml	(revision 0d510f18f7db18893a335225147c6fdfe7eef72e)
+++++ b/.idea/workspace.xml	(date 1681451732333)
++@@ -4,7 +4,27 @@
++     <option name="autoReloadType" value="NONE" />
++   </component>
++   <component name="ChangeListManager">
++-    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="Deleted OooberDriver" />
+++    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="Deleted OooberDriver">
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/.gitignore" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/.name" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/gradle.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/misc.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/home.jpg" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_email_white.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_lock_white.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_person_small.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_person_small_lastname.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_person_whitr.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/ic_phone_white.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/rounded_button.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/drawable/rounded_layout.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/Ooober.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Ooober.iml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_register.xml" afterDir="false" />
+++    </list>
++     <option name="SHOW_DIALOG" value="false" />
++     <option name="HIGHLIGHT_CONFLICTS" value="true" />
++     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++@@ -22,12 +42,16 @@
++     <option name="stateVersion" value="1" />
++   </component>
++   <component name="ProjectId" id="2OP7VM92tDqa7UNuJglqgkqVtot" />
+++  <component name="ProjectLevelVcsManager">
+++    <ConfirmationsSetting value="2" id="Add" />
+++  </component>
++   <component name="ProjectViewState">
++     <option name="hideEmptyMiddlePackages" value="true" />
++     <option name="showLibraryContents" value="true" />
++   </component>
++   <component name="PropertiesComponent"><![CDATA[{
++   "keyToString": {
+++    "ASKED_ADD_EXTERNAL_FILES": "true",
++     "RunOnceActivity.OpenProjectViewOnStart": "true",
++     "RunOnceActivity.ShowReadmeOnStart": "true",
++     "RunOnceActivity.cidr.known.project.marker": "true",
++@@ -67,6 +91,7 @@
++     </option>
++   </component>
++   <component name="VcsManagerConfiguration">
+++    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
++     <MESSAGE value="Deleted OooberDriver" />
++     <option name="LAST_COMMIT_MESSAGE" value="Deleted OooberDriver" />
++   </component>
++Index: OooberDriver/.idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AndroidLayouts\">\r\n    <shared>\r\n      <config />\r\n    </shared>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7aa49cb3-f406-424b-b805-464742b76ddb\" name=\"Changes\" comment=\"?\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"device_and_snapshot_combo_box_target[C:\\Users\\Jony Morales\\.android\\avd\\Pixel_4_API_30.avd]\" />\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Kotlin Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OO1tAw1n62amzJBzDqtzjJ2als\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.cidr.known.project.marker\": \"true\",\r\n    \"cidr.known.project.marker\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY\">\r\n      <recent name=\"com.ooober.driver.activities\" />\r\n    </key>\r\n    <key name=\"android.template.1514215493\">\r\n      <recent name=\"com.ooober.driver.activities\" />\r\n      <recent name=\"com.ooober.driver\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"app\" type=\"AndroidRunConfigurationType\" factoryName=\"Android App\">\r\n      <module name=\"Ooober_Driver.app.main\" />\r\n      <option name=\"DEPLOY\" value=\"true\" />\r\n      <option name=\"DEPLOY_APK_FROM_BUNDLE\" value=\"false\" />\r\n      <option name=\"DEPLOY_AS_INSTANT\" value=\"false\" />\r\n      <option name=\"ARTIFACT_NAME\" value=\"\" />\r\n      <option name=\"PM_INSTALL_OPTIONS\" value=\"\" />\r\n      <option name=\"ALL_USERS\" value=\"false\" />\r\n      <option name=\"ALWAYS_INSTALL_WITH_PM\" value=\"false\" />\r\n      <option name=\"CLEAR_APP_STORAGE\" value=\"false\" />\r\n      <option name=\"DYNAMIC_FEATURES_DISABLED_LIST\" value=\"\" />\r\n      <option name=\"ACTIVITY_EXTRA_FLAGS\" value=\"\" />\r\n      <option name=\"MODE\" value=\"default_activity\" />\r\n      <option name=\"CLEAR_LOGCAT\" value=\"false\" />\r\n      <option name=\"SHOW_LOGCAT_AUTOMATICALLY\" value=\"false\" />\r\n      <option name=\"INSPECTION_WITHOUT_ACTIVITY_RESTART\" value=\"false\" />\r\n      <option name=\"TARGET_SELECTION_MODE\" value=\"DEVICE_AND_SNAPSHOT_COMBO_BOX\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_CONFIGURATION_ID\" value=\"-1\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_PROJECT_ID\" value=\"\" />\r\n      <option name=\"DEBUGGER_TYPE\" value=\"Auto\" />\r\n      <Auto>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Auto>\r\n      <Hybrid>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Hybrid>\r\n      <Java />\r\n      <Native>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Native>\r\n      <Profilers>\r\n        <option name=\"ADVANCED_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_CONFIGURATION_NAME\" value=\"Java/Kotlin Method Sample (legacy)\" />\r\n        <option name=\"STARTUP_NATIVE_MEMORY_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"NATIVE_MEMORY_SAMPLE_RATE_BYTES\" value=\"2048\" />\r\n      </Profilers>\r\n      <option name=\"DEEP_LINK\" value=\"\" />\r\n      <option name=\"ACTIVITY_CLASS\" value=\"\" />\r\n      <option name=\"SEARCH_ACTIVITY_IN_GLOBAL_SCOPE\" value=\"false\" />\r\n      <option name=\"SKIP_ACTIVITY_VALIDATION\" value=\"false\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7aa49cb3-f406-424b-b805-464742b76ddb\" name=\"Changes\" comment=\"\" />\r\n      <created>1681417027207</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681417027207</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"?\">\r\n      <created>1681447198037</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681447198037</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"?\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"?\" />\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/.idea/workspace.xml b/OooberDriver/.idea/workspace.xml
++--- a/OooberDriver/.idea/workspace.xml	(revision 0d510f18f7db18893a335225147c6fdfe7eef72e)
+++++ b/OooberDriver/.idea/workspace.xml	(date 1681451732351)
++@@ -9,8 +9,26 @@
++     <option name="autoReloadType" value="NONE" />
++   </component>
++   <component name="ChangeListManager">
++-    <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment="?">
+++    <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment=":c">
+++      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/home.jpg" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_email_white.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_lock_white.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person_small.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person_small_lastname.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person_whitr.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_phone_white.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_button.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_layout.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/../.idea/Ooober.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Ooober.iml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
++     </list>
++     <option name="SHOW_DIALOG" value="false" />
++     <option name="HIGHLIGHT_CONFLICTS" value="true" />
++@@ -22,6 +40,44 @@
++     <projectState path="$PROJECT_DIR$">
++       <ProjectState />
++     </projectState>
+++  </component>
+++  <component name="ExternalProjectsManager">
+++    <system id="GRADLE">
+++      <state>
+++        <task path="$PROJECT_DIR$/app">
+++          <activation />
+++        </task>
+++        <projects_view>
+++          <tree_state>
+++            <expand>
+++              <path>
+++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+++                <item name="Ooober Driver" type="f1a62948:ProjectNode" />
+++              </path>
+++              <path>
+++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+++                <item name="Ooober Driver" type="f1a62948:ProjectNode" />
+++                <item name="app" type="2d1252cf:ModuleNode" />
+++              </path>
+++              <path>
+++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+++                <item name="Ooober Driver" type="f1a62948:ProjectNode" />
+++                <item name="app" type="2d1252cf:ModuleNode" />
+++                <item name="Tasks" type="e4a08cd1:TasksNode" />
+++              </path>
+++              <path>
+++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+++                <item name="Ooober Driver" type="f1a62948:ProjectNode" />
+++                <item name="app" type="2d1252cf:ModuleNode" />
+++                <item name="Tasks" type="e4a08cd1:TasksNode" />
+++                <item name="other" type="c8890929:TasksNode$1" />
+++              </path>
+++            </expand>
+++            <select />
+++          </tree_state>
+++        </projects_view>
+++      </state>
+++    </system>
++   </component>
++   <component name="FileTemplateManagerImpl">
++     <option name="RECENT_TEMPLATES">
++@@ -44,15 +100,17 @@
++     <option name="hideEmptyMiddlePackages" value="true" />
++     <option name="showLibraryContents" value="true" />
++   </component>
++-  <component name="PropertiesComponent"><![CDATA[{
++-  "keyToString": {
++-    "RunOnceActivity.OpenProjectViewOnStart": "true",
++-    "RunOnceActivity.ShowReadmeOnStart": "true",
++-    "RunOnceActivity.cidr.known.project.marker": "true",
++-    "cidr.known.project.marker": "true",
++-    "last_opened_file_path": "C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver"
+++  <component name="PropertiesComponent">{
+++  &quot;keyToString&quot;: {
+++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+++    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+++    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+++    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver&quot;,
+++    &quot;settings.editor.selected.configurable&quot;: &quot;experimental&quot;
++   }
++-}]]></component>
+++}</component>
++   <component name="RecentsManager">
++     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
++       <recent name="com.ooober.driver.activities" />
++@@ -62,7 +120,12 @@
++       <recent name="com.ooober.driver" />
++     </key>
++   </component>
++-  <component name="RunManager">
+++  <component name="RunAnythingCache">
+++    <option name="myCommands">
+++      <command value="gradle --rerun-tasks" />
+++    </option>
+++  </component>
+++  <component name="RunManager" selected="Android App.app">
++     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
++       <module name="Ooober_Driver.app.main" />
++       <option name="DEPLOY" value="true" />
++@@ -119,6 +182,30 @@
++       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
++       <method v="2" />
++     </configuration>
+++    <configuration name="OooberDriver" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+++      <ExternalSystemSettings>
+++        <option name="executionName" />
+++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+++        <option name="externalSystemIdString" value="GRADLE" />
+++        <option name="scriptParameters" value="--rerun-tasks" />
+++        <option name="taskDescriptions">
+++          <list />
+++        </option>
+++        <option name="taskNames">
+++          <list />
+++        </option>
+++        <option name="vmOptions" />
+++      </ExternalSystemSettings>
+++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+++      <DebugAllEnabled>false</DebugAllEnabled>
+++      <method v="2" />
+++    </configuration>
+++    <recent_temporary>
+++      <list>
+++        <item itemvalue="Gradle.OooberDriver" />
+++      </list>
+++    </recent_temporary>
++   </component>
++   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++   <component name="TaskManager">
++@@ -136,7 +223,14 @@
++       <option name="project" value="LOCAL" />
++       <updated>1681447198037</updated>
++     </task>
++-    <option name="localTasksCounter" value="2" />
+++    <task id="LOCAL-00002" summary=":c">
+++      <created>1681450851687</created>
+++      <option name="number" value="00002" />
+++      <option name="presentableId" value="LOCAL-00002" />
+++      <option name="project" value="LOCAL" />
+++      <updated>1681450851687</updated>
+++    </task>
+++    <option name="localTasksCounter" value="3" />
++     <servers />
++   </component>
++   <component name="Vcs.Log.Tabs.Properties">
++@@ -151,7 +245,9 @@
++     </option>
++   </component>
++   <component name="VcsManagerConfiguration">
+++    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
++     <MESSAGE value="?" />
++-    <option name="LAST_COMMIT_MESSAGE" value="?" />
+++    <MESSAGE value=":c" />
+++    <option name="LAST_COMMIT_MESSAGE" value=":c" />
++   </component>
++ </project>
++\ No newline at end of file
++Index: OooberDriver/app/src/main/res/drawable/ic_person_whitr.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/res/drawable/ic_person_whitr.xml b/OooberDriver/app/src/main/res/drawable/ic_person_whitr.xml
++new file mode 100644
++--- /dev/null	(date 1681451617070)
+++++ b/OooberDriver/app/src/main/res/drawable/ic_person_whitr.xml	(date 1681451617070)
++@@ -0,0 +1,5 @@
+++<vector android:height="300dp" android:tint="#FFFFFF"
+++    android:viewportHeight="24" android:viewportWidth="24"
+++    android:width="300dp" xmlns:android="http://schemas.android.com/apk/res/android">
+++    <path android:fillColor="@android:color/white" android:pathData="M12,12c2.21,0 4,-1.79 4,-4s-1.79,-4 -4,-4 -4,1.79 -4,4 1.79,4 4,4zM12,14c-2.67,0 -8,1.34 -8,4v2h16v-2c0,-2.66 -5.33,-4 -8,-4z"/>
+++</vector>
++Index: OooberDriver/.idea/misc.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/.idea/misc.xml b/OooberDriver/.idea/misc.xml
++new file mode 100644
++--- /dev/null	(date 1681449087601)
+++++ b/OooberDriver/.idea/misc.xml	(date 1681449087601)
++@@ -0,0 +1,10 @@
+++<?xml version="1.0" encoding="UTF-8"?>
+++<project version="4">
+++  <component name="ExternalStorageConfigurationManager" enabled="true" />
+++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+++    <output url="file://$PROJECT_DIR$/build/classes" />
+++  </component>
+++  <component name="ProjectType">
+++    <option name="id" value="Android" />
+++  </component>
+++</project>
++\ No newline at end of file
++Index: OooberDriver/.idea/.gitignore
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/.idea/.gitignore b/OooberDriver/.idea/.gitignore
++new file mode 100644
++--- /dev/null	(date 1681449087601)
+++++ b/OooberDriver/.idea/.gitignore	(date 1681449087601)
++@@ -0,0 +1,3 @@
+++# Default ignored files
+++/shelf/
+++/workspace.xml
++Index: OooberDriver/.idea/.name
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/.idea/.name b/OooberDriver/.idea/.name
++new file mode 100644
++--- /dev/null	(date 1681449087601)
+++++ b/OooberDriver/.idea/.name	(date 1681449087601)
++@@ -0,0 +1,1 @@
+++Ooober Driver
++\ No newline at end of file
++Index: OooberDriver/.idea/gradle.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/.idea/gradle.xml b/OooberDriver/.idea/gradle.xml
++new file mode 100644
++--- /dev/null	(date 1681449087601)
+++++ b/OooberDriver/.idea/gradle.xml	(date 1681449087601)
++@@ -0,0 +1,20 @@
+++<?xml version="1.0" encoding="UTF-8"?>
+++<project version="4">
+++  <component name="GradleMigrationSettings" migrationVersion="1" />
+++  <component name="GradleSettings">
+++    <option name="linkedExternalProjectsSettings">
+++      <GradleProjectSettings>
+++        <option name="testRunner" value="GRADLE" />
+++        <option name="distributionType" value="DEFAULT_WRAPPED" />
+++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+++        <option name="gradleHome" value="$PROJECT_DIR$/../../../../Program Files/gradle-7.5.1" />
+++        <option name="modules">
+++          <set>
+++            <option value="$PROJECT_DIR$" />
+++            <option value="$PROJECT_DIR$/app" />
+++          </set>
+++        </option>
+++      </GradleProjectSettings>
+++    </option>
+++  </component>
+++</project>
++\ No newline at end of file
++Index: .idea/Ooober.iml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/Ooober.iml b/.idea/Ooober.iml
++--- a/.idea/Ooober.iml	(revision 0d510f18f7db18893a335225147c6fdfe7eef72e)
+++++ b/.idea/Ooober.iml	(date 1681451315637)
++@@ -1,9 +1,14 @@
++ <?xml version="1.0" encoding="UTF-8"?>
++ <module type="JAVA_MODULE" version="4">
+++  <component name="FacetManager">
+++    <facet type="android" name="Android">
+++      <configuration />
+++    </facet>
+++  </component>
++   <component name="NewModuleRootManager" inherit-compiler-output="true">
++     <exclude-output />
++     <content url="file://$MODULE_DIR$" />
++-    <orderEntry type="inheritedJdk" />
+++    <orderEntry type="jdk" jdkName="Android API 33, extension level 4 Platform" jdkType="Android SDK" />
++     <orderEntry type="sourceFolder" forTests="false" />
++   </component>
++ </module>
++\ No newline at end of file
+Index: OooberUser/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberUser/.idea/vcs.xml b/OooberUser/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1681452102309)
++++ b/OooberUser/.idea/vcs.xml	(date 1681452102309)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: OooberDriver/.idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/.idea/compiler.xml b/OooberDriver/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1681451350957)
++++ b/OooberDriver/.idea/compiler.xml	(date 1681451350957)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="11" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1681489219693)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01__Changes_.xml	(date 1681489219693)
+@@ -0,0 +1,14 @@
++<changelist name="Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]" date="1681452076373" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 14/04/2023 0:01 [Changes]" />
++  <binary>
++    <option name="BEFORE_PATH" />
++    <option name="AFTER_PATH" value="OooberDriver/app/src/main/res/drawable/home.jpg" />
++    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/home.jpg" />
++  </binary>
++  <binary>
++    <option name="BEFORE_PATH" value="OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" />
++    <option name="AFTER_PATH" value="OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" />
++    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/fileHashes.lock" />
++  </binary>
++</changelist>
+\ No newline at end of file
+Index: OooberDriver/app/google-services.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/google-services.json b/OooberDriver/app/google-services.json
+new file mode 100644
+--- /dev/null	(date 1681453377034)
++++ b/OooberDriver/app/google-services.json	(date 1681453377034)
+@@ -0,0 +1,68 @@
++{
++  "project_info": {
++    "project_number": "868484423714",
++    "project_id": "ooober-dsm104",
++    "storage_bucket": "ooober-dsm104.appspot.com"
++  },
++  "client": [
++    {
++      "client_info": {
++        "mobilesdk_app_id": "1:868484423714:android:126d0abf1b580356de6a7b",
++        "android_client_info": {
++          "package_name": "com.ooober.driver"
++        }
++      },
++      "oauth_client": [
++        {
++          "client_id": "868484423714-90p22j54juh58og2sk6ur4lrgiftrjeq.apps.googleusercontent.com",
++          "client_type": 3
++        }
++      ],
++      "api_key": [
++        {
++          "current_key": "AIzaSyC9ukSdLl99KH9xasxmzNRW0Y78_YcAHZk"
++        }
++      ],
++      "services": {
++        "appinvite_service": {
++          "other_platform_oauth_client": [
++            {
++              "client_id": "868484423714-90p22j54juh58og2sk6ur4lrgiftrjeq.apps.googleusercontent.com",
++              "client_type": 3
++            }
++          ]
++        }
++      }
++    },
++    {
++      "client_info": {
++        "mobilesdk_app_id": "1:868484423714:android:e0892e4f6e5728d9de6a7b",
++        "android_client_info": {
++          "package_name": "com.ooober.user"
++        }
++      },
++      "oauth_client": [
++        {
++          "client_id": "868484423714-90p22j54juh58og2sk6ur4lrgiftrjeq.apps.googleusercontent.com",
++          "client_type": 3
++        }
++      ],
++      "api_key": [
++        {
++          "current_key": "AIzaSyC9ukSdLl99KH9xasxmzNRW0Y78_YcAHZk"
++        }
++      ],
++      "services": {
++        "appinvite_service": {
++          "other_platform_oauth_client": [
++            {
++              "client_id": "868484423714-90p22j54juh58og2sk6ur4lrgiftrjeq.apps.googleusercontent.com",
++              "client_type": 3
++            }
++          ]
++        }
++      }
++    }
++  ],
++  "configuration_version": "1"
++}
+\ No newline at end of file

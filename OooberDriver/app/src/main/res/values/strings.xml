@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Ooober Driver</string>
+    <string name="app_name">OooberDriver</string>
+    <string name="google_maps_key">AIzaSyCFLPag2eAgdL-gcQsfRW1w9oZ-Bck5FzQ</string>
 </resources>
