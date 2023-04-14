@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">868484423714-90p22j54juh58og2sk6ur4lrgiftrjeq.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">868484423714</string>
+    <string name="google_api_key" translatable="false">AIzaSyC9ukSdLl99KH9xasxmzNRW0Y78_YcAHZk</string>
+    <string name="google_app_id" translatable="false">1:868484423714:android:126d0abf1b580356de6a7b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC9ukSdLl99KH9xasxmzNRW0Y78_YcAHZk</string>
+    <string name="google_storage_bucket" translatable="false">ooober-dsm104.appspot.com</string>
+    <string name="project_id" translatable="false">ooober-dsm104</string>
+</resources>
