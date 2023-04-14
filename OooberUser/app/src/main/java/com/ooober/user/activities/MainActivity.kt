@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         )
 
-        binding.btnRegiser.setOnClickListener { goToRegister() }
+        binding.goSignUp.setOnClickListener { goToRegister() }
         binding.btnSingIn.setOnClickListener { login() }
     }
 
