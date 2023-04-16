@@ -35,13 +35,15 @@
             android:exported="false" />
         <activity
             android:name=".activities.MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk" />
-
     </application>
 
 </manifest>

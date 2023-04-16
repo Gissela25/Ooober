@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">OooberUser</string>
     <string name="google_maps_key">AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk</string>
+
+    <string name="txt_lang">Idioma</string>
+    <string name="lang_es">Español</string>
+    <string name="lang_en">Ingles</string>
 </resources>
