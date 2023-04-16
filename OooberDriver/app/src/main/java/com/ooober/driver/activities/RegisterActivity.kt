@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
-import com.google.android.gms.common.logging.Logger
 import com.ooober.driver.providers.DriverProvider
 import com.ooober.driver.databinding.ActivityRegisterBinding
 import com.ooober.driver.models.Driver
@@ -25,7 +24,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding.root)
         window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
-        binding.btnLogin.setOnClickListener { goToLogin() }
+        binding.GosignIn.setOnClickListener { goToLogin() }
         binding.btnSignUp.setOnClickListener { register() }
     }
 
@@ -120,7 +119,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun goToLogin() {
-        val i = Intent(this, MainActivity::class.java)
+        val i = Intent(this, SignInActivity::class.java)
         startActivity(i)
     }
 }

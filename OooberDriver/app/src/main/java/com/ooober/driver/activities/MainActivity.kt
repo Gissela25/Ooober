@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
-        binding.btnRegiser.setOnClickListener { goToRegister() }
+        binding.goSignUp.setOnClickListener { goToRegister() }
         binding.btnSingIn.setOnClickListener { login() }
     }
 
