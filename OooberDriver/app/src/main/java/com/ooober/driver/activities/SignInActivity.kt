@@ -37,6 +37,7 @@ class SignInActivity : AppCompatActivity() {
 
         binding.btnESignIn.setOnClickListener { goToLogin() }
         binding.GosignIn.setOnClickListener { goToRegister() }
+        binding.btnLanguage.setOnClickListener { goToSetLanguage() }
 
         val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -47,6 +48,7 @@ class SignInActivity : AppCompatActivity() {
             val intent = client.signInIntent
             startActivityForResult(intent, 10001)
         }
+
     }
 
     private fun goToLogin() {
@@ -56,6 +58,11 @@ class SignInActivity : AppCompatActivity() {
 
     private fun goToRegister() {
         val i = Intent(this, RegisterActivity::class.java)
+        startActivity(i)
+    }
+
+    private fun goToSetLanguage() {
+        val i = Intent(this, SettingsActivity::class.java)
         startActivity(i)
     }
 

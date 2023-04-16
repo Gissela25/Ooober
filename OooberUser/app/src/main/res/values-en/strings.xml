@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="txt_lang">Language</string>
+    <string name="app_name">OooberUser</string>
+    <string name="google_maps_key">AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk</string>
     <string name="lang_es">Spanish</string>
     <string name="lang_en">English</string>
+    <string name="txt_lang">Language</string>
 </resources>
