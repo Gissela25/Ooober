@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OooberDriver</string>
+
+    <string name="txt_lang">Language</string>
+    <string name="lang_es">Spanish</string>
+    <string name="lang_en">English</string>
+
+    <string name="btn_homeCreateAcc">Create Account</string>
+    <string name="btn_homeLogIn">Sign In</string>
+</resources>

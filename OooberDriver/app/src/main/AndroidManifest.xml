@@ -37,6 +37,10 @@
             android:name=".activities.MainActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false" >
+        </activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

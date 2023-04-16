@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">OooberDriver</string>
     <string name="google_maps_key">AIzaSyCFLPag2eAgdL-gcQsfRW1w9oZ-Bck5FzQ</string>
+
+    <string name="txt_lang">Idioma</string>
+    <string name="lang_es">Español</string>
+    <string name="lang_en">Ingles</string>
+
+    <string name="btn_homeCreateAcc">Crear Cuenta</string>
+    <string name="btn_homeLogIn">Iniciar Sesion</string>
 </resources>
