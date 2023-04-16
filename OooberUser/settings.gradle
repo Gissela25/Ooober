@@ -10,6 +10,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        //Ooober repository (EasyLocation)
+        maven { url 'https://jitpack.io' }
     }
 }
 rootProject.name = "OooberUser"
