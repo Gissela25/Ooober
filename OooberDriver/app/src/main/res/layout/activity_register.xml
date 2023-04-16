@@ -10,16 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/home" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.7"
             android:background="@color/black" />
     </FrameLayout>
 
@@ -30,54 +23,19 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0.3"
-            android:background="@drawable/rounded_layout"
-
-            />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_person_whitr" />
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="REGISTRO"
+                android:text="Crear una cuenta"
                 android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textColor="@color/yellow"
+                android:textSize="25sp"
                 android:textStyle="bold" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                app:startIconDrawable="@drawable/ic_email_white"
-                app:startIconTint="@color/white">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tvRemail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Correo electronico"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/white"
-                    android:textSize="13sp"
-
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -120,6 +78,28 @@
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                app:startIconDrawable="@drawable/ic_email_white"
+                app:startIconTint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvRemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo electronico"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -186,50 +166,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/rounded_button"
-                android:text="REGISTRATE"
-                app:backgroundTint="@color/white" />
+                android:text="Crear Cuenta" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
                 android:orientation="horizontal">
-
-                <View
-                    android:layout_width="70dp"
-                    android:layout_height="1dp"
-                    android:background="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:text="¿Ya tienes cuenta?"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginTop="150dp"
+                    android:text="¿Tienes una cuenta?"
                     android:textColor="@color/white" />
 
-                <View
-                    android:layout_width="70dp"
-                    android:layout_height="1dp"
-                    android:background="@color/white" />
+                <TextView
+                    android:id="@+id/GosignIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="150dp"
+                    android:clickable="true"
+                    android:text="Iniciar Sesión"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/rounded_button"
-                android:text="INICIAR SESION" />
-
         </LinearLayout>
+
 
     </FrameLayout>
 
