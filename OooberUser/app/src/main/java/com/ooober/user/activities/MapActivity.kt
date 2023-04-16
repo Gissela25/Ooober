@@ -34,17 +34,19 @@ import com.google.android.libraries.places.api.model.RectangularBounds
 import com.google.android.libraries.places.api.net.PlacesClient
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
+import com.google.firebase.firestore.GeoPoint
 import com.google.maps.android.SphericalUtil
 import com.ooober.user.databinding.ActivityMapBinding
 import com.ooober.user.providers.AuthProvider
 import com.ooober.user.providers.GeoProvider
+import org.imperiumlabs.geofirestore.callbacks.GeoQueryEventListener
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
     private lateinit var binding: ActivityMapBinding
     private var googleMap: GoogleMap? = null
     private var easyWayLocation: EasyWayLocation? = null
-    private var myLocationlatLog: LatLng? = null
+    private var myLocationLatLng: LatLng? = null
     private val geoProvider = GeoProvider()
     private val authProvider = AuthProvider()
 
@@ -58,6 +60,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     private var destinationLatLng: LatLng? = null
 
     private var isLocationEnabled = false
+
+    private val driverMarkers = ArrayList<Marker>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -115,6 +119,73 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             }
         }
 
+    private fun getNearbyDrivers() {
+
+        if(myLocationLatLng != null) return
+
+        geoProvider.getNearbyDrivers(myLocationLatLng!!, 10.0).addGeoQueryEventListener(object :
+            GeoQueryEventListener{
+            override fun onKeyEntered(documentID: String, location: GeoPoint) {
+
+                Log.d("FIRESTORE","Document id: $documentID" )
+                Log.d("FIRESTORE","location: $location" )
+
+                for(marker in driverMarkers){
+                    if(marker.tag != null){
+                        if(marker.tag == documentID){
+                            return
+                        }
+                    }
+                }
+                //Creamos un nuevo marcador para el conductor conectado
+                val driverLatLng = LatLng(location.latitude, location.longitude)
+                val marker = googleMap?.addMarker(
+                    MarkerOptions().position(driverLatLng).title("Conductor disponible").icon(
+                        BitmapDescriptorFactory.fromResource(
+                            R.drawable.uber_car
+                        )
+                    )
+                )
+                marker?.tag = documentID
+                driverMarkers.add(marker!!)
+
+            }
+
+            override fun onKeyExited(documentID: String) {
+                for (marker in driverMarkers){
+                    if(marker.tag != null){
+                        if(marker.tag == documentID){
+                            marker.remove()
+                            driverMarkers.remove(marker)
+                            return
+                        }
+                    }
+                }
+            }
+
+            override fun onKeyMoved(documentID: String, location: GeoPoint) {
+
+                for(marker in driverMarkers){
+                    if(marker.tag!= null){
+                        if(marker.tag == documentID){
+                            marker.position = LatLng(location.latitude, location.longitude)
+                        }
+                    }
+                }
+            }
+
+            override fun onGeoQueryError(exception: Exception) {
+
+            }
+
+            override fun onGeoQueryReady() {
+
+            }
+
+
+        })
+    }
+
     //Somthing use to happend
     private fun onCameraMove() {
         googleMap?.setOnCameraMoveListener {
@@ -148,8 +219,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     }
 
     private fun limitSearch() {
-        val northSide = SphericalUtil.computeOffset(myLocationlatLog, 5000.0, 0.0)
-        val southSide = SphericalUtil.computeOffset(myLocationlatLog, 5000.0, 180.0)
+        val northSide = SphericalUtil.computeOffset(myLocationLatLng, 5000.0, 0.0)
+        val southSide = SphericalUtil.computeOffset(myLocationLatLng, 5000.0, 180.0)
 
         autocompleteOrigin?.setLocationBias(RectangularBounds.newInstance(southSide, northSide))
         autocompleteDestination?.setLocationBias(
@@ -259,18 +330,20 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
     override fun currentLocation(location: Location) {
         //Lat y log de la posicion
-        myLocationlatLog = LatLng(location.latitude, location.longitude)
+        myLocationLatLng = LatLng(location.latitude, location.longitude)
 
         if (!isLocationEnabled) {
+            isLocationEnabled = true
             googleMap?.moveCamera(
                 CameraUpdateFactory.newCameraPosition(
-                    CameraPosition.builder().target(myLocationlatLog!!).zoom(15f).build()
+                    CameraPosition.builder().target(myLocationLatLng!!).zoom(15f).build()
                 )
             )
-            isLocationEnabled = true
+            getNearbyDrivers()
             limitSearch()
         }
     }
+
 
     override fun locationCancelled() {
 
