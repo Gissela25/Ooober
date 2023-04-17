@@ -48,3 +48,11 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 > [Enlace de Figma con los Mock Ups Ooober Drive](https://www.figma.com/file/d5modQM7hS3zCsyasHf4Ph/Untitled?node-id=3%3A28&t=aO9oDKsQCt5endiM-1)
 
 > [Documento Primer Avance](https://drive.google.com/file/d/1E_lgPc7cNiLXpOvKuuJ0yXaOEGhIrH6T/view?usp=sharing)
+
+>[Manual usuario OOOBER](https://drive.google.com/file/d/1yFWHS1qFXyAM54rh2ih2R_E1kyjCM6Iw/view?usp=sharing)
+
+>[Manual tecnico OOOBER](https://drive.google.com/file/d/1yFWHS1qFXyAM54rh2ih2R_E1kyjCM6Iw/view?usp=sharing)
+
+>[Manual Usuario OOOBER DRIVER](https://drive.google.com/file/d/1bNuFBVpelHJIGzJxf585ZBaLNqFK7f_X/view?usp=sharing)
+
+>[Manual tecnic OOOBER DRIVER](https://drive.google.com/file/d/1r5nKxNLOI6WEJImGriG0Xy0GGu_iWRaN/view?usp=sharing)
