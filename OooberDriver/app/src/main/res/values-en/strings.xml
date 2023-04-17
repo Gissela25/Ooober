@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">OooberDriver</string>
 
-    <string name="txt_lang">Language</string>
+    <string name="txt_lang">App language</string>
     <string name="lang_es">Spanish</string>
     <string name="lang_en">English</string>
 
@@ -26,4 +26,5 @@
     <string name="txt_LogInwithgoogle">Log In With Google</string>
     <string name="txt_LogInwithfacebook">Log In With  Facebook</string>
     <string name="txt_FirstTime">First Time in Ooober?</string>
+    <string name="txt_setLanguage">Save</string>
 </resources>

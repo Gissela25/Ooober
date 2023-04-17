@@ -1,16 +1,19 @@
 package com.ooober.driver.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import com.ooober.driver.R
 import android.widget.Spinner
 import java.util.*
 
 class SettingsActivity : AppCompatActivity() {
+    private  lateinit  var btnSettings : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
@@ -24,6 +27,11 @@ class SettingsActivity : AppCompatActivity() {
         if(currentLocale.contains("en"))
             op = 1
 
+        btnSettings = findViewById(R.id.btnESignIn)
+        btnSettings.setOnClickListener{
+            goToHome()
+        }
+        //get language list
         //config options for the language select spinner
         val languageSelector: Spinner = findViewById(R.id.spin_langSelect)
         val options = arrayOf(resources.getString(R.string.lang_es), resources.getString(R.string.lang_en))
@@ -58,5 +66,10 @@ class SettingsActivity : AppCompatActivity() {
                 // Do nothing
             }
         }
+    }
+
+    private fun goToHome() {
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
     }
 }

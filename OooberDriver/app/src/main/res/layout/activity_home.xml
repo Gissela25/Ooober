@@ -23,7 +23,7 @@
             android:id="@+id/btnCaccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Crear Cuenta"
+            android:text="@string/btn_homeCreateAcc"
             android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="180dp"

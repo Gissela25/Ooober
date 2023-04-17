@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">OooberDriver</string>
-    <string name="google_maps_key">AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk</string>
+    <string name="google_maps_key" translatable="false">AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk</string>
 
-    <string name="txt_lang">Idioma</string>
+    <string name="txt_lang">Idioma de la aplicación</string>
     <string name="lang_es">Español</string>
     <string name="lang_en">Ingles</string>
 
@@ -26,6 +26,7 @@
     <string name="txt_LogInwithgoogle">Iniciar Sesion Con Google</string>
     <string name="txt_LogInwithfacebook">Iniciar Sesion Con Facebook</string>
     <string name="txt_FirstTime">¿Es la primera vez que visitas Ooober?</string>
+    <string name="txt_setLanguage">Guardar</string>
 
 
 </resources>
