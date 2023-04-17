@@ -8,4 +8,22 @@
 
     <string name="btn_homeCreateAcc">Create Account</string>
     <string name="btn_homeLogIn">Sign In</string>
+
+    <string name="txt_hi">Hi again </string>
+    <string name="hint_mail">Mail </string>
+    <string name="hint_password">Password</string>
+    <string name="txt_noaccount">Do not have an account?</string>
+    <string name="txt_connect">CONNECT</string>
+    <string name="txt_Dconnect">DISCONNECT</string>
+    <string name="txt_createacc">Create an Account</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_Lname">Last Name</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_confirmpassword">Confirm Password</string>
+    <string name="txt_Doyouhaveaccount">¿Do You Have An Account?</string>
+    <string name="txt_LogIn">Log in</string>
+    <string name="txt_LogInwithemail">Log In With Email</string>
+    <string name="txt_LogInwithgoogle">Log In With Google</string>
+    <string name="txt_LogInwithfacebook">Log In With  Facebook</string>
+    <string name="txt_FirstTime">First Time in Ooober?</string>
 </resources>

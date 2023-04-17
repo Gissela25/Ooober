@@ -37,7 +37,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="¡Hola de nuevo!"
+                android:text="@string/txt_hi"
                 android:textAlignment="center"
                 android:textColor="@color/yellow"
                 android:textSize="28sp"
@@ -57,7 +57,7 @@
                     android:id="@+id/tvEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Correo electronico"
+                    android:hint="@string/hint_mail"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/white"
                     android:textSize="13sp"
@@ -78,7 +78,7 @@
                     android:id="@+id/tvclave"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Contraseña"
+                    android:hint="@string/hint_password"
                     android:inputType="textPassword"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
@@ -89,7 +89,7 @@
                 android:id="@+id/btnSingIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Iniciar Sesión"
+                android:text="@string/btn_homeLogIn"
                 android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="50dp"
@@ -104,7 +104,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿No tienes cuenta?"
+                    android:text="@string/txt_noaccount"
                     android:textColor="@color/white"
                     android:layout_marginTop="200dp"
                     android:layout_marginLeft="42dp"/>
@@ -113,7 +113,7 @@
                     android:id="@+id/goSignUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Crear una cuenta"
+                    android:text="@string/btn_homeCreateAcc"
                     android:textColor="@color/yellow"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="200dp"

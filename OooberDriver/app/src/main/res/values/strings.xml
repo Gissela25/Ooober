@@ -8,4 +8,24 @@
 
     <string name="btn_homeCreateAcc">Crear Cuenta</string>
     <string name="btn_homeLogIn">Iniciar Sesion</string>
+
+    <string name="txt_hi">Hola de nuevo </string>
+    <string name="hint_mail">Correo Electronico </string>
+    <string name="hint_password">Contraseña</string>
+    <string name="txt_noaccount">¿No tienes cuenta?</string>
+    <string name="txt_connect">CONECTARSE</string>
+    <string name="txt_Dconnect">DESCONECTARSE</string>
+    <string name="txt_createacc">Crear una cuenta</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_Lname">Apellido</string>
+    <string name="hint_phone">Telefono</string>
+    <string name="hint_confirmpassword">Confirmar Contraseña</string>
+    <string name="txt_Doyouhaveaccount">¿Tienes Cuenta?</string>
+    <string name="txt_LogIn">Iniciar Sesion</string>
+    <string name="txt_LogInwithemail">Iniciar Sesion Con Correo</string>
+    <string name="txt_LogInwithgoogle">Iniciar Sesion Con Google</string>
+    <string name="txt_LogInwithfacebook">Iniciar Sesion Con Facebook</string>
+    <string name="txt_FirstTime">¿Es la primera vez que visitas Ooober?</string>
+
+
 </resources>
