@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
+import com.ooober.user.R
 import com.ooober.user.databinding.ActivityMainBinding
 import com.ooober.user.providers.AuthProvider
 import kotlin.math.log
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                     goToMap()
                 }
                 else{
-                    Toast.makeText(this@MainActivity, "Error al iniciar sesion", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, R.string.txt_SessionFailed, Toast.LENGTH_SHORT).show()
                     Log.d("FIREBASE", "ERRO: ${it.exception.toString()}")
                 }
             }
@@ -54,11 +55,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun isValidForm(email: String, password: String): Boolean{
         if (email.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu correo electronico", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.txt_enterEmail, Toast.LENGTH_SHORT).show()
             return false
         }
         if (password.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu clave", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.txt_enterPwd, Toast.LENGTH_SHORT).show()
             return false
         }
         return true

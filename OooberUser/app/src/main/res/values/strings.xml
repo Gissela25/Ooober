@@ -3,9 +3,48 @@
     <string name="google_maps_key">AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk</string>
 
     <string name="lang_es">Español</string>
-    <string name="lang_en">Ingles</string>
-    <string name="txt_lang">Idioma</string>
+    <string name="lang_en">Ingles de la aplicación</string>
+    <string name="txt_lang">Idioma de la aplicación</string>
     <string name="facebook_app_id" translatable="false">660250129156064</string>
     <string name="fb_login_protocol_scheme" translatable="false">fb660250129156064</string>
     <string name="facebook_client_token" translatable="false">ef1aa393ad397298c8faba6850956b14</string>
+    <string name="txt_saveLanguage">Guardar</string>
+    <string name="txtTitleSetLan">Idiomas</string>
+
+    <string name="txt_SessionFailed">Error al iniciar sesión</string>
+    <string name="btn_homeCreateAcc">Crear Cuenta</string>
+    <string name="btn_homeLogIn">Iniciar Sesion</string>
+    <string name="txt_hi">Hola de nuevo </string>
+    <string name="hint_mail">Correo Electronico </string>
+    <string name="hint_password">Contraseña</string>
+    <string name="txt_noaccount">¿No tienes cuenta?</string>
+    <string name="txt_connect">CONECTARSE</string>
+    <string name="txt_Dconnect">DESCONECTARSE</string>
+    <string name="txt_createacc">Crear una cuenta</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_Lname">Apellido</string>
+    <string name="hint_phone">Telefono</string>
+    <string name="hint_confirmpassword">Confirmar Contraseña</string>
+    <string name="txt_Doyouhaveaccount">¿Tienes Cuenta?</string>
+    <string name="txt_LogIn">Iniciar Sesion</string>
+    <string name="txt_LogInwithemail">Iniciar Sesion Con Correo</string>
+    <string name="txt_LogInwithgoogle">Iniciar Sesion Con Google</string>
+    <string name="txt_LogInwithfacebook">Iniciar Sesion Con Facebook</string>
+    <string name="txt_FirstTime">¿Es la primera vez que visitas Ooober?</string>
+    <string name="txt_Where">¿A donde vamos?</string>
+    <string name="txt_request_trip">SOLICITAR UN VIAJE</string>
+    <string name="txt_enterEmail">Ingresa tu correo</string>
+    <string name="txt_enterPwd">Ingresa tu clave</string>
+    <string name="txt_registered">Registro exitoso</string>
+    <string name="txt_SomethingWasWrong">Ocurrió un error al almacenar datos del usuario</string>
+    <string name="txt_SignUpF">Registro fallido</string>
+    <string name="txt_EntName">Ingresa tu nombre</string>
+    <string name="txt_EntLN">Ingresa tu apellido</string>
+    <string name="txt_EntEmail">Ingresa tu correo</string>
+    <string name="txt_EntYourPhone">Ingresa tu teléfono</string>
+    <string name="txt_EntPwd">Ingresa tu contraseña</string>
+    <string name="txt_EntConfPwd">Confirma tu contraseña</string>
+    <string name="txt_PwdDoNotMatch">Contraseñas no coinciden</string>
+    <string name="txt_SixCharacters">La contraseña debe tener al menos 6 carácteres</string>
+    <string name="txt_AuthFalied">Atenticación fallida</string>
 </resources>

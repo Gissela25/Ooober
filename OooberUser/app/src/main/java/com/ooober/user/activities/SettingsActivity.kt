@@ -1,16 +1,19 @@
 package com.ooober.user.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import com.ooober.user.R
 import android.widget.Spinner
 import java.util.*
 
 class SettingsActivity : AppCompatActivity() {
+    private  lateinit  var btnSettings : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
@@ -18,7 +21,10 @@ class SettingsActivity : AppCompatActivity() {
         var op = 0
         //get current language
         val currentLocale = resources.configuration.locales.toString()
-
+        btnSettings = findViewById(R.id.btnESignIn)
+        btnSettings.setOnClickListener{
+            goToHome()
+        }
         //debug test
         Log.d("current LANG", currentLocale)
 
@@ -59,5 +65,9 @@ class SettingsActivity : AppCompatActivity() {
                 // Do nothing
             }
         }
+    }
+    private fun goToHome() {
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
     }
 }

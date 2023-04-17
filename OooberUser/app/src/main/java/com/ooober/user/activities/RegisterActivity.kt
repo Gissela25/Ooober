@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
 import com.google.android.gms.common.logging.Logger
+import com.ooober.user.R
 import com.ooober.user.databinding.ActivityRegisterBinding
 import com.ooober.user.models.Client
 import com.ooober.user.providers.AuthProvider
@@ -52,17 +53,17 @@ class RegisterActivity : AppCompatActivity() {
                     )
                     clientProvider.create(client).addOnCompleteListener {
                         if(it.isSuccessful){
-                            Toast.makeText(this@RegisterActivity, "Registro Exitoso", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@RegisterActivity, R.string.txt_registered, Toast.LENGTH_SHORT).show()
                             goToMap()
                         }
                         else{
-                            Toast.makeText(this@RegisterActivity, "Ocurrio un error al almacenar los datos del usuario ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@RegisterActivity, "${R.string.txt_SomethingWasWrong} ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
                             Log.d("FIREBASE", "Error: ${it.exception.toString()}")
                         }
                     }
                 }
                 else{
-                    Toast.makeText(this@RegisterActivity, "Registro Fallido ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@RegisterActivity, "${R.string.txt_SignUpF} ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
                     Log.d("FIREBASE", "Error: ${it.exception.toString()}")
                 }
             }
@@ -84,37 +85,37 @@ class RegisterActivity : AppCompatActivity() {
         Cpassword: String
     ): Boolean {
         if (name.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu Nombre", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.txt_EntName, Toast.LENGTH_SHORT).show()
             return false
         }
         if (lastname.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu Apellido", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.txt_EntLN, Toast.LENGTH_SHORT).show()
             return false
         }
         if (email.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu Correo Electronico", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.txt_EntEmail, Toast.LENGTH_SHORT).show()
             return false
         }
         if (phone.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu Telefono", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.txt_EntYourPhone, Toast.LENGTH_SHORT).show()
             return false
         }
         if (password.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu Contraseña", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.txt_EntPwd, Toast.LENGTH_SHORT).show()
             return false
         }
         if (Cpassword.isEmpty()) {
-            Toast.makeText(this, "Ingresa la confirmacion de tu Contraseña", Toast.LENGTH_SHORT)
+            Toast.makeText(this, R.string.txt_EntConfPwd, Toast.LENGTH_SHORT)
                 .show()
             return false
         }
         if (password != Cpassword) {
-            Toast.makeText(this, "Las contraseñas deben coincidir", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.txt_PwdDoNotMatch, Toast.LENGTH_SHORT).show()
         }
         if (password.length < 6) {
             Toast.makeText(
                 this,
-                "La contraseña debe contener al menos seis caracteres",
+                R.string.txt_SixCharacters,
                 Toast.LENGTH_LONG
             ).show()
             return false
@@ -123,7 +124,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun goToLogin() {
-        val i = Intent(this, MainActivity::class.java)
+        val i = Intent(this, SignInActivity::class.java)
         startActivity(i)
     }
 }

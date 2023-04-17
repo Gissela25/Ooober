@@ -106,7 +106,7 @@ class SignInActivity : AppCompatActivity() {
                             } else {
                                 Toast.makeText(
                                     this@SignInActivity,
-                                    "Ocurrio  un error al ingresar",
+                                    R.string.txt_SessionFailed,
                                     Toast.LENGTH_SHORT
                                 ).show()
                                 Log.d("FIREBASE", "Error: ${it.exception.toString()}")
@@ -117,7 +117,7 @@ class SignInActivity : AppCompatActivity() {
                         // En caso de errores se imprimiran los siguintes mensajes
                         Log.w("FACEBOOK", "signInWithCredential:failure", task.exception)
                         Toast.makeText(
-                            baseContext, "Authentication failed.",
+                            baseContext, R.string.txt_AuthFalied,
                             Toast.LENGTH_SHORT
                         ).show()
 

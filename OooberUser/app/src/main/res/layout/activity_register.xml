@@ -49,7 +49,7 @@
                     android:id="@+id/tvname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nombre"
+                    android:hint="@string/hint_name"
                     android:inputType="text"
                     android:textColor="@color/white"
                     android:textSize="13sp"
@@ -70,7 +70,7 @@
                     android:id="@+id/tvlastname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Apellido"
+                    android:hint="@string/hint_Lname"
                     android:inputType="text"
                     android:textColor="@color/white"
                     android:textSize="13sp"
@@ -91,7 +91,7 @@
                     android:id="@+id/tvRemail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Correo electronico"
+                    android:hint="@string/hint_mail"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/white"
                     android:textSize="13sp"
@@ -113,7 +113,7 @@
                     android:id="@+id/tvphone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Telefono"
+                    android:hint="@string/hint_phone"
                     android:inputType="phone"
                     android:textColor="@color/white"
                     android:textSize="13sp"
@@ -134,7 +134,7 @@
                     android:id="@+id/tvpassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Contraseña"
+                    android:hint="@string/hint_password"
                     android:inputType="textPassword"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
@@ -153,7 +153,7 @@
                     android:id="@+id/tvCpassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Confirmar Contraseña"
+                    android:hint="@string/hint_password"
                     android:inputType="textPassword"
                     android:textColor="@color/white"
                     android:textSize="13sp" />
@@ -169,7 +169,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/rounded_button"
-                android:text="Crear Cuenta" />
+                android:text="@string/btn_homeCreateAcc" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -181,7 +181,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="150dp"
-                    android:text="¿Tienes una cuenta?"
+                    android:text="@string/txt_Doyouhaveaccount"
                     android:textColor="@color/white" />
 
                 <TextView
@@ -191,7 +191,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="150dp"
                     android:clickable="true"
-                    android:text="Iniciar Sesión"
+                    android:text="@string/btn_homeLogIn"
                     android:textColor="@color/yellow"
                     android:textStyle="bold" />
 
