@@ -27,6 +27,19 @@
     <string name="txt_LogInwithfacebook">Iniciar Sesion Con Facebook</string>
     <string name="txt_FirstTime">¿Es la primera vez que visitas Ooober?</string>
     <string name="txt_setLanguage">Guardar</string>
-
+    <string name="txt_tLanguage">Seleccionar Lenguaje</string>
+    <string name="m_registerE">Registro Exitoso</string>
+    <string name="m_error">Ocurrio un error al almacenar los datos del usuario</string>
+    <string name="m_registerF">Registro Fallido</string>
+    <string name="m_Iname">Ingresa tu Nombre</string>
+    <string name="m_Ilastname">Ingresa tu Apellido</string>
+    <string name="m_Iemail">Ingresa tu Correo Electronico</string>
+    <string name="m_Iphone">Ingresa tu Telefono</string>
+    <string name="m_Ipassword">Ingresa tu Contraseña</string>
+    <string name="m_Icpassword">Ingresa la confirmacion de tu Contraseña</string>
+    <string name="m_Isamepassword">Las contraseñas deben coincidir</string>
+    <string name="m_Isizepassword">La contraseña debe contener al menos seis caracteres</string>
+    <string name="m_errorSignIn">Error al iniciar sesion</string>
+    <string name="m_errorSignIn2">Ocurrio  un error al ingresar</string>
 
 </resources>

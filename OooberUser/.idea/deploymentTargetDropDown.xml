@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="deploymentTargetDropDown">
-    <targetSelectedWithDropDown>
+    <runningDeviceTargetSelectedWithDropDown>
       <Target>
-        <type value="QUICK_BOOT_TARGET" />
+        <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\Jony Morales\.android\avd\Pixel_4_API_30_2_1.avd" />
+            <value value="C:\Users\gisse\.android\avd\Pixel_4_API_33_D.avd" />
           </Key>
         </deviceKey>
       </Target>
-    </targetSelectedWithDropDown>
-<<<<<<< Updated upstream
-    <timeTargetWasSelectedWithDropDown value="2023-04-16T19:26:06.580151Z" />
-=======
-    <timeTargetWasSelectedWithDropDown value="2023-04-16T18:48:57.480043800Z" />
->>>>>>> Stashed changes
+    </runningDeviceTargetSelectedWithDropDown>
+    <timeTargetWasSelectedWithDropDown value="2023-04-17T02:53:49.486787300Z" />
   </component>
 </project>

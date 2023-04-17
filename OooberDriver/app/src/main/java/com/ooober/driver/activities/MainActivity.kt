@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
+import com.ooober.driver.R
 import com.ooober.driver.databinding.ActivityMainBinding
 import com.ooober.driver.providers.AuthProvider
 
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                     goToMap()
                 }
                 else{
-                    Toast.makeText(this@MainActivity, "Error al iniciar sesion", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity,  R.string.m_errorSignIn, Toast.LENGTH_SHORT).show()
                     Log.d("FIREBASE", "ERRO: ${it.exception.toString()}")
                 }
             }
@@ -49,11 +50,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun isValidForm(email: String, password: String): Boolean{
         if (email.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu correo electronico", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.m_Iemail, Toast.LENGTH_SHORT).show()
             return false
         }
         if (password.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu clave", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.m_Ipassword, Toast.LENGTH_SHORT).show()
             return false
         }
         return true

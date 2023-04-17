@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
+import com.ooober.driver.R
 import com.ooober.driver.providers.DriverProvider
 import com.ooober.driver.databinding.ActivityRegisterBinding
 import com.ooober.driver.models.Driver
@@ -48,17 +49,17 @@ class RegisterActivity : AppCompatActivity() {
                     )
                     clientProvider.create(client).addOnCompleteListener {
                         if(it.isSuccessful){
-                            Toast.makeText(this@RegisterActivity, "Registro Exitoso", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@RegisterActivity, R.string.m_registerE, Toast.LENGTH_SHORT).show()
                             goToMap()
                         }
                         else{
-                            Toast.makeText(this@RegisterActivity, "Ocurrio un error al almacenar los datos del usuario ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@RegisterActivity, "${R.string.m_error} ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
                             Log.d("FIREBASE", "Error: ${it.exception.toString()}")
                         }
                     }
                 }
                 else{
-                    Toast.makeText(this@RegisterActivity, "Registro Fallido ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@RegisterActivity, "${R.string.m_registerF} ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
                     Log.d("FIREBASE", "Error: ${it.exception.toString()}")
                 }
             }
@@ -80,37 +81,37 @@ class RegisterActivity : AppCompatActivity() {
         Cpassword: String
     ): Boolean {
         if (name.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu Nombre", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.m_Iname, Toast.LENGTH_SHORT).show()
             return false
         }
         if (lastname.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu Apellido", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.m_Ilastname, Toast.LENGTH_SHORT).show()
             return false
         }
         if (email.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu Correo Electronico", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.m_Iemail, Toast.LENGTH_SHORT).show()
             return false
         }
         if (phone.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu Telefono", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.m_Iphone, Toast.LENGTH_SHORT).show()
             return false
         }
         if (password.isEmpty()) {
-            Toast.makeText(this, "Ingresa tu Contraseña", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.m_Ipassword, Toast.LENGTH_SHORT).show()
             return false
         }
         if (Cpassword.isEmpty()) {
-            Toast.makeText(this, "Ingresa la confirmacion de tu Contraseña", Toast.LENGTH_SHORT)
+            Toast.makeText(this, R.string.m_Icpassword, Toast.LENGTH_SHORT)
                 .show()
             return false
         }
         if (password != Cpassword) {
-            Toast.makeText(this, "Las contraseñas deben coincidir", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.m_Isamepassword, Toast.LENGTH_SHORT).show()
         }
         if (password.length < 6) {
             Toast.makeText(
                 this,
-                "La contraseña debe contener al menos seis caracteres",
+                R.string.m_Isizepassword,
                 Toast.LENGTH_LONG
             ).show()
             return false

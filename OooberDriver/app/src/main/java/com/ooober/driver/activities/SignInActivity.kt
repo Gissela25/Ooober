@@ -93,7 +93,7 @@ class SignInActivity : AppCompatActivity() {
                                 startActivity(i)
                             }
                             else{
-                                Toast.makeText(this@SignInActivity, "Ocurrio  un error al ingresar", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this@SignInActivity, R.string.m_errorSignIn2, Toast.LENGTH_SHORT).show()
                                 Log.d("FIREBASE", "Error: ${it.exception.toString()}")
                             }
                         }

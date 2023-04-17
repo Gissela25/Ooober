@@ -27,4 +27,19 @@
     <string name="txt_LogInwithfacebook">Log In With  Facebook</string>
     <string name="txt_FirstTime">First Time in Ooober?</string>
     <string name="txt_setLanguage">Save</string>
+    <string name="txt_tLanguage">Select a language</string>
+    <string name="m_registerE">Successful registration</string>
+    <string name="m_error">An error occurred while storing user data</string>
+    <string name="m_registerF">Sign up failed</string>
+    <string name="m_Iname">Enter your Name</string>
+    <string name="m_Ilastname">Enter your Last Name</string>
+    <string name="m_Iemail">Enter your Email</string>
+    <string name="m_Iphone">Enter your phone</string>
+    <string name="m_Ipassword">Enter your Password</string>
+    <string name="m_Icpassword">Enter the confirmation of your Password</string>
+    <string name="m_Isamepassword">Passwords must match</string>
+    <string name="m_Isizepassword">Password must contain at least six characters</string>
+    <string name="m_errorSignIn">Failed to login</string>
+    <string name="m_errorSignIn2">An error occurred while entering</string>
+
 </resources>

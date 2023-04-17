@@ -23,34 +23,36 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Idiomas"
+                android:layout_marginTop="50dp"
+                android:text="@string/txt_tLanguage"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_marginTop="50dp"/>
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/spin_langSelect"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp" />
+                android:layout_marginTop="200dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btnESignIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_setLanguage"
-                android:textColor="@color/white"
-                android:layout_marginRight="30dp"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="180dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
                 android:background="@drawable/border_button"
-                android:drawableLeft="@drawable/ic_email_white"
                 android:paddingLeft="10dp"
-                android:textAllCaps="false"/>
+                android:text="@string/txt_setLanguage"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
 
         </LinearLayout>
