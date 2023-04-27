@@ -1,6 +1,7 @@
 package com.ooober.user.activities
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.graphics.Bitmap
@@ -14,19 +15,19 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
-import com.ooober.user.R
 import com.example.easywaylocation.EasyWayLocation
 import com.example.easywaylocation.Listener
 import com.google.android.gms.common.api.Status
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.Priority
 import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
 import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
@@ -36,8 +37,10 @@ import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
 import com.google.firebase.firestore.GeoPoint
 import com.google.maps.android.SphericalUtil
+import com.ooober.user.R
 import com.ooober.user.databinding.ActivityMapBinding
 import com.ooober.user.providers.AuthProvider
+import com.ooober.user.providers.ClientProvider
 import com.ooober.user.providers.GeoProvider
 import org.imperiumlabs.geofirestore.callbacks.GeoQueryEventListener
 
@@ -49,8 +52,9 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     private var myLocationLatLng: LatLng? = null
     private val geoProvider = GeoProvider()
     private val authProvider = AuthProvider()
+    private val clientProvider = ClientProvider()
 
-    //GooglePlaces
+    // GOOGLE PLACES
     private var places: PlacesClient? = null
     private var autocompleteOrigin: AutocompleteSupportFragment? = null
     private var autocompleteDestination: AutocompleteSupportFragment? = null
@@ -62,101 +66,101 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     private var isLocationEnabled = false
 
     private val driverMarkers = ArrayList<Marker>()
+    //private val driversLocation = ArrayList<DriverLocation>()
+    //private val modalMenu = ModalBottomSheetMenu()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMapBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        )
+        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+        mapFragment.getMapAsync(this)
 
-        //To get specific location
         val locationRequest = LocationRequest.create().apply {
             interval = 0
             fastestInterval = 0
             priority = Priority.PRIORITY_HIGH_ACCURACY
             smallestDisplacement = 1f
-
         }
-        //Instance to get location
+
         easyWayLocation = EasyWayLocation(this, locationRequest, false, false, this)
-        locationPermissions.launch(
-            arrayOf(
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_COARSE_LOCATION
-            )
-        )
+
+        locationPermissions.launch(arrayOf(
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION
+        ))
 
         startGooglePlaces()
 
-        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
-        mapFragment.getMapAsync(this)
 
+
+        //binding.btnRequestTrip.setOnClickListener { goToTripInfo() }
+        //binding.imageViewMenu.setOnClickListener { showModalMenu() }
     }
 
-    val locationPermissions =
-        registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permission ->
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                when {
-                    permission.getOrDefault(Manifest.permission.ACCESS_FINE_LOCATION, false) -> {
-                        Log.d("LOCALIZACION", "Permiso concdedido")
-                        easyWayLocation?.startLocation()
+    val locationPermissions = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permission ->
 
-                    }
-                    permission.getOrDefault(Manifest.permission.ACCESS_COARSE_LOCATION, false) -> {
-                        Log.d("LOCALIZACION", "Permiso concdedido con limitación")
-                        easyWayLocation?.startLocation()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            when {
+                permission.getOrDefault(Manifest.permission.ACCESS_FINE_LOCATION, false) -> {
+                    Log.d("LOCALIZACION", "Permiso concedido")
+                    easyWayLocation?.startLocation()
 
-                    }
-                    else -> {
-                        Log.d("LOCALIZACION", "Permiso no concedido")
-                    }
+                }
+                permission.getOrDefault(Manifest.permission.ACCESS_COARSE_LOCATION, false) -> {
+                    Log.d("LOCALIZACION", "Permiso concedido con limitacion")
+                    easyWayLocation?.startLocation()
+
+                }
+                else -> {
+                    Log.d("LOCALIZACION", "Permiso no concedido")
                 }
             }
         }
 
+    }
+
     private fun getNearbyDrivers() {
 
-        if(myLocationLatLng != null) return
+        if (myLocationLatLng == null) return
 
-        geoProvider.getNearbyDrivers(myLocationLatLng!!, 10.0).addGeoQueryEventListener(object :
-            GeoQueryEventListener{
+        geoProvider.getNearbyDrivers(myLocationLatLng!!, 30.0).addGeoQueryEventListener(object: GeoQueryEventListener {
+
             override fun onKeyEntered(documentID: String, location: GeoPoint) {
 
-                Log.d("FIRESTORE","Document id: $documentID" )
-                Log.d("FIRESTORE","location: $location" )
+                Log.d("FIRESTORE", "Document id: $documentID")
+                Log.d("FIRESTORE", "location: $location")
 
-                for(marker in driverMarkers){
-                    if(marker.tag != null){
-                        if(marker.tag == documentID){
+                for (marker in driverMarkers) {
+                    if (marker.tag != null) {
+                        if (marker.tag == documentID) {
                             return
                         }
                     }
                 }
-                //Creamos un nuevo marcador para el conductor conectado
+                // CREAMOS UN NUEVO MARCADOR PARA EL CONDUCTOR CONECTADO
                 val driverLatLng = LatLng(location.latitude, location.longitude)
                 val marker = googleMap?.addMarker(
                     MarkerOptions().position(driverLatLng).title("Conductor disponible").icon(
-                        BitmapDescriptorFactory.fromResource(
-                            R.drawable.uber_car
-                        )
+                        BitmapDescriptorFactory.fromResource(R.drawable.uber_car)
                     )
                 )
+
                 marker?.tag = documentID
                 driverMarkers.add(marker!!)
 
             }
 
             override fun onKeyExited(documentID: String) {
-                for (marker in driverMarkers){
-                    if(marker.tag != null){
-                        if(marker.tag == documentID){
+                for (marker in driverMarkers) {
+                    if (marker.tag != null) {
+                        if (marker.tag == documentID) {
                             marker.remove()
                             driverMarkers.remove(marker)
+                            //driversLocation.removeAt(getPositionDriver(documentID))
                             return
                         }
                     }
@@ -165,13 +169,28 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
             override fun onKeyMoved(documentID: String, location: GeoPoint) {
 
-                for(marker in driverMarkers){
-                    if(marker.tag!= null){
-                        if(marker.tag == documentID){
+                for (marker in driverMarkers) {
+
+                    val start = LatLng(location.latitude, location.longitude)
+                    var end: LatLng? = null
+                    //val position = getPositionDriver(marker.tag.toString())
+
+                    if (marker.tag != null) {
+                        if (marker.tag == documentID) {
                             marker.position = LatLng(location.latitude, location.longitude)
+
+                            //if (driversLocation[position].latlng != null) {
+                                //end = driversLocation[position].latlng
+                            //}
+                            //driversLocation[position].latlng = LatLng(location.latitude, location.longitude)
+                            //if (end  != null) {
+                                //CarMoveAnim.carAnim(marker, end, start)
+                            //}
+
                         }
                     }
                 }
+
             }
 
             override fun onGeoQueryError(exception: Exception) {
@@ -182,26 +201,28 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
             }
 
-
         })
     }
 
-    //Somthing use to happend
     private fun onCameraMove() {
-        googleMap?.setOnCameraMoveListener {
+        googleMap?.setOnCameraIdleListener {
             try {
                 val geocoder = Geocoder(this)
                 originLatLng = googleMap?.cameraPosition?.target
-                if(originLatLng != null){
+
+                if (originLatLng != null) {
                     val addressList = geocoder.getFromLocation(originLatLng?.latitude!!, originLatLng?.longitude!!, 1)
-                    if (addressList != null && addressList.isNotEmpty()) {
-                        val city = addressList[0].locality
-                        val country = addressList[0].countryName
-                        val address = addressList[0].getAddressLine(0)
-                        originName = "$address $city"
-                        autocompleteOrigin?.setText("$address $city")
+                    if (addressList != null) {
+                        if (addressList.size > 0) {
+                            val city = addressList[0].locality
+                            val country = addressList[0].countryName
+                            val address = addressList[0].getAddressLine(0)
+                            originName = "$address $city"
+                            autocompleteOrigin?.setText("$address $city")
+                        }
                     }
                 }
+
             } catch (e: Exception) {
                 Log.d("ERROR", "Mensaje error: ${e.message}")
             }
@@ -218,33 +239,28 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         instanceAutocompleteDestination()
     }
 
+
     private fun limitSearch() {
         val northSide = SphericalUtil.computeOffset(myLocationLatLng, 5000.0, 0.0)
         val southSide = SphericalUtil.computeOffset(myLocationLatLng, 5000.0, 180.0)
 
         autocompleteOrigin?.setLocationBias(RectangularBounds.newInstance(southSide, northSide))
-        autocompleteDestination?.setLocationBias(
-            RectangularBounds.newInstance(
-                southSide,
-                northSide
-            )
-        )
+        autocompleteDestination?.setLocationBias(RectangularBounds.newInstance(southSide, northSide))
     }
 
     private fun instanceAutocompleteOrigin() {
-        autocompleteOrigin =
-            supportFragmentManager.findFragmentById(R.id.placesAutocompleteOrigin) as AutocompleteSupportFragment
+        autocompleteOrigin = supportFragmentManager.findFragmentById(R.id.placesAutocompleteOrigin) as AutocompleteSupportFragment
         autocompleteOrigin?.setPlaceFields(
             listOf(
                 Place.Field.ID,
                 Place.Field.NAME,
                 Place.Field.LAT_LNG,
-                Place.Field.ADDRESS
+                Place.Field.ADDRESS,
             )
         )
         autocompleteOrigin?.setHint("Lugar de recogida")
-        autocompleteOrigin?.setCountry("SV")
-        autocompleteOrigin?.setOnPlaceSelectedListener(object : PlaceSelectionListener {
+        autocompleteOrigin?.setCountry("CO")
+        autocompleteOrigin?.setOnPlaceSelectedListener(object: PlaceSelectionListener {
             override fun onPlaceSelected(place: Place) {
                 originName = place.name!!
                 originLatLng = place.latLng
@@ -260,19 +276,18 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     }
 
     private fun instanceAutocompleteDestination() {
-        autocompleteDestination =
-            supportFragmentManager.findFragmentById(R.id.placesAutocompleteDestination) as AutocompleteSupportFragment
+        autocompleteDestination = supportFragmentManager.findFragmentById(R.id.placesAutocompleteDestination) as AutocompleteSupportFragment
         autocompleteDestination?.setPlaceFields(
             listOf(
                 Place.Field.ID,
                 Place.Field.NAME,
                 Place.Field.LAT_LNG,
-                Place.Field.ADDRESS
+                Place.Field.ADDRESS,
             )
         )
         autocompleteDestination?.setHint("Destino")
-        autocompleteDestination?.setCountry("SV")
-        autocompleteDestination?.setOnPlaceSelectedListener(object : PlaceSelectionListener {
+        autocompleteDestination?.setCountry("CO")
+        autocompleteDestination?.setOnPlaceSelectedListener(object: PlaceSelectionListener {
             override fun onPlaceSelected(place: Place) {
                 destinationName = place.name!!
                 destinationLatLng = place.latLng
@@ -288,10 +303,10 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     }
 
     override fun onResume() {
-        super.onResume()
+        super.onResume() // ABRIMOS LA PANTALLA ACTUAL
     }
 
-    override fun onDestroy() {
+    override fun onDestroy() { // CIERRA APLICACION O PASAMOS A OTRA ACTIVITY
         super.onDestroy()
         easyWayLocation?.endUpdates()
     }
@@ -300,7 +315,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         googleMap = map
         googleMap?.uiSettings?.isZoomControlsEnabled = true
         onCameraMove()
-        // easyWayLocation?.startLocation()
+//        easyWayLocation?.startLocation();
+
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -309,41 +325,41 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
+
             return
         }
         googleMap?.isMyLocationEnabled = false
+
         try {
             val success = googleMap?.setMapStyle(
                 MapStyleOptions.loadRawResourceStyle(this, R.raw.style)
             )
             if (!success!!) {
-                Log.d("MAPAS", "No se pudo encontrar el estlo")
+                Log.d("MAPAS", "No se pudo encontrar el estilo")
             }
+
         } catch (e: Resources.NotFoundException) {
-            Log.d("MAPAS", "Error : ${e.toString()} ")
+            Log.d("MAPAS", "Error: ${e.toString()}")
         }
+
     }
 
     override fun locationOn() {
 
     }
 
-    override fun currentLocation(location: Location) {
-        //Lat y log de la posicion
-        myLocationLatLng = LatLng(location.latitude, location.longitude)
+    override fun currentLocation(location: Location) { // ACTUALIZACION DE LA POSICION EN TIEMPO REAL
+        myLocationLatLng = LatLng(location.latitude, location.longitude) // LAT Y LONG DE LA POSICION ACTUAL
 
-        if (!isLocationEnabled) {
+        if (!isLocationEnabled) { // UNA SOLA VEZ
             isLocationEnabled = true
-            googleMap?.moveCamera(
-                CameraUpdateFactory.newCameraPosition(
-                    CameraPosition.builder().target(myLocationLatLng!!).zoom(15f).build()
-                )
-            )
+            googleMap?.moveCamera(CameraUpdateFactory.newCameraPosition(
+                CameraPosition.builder().target(myLocationLatLng!!).zoom(15f).build()
+            ))
             getNearbyDrivers()
             limitSearch()
         }
     }
-
 
     override fun locationCancelled() {
 

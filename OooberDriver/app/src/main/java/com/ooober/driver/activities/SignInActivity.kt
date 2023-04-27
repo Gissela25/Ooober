@@ -72,34 +72,38 @@ class SignInActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode==10001){
+        if (requestCode == 10001) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             val account = task.getResult(ApiException::class.java)
-            val credential = GoogleAuthProvider.getCredential(account.idToken,null)
+            val credential = GoogleAuthProvider.getCredential(account.idToken, null)
             FirebaseAuth.getInstance().signInWithCredential(credential)
-                .addOnCompleteListener{task->
-                    if(task.isSuccessful){
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
                         val client = Driver(
                             id = authProvider.getId(),
                             name = account.displayName,
                             email = account.email,
                         )
                         driverProvider.create(client).addOnCompleteListener {
-                            if(it.isSuccessful){
+                            if (it.isSuccessful) {
 
-                                Log.d("FIREBASE","Succesfuly")
+                                Log.d("FIREBASE", "Succesfuly")
                                 val i = Intent(this, MapActivity::class.java)
-                                i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                                i.flags =
+                                    Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                                 startActivity(i)
-                            }
-                            else{
-                                Toast.makeText(this@SignInActivity, R.string.m_errorSignIn2, Toast.LENGTH_SHORT).show()
+                            } else {
+                                Toast.makeText(
+                                    this@SignInActivity,
+                                    R.string.m_errorSignIn2,
+                                    Toast.LENGTH_SHORT
+                                ).show()
                                 Log.d("FIREBASE", "Error: ${it.exception.toString()}")
                             }
                         }
 
-                    }else{
-                        Toast.makeText(this,task.exception?.message, Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()
                     }
 
                 }
