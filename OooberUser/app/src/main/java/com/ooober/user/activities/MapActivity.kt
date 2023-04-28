@@ -99,7 +99,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
 
 
-        //binding.btnRequestTrip.setOnClickListener { goToTripInfo() }
+        binding.btnRequestTrip.setOnClickListener { goToTripInfo() }
         //binding.imageViewMenu.setOnClickListener { showModalMenu() }
     }
 
@@ -214,6 +214,19 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         })
     }
 
+    private fun goToTripInfo(){
+
+        if(originLatLng != null && destinationLatLng != null) {
+            val i = Intent(this, TripInfoActivity::class.java)
+            startActivity(i)
+        }
+        else{
+            Toast.makeText(this, "Debes seleccionar el origen y el destino", Toast.LENGTH_LONG).show()
+        }
+
+
+    }
+
     private fun getPositionDriver(id: String): Int {
         var position = 0
         for (i in driversLocation.indices) {
@@ -280,7 +293,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             )
         )
         autocompleteOrigin?.setHint("Lugar de recogida")
-        autocompleteOrigin?.setCountry("CO")
+        autocompleteOrigin?.setCountry("SV")
         autocompleteOrigin?.setOnPlaceSelectedListener(object: PlaceSelectionListener {
             override fun onPlaceSelected(place: Place) {
                 originName = place.name!!
@@ -307,7 +320,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             )
         )
         autocompleteDestination?.setHint("Destino")
-        autocompleteDestination?.setCountry("CO")
+        autocompleteDestination?.setCountry("SV")
         autocompleteDestination?.setOnPlaceSelectedListener(object: PlaceSelectionListener {
             override fun onPlaceSelected(place: Place) {
                 destinationName = place.name!!
