@@ -41,5 +41,6 @@
     <string name="m_Isizepassword">La contraseña debe contener al menos seis caracteres</string>
     <string name="m_errorSignIn">Error al iniciar sesion</string>
     <string name="m_errorSignIn2">Ocurrio  un error al ingresar</string>
+    <string name="txt_LogInwithGithub">Iniciar Sesión con Github</string>
 
 </resources>

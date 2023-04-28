@@ -71,6 +71,20 @@
                 android:drawableLeft="@drawable/ufacebook"
                 android:paddingLeft="10dp"
                 android:textAllCaps="false"/>
+
+            <Button
+                android:id="@+id/btnSGithub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_LogInwithGithub"
+                android:textColor="@color/white"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/border_button"
+                android:drawableLeft="@drawable/ugithub"
+                android:paddingLeft="10dp"
+                android:textAllCaps="false"/>
             <Button
                 android:id="@+id/btnLanguage"
                 android:layout_width="match_parent"

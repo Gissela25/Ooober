@@ -181,6 +181,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             return
         }
         googleMap?.isMyLocationEnabled = false
+        //Code to change map style
+        /*
         try {
             val success = googleMap?.setMapStyle(
                 MapStyleOptions.loadRawResourceStyle(this, R.raw.style)
@@ -191,6 +193,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         } catch (e: Resources.NotFoundException) {
             Log.d("MAPAS", "Error : ${e.toString()} ")
         }
+         */
     }
 
     override fun locationOn() {

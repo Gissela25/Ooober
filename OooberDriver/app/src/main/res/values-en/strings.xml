@@ -41,5 +41,6 @@
     <string name="m_Isizepassword">Password must contain at least six characters</string>
     <string name="m_errorSignIn">Failed to login</string>
     <string name="m_errorSignIn2">An error occurred while entering</string>
+    <string name="txt_LogInwithGithub">Log In With Github</string>
 
 </resources>
