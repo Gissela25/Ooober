@@ -218,6 +218,12 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
         if(originLatLng != null && destinationLatLng != null) {
             val i = Intent(this, TripInfoActivity::class.java)
+            i.putExtra("origin", originName)
+            i.putExtra("destination", destinationName)
+            i.putExtra("origin_lat", originLatLng?.latitude)
+            i.putExtra("origin_lng", originLatLng?.longitude)
+            i.putExtra("destination_lat", destinationLatLng?.latitude)
+            i.putExtra("destination_lng", destinationLatLng?.longitude)
             startActivity(i)
         }
         else{
