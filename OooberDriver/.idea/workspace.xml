@@ -10,109 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment=":c">
-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_27_04_2023_17_48__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/google-services.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/home.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_0_01__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_10_20_[Changes]/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_10_20_[Changes]/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_10_20_[Changes]/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_10_20_[Changes]/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_10_20_[Changes]/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_10_20_[Changes]/fileHashes1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_10_20_[Changes]/home.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_10_20_[Changes]/home1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_10_20_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_10_20__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_26_[Changes]/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_26_[Changes]/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_26_[Changes]/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_26_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_26__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_53_[Changes]/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_53_[Changes]/buildOutputCleanup1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_53_[Changes]/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_53_[Changes]/checksums1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_53_[Changes]/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_53_[Changes]/fileHashes1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_53_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_15_04_2023_22_53__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/buildOutputCleanup1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/buildOutputCleanup11.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/buildOutputCleanup2.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/checksums1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/checksums2.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/checksums3.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/fileHashes1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/fileHashes2.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/fileHashes3.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_0_13__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_19_25_[Changes]/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_19_25_[Changes]/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_19_25_[Changes]/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_19_25_[Changes]/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_19_25_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_19_25__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/buildOutputCleanup1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/buildOutputCleanup11.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/buildOutputCleanup12.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/buildOutputCleanup13.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/buildOutputCleanup2.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/buildOutputCleanup3.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/buildOutputCleanup4.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/checksums1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/checksums11.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/checksums12.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/checksums2.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/checksums3.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/checksums4.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/checksums5.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/executionHistory1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/fileHashes1.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/fileHashes1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/fileHashes11.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/fileHashes2.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/fileHashes3.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/fileHashes4.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/fileHashes5.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/fileHashes6.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_16_04_2023_9_54__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/google-services.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/providers/AuthProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/providers/AuthProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/raw/style.json" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/raw/style.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Jony Morales\.android\avd\Pixel_4_API_31_4.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\gisse\.android\avd\Pixel_4_API_33_DG.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -183,25 +90,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Suggestions&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;emulator&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "last_opened_file_path": "C:/Users/gisse/OneDrive/Escritorio/DSM/Proyecto - DSM/OooberDriver",
+    "project.structure.last.edited": "Suggestions",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "emulator"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jony Morales\AndroidStudioProjects\Ooober\OooberDriver\app\src" />
       <recent name="C:\Users\gisse\OneDrive\Escritorio\DSM\Proyecto - DSM\OooberDriver\app\src\main\res\drawable" />
       <recent name="C:\Users\Jony Morales\AndroidStudioProjects\Ooober\OooberDriver\app\src\main\res\drawable" />
     </key>
