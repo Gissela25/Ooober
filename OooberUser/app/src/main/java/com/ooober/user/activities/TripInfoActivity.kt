@@ -8,17 +8,20 @@ import android.util.Log
 import android.view.WindowManager
 import com.example.easywaylocation.EasyWayLocation
 import com.example.easywaylocation.Listener
+import com.example.easywaylocation.draw_path.DirectionUtil
+import com.example.easywaylocation.draw_path.PolyLineDataBean
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.Priority
+import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MapStyleOptions
+import com.google.android.gms.maps.model.*
 import com.ooober.user.R
 import com.ooober.user.databinding.ActivityTripInfoBinding
 
-class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
+class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
+    DirectionUtil.DirectionCallBack {
 
     private lateinit var binding: ActivityTripInfoBinding
     private var googleMap: GoogleMap? = null
@@ -34,6 +37,13 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     private var originLatLng: LatLng? = null
     private var destinationLatLng: LatLng? = null
 
+    private var wayPoints: ArrayList<LatLng> = ArrayList()
+    private val WAY_POINT_TAG = "way_point_tag"
+    private lateinit var directionUtil: DirectionUtil
+
+    private var markerOrigin: Marker? = null
+    private var markerDestination: Marker? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -48,10 +58,10 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         //Extras
         extraOriginName = intent.getStringExtra("origin")!!
         extraDestinationName = intent.getStringExtra("destination")!!
-        extraOriginLat = intent.getDoubleExtra("origin_lat",0.0)
-        extraOriginLng = intent.getDoubleExtra("origin_lng",0.0)
-        extraDestinationLat = intent.getDoubleExtra("destination_lat",0.0)
-        extraDestinationLng = intent.getDoubleExtra("destination_lng",0.0)
+        extraOriginLat = intent.getDoubleExtra("origin_lat", 0.0)
+        extraOriginLng = intent.getDoubleExtra("origin_lng", 0.0)
+        extraDestinationLat = intent.getDoubleExtra("destination_lat", 0.0)
+        extraDestinationLng = intent.getDoubleExtra("destination_lng", 0.0)
 
         originLatLng = LatLng(extraOriginLat, extraOriginLng)
         destinationLatLng = LatLng(extraDestinationLat, extraDestinationLng)
@@ -79,10 +89,49 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         binding.imageViewBack.setOnClickListener { finish() }
     }
 
+    private fun addOriginMarker() {
+        markerOrigin = googleMap?.addMarker(
+            MarkerOptions().position(originLatLng!!).title("Mi posicion")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icons_location_person))
+        )
+    }
+    private fun addDestinationMarker() {
+        markerDestination = googleMap?.addMarker(
+            MarkerOptions().position(destinationLatLng!!).title("Llegada")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icons_pin))
+        )
+    }
+
+    private fun easyDrawRoute() {
+        wayPoints.add(originLatLng!!)
+        wayPoints.add(destinationLatLng!!)
+        directionUtil = DirectionUtil.Builder()
+            .setDirectionKey(resources.getString(R.string.google_maps_key))
+            .setOrigin(originLatLng!!)
+            .setWayPoints(wayPoints)
+            .setGoogleMap(googleMap!!)
+            .setPolyLinePrimaryColor(R.color.yellow)
+            .setPolyLineWidth(10)
+            .setPathAnimation(true)
+            .setCallback(this)
+            .setDestination(destinationLatLng!!)
+            .build()
+
+        directionUtil.initPath()
+    }
+
     override fun onMapReady(map: GoogleMap) {
         googleMap = map
         googleMap?.uiSettings?.isZoomControlsEnabled = true
 
+        googleMap?.moveCamera(
+            CameraUpdateFactory.newCameraPosition(
+                CameraPosition.builder().target(originLatLng!!).zoom(13f).build()
+            )
+        )
+        easyDrawRoute()
+        addOriginMarker()
+        addDestinationMarker()
 
         try {
             val success = googleMap?.setMapStyle(
@@ -112,5 +161,25 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     override fun onDestroy() { // CIERRA APLICACION O PASAMOS A OTRA ACTIVITY
         super.onDestroy()
         easyWayLocation?.endUpdates()
+    }
+
+    override fun pathFindFinish(
+        polyLineDetailsMap: HashMap<String, PolyLineDataBean>,
+        polyLineDetailsArray: ArrayList<PolyLineDataBean>
+    ) {
+        var distance = polyLineDetailsArray[1].distance.toDouble() //metros
+        var time = polyLineDetailsArray[1].time.toDouble() //segundos
+        distance = if(distance < 1000.0) 1000.0 else distance
+        time = if(time < 60.0) 60.0 else time
+
+        distance = distance / 1000
+        time = time / 60
+
+        val timeString = String.format("%.2f", time).toDouble()
+        val distanceString = String.format("%.2f", distance).toDouble()
+
+        binding.textViewTimeAndDistance.text = "$timeString min - $distanceString km"
+
+        directionUtil.drawPath(WAY_POINT_TAG)
     }
 }
