@@ -1,8 +1,11 @@
 package com.ooober.driver.providers
 
+import android.content.Intent
+import androidx.core.content.ContextCompat.startActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.ooober.driver.activities.MapActivity
 
 class AuthProvider {
 
@@ -18,6 +21,9 @@ class AuthProvider {
         return auth.createUserWithEmailAndPassword(email, password)
     }
 
+    fun logout(){
+        auth.signOut()
+    }
     fun getId():String{
         return auth.currentUser?.uid ?: ""
     }

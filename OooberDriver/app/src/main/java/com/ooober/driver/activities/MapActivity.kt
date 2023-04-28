@@ -1,6 +1,7 @@
 package com.ooober.driver.activities
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.graphics.Bitmap
@@ -49,6 +50,13 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         )
 
+        binding.btnLogout.setOnClickListener{
+            authProvider.logout()
+            val i = Intent(this, HomeActivity::class.java)
+            i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(i)
+            finish()
+        }
 
         //To get specific location
         val locationRequest = LocationRequest.create().apply {
