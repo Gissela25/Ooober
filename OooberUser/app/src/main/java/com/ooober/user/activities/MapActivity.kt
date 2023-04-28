@@ -39,9 +39,11 @@ import com.google.firebase.firestore.GeoPoint
 import com.google.maps.android.SphericalUtil
 import com.ooober.user.R
 import com.ooober.user.databinding.ActivityMapBinding
+import com.ooober.user.models.DriverLocation
 import com.ooober.user.providers.AuthProvider
 import com.ooober.user.providers.ClientProvider
 import com.ooober.user.providers.GeoProvider
+import com.ooober.user.utils.CarMoveAnim
 import org.imperiumlabs.geofirestore.callbacks.GeoQueryEventListener
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
@@ -66,7 +68,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     private var isLocationEnabled = false
 
     private val driverMarkers = ArrayList<Marker>()
-    //private val driversLocation = ArrayList<DriverLocation>()
+    private val driversLocation = ArrayList<DriverLocation>()
     //private val modalMenu = ModalBottomSheetMenu()
 
 
@@ -135,6 +137,9 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
                 Log.d("FIRESTORE", "location: $location")
 
                 for (marker in driverMarkers) {
+
+
+
                     if (marker.tag != null) {
                         if (marker.tag == documentID) {
                             return
@@ -152,15 +157,20 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
                 marker?.tag = documentID
                 driverMarkers.add(marker!!)
 
+                val dl = DriverLocation()
+                dl.id = documentID
+                driversLocation.add(dl)
+
             }
 
             override fun onKeyExited(documentID: String) {
                 for (marker in driverMarkers) {
+
                     if (marker.tag != null) {
                         if (marker.tag == documentID) {
                             marker.remove()
                             driverMarkers.remove(marker)
-                            //driversLocation.removeAt(getPositionDriver(documentID))
+                            driversLocation.removeAt(getPositionDriver(documentID))
                             return
                         }
                     }
@@ -173,19 +183,19 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
                     val start = LatLng(location.latitude, location.longitude)
                     var end: LatLng? = null
-                    //val position = getPositionDriver(marker.tag.toString())
+                    val position = getPositionDriver(marker.tag.toString())
 
                     if (marker.tag != null) {
                         if (marker.tag == documentID) {
                             marker.position = LatLng(location.latitude, location.longitude)
 
-                            //if (driversLocation[position].latlng != null) {
-                                //end = driversLocation[position].latlng
-                            //}
-                            //driversLocation[position].latlng = LatLng(location.latitude, location.longitude)
-                            //if (end  != null) {
-                                //CarMoveAnim.carAnim(marker, end, start)
-                            //}
+                            if (driversLocation[position].latlng != null) {
+                                end = driversLocation[position].latlng
+                            }
+                            driversLocation[position].latlng = LatLng(location.latitude, location.longitude)
+                            if (end  != null) {
+                                CarMoveAnim.carAnim(marker, end, start)
+                            }
 
                         }
                     }
@@ -202,6 +212,17 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             }
 
         })
+    }
+
+    private fun getPositionDriver(id: String): Int {
+        var position = 0
+        for (i in driversLocation.indices) {
+            if(id == driversLocation[i].id) {
+                position = i
+                break
+            }
+        }
+        return position
     }
 
     private fun onCameraMove() {
