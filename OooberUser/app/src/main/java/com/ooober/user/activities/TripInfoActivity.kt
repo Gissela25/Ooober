@@ -19,6 +19,8 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
 import com.ooober.user.R
 import com.ooober.user.databinding.ActivityTripInfoBinding
+import com.ooober.user.models.Prices
+import com.ooober.user.providers.ConfigProvider
 
 class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     DirectionUtil.DirectionCallBack {
@@ -44,6 +46,10 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     private var markerOrigin: Marker? = null
     private var markerDestination: Marker? = null
 
+    private var configProvider = ConfigProvider()
+
+    var distance = 0.0
+    var time = 0.0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -87,6 +93,39 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         Log.d("LOCALIZACION", "Destination lng: ${originLatLng?.longitude}")
 
         binding.imageViewBack.setOnClickListener { finish() }
+    }
+
+    private fun getPrices(distance: Double, time: Double) {
+
+        configProvider.getPrices().addOnSuccessListener { document ->
+            if (document.exists()) {
+                val prices = document.toObject(Prices::class.java) // DOCUMENTO CON LA INFORMACION
+
+                val totalDistance = distance * prices?.km!! // VALOR POR KM
+                Log.d("PRICES", "totalDistance: $totalDistance")
+                val totalTime = time * prices?.min!! // VALOR POR MIN
+                Log.d("PRICES", "totalTime: $totalTime")
+                var total =  totalDistance + totalTime // TOTAL
+                Log.d("PRICES", "total: $total")
+
+                total = if (total < 5.0) prices?.minValue!! else total
+                Log.d("PRICES", "new total: $total")
+
+                var minTotal = total - prices?.difference!! // TOTAL - 2USD
+                Log.d("PRICES", "minTotal: $minTotal")
+
+                var maxTotal = total + prices?.difference!! // TOTAL + 2USD
+                Log.d("PRICES", "maxTotal: $maxTotal")
+
+
+                val minTotalString = String.format("%.1f", minTotal)
+                val maxTotalString = String.format("%.1f", maxTotal)
+                binding.textViewPrice.text = "$minTotalString - $maxTotalString$"
+
+
+            }
+        }
+
     }
 
     private fun addOriginMarker() {
@@ -167,18 +206,19 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         polyLineDetailsMap: HashMap<String, PolyLineDataBean>,
         polyLineDetailsArray: ArrayList<PolyLineDataBean>
     ) {
-        var distance = polyLineDetailsArray[1].distance.toDouble() //metros
-        var time = polyLineDetailsArray[1].time.toDouble() //segundos
-        distance = if(distance < 1000.0) 1000.0 else distance
-        time = if(time < 60.0) 60.0 else time
+        distance = polyLineDetailsArray[1].distance.toDouble() // METROS
+        time = polyLineDetailsArray[1].time.toDouble() // SEGUNDOS
+        distance = if (distance < 1000.0) 1000.0 else distance // SI ES MENOS DE 1000 METROS EN 1 KM
+        time = if (time < 60.0) 60.0 else time
 
-        distance = distance / 1000
-        time = time / 60
+        distance = distance / 1000 // KM
+        time = time / 60 // MIN
 
-        val timeString = String.format("%.2f", time).toDouble()
-        val distanceString = String.format("%.2f", distance).toDouble()
+        val timeString = String.format("%.2f", time)
+        val distanceString = String.format("%.2f", distance)
 
-        binding.textViewTimeAndDistance.text = "$timeString min - $distanceString km"
+        getPrices(distance, time)
+        binding.textViewTimeAndDistance.text = "$timeString mins - $distanceString km"
 
         directionUtil.drawPath(WAY_POINT_TAG)
     }
