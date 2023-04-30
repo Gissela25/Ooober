@@ -102,12 +102,14 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
 
         if(originLatLng != null && destinationLatLng != null) {
             val i = Intent(this, SearchActivity::class.java)
-            i.putExtra("origin", extraDestinationName)
+            i.putExtra("origin", extraOriginName)
             i.putExtra("destination", extraDestinationName)
             i.putExtra("origin_lat", originLatLng?.latitude)
             i.putExtra("origin_lng", originLatLng?.longitude)
             i.putExtra("destination_lat", destinationLatLng?.latitude)
             i.putExtra("destination_lng", destinationLatLng?.longitude)
+            i.putExtra("time", time)
+            i.putExtra("distance", distance)
             startActivity(i)
         }
         else{
