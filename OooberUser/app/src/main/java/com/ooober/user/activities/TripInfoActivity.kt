@@ -1,11 +1,13 @@
 package com.ooober.user.activities
 
+import android.content.Intent
 import android.content.res.Resources
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
+import android.widget.Toast
 import com.example.easywaylocation.EasyWayLocation
 import com.example.easywaylocation.Listener
 import com.example.easywaylocation.draw_path.DirectionUtil
@@ -93,6 +95,26 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         Log.d("LOCALIZACION", "Destination lng: ${originLatLng?.longitude}")
 
         binding.imageViewBack.setOnClickListener { finish() }
+        binding.btnConfirmRequest.setOnClickListener { goToSearchDriver() }
+    }
+
+    private fun goToSearchDriver(){
+
+        if(originLatLng != null && destinationLatLng != null) {
+            val i = Intent(this, SearchActivity::class.java)
+            i.putExtra("origin", extraDestinationName)
+            i.putExtra("destination", extraDestinationName)
+            i.putExtra("origin_lat", originLatLng?.latitude)
+            i.putExtra("origin_lng", originLatLng?.longitude)
+            i.putExtra("destination_lat", destinationLatLng?.latitude)
+            i.putExtra("destination_lng", destinationLatLng?.longitude)
+            startActivity(i)
+        }
+        else{
+            Toast.makeText(this, "Debes seleccionar el origen y el destino", Toast.LENGTH_LONG).show()
+        }
+
+
     }
 
     private fun getPrices(distance: Double, time: Double) {
