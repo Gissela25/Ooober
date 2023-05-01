@@ -36,7 +36,7 @@ class SearchActivity : AppCompatActivity() {
     private var authProvider = AuthProvider()
 
     // BUSQUEDA DEL CONDUCTOR
-    private var radius = 0.1
+    private var radius = 0.2
     private var idDriver = ""
     //private var driver: Driver? = null
     private var isDriverFound = false
@@ -104,7 +104,7 @@ class SearchActivity : AppCompatActivity() {
 
             override fun onGeoQueryReady() {
                 if(!isDriverFound){
-                    radius = radius + 0.1
+                    radius = radius + 0.2
 
                     if(radius > limitRadius){
                         binding.textViewSearch.text = "NO SE ENCONTROL NINGUN CONDUCTOR"

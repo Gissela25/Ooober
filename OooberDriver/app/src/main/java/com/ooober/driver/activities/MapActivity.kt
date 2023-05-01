@@ -3,7 +3,6 @@ package com.ooober.driver.activities
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
@@ -11,6 +10,7 @@ import android.location.Location
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
@@ -27,19 +27,38 @@ import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.Priority
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.*
+import com.google.firebase.firestore.ListenerRegistration
 import com.ooober.driver.databinding.ActivityMapBinding
+import com.ooober.driver.fragments.ModalButtomSheetBooking
+import com.ooober.driver.models.Booking
 import com.ooober.driver.providers.AuthProvider
+import com.ooober.driver.providers.BookingProvider
 import com.ooober.driver.providers.GeoProvider
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
+    private  var bookingListener: ListenerRegistration? = null
     private lateinit var binding: ActivityMapBinding
     private var googleMap: GoogleMap? = null
-    private var easyWayLocation: EasyWayLocation? = null
+    var easyWayLocation: EasyWayLocation? = null
     private var myLocationlatLog: LatLng? = null
     private var markerDriver: Marker? = null
     private val geoProvider= GeoProvider()
     private val authProvider = AuthProvider()
+    private val bookingProvider = BookingProvider()
+    private val modalBooking = ModalButtomSheetBooking()
+
+    private val timer = object : CountDownTimer(30000,1000){
+        override fun onTick(counter: Long) {
+            Log.d("TIMER","Counter: $counter")
+        }
+
+        override fun onFinish() {
+            Log.d("TIMER","FINISH")
+            modalBooking.dismiss()
+        }
+
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -74,6 +93,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
                 Manifest.permission.ACCESS_COARSE_LOCATION
             )
         )
+
+        listenerBooking()
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
@@ -133,6 +154,34 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     override fun onDestroy() {
         super.onDestroy()
         easyWayLocation?.endUpdates()
+        bookingListener?.remove()
+    }
+
+    private fun listenerBooking(){
+        bookingListener = bookingProvider.getBooking().addSnapshotListener{snapshot, e ->
+            if(e != null){
+                Log.d("FIRESTORE","ERROR: ${e.message}")
+                return@addSnapshotListener
+            }
+            if(snapshot != null){
+                if(snapshot.documents.size >0)
+                {
+                    val booking = snapshot.documents[0].toObject(Booking::class.java)
+                    if(booking?.status == "create"){
+                        showModalBookin(booking!!)
+                    }
+                }
+            }
+
+        }
+    }
+
+    private fun showModalBookin(booking: Booking){
+        val bundle = Bundle()
+        bundle.putString("booking",booking.toJson())
+        modalBooking.arguments = bundle
+        modalBooking.show(supportFragmentManager,ModalButtomSheetBooking.TAG)
+        timer.start()
     }
 
     private fun addMarker() {
@@ -230,7 +279,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
         googleMap?.moveCamera(
             CameraUpdateFactory.newCameraPosition(
-                CameraPosition.builder().target(myLocationlatLog!!).zoom(17f).build()
+                CameraPosition.builder().target(myLocationlatLog!!).zoom(15f).build()
             )
         )
         addMarker()
