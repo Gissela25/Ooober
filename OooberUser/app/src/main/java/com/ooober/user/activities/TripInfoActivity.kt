@@ -195,7 +195,7 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         easyDrawRoute()
         addOriginMarker()
         addDestinationMarker()
-
+/*
         try {
             val success = googleMap?.setMapStyle(
                 MapStyleOptions.loadRawResourceStyle(this, R.raw.style)
@@ -207,6 +207,8 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         } catch (e: Resources.NotFoundException) {
             Log.d("MAPAS", "Error: ${e.toString()}")
         }
+
+ */
     }
 
     override fun locationOn() {

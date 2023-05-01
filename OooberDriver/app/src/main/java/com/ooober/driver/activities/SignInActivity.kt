@@ -38,7 +38,7 @@ class SignInActivity : AppCompatActivity() {
         binding.btnESignIn.setOnClickListener { goToLogin() }
         binding.GosignIn.setOnClickListener { goToRegister() }
         binding.btnLanguage.setOnClickListener { goToSetLanguage() }
-        binding.btnSGithub.setOnClickListener { goToGithubAuth()}
+        binding.btnSGithub.setOnClickListener { }
 
         val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))

@@ -5,9 +5,9 @@
     <string name="lang_es">Español</string>
     <string name="lang_en">Ingles de la aplicación</string>
     <string name="txt_lang">Idioma de la aplicación</string>
-    <string name="facebook_app_id" translatable="false">660250129156064</string>
-    <string name="fb_login_protocol_scheme" translatable="false">fb660250129156064</string>
-    <string name="facebook_client_token" translatable="false">ef1aa393ad397298c8faba6850956b14</string>
+    <string name="facebook_app_id" translatable="false">737288371330155</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb737288371330155</string>
+    <string name="facebook_client_token" translatable="false">a186ffb22e00770052c88abb8ad02d42</string>
     <string name="txt_saveLanguage">Guardar</string>
     <string name="txtTitleSetLan">Idiomas</string>
 

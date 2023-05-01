@@ -1,0 +1,1451 @@
+Index: OooberUser/app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">OooberUser</string>\r\n    <string name=\"google_maps_key\">AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk</string>\r\n\r\n    <string name=\"lang_es\">Español</string>\r\n    <string name=\"lang_en\">Ingles de la aplicación</string>\r\n    <string name=\"txt_lang\">Idioma de la aplicación</string>\r\n    <string name=\"facebook_app_id\" translatable=\"false\">660250129156064</string>\r\n    <string name=\"fb_login_protocol_scheme\" translatable=\"false\">fb660250129156064</string>\r\n    <string name=\"facebook_client_token\" translatable=\"false\">ef1aa393ad397298c8faba6850956b14</string>\r\n    <string name=\"txt_saveLanguage\">Guardar</string>\r\n    <string name=\"txtTitleSetLan\">Idiomas</string>\r\n\r\n    <string name=\"txt_SessionFailed\">Error al iniciar sesión</string>\r\n    <string name=\"btn_homeCreateAcc\">Crear Cuenta</string>\r\n    <string name=\"btn_homeLogIn\">Iniciar Sesion</string>\r\n    <string name=\"txt_hi\">Hola de nuevo </string>\r\n    <string name=\"hint_mail\">Correo Electronico </string>\r\n    <string name=\"hint_password\">Contraseña</string>\r\n    <string name=\"txt_noaccount\">¿No tienes cuenta?</string>\r\n    <string name=\"txt_connect\">CONECTARSE</string>\r\n    <string name=\"txt_Dconnect\">DESCONECTARSE</string>\r\n    <string name=\"txt_createacc\">Crear una cuenta</string>\r\n    <string name=\"hint_name\">Nombre</string>\r\n    <string name=\"hint_Lname\">Apellido</string>\r\n    <string name=\"hint_phone\">Telefono</string>\r\n    <string name=\"hint_confirmpassword\">Confirmar Contraseña</string>\r\n    <string name=\"txt_Doyouhaveaccount\">¿Tienes Cuenta?</string>\r\n    <string name=\"txt_LogIn\">Iniciar Sesion</string>\r\n    <string name=\"txt_LogInwithemail\">Iniciar Sesion Con Correo</string>\r\n    <string name=\"txt_LogInwithgoogle\">Iniciar Sesion Con Google</string>\r\n    <string name=\"txt_LogInwithfacebook\">Iniciar Sesion Con Facebook</string>\r\n    <string name=\"txt_FirstTime\">¿Es la primera vez que visitas Ooober?</string>\r\n    <string name=\"txt_Where\">¿A donde vamos?</string>\r\n    <string name=\"txt_request_trip\">SOLICITAR UN VIAJE</string>\r\n    <string name=\"txt_enterEmail\">Ingresa tu correo</string>\r\n    <string name=\"txt_enterPwd\">Ingresa tu clave</string>\r\n    <string name=\"txt_registered\">Registro exitoso</string>\r\n    <string name=\"txt_SomethingWasWrong\">Ocurrió un error al almacenar datos del usuario</string>\r\n    <string name=\"txt_SignUpF\">Registro fallido</string>\r\n    <string name=\"txt_EntName\">Ingresa tu nombre</string>\r\n    <string name=\"txt_EntLN\">Ingresa tu apellido</string>\r\n    <string name=\"txt_EntEmail\">Ingresa tu correo</string>\r\n    <string name=\"txt_EntYourPhone\">Ingresa tu teléfono</string>\r\n    <string name=\"txt_EntPwd\">Ingresa tu contraseña</string>\r\n    <string name=\"txt_EntConfPwd\">Confirma tu contraseña</string>\r\n    <string name=\"txt_PwdDoNotMatch\">Contraseñas no coinciden</string>\r\n    <string name=\"txt_SixCharacters\">La contraseña debe tener al menos 6 carácteres</string>\r\n    <string name=\"txt_AuthFalied\">Atenticación fallida</string>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberUser/app/src/main/res/values/strings.xml b/OooberUser/app/src/main/res/values/strings.xml
+--- a/OooberUser/app/src/main/res/values/strings.xml	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/OooberUser/app/src/main/res/values/strings.xml	(date 1682915459730)
+@@ -5,9 +5,9 @@
+     <string name="lang_es">Español</string>
+     <string name="lang_en">Ingles de la aplicación</string>
+     <string name="txt_lang">Idioma de la aplicación</string>
+-    <string name="facebook_app_id" translatable="false">660250129156064</string>
+-    <string name="fb_login_protocol_scheme" translatable="false">fb660250129156064</string>
+-    <string name="facebook_client_token" translatable="false">ef1aa393ad397298c8faba6850956b14</string>
++    <string name="facebook_app_id" translatable="false">737288371330155</string>
++    <string name="fb_login_protocol_scheme" translatable="false">fb737288371330155</string>
++    <string name="facebook_client_token" translatable="false">a186ffb22e00770052c88abb8ad02d42</string>
+     <string name="txt_saveLanguage">Guardar</string>
+     <string name="txtTitleSetLan">Idiomas</string>
+ 
+Index: OooberDriver/app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n    <uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />\r\n    <uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.OooberDriver\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".HistoriesDetailActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".HistoriesActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".CalificationClientActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.ProfileActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.GithubAuthActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.SignInActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.HomeActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <activity\r\n            android:name=\".activities.MapActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.RegisterActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.MainActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.SettingsActivity\"\r\n            android:exported=\"false\" />\r\n\r\n        <meta-data\r\n            android:name=\"com.google.android.geo.API_KEY\"\r\n            android:value=\"AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk\" />\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/AndroidManifest.xml b/OooberDriver/app/src/main/AndroidManifest.xml
+--- a/OooberDriver/app/src/main/AndroidManifest.xml	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/OooberDriver/app/src/main/AndroidManifest.xml	(date 1682914273782)
+@@ -16,16 +16,19 @@
+         android:theme="@style/Theme.OooberDriver"
+         tools:targetApi="31">
+         <activity
+-            android:name=".HistoriesDetailActivity"
++            android:name=".activities.HistoriesDetailActivity"
+             android:exported="false" />
+         <activity
+-            android:name=".HistoriesActivity"
++            android:name=".activities.HistoriesActivity"
+             android:exported="false" />
+         <activity
+-            android:name=".CalificationClientActivity"
++            android:name=".activities.CalificationClientActivity"
+             android:exported="false" />
+         <activity
+             android:name=".activities.ProfileActivity"
++            android:exported="false" />
++        <activity
++            android:name=".activities.MapTripActivity"
+             android:exported="false" />
+         <activity
+             android:name=".activities.GithubAuthActivity"
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1682921324452)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04__Changes_.xml	(date 1682921324452)
+@@ -0,0 +1,29 @@
++<changelist name="Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]" date="1682910248036" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 30/04/2023 21:04 [Changes]" />
++  <binary>
++    <option name="BEFORE_PATH" value="OooberDriver/.gradle/7.5/checksums/checksums.lock" />
++    <option name="AFTER_PATH" value="OooberDriver/.gradle/7.5/checksums/checksums.lock" />
++    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/checksums.lock" />
++  </binary>
++  <binary>
++    <option name="BEFORE_PATH" value="OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" />
++    <option name="AFTER_PATH" value="OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" />
++    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/fileHashes.bin" />
++  </binary>
++  <binary>
++    <option name="BEFORE_PATH" value="OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
++    <option name="AFTER_PATH" value="OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
++    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/buildOutputCleanup.lock" />
++  </binary>
++  <binary>
++    <option name="BEFORE_PATH" value="OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" />
++    <option name="AFTER_PATH" value="OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" />
++    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/executionHistory.lock" />
++  </binary>
++  <binary>
++    <option name="BEFORE_PATH" value="OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" />
++    <option name="AFTER_PATH" value="OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" />
++    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/fileHashes.lock" />
++  </binary>
++</changelist>
+\ No newline at end of file
+Index: OooberUser/app/src/main/java/com/ooober/user/activities/SignInActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ooober.user.activities\r\n\r\nimport android.content.Intent\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\nimport android.util.Log\r\nimport android.view.WindowManager\r\nimport android.widget.Toast\r\nimport com.facebook.AccessToken\r\nimport com.facebook.CallbackManager\r\nimport com.facebook.FacebookCallback\r\nimport com.facebook.FacebookException\r\nimport com.facebook.login.LoginManager\r\nimport com.facebook.login.LoginResult\r\nimport com.google.android.gms.auth.api.signin.GoogleSignIn\r\nimport com.google.android.gms.auth.api.signin.GoogleSignInClient\r\nimport com.google.android.gms.auth.api.signin.GoogleSignInOptions\r\nimport com.google.android.gms.common.api.ApiException\r\nimport com.google.firebase.auth.FacebookAuthProvider\r\nimport com.google.firebase.auth.FirebaseAuth\r\nimport com.google.firebase.auth.GoogleAuthProvider\r\nimport com.ooober.user.R\r\nimport com.ooober.user.databinding.ActivitySignInBinding\r\nimport com.ooober.user.models.Client\r\nimport com.ooober.user.providers.AuthProvider\r\nimport com.ooober.user.providers.ClientProvider\r\n\r\nclass SignInActivity : AppCompatActivity() {\r\n\r\n    private val authProvider = AuthProvider()\r\n    private val driverProvider = ClientProvider()\r\n    private lateinit var binding: ActivitySignInBinding\r\n    private lateinit var client: GoogleSignInClient\r\n    val auth: FirebaseAuth = FirebaseAuth.getInstance()\r\n    private val callbackManager = CallbackManager.Factory.create()\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n\r\n        super.onCreate(savedInstanceState)\r\n        binding = ActivitySignInBinding.inflate(layoutInflater)\r\n        setContentView(binding.root)\r\n        window.setFlags(\r\n            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,\r\n            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS\r\n        )\r\n\r\n        binding.btnESignIn.setOnClickListener { goToLogin() }\r\n        binding.GosignIn.setOnClickListener { goToRegister() }\r\n        binding.btnLanguage.setOnClickListener { goToSetLanguage() }\r\n\r\n        val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)\r\n            .requestIdToken(getString(R.string.default_web_client_id))\r\n            .requestEmail()\r\n            .build()\r\n        client = GoogleSignIn.getClient(this, options)\r\n        binding.btnSgoogle.setOnClickListener {\r\n            val intent = client.signInIntent\r\n            startActivityForResult(intent, 10001)\r\n        }\r\n\r\n        binding.btnSfacebook.setOnClickListener {\r\n            LoginManager.getInstance()\r\n                .logInWithReadPermissions(this, listOf(\"email\", \"public_profile\"))\r\n\r\n            LoginManager.getInstance()\r\n                .registerCallback(callbackManager, object : FacebookCallback<LoginResult> {\r\n                    override fun onSuccess(result: LoginResult) {\r\n                        handleFacebookAccessToken(result.accessToken)\r\n                    }\r\n\r\n                    override fun onCancel() {\r\n                        Log.d(\"FACEBOOK\", \"facebook:onCancel\")\r\n                    }\r\n\r\n                    override fun onError(error: FacebookException) {\r\n                        Log.d(\"FACEBOOK\", \"facebook:onError\", error)\r\n                    }\r\n                })\r\n        }\r\n\r\n    }\r\n\r\n    private fun handleFacebookAccessToken(token: AccessToken) {\r\n        Log.d(\"FACEBOOK\", \"handleFacebookAccessToken:$token\")\r\n\r\n        val credential = FacebookAuthProvider.getCredential(token.token)\r\n        auth.signInWithCredential(credential)\r\n            .addOnCompleteListener(this) { task ->\r\n                if (task.isSuccessful) {\r\n                    Log.d(\"FACEBOOK\", \"signInWithCredential:success\")\r\n                    val user = task.result?.user\r\n                    if (task.isSuccessful) {\r\n                        val client = Client(\r\n                            id = authProvider.getId(),\r\n                            name = user?.displayName,\r\n                            email = user?.email,\r\n                            phone = user?.phoneNumber\r\n                        )\r\n                        driverProvider.create(client).addOnCompleteListener {\r\n                            if (it.isSuccessful) {\r\n\r\n                                Log.d(\"FIREBASE\", \"Succesfuly\")\r\n                                val i = Intent(this, MapActivity::class.java)\r\n                                i.flags =\r\n                                    Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK\r\n                                startActivity(i)\r\n                            } else {\r\n                                Toast.makeText(\r\n                                    this@SignInActivity,\r\n                                    R.string.txt_SessionFailed,\r\n                                    Toast.LENGTH_SHORT\r\n                                ).show()\r\n                                Log.d(\"FIREBASE\", \"Error: ${it.exception.toString()}\")\r\n                            }\r\n                        }\r\n\r\n                    } else {\r\n                        // En caso de errores se imprimiran los siguintes mensajes\r\n                        Log.w(\"FACEBOOK\", \"signInWithCredential:failure\", task.exception)\r\n                        Toast.makeText(\r\n                            baseContext, R.string.txt_AuthFalied,\r\n                            Toast.LENGTH_SHORT\r\n                        ).show()\r\n\r\n                    }\r\n                }\r\n            }\r\n    }\r\n\r\n    private fun goToLogin() {\r\n        val i = Intent(this, MainActivity::class.java)\r\n        startActivity(i)\r\n    }\r\n\r\n    private fun goToRegister() {\r\n        val i = Intent(this, RegisterActivity::class.java)\r\n        startActivity(i)\r\n    }\r\n\r\n    private fun goToSetLanguage() {\r\n        val i = Intent(this, SettingsActivity::class.java)\r\n        startActivity(i)\r\n    }\r\n\r\n    private fun SignGoogle() {\r\n\r\n    }\r\n\r\n    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {\r\n        super.onActivityResult(requestCode, resultCode, data)\r\n        if (requestCode == 10001) {\r\n            val task = GoogleSignIn.getSignedInAccountFromIntent(data)\r\n            val account = task.getResult(ApiException::class.java)\r\n            val credential = GoogleAuthProvider.getCredential(account.idToken, null)\r\n            FirebaseAuth.getInstance().signInWithCredential(credential)\r\n                .addOnCompleteListener { task ->\r\n                    if (task.isSuccessful) {\r\n                        val client = Client(\r\n                            id = authProvider.getId(),\r\n                            name = account.displayName,\r\n                            email = account.email,\r\n                        )\r\n                        driverProvider.create(client).addOnCompleteListener {\r\n                            if (it.isSuccessful) {\r\n\r\n                                Log.d(\"FIREBASE\", \"Succesfuly\")\r\n                                val i = Intent(this, MapActivity::class.java)\r\n                                i.flags =\r\n                                    Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK\r\n                                startActivity(i)\r\n                            } else {\r\n                                Toast.makeText(\r\n                                    this@SignInActivity,\r\n                                    \"Ocurrio  un error al ingresar\",\r\n                                    Toast.LENGTH_SHORT\r\n                                ).show()\r\n                                Log.d(\"FIREBASE\", \"Error: ${it.exception.toString()}\")\r\n                            }\r\n                        }\r\n\r\n                    } else {\r\n                        Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()\r\n                    }\r\n\r\n                }\r\n        }\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberUser/app/src/main/java/com/ooober/user/activities/SignInActivity.kt b/OooberUser/app/src/main/java/com/ooober/user/activities/SignInActivity.kt
+--- a/OooberUser/app/src/main/java/com/ooober/user/activities/SignInActivity.kt	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/OooberUser/app/src/main/java/com/ooober/user/activities/SignInActivity.kt	(date 1682917591765)
+@@ -59,7 +59,7 @@
+ 
+         binding.btnSfacebook.setOnClickListener {
+             LoginManager.getInstance()
+-                .logInWithReadPermissions(this, listOf("email", "public_profile"))
++                .logInWithReadPermissions(this, listOf("public_profile"))
+ 
+             LoginManager.getInstance()
+                 .registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
+@@ -183,6 +183,7 @@
+ 
+                 }
+         }
++        callbackManager.onActivityResult(requestCode, resultCode, data)
+     }
+ 
+ }
+Index: OooberUser/app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n    <uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />\r\n    <uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />\r\n    <uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />\r\n\r\n    <queries>\r\n        <provider android:authorities=\"com.facebook.katana.provider.PlatformProvider\" /> <!-- allows app to access Facebook app features -->\r\n        <provider android:authorities=\"com.facebook.orca.provider.PlatformProvider\" /> <!-- allows sharing to Messenger app -->\r\n    </queries>\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.OooberUser\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".activities.SearchActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.TripInfoActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.HomeActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <activity\r\n            android:name=\".activities.SignInActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.VIEW\" />\r\n\r\n                <data android:scheme=\"@string/fb_login_protocol_scheme\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <activity\r\n            android:name=\".activities.MapActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.RegisterActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.MainActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.SettingsActivity\"\r\n            android:exported=\"false\" />\r\n\r\n        <meta-data\r\n            android:name=\"com.google.android.geo.API_KEY\"\r\n            android:value=\"AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk\" />\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberUser/app/src/main/AndroidManifest.xml b/OooberUser/app/src/main/AndroidManifest.xml
+--- a/OooberUser/app/src/main/AndroidManifest.xml	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/OooberUser/app/src/main/AndroidManifest.xml	(date 1682915404505)
+@@ -21,6 +21,8 @@
+         android:supportsRtl="true"
+         android:theme="@style/Theme.OooberUser"
+         tools:targetApi="31">
++        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
++        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+         <activity
+             android:name=".activities.SearchActivity"
+             android:exported="false" />
+@@ -36,6 +38,22 @@
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
++
++        <activity android:name="com.facebook.FacebookActivity"
++            android:configChanges=
++                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
++            android:label="@string/app_name" />
++        <activity
++            android:name="com.facebook.CustomTabActivity"
++            android:exported="true">
++            <intent-filter>
++                <action android:name="android.intent.action.VIEW" />
++                <category android:name="android.intent.category.DEFAULT" />
++                <category android:name="android.intent.category.BROWSABLE" />
++                <data android:scheme="@string/fb_login_protocol_scheme" />
++            </intent-filter>
++        </activity>
++
+         <activity
+             android:name=".activities.SignInActivity"
+             android:exported="true">
+Index: OooberUser/app/src/main/java/com/ooober/user/activities/TripInfoActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ooober.user.activities\r\n\r\nimport android.content.Intent\r\nimport android.content.res.Resources\r\nimport android.location.Location\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\nimport android.util.Log\r\nimport android.view.WindowManager\r\nimport android.widget.Toast\r\nimport com.example.easywaylocation.EasyWayLocation\r\nimport com.example.easywaylocation.Listener\r\nimport com.example.easywaylocation.draw_path.DirectionUtil\r\nimport com.example.easywaylocation.draw_path.PolyLineDataBean\r\nimport com.google.android.gms.location.LocationRequest\r\nimport com.google.android.gms.location.Priority\r\nimport com.google.android.gms.maps.CameraUpdateFactory\r\nimport com.google.android.gms.maps.GoogleMap\r\nimport com.google.android.gms.maps.OnMapReadyCallback\r\nimport com.google.android.gms.maps.SupportMapFragment\r\nimport com.google.android.gms.maps.model.*\r\nimport com.ooober.user.R\r\nimport com.ooober.user.databinding.ActivityTripInfoBinding\r\nimport com.ooober.user.models.Prices\r\nimport com.ooober.user.providers.ConfigProvider\r\n\r\nclass TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener,\r\n    DirectionUtil.DirectionCallBack {\r\n\r\n    private lateinit var binding: ActivityTripInfoBinding\r\n    private var googleMap: GoogleMap? = null\r\n    private var easyWayLocation: EasyWayLocation? = null\r\n\r\n    private var extraOriginName = \"\"\r\n    private var extraDestinationName = \"\"\r\n    private var extraOriginLat = 0.0\r\n    private var extraOriginLng = 0.0\r\n    private var extraDestinationLat = 0.0\r\n    private var extraDestinationLng = 0.0\r\n\r\n    private var originLatLng: LatLng? = null\r\n    private var destinationLatLng: LatLng? = null\r\n\r\n    private var wayPoints: ArrayList<LatLng> = ArrayList()\r\n    private val WAY_POINT_TAG = \"way_point_tag\"\r\n    private lateinit var directionUtil: DirectionUtil\r\n\r\n    private var markerOrigin: Marker? = null\r\n    private var markerDestination: Marker? = null\r\n\r\n    private var configProvider = ConfigProvider()\r\n\r\n    var distance = 0.0\r\n    var time = 0.0\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n\r\n        binding = ActivityTripInfoBinding.inflate(layoutInflater)\r\n\r\n        setContentView(binding.root)\r\n        window.setFlags(\r\n            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,\r\n            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS\r\n        )\r\n\r\n        //Extras\r\n        extraOriginName = intent.getStringExtra(\"origin\")!!\r\n        extraDestinationName = intent.getStringExtra(\"destination\")!!\r\n        extraOriginLat = intent.getDoubleExtra(\"origin_lat\", 0.0)\r\n        extraOriginLng = intent.getDoubleExtra(\"origin_lng\", 0.0)\r\n        extraDestinationLat = intent.getDoubleExtra(\"destination_lat\", 0.0)\r\n        extraDestinationLng = intent.getDoubleExtra(\"destination_lng\", 0.0)\r\n\r\n        originLatLng = LatLng(extraOriginLat, extraOriginLng)\r\n        destinationLatLng = LatLng(extraDestinationLat, extraDestinationLng)\r\n\r\n        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment\r\n        mapFragment.getMapAsync(this)\r\n\r\n        val locationRequest = LocationRequest.create().apply {\r\n            interval = 0\r\n            fastestInterval = 0\r\n            priority = Priority.PRIORITY_HIGH_ACCURACY\r\n            smallestDisplacement = 1f\r\n        }\r\n\r\n        easyWayLocation = EasyWayLocation(this, locationRequest, false, false, this)\r\n\r\n        binding.textViewOrigin.text = extraOriginName\r\n        binding.textViewDestination.text = extraDestinationName\r\n\r\n        Log.d(\"LOCALIZACION\", \"Origin lat: ${originLatLng?.latitude}\")\r\n        Log.d(\"LOCALIZACION\", \"Origin lng: ${originLatLng?.longitude}\")\r\n        Log.d(\"LOCALIZACION\", \"Destination lat: ${originLatLng?.latitude}\")\r\n        Log.d(\"LOCALIZACION\", \"Destination lng: ${originLatLng?.longitude}\")\r\n\r\n        binding.imageViewBack.setOnClickListener { finish() }\r\n        binding.btnConfirmRequest.setOnClickListener { goToSearchDriver() }\r\n    }\r\n\r\n    private fun goToSearchDriver(){\r\n\r\n        if(originLatLng != null && destinationLatLng != null) {\r\n            val i = Intent(this, SearchActivity::class.java)\r\n            i.putExtra(\"origin\", extraOriginName)\r\n            i.putExtra(\"destination\", extraDestinationName)\r\n            i.putExtra(\"origin_lat\", originLatLng?.latitude)\r\n            i.putExtra(\"origin_lng\", originLatLng?.longitude)\r\n            i.putExtra(\"destination_lat\", destinationLatLng?.latitude)\r\n            i.putExtra(\"destination_lng\", destinationLatLng?.longitude)\r\n            i.putExtra(\"time\", time)\r\n            i.putExtra(\"distance\", distance)\r\n            startActivity(i)\r\n        }\r\n        else{\r\n            Toast.makeText(this, \"Debes seleccionar el origen y el destino\", Toast.LENGTH_LONG).show()\r\n        }\r\n\r\n\r\n    }\r\n\r\n    private fun getPrices(distance: Double, time: Double) {\r\n\r\n        configProvider.getPrices().addOnSuccessListener { document ->\r\n            if (document.exists()) {\r\n                val prices = document.toObject(Prices::class.java) // DOCUMENTO CON LA INFORMACION\r\n\r\n                val totalDistance = distance * prices?.km!! // VALOR POR KM\r\n                Log.d(\"PRICES\", \"totalDistance: $totalDistance\")\r\n                val totalTime = time * prices?.min!! // VALOR POR MIN\r\n                Log.d(\"PRICES\", \"totalTime: $totalTime\")\r\n                var total =  totalDistance + totalTime // TOTAL\r\n                Log.d(\"PRICES\", \"total: $total\")\r\n\r\n                total = if (total < 5.0) prices?.minValue!! else total\r\n                Log.d(\"PRICES\", \"new total: $total\")\r\n\r\n                var minTotal = total - prices?.difference!! // TOTAL - 2USD\r\n                Log.d(\"PRICES\", \"minTotal: $minTotal\")\r\n\r\n                var maxTotal = total + prices?.difference!! // TOTAL + 2USD\r\n                Log.d(\"PRICES\", \"maxTotal: $maxTotal\")\r\n\r\n\r\n                val minTotalString = String.format(\"%.1f\", minTotal)\r\n                val maxTotalString = String.format(\"%.1f\", maxTotal)\r\n                binding.textViewPrice.text = \"$minTotalString - $maxTotalString$\"\r\n\r\n\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n    private fun addOriginMarker() {\r\n        markerOrigin = googleMap?.addMarker(\r\n            MarkerOptions().position(originLatLng!!).title(\"Mi posicion\")\r\n                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icons_location_person))\r\n        )\r\n    }\r\n    private fun addDestinationMarker() {\r\n        markerDestination = googleMap?.addMarker(\r\n            MarkerOptions().position(destinationLatLng!!).title(\"Llegada\")\r\n                .icon(BitmapDescriptorFactory.fromResource(R.drawable.icons_pin))\r\n        )\r\n    }\r\n\r\n    private fun easyDrawRoute() {\r\n        wayPoints.add(originLatLng!!)\r\n        wayPoints.add(destinationLatLng!!)\r\n        directionUtil = DirectionUtil.Builder()\r\n            .setDirectionKey(resources.getString(R.string.google_maps_key))\r\n            .setOrigin(originLatLng!!)\r\n            .setWayPoints(wayPoints)\r\n            .setGoogleMap(googleMap!!)\r\n            .setPolyLinePrimaryColor(R.color.yellow)\r\n            .setPolyLineWidth(10)\r\n            .setPathAnimation(true)\r\n            .setCallback(this)\r\n            .setDestination(destinationLatLng!!)\r\n            .build()\r\n\r\n        directionUtil.initPath()\r\n    }\r\n\r\n    override fun onMapReady(map: GoogleMap) {\r\n        googleMap = map\r\n        googleMap?.uiSettings?.isZoomControlsEnabled = true\r\n\r\n        googleMap?.moveCamera(\r\n            CameraUpdateFactory.newCameraPosition(\r\n                CameraPosition.builder().target(originLatLng!!).zoom(13f).build()\r\n            )\r\n        )\r\n        easyDrawRoute()\r\n        addOriginMarker()\r\n        addDestinationMarker()\r\n\r\n        try {\r\n            val success = googleMap?.setMapStyle(\r\n                MapStyleOptions.loadRawResourceStyle(this, R.raw.style)\r\n            )\r\n            if (!success!!) {\r\n                Log.d(\"MAPAS\", \"No se pudo encontrar el estilo\")\r\n            }\r\n\r\n        } catch (e: Resources.NotFoundException) {\r\n            Log.d(\"MAPAS\", \"Error: ${e.toString()}\")\r\n        }\r\n    }\r\n\r\n    override fun locationOn() {\r\n\r\n    }\r\n\r\n    override fun currentLocation(location: Location?) {\r\n\r\n    }\r\n\r\n    override fun locationCancelled() {\r\n\r\n    }\r\n\r\n    override fun onDestroy() { // CIERRA APLICACION O PASAMOS A OTRA ACTIVITY\r\n        super.onDestroy()\r\n        easyWayLocation?.endUpdates()\r\n    }\r\n\r\n    override fun pathFindFinish(\r\n        polyLineDetailsMap: HashMap<String, PolyLineDataBean>,\r\n        polyLineDetailsArray: ArrayList<PolyLineDataBean>\r\n    ) {\r\n        distance = polyLineDetailsArray[1].distance.toDouble() // METROS\r\n        time = polyLineDetailsArray[1].time.toDouble() // SEGUNDOS\r\n        distance = if (distance < 1000.0) 1000.0 else distance // SI ES MENOS DE 1000 METROS EN 1 KM\r\n        time = if (time < 60.0) 60.0 else time\r\n\r\n        distance = distance / 1000 // KM\r\n        time = time / 60 // MIN\r\n\r\n        val timeString = String.format(\"%.2f\", time)\r\n        val distanceString = String.format(\"%.2f\", distance)\r\n\r\n        getPrices(distance, time)\r\n        binding.textViewTimeAndDistance.text = \"$timeString mins - $distanceString km\"\r\n\r\n        directionUtil.drawPath(WAY_POINT_TAG)\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberUser/app/src/main/java/com/ooober/user/activities/TripInfoActivity.kt b/OooberUser/app/src/main/java/com/ooober/user/activities/TripInfoActivity.kt
+--- a/OooberUser/app/src/main/java/com/ooober/user/activities/TripInfoActivity.kt	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/OooberUser/app/src/main/java/com/ooober/user/activities/TripInfoActivity.kt	(date 1682918061008)
+@@ -195,7 +195,7 @@
+         easyDrawRoute()
+         addOriginMarker()
+         addDestinationMarker()
+-
++/*
+         try {
+             val success = googleMap?.setMapStyle(
+                 MapStyleOptions.loadRawResourceStyle(this, R.raw.style)
+@@ -207,6 +207,8 @@
+         } catch (e: Resources.NotFoundException) {
+             Log.d("MAPAS", "Error: ${e.toString()}")
+         }
++
++ */
+     }
+ 
+     override fun locationOn() {
+Index: OooberDriver/.idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <runningDeviceTargetSelectedWithDropDown>\r\n      <Target>\r\n        <type value=\"RUNNING_DEVICE_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\Jony Morales\\.android\\avd\\Pixel_4_API_31_2.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </runningDeviceTargetSelectedWithDropDown>\r\n    <timeTargetWasSelectedWithDropDown value=\"2023-05-01T00:09:55.284819500Z\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/.idea/deploymentTargetDropDown.xml b/OooberDriver/.idea/deploymentTargetDropDown.xml
+--- a/OooberDriver/.idea/deploymentTargetDropDown.xml	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/OooberDriver/.idea/deploymentTargetDropDown.xml	(date 1682910247656)
+@@ -12,6 +12,6 @@
+         </deviceKey>
+       </Target>
+     </runningDeviceTargetSelectedWithDropDown>
+-    <timeTargetWasSelectedWithDropDown value="2023-05-01T00:09:55.284819500Z" />
++    <timeTargetWasSelectedWithDropDown value="2023-05-01T02:52:18.735594300Z" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: OooberDriver/app/src/main/java/com/ooober/driver/activities/CalificationClientActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ooober.driver.activities\r\n\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\n\r\nclass CalificationClientActivity : AppCompatActivity() {\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.activity_calification_client)\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/java/com/ooober/driver/activities/CalificationClientActivity.kt b/OooberDriver/app/src/main/java/com/ooober/driver/activities/CalificationClientActivity.kt
+--- a/OooberDriver/app/src/main/java/com/ooober/driver/activities/CalificationClientActivity.kt	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/OooberDriver/app/src/main/java/com/ooober/driver/activities/CalificationClientActivity.kt	(date 1682910375090)
+@@ -2,6 +2,7 @@
+ 
+ import androidx.appcompat.app.AppCompatActivity
+ import android.os.Bundle
++import com.ooober.driver.R
+ 
+ class CalificationClientActivity : AppCompatActivity() {
+     override fun onCreate(savedInstanceState: Bundle?) {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"70d1792b-b2ef-48a0-874d-efa0d709b0e5\" name=\"Changes\" comment=\"Github and MapStyle (See the line 189)\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/executionHistory.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/shelved.patch\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17__Changes_.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/shelved.patch\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14__Changes_.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/OooberDriver/.idea/dictionaries/J_morales.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/models/Booking.kt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/providers/BookingProvider.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Fase-2\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OP7VM92tDqa7UNuJglqgkqVtot\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberUser&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"70d1792b-b2ef-48a0-874d-efa0d709b0e5\" name=\"Changes\" comment=\"\" />\r\n      <created>1681450387058</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681450387058</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Deleted OooberDriver\">\r\n      <created>1681450620925</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681450620925</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Update OooberDriver\">\r\n      <created>1681509087004</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681509087004</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Update OooberDriver (Google)\">\r\n      <created>1681607058002</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681607058002</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Updates\">\r\n      <created>1681675261217</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681675261217</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Updates\">\r\n      <created>1681677510767</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681677510767</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Updates\">\r\n      <created>1681698089052</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681698089053</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Strings\">\r\n      <created>1681703852893</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681703852893</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Bug Fixed\">\r\n      <created>1682648557026</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1682648557026</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Github and MapStyle (See the line 189)\">\r\n      <created>1682709167077</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1682709167077</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"Deleted OooberDriver\" />\r\n    <MESSAGE value=\"Update OooberDriver\" />\r\n    <MESSAGE value=\"Update OooberDriver (Google)\" />\r\n    <MESSAGE value=\"Updates\" />\r\n    <MESSAGE value=\"Strings\" />\r\n    <MESSAGE value=\"Bug Fixed\" />\r\n    <MESSAGE value=\"Github and MapStyle (See the line 189)\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Github and MapStyle (See the line 189)\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/.idea/workspace.xml	(date 1682910776457)
+@@ -4,34 +4,27 @@
+     <option name="autoReloadType" value="NONE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="Github and MapStyle (See the line 189)">
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/buildOutputCleanup.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/executionHistory.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.bin" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/shelved.patch" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17__Changes_.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup1.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory1.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.bin" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.bin" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/shelved.patch" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14__Changes_.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/dictionaries/J_morales.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/models/Booking.kt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/providers/BookingProvider.kt" afterDir="false" />
++    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="Accept or cancel trip request - 👾">
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/buildOutputCleanup.lock" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/checksums.lock" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/executionHistory.lock" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/fileHashes.bin" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/fileHashes.lock" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04__Changes_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_map_trip.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/AndroidManifest.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/CalificationClientActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/CalificationClientActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_profile.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -141,7 +134,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1682709167077</updated>
+     </task>
+-    <option name="localTasksCounter" value="10" />
++    <task id="LOCAL-00010" summary="Accept or cancel trip request - 👾">
++      <created>1682900185079</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1682900185079</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -164,6 +164,7 @@
+     <MESSAGE value="Strings" />
+     <MESSAGE value="Bug Fixed" />
+     <MESSAGE value="Github and MapStyle (See the line 189)" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Github and MapStyle (See the line 189)" />
++    <MESSAGE value="Accept or cancel trip request - " />
++    <option name="LAST_COMMIT_MESSAGE" value="Accept or cancel trip request - " />
+   </component>
+ </project>
+\ No newline at end of file
+Index: OooberDriver/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AndroidLayouts\">\r\n    <shared>\r\n      <config />\r\n    </shared>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7aa49cb3-f406-424b-b805-464742b76ddb\" name=\"Changes\" comment=\":c\">\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/executionHistory.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/shelved.patch\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17__Changes_.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/shelved.patch\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14__Changes_.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/dictionaries/J_morales.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/java/com/ooober/driver/fragments/ModalButtomSheetBooking.kt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/java/com/ooober/driver/models/Booking.kt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/java/com/ooober/driver/providers/BookingProvider.kt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/res/drawable/ic_location_grey.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/res/drawable/ic_my_location_grey.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/res/drawable/ic_timer_grey.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_booking.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/src/main/res/drawable/uber_car.png\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/src/main/res/drawable/uber_car.png\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SearchActivity.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SearchActivity.kt\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"device_and_snapshot_combo_box_target[C:\\Users\\Jony Morales\\.android\\avd\\Pixel_4_API_31_2.avd]\" />\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$/app\">\r\n          <activation />\r\n        </task>\r\n        <task path=\"$PROJECT_DIR$\">\r\n          <activation />\r\n        </task>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Ooober Driver\" type=\"f1a62948:ProjectNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Ooober Driver\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"app\" type=\"2d1252cf:ModuleNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Ooober Driver\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"app\" type=\"2d1252cf:ModuleNode\" />\r\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Ooober Driver\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"app\" type=\"2d1252cf:ModuleNode\" />\r\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\r\n                <item name=\"other\" type=\"c8890929:TasksNode$1\" />\r\n              </path>\r\n            </expand>\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Kotlin Class\" />\r\n        <option value=\"layoutResourceFile\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OO1tAw1n62amzJBzDqtzjJ2als\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.cidr.known.project.marker\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"cidr.known.project.marker\": \"true\",\r\n    \"com.google.services.firebase.aqiPopupShown\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver/app/src/main/res/drawable\",\r\n    \"project.structure.last.edited\": \"Suggestions\",\r\n    \"project.structure.proportion\": \"0.17\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"experimental\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Jony Morales\\AndroidStudioProjects\\Ooober\\OooberDriver\\app\\src\\main\\res\\drawable\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Jony Morales\\AndroidStudioProjects\\Ooober\\OooberDriver\\app\\src\\main\\res\\drawable\" />\r\n      <recent name=\"C:\\Users\\gisse\\OneDrive\\Escritorio\\DSM\\Proyecto - DSM\\OooberDriver\\app\\src\\main\\res\\drawable\" />\r\n    </key>\r\n    <key name=\"MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY\">\r\n      <recent name=\"com.ooober.driver.activities\" />\r\n    </key>\r\n    <key name=\"CopyKotlinDeclarationDialog.RECENTS_KEY\">\r\n      <recent name=\"com.ooober.driver.providers\" />\r\n      <recent name=\"com.ooober.driver.models\" />\r\n    </key>\r\n    <key name=\"android.template.1514215493\">\r\n      <recent name=\"com.ooober.driver.activities\" />\r\n      <recent name=\"com.ooober.driver\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunAnythingCache\">\r\n    <option name=\"myCommands\">\r\n      <command value=\"gradle --rerun-tasks\" />\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Android App.app\">\r\n    <configuration name=\"app\" type=\"AndroidRunConfigurationType\" factoryName=\"Android App\">\r\n      <module name=\"Ooober_Driver.app.main\" />\r\n      <option name=\"DEPLOY\" value=\"true\" />\r\n      <option name=\"DEPLOY_APK_FROM_BUNDLE\" value=\"false\" />\r\n      <option name=\"DEPLOY_AS_INSTANT\" value=\"false\" />\r\n      <option name=\"ARTIFACT_NAME\" value=\"\" />\r\n      <option name=\"PM_INSTALL_OPTIONS\" value=\"\" />\r\n      <option name=\"ALL_USERS\" value=\"false\" />\r\n      <option name=\"ALWAYS_INSTALL_WITH_PM\" value=\"false\" />\r\n      <option name=\"CLEAR_APP_STORAGE\" value=\"false\" />\r\n      <option name=\"DYNAMIC_FEATURES_DISABLED_LIST\" value=\"\" />\r\n      <option name=\"ACTIVITY_EXTRA_FLAGS\" value=\"\" />\r\n      <option name=\"MODE\" value=\"default_activity\" />\r\n      <option name=\"CLEAR_LOGCAT\" value=\"false\" />\r\n      <option name=\"SHOW_LOGCAT_AUTOMATICALLY\" value=\"false\" />\r\n      <option name=\"INSPECTION_WITHOUT_ACTIVITY_RESTART\" value=\"false\" />\r\n      <option name=\"TARGET_SELECTION_MODE\" value=\"DEVICE_AND_SNAPSHOT_COMBO_BOX\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_CONFIGURATION_ID\" value=\"-1\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_PROJECT_ID\" value=\"\" />\r\n      <option name=\"DEBUGGER_TYPE\" value=\"Auto\" />\r\n      <Auto>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Auto>\r\n      <Hybrid>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Hybrid>\r\n      <Java />\r\n      <Native>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Native>\r\n      <Profilers>\r\n        <option name=\"ADVANCED_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_CONFIGURATION_NAME\" value=\"Java/Kotlin Method Sample (legacy)\" />\r\n        <option name=\"STARTUP_NATIVE_MEMORY_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"NATIVE_MEMORY_SAMPLE_RATE_BYTES\" value=\"2048\" />\r\n      </Profilers>\r\n      <option name=\"DEEP_LINK\" value=\"\" />\r\n      <option name=\"ACTIVITY_CLASS\" value=\"\" />\r\n      <option name=\"SEARCH_ACTIVITY_IN_GLOBAL_SCOPE\" value=\"false\" />\r\n      <option name=\"SKIP_ACTIVITY_VALIDATION\" value=\"false\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"OooberDriver\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"--rerun-tasks\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list />\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Android App.app\" />\r\n      <item itemvalue=\"Gradle.OooberDriver\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Gradle.OooberDriver\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration>C:\\Users\\Jony Morales\\AppData\\Roaming\\Subversion</configuration>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7aa49cb3-f406-424b-b805-464742b76ddb\" name=\"Changes\" comment=\"\" />\r\n      <created>1681417027207</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681417027207</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"?\">\r\n      <created>1681447198037</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681447198037</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\":c\">\r\n      <created>1681450851687</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681450851687</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"?\" />\r\n    <MESSAGE value=\":c\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\":c\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/.idea/workspace.xml b/OooberDriver/.idea/workspace.xml
+--- a/OooberDriver/.idea/workspace.xml	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/OooberDriver/.idea/workspace.xml	(date 1682921277977)
+@@ -10,49 +10,39 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment=":c">
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/buildOutputCleanup.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/executionHistory.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.bin" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/shelved.patch" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17__Changes_.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup1.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory1.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.bin" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.bin" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.lock" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/shelved.patch" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14__Changes_.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/J_morales.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/fragments/ModalButtomSheetBooking.kt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/models/Booking.kt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/providers/BookingProvider.kt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_location_grey.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_my_location_grey.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_timer_grey.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_booking.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/buildOutputCleanup.lock" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/checksums.lock" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/executionHistory.lock" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/fileHashes.bin" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/fileHashes.lock" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04__Changes_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_map_trip.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/uber_car.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/uber_car.png" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/CalificationClientActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/CalificationClientActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/SignInActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/SignInActivity.kt" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SearchActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SearchActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../OooberUser/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/build.gradle" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/AndroidManifest.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SignInActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SignInActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/TripInfoActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/TripInfoActivity.kt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/strings.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Jony Morales\.android\avd\Pixel_4_API_31_2.avd]" />
++  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Jony Morales\.android\avd\Pixel_4_API_30.avd]" />
+   <component name="ExternalProjectsData">
+     <projectState path="$PROJECT_DIR$">
+       <ProjectState />
+@@ -133,7 +123,7 @@
+     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "cidr.known.project.marker": "true",
+     "com.google.services.firebase.aqiPopupShown": "true",
+-    "last_opened_file_path": "C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver/app/src/main/res/drawable",
++    "last_opened_file_path": "C:/Users/Jony Morales/Desktop/guia 7/guia 7/Firebase - Tarea/Firebase",
+     "project.structure.last.edited": "Suggestions",
+     "project.structure.proportion": "0.17",
+     "project.structure.side.proportion": "0.2",
+@@ -150,6 +140,9 @@
+     </key>
+     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+       <recent name="com.ooober.driver.activities" />
++    </key>
++    <key name="android.template.1037218376">
++      <recent name="com.ooober.driver" />
+     </key>
+     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+       <recent name="com.ooober.driver.providers" />
+Index: OooberUser/app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'com.android.application'\r\n    id 'org.jetbrains.kotlin.android'\r\n    id 'com.google.gms.google-services'\r\n}\r\n\r\nandroid {\r\n    namespace 'com.ooober.user'\r\n    compileSdk 33\r\n\r\n    defaultConfig {\r\n        applicationId \"com.ooober.user\"\r\n        minSdk 24\r\n        targetSdk 33\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility JavaVersion.VERSION_1_8\r\n        targetCompatibility JavaVersion.VERSION_1_8\r\n    }\r\n    kotlinOptions {\r\n        jvmTarget = '1.8'\r\n    }\r\n    buildFeatures{\r\n        viewBinding true\r\n\r\n    }\r\n}\r\n\r\ndependencies {\r\n\r\n    implementation 'androidx.core:core-ktx:1.7.0'\r\n    implementation 'com.facebook.android:facebook-login:latest.release'\r\n    implementation(\"com.facebook.android:facebook-android-sdk:14.1.1\") {\r\n        because(\"Social Media Login integration\")\r\n    }\r\n    implementation 'androidx.appcompat:appcompat:1.6.1'\r\n    implementation 'com.google.android.material:material:1.8.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'\r\n    implementation 'com.google.firebase:firebase-auth-ktx:21.0.3'\r\n    implementation platform('com.google.firebase:firebase-bom:31.2.3')\r\n    implementation 'com.google.firebase:firebase-firestore-ktx'\r\n    implementation 'com.beust:klaxon:5.5'\r\n    implementation 'com.google.android.gms:play-services-auth:20.5.0'\r\n\r\n    //Maps dependencies\r\n    implementation 'com.google.maps.android:maps-ktx:3.2.0'\r\n    implementation 'com.google.maps.android:maps-utils-ktx:3.2.0'\r\n    implementation 'com.google.maps.android:android-maps-utils:2.2.3'\r\n    implementation 'com.google.android.gms:play-services-maps:18.0.2'\r\n    implementation 'com.google.android.gms:play-services-location:20.0.0'\r\n\r\n    implementation 'com.github.prabhat1707:EasyWayLocation:2.4'\r\n    implementation 'com.github.imperiumlabs:GeoFirestore-Android:v1.4.0'\r\n    implementation 'com.airbnb.android:lottie:5.2.0'\r\n\r\n    //Places\r\n    implementation 'com.google.maps.android:places-ktx:2.0.0'\r\n    implementation 'com.android.volley:volley:1.2.1'\r\n\r\n\r\n    testImplementation 'junit:junit:4.13.2'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.5'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberUser/app/build.gradle b/OooberUser/app/build.gradle
+--- a/OooberUser/app/build.gradle	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/OooberUser/app/build.gradle	(date 1682916730628)
+@@ -41,7 +41,7 @@
+ 
+     implementation 'androidx.core:core-ktx:1.7.0'
+     implementation 'com.facebook.android:facebook-login:latest.release'
+-    implementation("com.facebook.android:facebook-android-sdk:14.1.1") {
++    implementation("com.facebook.android:facebook-android-sdk:16.0.1") {
+         because("Social Media Login integration")
+     }
+     implementation 'androidx.appcompat:appcompat:1.6.1'
+Index: OooberUser/.idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <runningDeviceTargetSelectedWithDropDown>\r\n      <Target>\r\n        <type value=\"RUNNING_DEVICE_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\Jony Morales\\.android\\avd\\Pixel_4_API_31_3.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </runningDeviceTargetSelectedWithDropDown>\r\n    <targetSelectedWithDropDown>\r\n      <Target>\r\n        <type value=\"QUICK_BOOT_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\Jony Morales\\.android\\avd\\Pixel_4_API_31_3.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </targetSelectedWithDropDown>\r\n    <timeTargetWasSelectedWithDropDown value=\"2023-05-01T00:09:46.875118400Z\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberUser/.idea/deploymentTargetDropDown.xml b/OooberUser/.idea/deploymentTargetDropDown.xml
+--- a/OooberUser/.idea/deploymentTargetDropDown.xml	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/OooberUser/.idea/deploymentTargetDropDown.xml	(date 1682918209727)
+@@ -7,22 +7,11 @@
+         <deviceKey>
+           <Key>
+             <type value="VIRTUAL_DEVICE_PATH" />
+-            <value value="C:\Users\Jony Morales\.android\avd\Pixel_4_API_31_3.avd" />
++            <value value="C:\Users\Jony Morales\.android\avd\Pixel_4_API_31_2.avd" />
+           </Key>
+         </deviceKey>
+       </Target>
+     </runningDeviceTargetSelectedWithDropDown>
+-    <targetSelectedWithDropDown>
+-      <Target>
+-        <type value="QUICK_BOOT_TARGET" />
+-        <deviceKey>
+-          <Key>
+-            <type value="VIRTUAL_DEVICE_PATH" />
+-            <value value="C:\Users\Jony Morales\.android\avd\Pixel_4_API_31_3.avd" />
+-          </Key>
+-        </deviceKey>
+-      </Target>
+-    </targetSelectedWithDropDown>
+-    <timeTargetWasSelectedWithDropDown value="2023-05-01T00:09:46.875118400Z" />
++    <timeTargetWasSelectedWithDropDown value="2023-05-01T05:16:43.136550900Z" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1682910246886)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04_[Changes]/shelved.patch	(date 1682910246886)
+@@ -0,0 +1,585 @@
++Index: .idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"70d1792b-b2ef-48a0-874d-efa0d709b0e5\" name=\"Changes\" comment=\"Github and MapStyle (See the line 189)\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/executionHistory.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/shelved.patch\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17__Changes_.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/shelved.patch\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14__Changes_.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/OooberDriver/.idea/dictionaries/J_morales.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/models/Booking.kt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/providers/BookingProvider.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Fase-2\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OP7VM92tDqa7UNuJglqgkqVtot\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberUser&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"70d1792b-b2ef-48a0-874d-efa0d709b0e5\" name=\"Changes\" comment=\"\" />\r\n      <created>1681450387058</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681450387058</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Deleted OooberDriver\">\r\n      <created>1681450620925</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681450620925</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Update OooberDriver\">\r\n      <created>1681509087004</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681509087004</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Update OooberDriver (Google)\">\r\n      <created>1681607058002</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681607058002</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Updates\">\r\n      <created>1681675261217</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681675261217</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Updates\">\r\n      <created>1681677510767</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681677510767</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Updates\">\r\n      <created>1681698089052</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681698089053</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Strings\">\r\n      <created>1681703852893</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681703852893</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Bug Fixed\">\r\n      <created>1682648557026</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1682648557026</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Github and MapStyle (See the line 189)\">\r\n      <created>1682709167077</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1682709167077</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"Deleted OooberDriver\" />\r\n    <MESSAGE value=\"Update OooberDriver\" />\r\n    <MESSAGE value=\"Update OooberDriver (Google)\" />\r\n    <MESSAGE value=\"Updates\" />\r\n    <MESSAGE value=\"Strings\" />\r\n    <MESSAGE value=\"Bug Fixed\" />\r\n    <MESSAGE value=\"Github and MapStyle (See the line 189)\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Github and MapStyle (See the line 189)\" />\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/workspace.xml b/.idea/workspace.xml
++--- a/.idea/workspace.xml	(revision ed7dea570a688bb2dbfc9452a28f52e82571f12c)
+++++ b/.idea/workspace.xml	(date 1682910026163)
++@@ -4,34 +4,19 @@
++     <option name="autoReloadType" value="NONE" />
++   </component>
++   <component name="ChangeListManager">
++-    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="Github and MapStyle (See the line 189)">
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/buildOutputCleanup.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/executionHistory.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.bin" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/shelved.patch" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17__Changes_.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup1.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory1.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.bin" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.bin" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/shelved.patch" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14__Changes_.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/dictionaries/J_morales.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/models/Booking.kt" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/providers/BookingProvider.kt" afterDir="false" />
+++    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="Accept or cancel trip request - 👾">
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/layout/activity_map_trip.xml" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/AndroidManifest.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values/strings.xml" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" afterDir="false" />
++     </list>
++     <option name="SHOW_DIALOG" value="false" />
++@@ -141,7 +126,14 @@
++       <option name="project" value="LOCAL" />
++       <updated>1682709167077</updated>
++     </task>
++-    <option name="localTasksCounter" value="10" />
+++    <task id="LOCAL-00010" summary="Accept or cancel trip request - 👾">
+++      <created>1682900185079</created>
+++      <option name="number" value="00010" />
+++      <option name="presentableId" value="LOCAL-00010" />
+++      <option name="project" value="LOCAL" />
+++      <updated>1682900185079</updated>
+++    </task>
+++    <option name="localTasksCounter" value="11" />
++     <servers />
++   </component>
++   <component name="Vcs.Log.Tabs.Properties">
++@@ -164,6 +156,7 @@
++     <MESSAGE value="Strings" />
++     <MESSAGE value="Bug Fixed" />
++     <MESSAGE value="Github and MapStyle (See the line 189)" />
++-    <option name="LAST_COMMIT_MESSAGE" value="Github and MapStyle (See the line 189)" />
+++    <MESSAGE value="Accept or cancel trip request - " />
+++    <option name="LAST_COMMIT_MESSAGE" value="Accept or cancel trip request - " />
++   </component>
++ </project>
++\ No newline at end of file
++Index: OooberDriver/app/src/main/AndroidManifest.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n    <uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />\r\n    <uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.OooberDriver\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".activities.GithubAuthActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.SignInActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.HomeActivity\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <activity\r\n            android:name=\".activities.MapActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.RegisterActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".activities.MainActivity\"\r\n            android:exported=\"false\"></activity>\r\n        <activity\r\n            android:name=\".activities.SettingsActivity\"\r\n            android:exported=\"false\"></activity>\r\n\r\n        <meta-data\r\n            android:name=\"com.google.android.geo.API_KEY\"\r\n            android:value=\"AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk\" />\r\n    </application>\r\n\r\n</manifest>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/AndroidManifest.xml b/OooberDriver/app/src/main/AndroidManifest.xml
++--- a/OooberDriver/app/src/main/AndroidManifest.xml	(revision ed7dea570a688bb2dbfc9452a28f52e82571f12c)
+++++ b/OooberDriver/app/src/main/AndroidManifest.xml	(date 1682905382792)
++@@ -16,6 +16,9 @@
++         android:theme="@style/Theme.OooberDriver"
++         tools:targetApi="31">
++         <activity
+++            android:name=".activities.MapTripActivity"
+++            android:exported="false" />
+++        <activity
++             android:name=".activities.GithubAuthActivity"
++             android:exported="false" />
++         <activity
++@@ -38,10 +41,10 @@
++             android:exported="false" />
++         <activity
++             android:name=".activities.MainActivity"
++-            android:exported="false"></activity>
+++            android:exported="false" />
++         <activity
++             android:name=".activities.SettingsActivity"
++-            android:exported="false"></activity>
+++            android:exported="false" />
++ 
++         <meta-data
++             android:name="com.google.android.geo.API_KEY"
++Index: OooberDriver/.idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AndroidLayouts\">\r\n    <shared>\r\n      <config />\r\n    </shared>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"NONE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7aa49cb3-f406-424b-b805-464742b76ddb\" name=\"Changes\" comment=\":c\">\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/executionHistory.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/shelved.patch\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17__Changes_.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.bin\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.lock\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/shelved.patch\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14__Changes_.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/dictionaries/J_morales.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/java/com/ooober/driver/fragments/ModalButtomSheetBooking.kt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/java/com/ooober/driver/models/Booking.kt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/java/com/ooober/driver/providers/BookingProvider.kt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/res/drawable/ic_location_grey.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/res/drawable/ic_my_location_grey.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/res/drawable/ic_timer_grey.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_booking.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/app/src/main/res/drawable/uber_car.png\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/app/src/main/res/drawable/uber_car.png\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SearchActivity.kt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SearchActivity.kt\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"device_and_snapshot_combo_box_target[C:\\Users\\Jony Morales\\.android\\avd\\Pixel_4_API_31_2.avd]\" />\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$/app\">\r\n          <activation />\r\n        </task>\r\n        <task path=\"$PROJECT_DIR$\">\r\n          <activation />\r\n        </task>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Ooober Driver\" type=\"f1a62948:ProjectNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Ooober Driver\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"app\" type=\"2d1252cf:ModuleNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Ooober Driver\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"app\" type=\"2d1252cf:ModuleNode\" />\r\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\r\n              </path>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"Ooober Driver\" type=\"f1a62948:ProjectNode\" />\r\n                <item name=\"app\" type=\"2d1252cf:ModuleNode\" />\r\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\r\n                <item name=\"other\" type=\"c8890929:TasksNode$1\" />\r\n              </path>\r\n            </expand>\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Kotlin Class\" />\r\n        <option value=\"layoutResourceFile\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2OO1tAw1n62amzJBzDqtzjJ2als\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.cidr.known.project.marker\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"cidr.known.project.marker\": \"true\",\r\n    \"com.google.services.firebase.aqiPopupShown\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver/app/src/main/res/drawable\",\r\n    \"project.structure.last.edited\": \"Suggestions\",\r\n    \"project.structure.proportion\": \"0.17\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"experimental\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Jony Morales\\AndroidStudioProjects\\Ooober\\OooberDriver\\app\\src\\main\\res\\drawable\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Jony Morales\\AndroidStudioProjects\\Ooober\\OooberDriver\\app\\src\\main\\res\\drawable\" />\r\n      <recent name=\"C:\\Users\\gisse\\OneDrive\\Escritorio\\DSM\\Proyecto - DSM\\OooberDriver\\app\\src\\main\\res\\drawable\" />\r\n    </key>\r\n    <key name=\"MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY\">\r\n      <recent name=\"com.ooober.driver.activities\" />\r\n    </key>\r\n    <key name=\"CopyKotlinDeclarationDialog.RECENTS_KEY\">\r\n      <recent name=\"com.ooober.driver.providers\" />\r\n      <recent name=\"com.ooober.driver.models\" />\r\n    </key>\r\n    <key name=\"android.template.1514215493\">\r\n      <recent name=\"com.ooober.driver.activities\" />\r\n      <recent name=\"com.ooober.driver\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunAnythingCache\">\r\n    <option name=\"myCommands\">\r\n      <command value=\"gradle --rerun-tasks\" />\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Android App.app\">\r\n    <configuration name=\"app\" type=\"AndroidRunConfigurationType\" factoryName=\"Android App\">\r\n      <module name=\"Ooober_Driver.app.main\" />\r\n      <option name=\"DEPLOY\" value=\"true\" />\r\n      <option name=\"DEPLOY_APK_FROM_BUNDLE\" value=\"false\" />\r\n      <option name=\"DEPLOY_AS_INSTANT\" value=\"false\" />\r\n      <option name=\"ARTIFACT_NAME\" value=\"\" />\r\n      <option name=\"PM_INSTALL_OPTIONS\" value=\"\" />\r\n      <option name=\"ALL_USERS\" value=\"false\" />\r\n      <option name=\"ALWAYS_INSTALL_WITH_PM\" value=\"false\" />\r\n      <option name=\"CLEAR_APP_STORAGE\" value=\"false\" />\r\n      <option name=\"DYNAMIC_FEATURES_DISABLED_LIST\" value=\"\" />\r\n      <option name=\"ACTIVITY_EXTRA_FLAGS\" value=\"\" />\r\n      <option name=\"MODE\" value=\"default_activity\" />\r\n      <option name=\"CLEAR_LOGCAT\" value=\"false\" />\r\n      <option name=\"SHOW_LOGCAT_AUTOMATICALLY\" value=\"false\" />\r\n      <option name=\"INSPECTION_WITHOUT_ACTIVITY_RESTART\" value=\"false\" />\r\n      <option name=\"TARGET_SELECTION_MODE\" value=\"DEVICE_AND_SNAPSHOT_COMBO_BOX\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_CONFIGURATION_ID\" value=\"-1\" />\r\n      <option name=\"SELECTED_CLOUD_MATRIX_PROJECT_ID\" value=\"\" />\r\n      <option name=\"DEBUGGER_TYPE\" value=\"Auto\" />\r\n      <Auto>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Auto>\r\n      <Hybrid>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Hybrid>\r\n      <Java />\r\n      <Native>\r\n        <option name=\"USE_JAVA_AWARE_DEBUGGER\" value=\"false\" />\r\n        <option name=\"SHOW_STATIC_VARS\" value=\"true\" />\r\n        <option name=\"WORKING_DIR\" value=\"\" />\r\n        <option name=\"TARGET_LOGGING_CHANNELS\" value=\"lldb process:gdb-remote packets\" />\r\n        <option name=\"SHOW_OPTIMIZED_WARNING\" value=\"true\" />\r\n      </Native>\r\n      <Profilers>\r\n        <option name=\"ADVANCED_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"STARTUP_CPU_PROFILING_CONFIGURATION_NAME\" value=\"Java/Kotlin Method Sample (legacy)\" />\r\n        <option name=\"STARTUP_NATIVE_MEMORY_PROFILING_ENABLED\" value=\"false\" />\r\n        <option name=\"NATIVE_MEMORY_SAMPLE_RATE_BYTES\" value=\"2048\" />\r\n      </Profilers>\r\n      <option name=\"DEEP_LINK\" value=\"\" />\r\n      <option name=\"ACTIVITY_CLASS\" value=\"\" />\r\n      <option name=\"SEARCH_ACTIVITY_IN_GLOBAL_SCOPE\" value=\"false\" />\r\n      <option name=\"SKIP_ACTIVITY_VALIDATION\" value=\"false\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"OooberDriver\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\r\n      <ExternalSystemSettings>\r\n        <option name=\"executionName\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\r\n        <option name=\"scriptParameters\" value=\"--rerun-tasks\" />\r\n        <option name=\"taskDescriptions\">\r\n          <list />\r\n        </option>\r\n        <option name=\"taskNames\">\r\n          <list />\r\n        </option>\r\n        <option name=\"vmOptions\" />\r\n      </ExternalSystemSettings>\r\n      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>\r\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\r\n      <DebugAllEnabled>false</DebugAllEnabled>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Android App.app\" />\r\n      <item itemvalue=\"Gradle.OooberDriver\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Gradle.OooberDriver\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration>C:\\Users\\Jony Morales\\AppData\\Roaming\\Subversion</configuration>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7aa49cb3-f406-424b-b805-464742b76ddb\" name=\"Changes\" comment=\"\" />\r\n      <created>1681417027207</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1681417027207</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"?\">\r\n      <created>1681447198037</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681447198037</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\":c\">\r\n      <created>1681450851687</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681450851687</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"?\" />\r\n    <MESSAGE value=\":c\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\":c\" />\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/.idea/workspace.xml b/OooberDriver/.idea/workspace.xml
++--- a/OooberDriver/.idea/workspace.xml	(revision ed7dea570a688bb2dbfc9452a28f52e82571f12c)
+++++ b/OooberDriver/.idea/workspace.xml	(date 1682910026120)
++@@ -10,42 +10,19 @@
++   </component>
++   <component name="ChangeListManager">
++     <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment=":c">
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/buildOutputCleanup.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/executionHistory.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.bin" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/shelved.patch" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17__Changes_.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/buildOutputCleanup1.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/executionHistory1.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.bin" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.bin" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/fileHashes1.lock" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14_[Changes]/shelved.patch" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/../.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14__Changes_.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/J_morales.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/fragments/ModalButtomSheetBooking.kt" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/models/Booking.kt" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/providers/BookingProvider.kt" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_location_grey.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_my_location_grey.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_timer_grey.xml" afterDir="false" />
++-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_booking.xml" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_map_trip.xml" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MapActivity.kt" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/uber_car.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/uber_car.png" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SearchActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SearchActivity.kt" afterDir="false" />
++     </list>
++     <option name="SHOW_DIALOG" value="false" />
++     <option name="HIGHLIGHT_CONFLICTS" value="true" />
++@@ -150,6 +127,9 @@
++     </key>
++     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
++       <recent name="com.ooober.driver.activities" />
+++    </key>
+++    <key name="android.template.1037218376">
+++      <recent name="com.ooober.driver" />
++     </key>
++     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
++       <recent name="com.ooober.driver.providers" />
++Index: OooberDriver/app/src/main/res/layout/activity_map_trip.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/res/layout/activity_map_trip.xml b/OooberDriver/app/src/main/res/layout/activity_map_trip.xml
++new file mode 100644
++--- /dev/null	(date 1682905630434)
+++++ b/OooberDriver/app/src/main/res/layout/activity_map_trip.xml	(date 1682905630434)
++@@ -0,0 +1,52 @@
+++<?xml version="1.0" encoding="utf-8"?>
+++<androidx.coordinatorlayout.widget.CoordinatorLayout
+++    xmlns:android="http://schemas.android.com/apk/res/android"
+++    xmlns:app="http://schemas.android.com/apk/res-auto"
+++    xmlns:tools="http://schemas.android.com/tools"
+++    android:layout_width="match_parent"
+++    android:layout_height="match_parent"
+++    tools:context=".activities.MapTripActivity">
+++
+++    <fragment
+++        android:id="@+id/map"
+++        android:layout_width="match_parent"
+++        android:layout_height="match_parent"
+++        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+++
+++    <Button
+++        android:id="@+id/btnStartTrip"
+++        android:layout_width="match_parent"
+++        android:layout_height="wrap_content"
+++        android:text="INICIAR VIAJE"
+++        android:background="@drawable/rounded_button"
+++        android:layout_gravity="bottom"
+++        android:layout_marginBottom="100dp"
+++        android:layout_marginRight="60dp"
+++        android:layout_marginLeft="60dp"
+++
+++        />
+++
+++    <Button
+++        android:id="@+id/btnFinishTtrip"
+++        android:layout_width="match_parent"
+++        android:layout_height="wrap_content"
+++        android:text="FINALIZAR VIAJE"
+++        android:background="@drawable/rounded_button"
+++        android:layout_gravity="bottom"
+++        app:backgroundTint="@color/grey"
+++        android:layout_marginBottom="100dp"
+++        android:layout_marginRight="60dp"
+++        android:layout_marginLeft="60dp"
+++        android:visibility="gone"/>
+++    <Button
+++        android:id="@+id/btnLogout"
+++        android:layout_width="match_parent"
+++        android:layout_height="wrap_content"
+++        android:text="SALIR"
+++        android:background="@drawable/rounded_button"
+++        android:layout_gravity="bottom"
+++        app:backgroundTint="@color/grey"
+++        android:layout_marginBottom="50dp"
+++        android:layout_marginRight="60dp"
+++        android:layout_marginLeft="60dp" />
+++</androidx.coordinatorlayout.widget.CoordinatorLayout>
++\ No newline at end of file
++Index: OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt b/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt
++new file mode 100644
++--- /dev/null	(date 1682906360360)
+++++ b/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt	(date 1682906360360)
++@@ -0,0 +1,295 @@
+++package com.ooober.driver.activities
+++
+++import android.Manifest
+++import android.content.Intent
+++import android.content.pm.PackageManager
+++import android.graphics.Bitmap
+++import android.graphics.Canvas
+++import android.graphics.drawable.Drawable
+++import android.location.Location
+++import android.os.Build
+++import androidx.appcompat.app.AppCompatActivity
+++import android.os.Bundle
+++import android.os.CountDownTimer
+++import android.util.Log
+++import android.view.View
+++import android.view.WindowManager
+++import androidx.activity.result.contract.ActivityResultContracts
+++import androidx.core.app.ActivityCompat
+++import androidx.core.content.ContextCompat
+++import com.google.android.gms.maps.GoogleMap
+++import com.google.android.gms.maps.OnMapReadyCallback
+++import com.google.android.gms.maps.SupportMapFragment
+++import com.ooober.driver.R
+++import com.example.easywaylocation.EasyWayLocation
+++import com.example.easywaylocation.Listener
+++import com.google.android.gms.location.LocationRequest
+++import com.google.android.gms.location.Priority
+++import com.google.android.gms.maps.CameraUpdateFactory
+++import com.google.android.gms.maps.model.*
+++import com.google.firebase.firestore.ListenerRegistration
+++import com.ooober.driver.databinding.ActivityMapBinding
+++import com.ooober.driver.databinding.ActivityMapTripBinding
+++import com.ooober.driver.fragments.ModalButtomSheetBooking
+++import com.ooober.driver.models.Booking
+++import com.ooober.driver.providers.AuthProvider
+++import com.ooober.driver.providers.BookingProvider
+++import com.ooober.driver.providers.GeoProvider
+++
+++class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
+++
+++    private  var bookingListener: ListenerRegistration? = null
+++    private lateinit var binding: ActivityMapTripBinding
+++    private var googleMap: GoogleMap? = null
+++    var easyWayLocation: EasyWayLocation? = null
+++    private var myLocationlatLog: LatLng? = null
+++    private var markerDriver: Marker? = null
+++    private val geoProvider= GeoProvider()
+++    private val authProvider = AuthProvider()
+++    private val bookingProvider = BookingProvider()
+++    private val modalBooking = ModalButtomSheetBooking()
+++
+++    private val timer = object : CountDownTimer(30000,1000){
+++        override fun onTick(counter: Long) {
+++            Log.d("TIMER","Counter: $counter")
+++        }
+++
+++        override fun onFinish() {
+++            Log.d("TIMER","FINISH")
+++            modalBooking.dismiss()
+++        }
+++
+++    }
+++    override fun onCreate(savedInstanceState: Bundle?) {
+++        super.onCreate(savedInstanceState)
+++
+++        binding = ActivityMapTripBinding.inflate(layoutInflater)
+++        setContentView(binding.root)
+++        window.setFlags(
+++            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+++            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+++        )
+++
+++        binding.btnLogout.setOnClickListener{
+++            authProvider.logout()
+++            val i = Intent(this, HomeActivity::class.java)
+++            i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+++            startActivity(i)
+++            finish()
+++        }
+++
+++        //To get specific location
+++        val locationRequest = LocationRequest.create().apply {
+++            interval = 0
+++            fastestInterval = 0
+++            priority = Priority.PRIORITY_HIGH_ACCURACY
+++            smallestDisplacement = 1f
+++
+++        }
+++        //Instance to get location
+++        easyWayLocation = EasyWayLocation(this, locationRequest, false, false, this)
+++        locationPermissions.launch(
+++            arrayOf(
+++                Manifest.permission.ACCESS_FINE_LOCATION,
+++                Manifest.permission.ACCESS_COARSE_LOCATION
+++            )
+++        )
+++
+++        listenerBooking()
+++
+++        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+++        mapFragment.getMapAsync(this)
+++
+++       // binding.btnStartTrip.setOnClickListener{connectDriver()}
+++       // binding.btnFinishTtrip.setOnClickListener{disconnectDriver()}
+++    }
+++
+++    val locationPermissions =
+++        registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permission ->
+++            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+++                when {
+++                    permission.getOrDefault(Manifest.permission.ACCESS_FINE_LOCATION, false) -> {
+++                        Log.d("LOCALIZACION", "Permiso concdedido")
+++                        easyWayLocation?.startLocation()
+++                        //checkIfDriverIsConnected()
+++                    }
+++                    permission.getOrDefault(Manifest.permission.ACCESS_COARSE_LOCATION, false) -> {
+++                        Log.d("LOCALIZACION", "Permiso concdedido con limitación")
+++                        easyWayLocation?.startLocation()
+++                        //checkIfDriverIsConnected()
+++                    }
+++                    else -> {
+++                        Log.d("LOCALIZACION", "Permiso no concedido")
+++                    }
+++                }
+++            }
+++        }
+++
+++    // To save and set the drivers positions
+++    private fun saveLocation(){
+++        if(myLocationlatLog != null){
+++            geoProvider.saveLocation(authProvider.getId(),myLocationlatLog!!)
+++        }
+++    }
+++
+++    private fun checkIfDriverIsConnected() {
+++        geoProvider.getLocation(authProvider.getId()).addOnSuccessListener { document->
+++            if(document.exists()){
+++                if(document.contains("l")){
+++                    connectDriver()
+++                }
+++                else{
+++                    showButtonConnect()
+++                }
+++            }
+++            else{
+++                showButtonConnect()
+++            }
+++        }
+++    }
+++
+++    override fun onResume() {
+++        super.onResume()
+++    }
+++
+++    override fun onDestroy() {
+++        super.onDestroy()
+++        easyWayLocation?.endUpdates()
+++        bookingListener?.remove()
+++    }
+++
+++    private fun listenerBooking(){
+++        bookingListener = bookingProvider.getBooking().addSnapshotListener{snapshot, e ->
+++            if(e != null){
+++                Log.d("FIRESTORE","ERROR: ${e.message}")
+++                return@addSnapshotListener
+++            }
+++            if(snapshot != null){
+++                if(snapshot.documents.size >0)
+++                {
+++                    val booking = snapshot.documents[0].toObject(Booking::class.java)
+++                    if(booking?.status == "create"){
+++                        showModalBookin(booking!!)
+++                    }
+++                }
+++            }
+++
+++        }
+++    }
+++
+++    private fun showModalBookin(booking: Booking){
+++        val bundle = Bundle()
+++        bundle.putString("booking",booking.toJson())
+++        modalBooking.arguments = bundle
+++        modalBooking.show(supportFragmentManager,ModalButtomSheetBooking.TAG)
+++        timer.start()
+++    }
+++
+++    private fun addMarker() {
+++        val drawable = ContextCompat.getDrawable(applicationContext, R.drawable.uber_car)
+++        val markerIcon = getMarkerFromDrawable(drawable!!)
+++        if (markerDriver != null) {
+++            markerDriver!!.remove() //No redibujar el dibujo
+++        }
+++
+++        if (myLocationlatLog != null) {
+++            markerDriver = googleMap?.addMarker(
+++                MarkerOptions().position(myLocationlatLog!!)
+++                    .anchor(0.5f, 0.5f)
+++                    .flat(true)
+++                    .icon(markerIcon)
+++            )
+++        }
+++    }
+++
+++    //Traer imagen
+++    private fun getMarkerFromDrawable(drawable: Drawable): BitmapDescriptor {
+++        val canvas = Canvas()
+++        val bitmap = Bitmap.createBitmap(
+++            70,
+++            150,
+++            Bitmap.Config.ARGB_8888
+++        )
+++        canvas.setBitmap(bitmap)
+++        drawable.setBounds(0, 0, 70, 150)
+++        drawable.draw(canvas)
+++        return BitmapDescriptorFactory.fromBitmap(bitmap)
+++    }
+++
+++    override fun onMapReady(map: GoogleMap) {
+++        googleMap = map
+++        googleMap?.uiSettings?.isZoomControlsEnabled = true
+++        // easyWayLocation?.startLocation()
+++        if (ActivityCompat.checkSelfPermission(
+++                this,
+++                Manifest.permission.ACCESS_FINE_LOCATION
+++            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+++                this,
+++                Manifest.permission.ACCESS_COARSE_LOCATION
+++            ) != PackageManager.PERMISSION_GRANTED
+++        ) {
+++            return
+++        }
+++        googleMap?.isMyLocationEnabled = false
+++        //Code to change map style
+++        /*
+++        try {
+++            val success = googleMap?.setMapStyle(
+++                MapStyleOptions.loadRawResourceStyle(this, R.raw.style)
+++            )
+++            if (!success!!) {
+++                Log.d("MAPAS", "No se pudo encontrar el estlo")
+++            }
+++        } catch (e: Resources.NotFoundException) {
+++            Log.d("MAPAS", "Error : ${e.toString()} ")
+++        }
+++         */
+++    }
+++
+++    override fun locationOn() {
+++
+++    }
+++
+++    private fun disconnectDriver() {
+++        easyWayLocation?.endUpdates()
+++        if (myLocationlatLog != null) {
+++            geoProvider.removeLocation(authProvider.getId())
+++            showButtonConnect()
+++        }
+++    }
+++
+++    private fun connectDriver() {
+++        easyWayLocation?.endUpdates()
+++        easyWayLocation?.startLocation()
+++        showButtonDisconnect()
+++    }
+++
+++    private fun showButtonConnect() {
+++        binding.btnFinishTtrip.visibility = View.GONE //ocultando
+++        binding.btnStartTrip.visibility = View.VISIBLE //Mostrando
+++    }
+++
+++    private fun showButtonDisconnect() {
+++        binding.btnFinishTtrip.visibility = View.VISIBLE //ocultando
+++        binding.btnStartTrip.visibility = View.GONE //Mostrando
+++    }
+++
+++    override fun currentLocation(location: Location) {
+++        //Lat y log de la posicion
+++        myLocationlatLog = LatLng(location.latitude, location.longitude)
+++
+++        googleMap?.moveCamera(
+++            CameraUpdateFactory.newCameraPosition(
+++                CameraPosition.builder().target(myLocationlatLog!!).zoom(15f).build()
+++            )
+++        )
+++        addMarker()
+++        saveLocation()
+++    }
+++
+++    override fun locationCancelled() {
+++
+++    }
+++
+++
+++}
++\ No newline at end of file
++Index: OooberUser/.idea/deploymentTargetDropDown.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <runningDeviceTargetSelectedWithDropDown>\r\n      <Target>\r\n        <type value=\"RUNNING_DEVICE_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\Jony Morales\\.android\\avd\\Pixel_4_API_31_3.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </runningDeviceTargetSelectedWithDropDown>\r\n    <targetSelectedWithDropDown>\r\n      <Target>\r\n        <type value=\"QUICK_BOOT_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\Jony Morales\\.android\\avd\\Pixel_4_API_31_3.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </targetSelectedWithDropDown>\r\n    <timeTargetWasSelectedWithDropDown value=\"2023-05-01T00:09:46.875118400Z\" />\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberUser/.idea/deploymentTargetDropDown.xml b/OooberUser/.idea/deploymentTargetDropDown.xml
++--- a/OooberUser/.idea/deploymentTargetDropDown.xml	(revision ed7dea570a688bb2dbfc9452a28f52e82571f12c)
+++++ b/OooberUser/.idea/deploymentTargetDropDown.xml	(date 1682908503295)
++@@ -23,6 +23,6 @@
++         </deviceKey>
++       </Target>
++     </targetSelectedWithDropDown>
++-    <timeTargetWasSelectedWithDropDown value="2023-05-01T00:09:46.875118400Z" />
+++    <timeTargetWasSelectedWithDropDown value="2023-05-01T02:34:58.447578400Z" />
++   </component>
++ </project>
++\ No newline at end of file
++Index: OooberDriver/.idea/deploymentTargetDropDown.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <runningDeviceTargetSelectedWithDropDown>\r\n      <Target>\r\n        <type value=\"RUNNING_DEVICE_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\Jony Morales\\.android\\avd\\Pixel_4_API_31_2.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </runningDeviceTargetSelectedWithDropDown>\r\n    <timeTargetWasSelectedWithDropDown value=\"2023-05-01T00:09:55.284819500Z\" />\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/OooberDriver/.idea/deploymentTargetDropDown.xml b/OooberDriver/.idea/deploymentTargetDropDown.xml
++--- a/OooberDriver/.idea/deploymentTargetDropDown.xml	(revision ed7dea570a688bb2dbfc9452a28f52e82571f12c)
+++++ b/OooberDriver/.idea/deploymentTargetDropDown.xml	(date 1682909554844)
++@@ -12,6 +12,6 @@
++         </deviceKey>
++       </Target>
++     </runningDeviceTargetSelectedWithDropDown>
++-    <timeTargetWasSelectedWithDropDown value="2023-05-01T00:09:55.284819500Z" />
+++    <timeTargetWasSelectedWithDropDown value="2023-05-01T02:52:18.735594300Z" />
++   </component>
++ </project>
++\ No newline at end of file
+Index: OooberDriver/app/src/main/java/com/ooober/driver/activities/SignInActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.ooober.driver.activities\r\n\r\nimport android.content.Intent\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\nimport android.util.Log\r\nimport android.view.WindowManager\r\nimport android.widget.Toast\r\nimport com.google.android.gms.auth.api.signin.GoogleSignIn\r\nimport com.google.android.gms.auth.api.signin.GoogleSignInClient\r\nimport com.google.android.gms.auth.api.signin.GoogleSignInOptions\r\nimport com.google.android.gms.common.api.ApiException\r\nimport com.google.firebase.auth.FirebaseAuth\r\nimport com.google.firebase.auth.GoogleAuthProvider\r\nimport com.ooober.driver.R\r\nimport com.ooober.driver.databinding.ActivityHomeBinding\r\nimport com.ooober.driver.databinding.ActivitySignInBinding\r\nimport com.ooober.driver.models.Driver\r\nimport com.ooober.driver.providers.AuthProvider\r\nimport com.ooober.driver.providers.DriverProvider\r\n\r\nclass SignInActivity : AppCompatActivity() {\r\n\r\n    private val authProvider = AuthProvider()\r\n    private val driverProvider = DriverProvider()\r\n    private lateinit var binding: ActivitySignInBinding\r\n    private lateinit var client: GoogleSignInClient\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n\r\n        super.onCreate(savedInstanceState)\r\n        binding = ActivitySignInBinding.inflate(layoutInflater)\r\n        setContentView(binding.root)\r\n        window.setFlags(\r\n            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,\r\n            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS\r\n        )\r\n\r\n        binding.btnESignIn.setOnClickListener { goToLogin() }\r\n        binding.GosignIn.setOnClickListener { goToRegister() }\r\n        binding.btnLanguage.setOnClickListener { goToSetLanguage() }\r\n        binding.btnSGithub.setOnClickListener { goToGithubAuth()}\r\n\r\n        val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)\r\n            .requestIdToken(getString(R.string.default_web_client_id))\r\n            .requestEmail()\r\n            .build()\r\n        client = GoogleSignIn.getClient(this, options)\r\n        binding.btnSgoogle.setOnClickListener {\r\n            val intent = client.signInIntent\r\n            startActivityForResult(intent, 10001)\r\n        }\r\n\r\n    }\r\n\r\n    private fun goToGithubAuth() {\r\n        val i = Intent(this, GithubAuthActivity::class.java)\r\n        startActivity(i)\r\n    }\r\n\r\n    private fun goToLogin() {\r\n        val i = Intent(this, MainActivity::class.java)\r\n        startActivity(i)\r\n    }\r\n\r\n    private fun goToRegister() {\r\n        val i = Intent(this, RegisterActivity::class.java)\r\n        startActivity(i)\r\n    }\r\n\r\n    private fun goToSetLanguage() {\r\n        val i = Intent(this, SettingsActivity::class.java)\r\n        startActivity(i)\r\n    }\r\n\r\n    private fun SignGoogle() {\r\n\r\n    }\r\n\r\n    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {\r\n        super.onActivityResult(requestCode, resultCode, data)\r\n        if (requestCode == 10001) {\r\n            val task = GoogleSignIn.getSignedInAccountFromIntent(data)\r\n            val account = task.getResult(ApiException::class.java)\r\n            val credential = GoogleAuthProvider.getCredential(account.idToken, null)\r\n            FirebaseAuth.getInstance().signInWithCredential(credential)\r\n                .addOnCompleteListener { task ->\r\n                    if (task.isSuccessful) {\r\n                        val client = Driver(\r\n                            id = authProvider.getId(),\r\n                            name = account.displayName,\r\n                            email = account.email,\r\n                        )\r\n                        driverProvider.create(client).addOnCompleteListener {\r\n                            if (it.isSuccessful) {\r\n\r\n                                Log.d(\"FIREBASE\", \"Succesfuly\")\r\n                                val i = Intent(this, MapActivity::class.java)\r\n                                i.flags =\r\n                                    Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK\r\n                                startActivity(i)\r\n                            } else {\r\n                                Toast.makeText(\r\n                                    this@SignInActivity,\r\n                                    R.string.m_errorSignIn2,\r\n                                    Toast.LENGTH_SHORT\r\n                                ).show()\r\n                                Log.d(\"FIREBASE\", \"Error: ${it.exception.toString()}\")\r\n                            }\r\n                        }\r\n\r\n                    } else {\r\n                        Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()\r\n                    }\r\n\r\n                }\r\n        }\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/java/com/ooober/driver/activities/SignInActivity.kt b/OooberDriver/app/src/main/java/com/ooober/driver/activities/SignInActivity.kt
+--- a/OooberDriver/app/src/main/java/com/ooober/driver/activities/SignInActivity.kt	(revision 6e6dc7f9efde27d975fc10e39a37f89669184091)
++++ b/OooberDriver/app/src/main/java/com/ooober/driver/activities/SignInActivity.kt	(date 1682921277593)
+@@ -38,7 +38,7 @@
+         binding.btnESignIn.setOnClickListener { goToLogin() }
+         binding.GosignIn.setOnClickListener { goToRegister() }
+         binding.btnLanguage.setOnClickListener { goToSetLanguage() }
+-        binding.btnSGithub.setOnClickListener { goToGithubAuth()}
++        binding.btnSGithub.setOnClickListener { }
+ 
+         val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+             .requestIdToken(getString(R.string.default_web_client_id))
+Index: OooberDriver/app/src/main/res/layout/activity_map_trip.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/res/layout/activity_map_trip.xml b/OooberDriver/app/src/main/res/layout/activity_map_trip.xml
+new file mode 100644
+--- /dev/null	(date 1682910247628)
++++ b/OooberDriver/app/src/main/res/layout/activity_map_trip.xml	(date 1682910247628)
+@@ -0,0 +1,52 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.coordinatorlayout.widget.CoordinatorLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".activities.MapTripActivity">
++
++    <fragment
++        android:id="@+id/map"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:name="com.google.android.gms.maps.SupportMapFragment"/>
++
++    <Button
++        android:id="@+id/btnStartTrip"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="INICIAR VIAJE"
++        android:background="@drawable/rounded_button"
++        android:layout_gravity="bottom"
++        android:layout_marginBottom="100dp"
++        android:layout_marginRight="60dp"
++        android:layout_marginLeft="60dp"
++
++        />
++
++    <Button
++        android:id="@+id/btnFinishTtrip"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="FINALIZAR VIAJE"
++        android:background="@drawable/rounded_button"
++        android:layout_gravity="bottom"
++        app:backgroundTint="@color/grey"
++        android:layout_marginBottom="100dp"
++        android:layout_marginRight="60dp"
++        android:layout_marginLeft="60dp"
++        android:visibility="gone"/>
++    <Button
++        android:id="@+id/btnLogout"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:text="SALIR"
++        android:background="@drawable/rounded_button"
++        android:layout_gravity="bottom"
++        app:backgroundTint="@color/grey"
++        android:layout_marginBottom="50dp"
++        android:layout_marginRight="60dp"
++        android:layout_marginLeft="60dp" />
++</androidx.coordinatorlayout.widget.CoordinatorLayout>
+\ No newline at end of file
+Index: OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt b/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt
+new file mode 100644
+--- /dev/null	(date 1682910247640)
++++ b/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt	(date 1682910247640)
+@@ -0,0 +1,295 @@
++package com.ooober.driver.activities
++
++import android.Manifest
++import android.content.Intent
++import android.content.pm.PackageManager
++import android.graphics.Bitmap
++import android.graphics.Canvas
++import android.graphics.drawable.Drawable
++import android.location.Location
++import android.os.Build
++import androidx.appcompat.app.AppCompatActivity
++import android.os.Bundle
++import android.os.CountDownTimer
++import android.util.Log
++import android.view.View
++import android.view.WindowManager
++import androidx.activity.result.contract.ActivityResultContracts
++import androidx.core.app.ActivityCompat
++import androidx.core.content.ContextCompat
++import com.google.android.gms.maps.GoogleMap
++import com.google.android.gms.maps.OnMapReadyCallback
++import com.google.android.gms.maps.SupportMapFragment
++import com.ooober.driver.R
++import com.example.easywaylocation.EasyWayLocation
++import com.example.easywaylocation.Listener
++import com.google.android.gms.location.LocationRequest
++import com.google.android.gms.location.Priority
++import com.google.android.gms.maps.CameraUpdateFactory
++import com.google.android.gms.maps.model.*
++import com.google.firebase.firestore.ListenerRegistration
++import com.ooober.driver.databinding.ActivityMapBinding
++import com.ooober.driver.databinding.ActivityMapTripBinding
++import com.ooober.driver.fragments.ModalButtomSheetBooking
++import com.ooober.driver.models.Booking
++import com.ooober.driver.providers.AuthProvider
++import com.ooober.driver.providers.BookingProvider
++import com.ooober.driver.providers.GeoProvider
++
++class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
++
++    private  var bookingListener: ListenerRegistration? = null
++    private lateinit var binding: ActivityMapTripBinding
++    private var googleMap: GoogleMap? = null
++    var easyWayLocation: EasyWayLocation? = null
++    private var myLocationlatLog: LatLng? = null
++    private var markerDriver: Marker? = null
++    private val geoProvider= GeoProvider()
++    private val authProvider = AuthProvider()
++    private val bookingProvider = BookingProvider()
++    private val modalBooking = ModalButtomSheetBooking()
++
++    private val timer = object : CountDownTimer(30000,1000){
++        override fun onTick(counter: Long) {
++            Log.d("TIMER","Counter: $counter")
++        }
++
++        override fun onFinish() {
++            Log.d("TIMER","FINISH")
++            modalBooking.dismiss()
++        }
++
++    }
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++
++        binding = ActivityMapTripBinding.inflate(layoutInflater)
++        setContentView(binding.root)
++        window.setFlags(
++            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
++            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
++        )
++
++        binding.btnLogout.setOnClickListener{
++            authProvider.logout()
++            val i = Intent(this, HomeActivity::class.java)
++            i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
++            startActivity(i)
++            finish()
++        }
++
++        //To get specific location
++        val locationRequest = LocationRequest.create().apply {
++            interval = 0
++            fastestInterval = 0
++            priority = Priority.PRIORITY_HIGH_ACCURACY
++            smallestDisplacement = 1f
++
++        }
++        //Instance to get location
++        easyWayLocation = EasyWayLocation(this, locationRequest, false, false, this)
++        locationPermissions.launch(
++            arrayOf(
++                Manifest.permission.ACCESS_FINE_LOCATION,
++                Manifest.permission.ACCESS_COARSE_LOCATION
++            )
++        )
++
++        listenerBooking()
++
++        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
++        mapFragment.getMapAsync(this)
++
++       // binding.btnStartTrip.setOnClickListener{connectDriver()}
++       // binding.btnFinishTtrip.setOnClickListener{disconnectDriver()}
++    }
++
++    val locationPermissions =
++        registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permission ->
++            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
++                when {
++                    permission.getOrDefault(Manifest.permission.ACCESS_FINE_LOCATION, false) -> {
++                        Log.d("LOCALIZACION", "Permiso concdedido")
++                        easyWayLocation?.startLocation()
++                        //checkIfDriverIsConnected()
++                    }
++                    permission.getOrDefault(Manifest.permission.ACCESS_COARSE_LOCATION, false) -> {
++                        Log.d("LOCALIZACION", "Permiso concdedido con limitación")
++                        easyWayLocation?.startLocation()
++                        //checkIfDriverIsConnected()
++                    }
++                    else -> {
++                        Log.d("LOCALIZACION", "Permiso no concedido")
++                    }
++                }
++            }
++        }
++
++    // To save and set the drivers positions
++    private fun saveLocation(){
++        if(myLocationlatLog != null){
++            geoProvider.saveLocation(authProvider.getId(),myLocationlatLog!!)
++        }
++    }
++
++    private fun checkIfDriverIsConnected() {
++        geoProvider.getLocation(authProvider.getId()).addOnSuccessListener { document->
++            if(document.exists()){
++                if(document.contains("l")){
++                    connectDriver()
++                }
++                else{
++                    showButtonConnect()
++                }
++            }
++            else{
++                showButtonConnect()
++            }
++        }
++    }
++
++    override fun onResume() {
++        super.onResume()
++    }
++
++    override fun onDestroy() {
++        super.onDestroy()
++        easyWayLocation?.endUpdates()
++        bookingListener?.remove()
++    }
++
++    private fun listenerBooking(){
++        bookingListener = bookingProvider.getBooking().addSnapshotListener{snapshot, e ->
++            if(e != null){
++                Log.d("FIRESTORE","ERROR: ${e.message}")
++                return@addSnapshotListener
++            }
++            if(snapshot != null){
++                if(snapshot.documents.size >0)
++                {
++                    val booking = snapshot.documents[0].toObject(Booking::class.java)
++                    if(booking?.status == "create"){
++                        showModalBookin(booking!!)
++                    }
++                }
++            }
++
++        }
++    }
++
++    private fun showModalBookin(booking: Booking){
++        val bundle = Bundle()
++        bundle.putString("booking",booking.toJson())
++        modalBooking.arguments = bundle
++        modalBooking.show(supportFragmentManager,ModalButtomSheetBooking.TAG)
++        timer.start()
++    }
++
++    private fun addMarker() {
++        val drawable = ContextCompat.getDrawable(applicationContext, R.drawable.uber_car)
++        val markerIcon = getMarkerFromDrawable(drawable!!)
++        if (markerDriver != null) {
++            markerDriver!!.remove() //No redibujar el dibujo
++        }
++
++        if (myLocationlatLog != null) {
++            markerDriver = googleMap?.addMarker(
++                MarkerOptions().position(myLocationlatLog!!)
++                    .anchor(0.5f, 0.5f)
++                    .flat(true)
++                    .icon(markerIcon)
++            )
++        }
++    }
++
++    //Traer imagen
++    private fun getMarkerFromDrawable(drawable: Drawable): BitmapDescriptor {
++        val canvas = Canvas()
++        val bitmap = Bitmap.createBitmap(
++            70,
++            150,
++            Bitmap.Config.ARGB_8888
++        )
++        canvas.setBitmap(bitmap)
++        drawable.setBounds(0, 0, 70, 150)
++        drawable.draw(canvas)
++        return BitmapDescriptorFactory.fromBitmap(bitmap)
++    }
++
++    override fun onMapReady(map: GoogleMap) {
++        googleMap = map
++        googleMap?.uiSettings?.isZoomControlsEnabled = true
++        // easyWayLocation?.startLocation()
++        if (ActivityCompat.checkSelfPermission(
++                this,
++                Manifest.permission.ACCESS_FINE_LOCATION
++            ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
++                this,
++                Manifest.permission.ACCESS_COARSE_LOCATION
++            ) != PackageManager.PERMISSION_GRANTED
++        ) {
++            return
++        }
++        googleMap?.isMyLocationEnabled = false
++        //Code to change map style
++        /*
++        try {
++            val success = googleMap?.setMapStyle(
++                MapStyleOptions.loadRawResourceStyle(this, R.raw.style)
++            )
++            if (!success!!) {
++                Log.d("MAPAS", "No se pudo encontrar el estlo")
++            }
++        } catch (e: Resources.NotFoundException) {
++            Log.d("MAPAS", "Error : ${e.toString()} ")
++        }
++         */
++    }
++
++    override fun locationOn() {
++
++    }
++
++    private fun disconnectDriver() {
++        easyWayLocation?.endUpdates()
++        if (myLocationlatLog != null) {
++            geoProvider.removeLocation(authProvider.getId())
++            showButtonConnect()
++        }
++    }
++
++    private fun connectDriver() {
++        easyWayLocation?.endUpdates()
++        easyWayLocation?.startLocation()
++        showButtonDisconnect()
++    }
++
++    private fun showButtonConnect() {
++        binding.btnFinishTtrip.visibility = View.GONE //ocultando
++        binding.btnStartTrip.visibility = View.VISIBLE //Mostrando
++    }
++
++    private fun showButtonDisconnect() {
++        binding.btnFinishTtrip.visibility = View.VISIBLE //ocultando
++        binding.btnStartTrip.visibility = View.GONE //Mostrando
++    }
++
++    override fun currentLocation(location: Location) {
++        //Lat y log de la posicion
++        myLocationlatLog = LatLng(location.latitude, location.longitude)
++
++        googleMap?.moveCamera(
++            CameraUpdateFactory.newCameraPosition(
++                CameraPosition.builder().target(myLocationlatLog!!).zoom(15f).build()
++            )
++        )
++        addMarker()
++        saveLocation()
++    }
++
++    override fun locationCancelled() {
++
++    }
++
++
++}
+\ No newline at end of file
