@@ -63,36 +63,27 @@ class ModalButtomSheetBooking : BottomSheetDialogFragment() {
 
     private fun cancelBooking(idCliente: String) {
         bookingProvider.updateStatus(idCliente, "cancel").addOnCompleteListener {
-            if (it.isSuccessful) {
+            (activity as? MapActivity)?.timer?.cancel()
                 dismiss()
-                if (context != null) {
-                    Toast.makeText(context, "Viaje cancelado", Toast.LENGTH_SHORT).show()
-                }
-            } else {
-                if (context != null) {
-                    Toast.makeText(context, "No se pudo cancelar el viaje", Toast.LENGTH_LONG)
-                        .show()
-                }
-            }
         }
     }
 
     private fun acceptBooking(idCliente: String) {
         bookingProvider.updateStatus(idCliente, "accept").addOnCompleteListener {
+            (activity as? MapActivity)?.timer?.cancel()
             if (it.isSuccessful) {
                 (activity as? MapActivity)?.easyWayLocation?.endUpdates()
                 geoProvider.removeLocation(authProvider.getId())
                 goToMapTrip()
             } else {
-                if(context != null) {
-                    Toast.makeText(context, "No se pudo aceptar el viaje", Toast.LENGTH_LONG).show()
-                }
+                  //  Toast.makeText(activity, "No se pudo aceptar el viaje", Toast.LENGTH_LONG).show()
             }
         }
     }
 
     private fun goToMapTrip() {
         val i = Intent(context, MapTripActivity::class.java)
+        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         context?.startActivity(i)
     }
 
@@ -102,8 +93,9 @@ class ModalButtomSheetBooking : BottomSheetDialogFragment() {
 
     override fun onDismiss(dialog: DialogInterface) {
         super.onDismiss(dialog)
-        if (booking.idClient != null) {
-            cancelBooking(booking.idClient!!)
-        }
+        (activity as? MapActivity)?.timer?.cancel()
+        //if (booking.idClient != null) {
+        //    cancelBooking(booking.idClient!!)
+        //}
     }
 }

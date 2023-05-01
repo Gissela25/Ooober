@@ -39,6 +39,7 @@ import com.google.firebase.firestore.GeoPoint
 import com.google.maps.android.SphericalUtil
 import com.ooober.user.R
 import com.ooober.user.databinding.ActivityMapBinding
+import com.ooober.user.models.Booking
 import com.ooober.user.models.DriverLocation
 import com.ooober.user.providers.AuthProvider
 import com.ooober.user.providers.BookingProvider
@@ -126,7 +127,17 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     }
 
     private fun removeBooking() {
-        bookingProvider.remove()
+        bookingProvider.getBooking().get().addOnSuccessListener {
+            document->
+                if(document.exists()){
+                    val booking = document.toObject(Booking::class.java)
+                    if(booking?.status == "create" || booking?.status == "cancel")
+                    {
+                        bookingProvider.remove()
+                    }
+                }
+        }
+
     }
 
     private fun getNearbyDrivers() {
