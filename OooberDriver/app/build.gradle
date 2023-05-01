@@ -58,6 +58,8 @@ dependencies {
     implementation 'com.google.maps.android:android-maps-utils:2.2.3'
     implementation 'com.google.android.gms:play-services-maps:18.0.2'
     implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
     implementation 'com.github.prabhat1707:EasyWayLocation:2.4'
 
     //Positions dependencies
