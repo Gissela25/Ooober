@@ -41,6 +41,7 @@ import com.ooober.user.R
 import com.ooober.user.databinding.ActivityMapBinding
 import com.ooober.user.models.DriverLocation
 import com.ooober.user.providers.AuthProvider
+import com.ooober.user.providers.BookingProvider
 import com.ooober.user.providers.ClientProvider
 import com.ooober.user.providers.GeoProvider
 import com.ooober.user.utils.CarMoveAnim
@@ -55,6 +56,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     private val geoProvider = GeoProvider()
     private val authProvider = AuthProvider()
     private val clientProvider = ClientProvider()
+    private val bookingProvider = BookingProvider()
 
     // GOOGLE PLACES
     private var places: PlacesClient? = null
@@ -96,9 +98,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         ))
 
         startGooglePlaces()
-
-
-
+        removeBooking()
         binding.btnRequestTrip.setOnClickListener { goToTripInfo() }
         //binding.imageViewMenu.setOnClickListener { showModalMenu() }
     }
@@ -123,6 +123,10 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             }
         }
 
+    }
+
+    private fun removeBooking() {
+        bookingProvider.remove()
     }
 
     private fun getNearbyDrivers() {

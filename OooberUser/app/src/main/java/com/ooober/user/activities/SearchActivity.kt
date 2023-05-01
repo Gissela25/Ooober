@@ -1,5 +1,6 @@
 package com.ooober.user.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,7 @@ import android.widget.Toast
 import com.google.android.gms.maps.model.LatLng
 import com.google.firebase.firestore.DocumentId
 import com.google.firebase.firestore.GeoPoint
+import com.google.firebase.firestore.ListenerRegistration
 import com.ooober.user.R
 import com.ooober.user.databinding.ActivitySearchBinding
 import com.ooober.user.models.Booking
@@ -18,6 +20,7 @@ import org.imperiumlabs.geofirestore.callbacks.GeoQueryEventListener
 
 class SearchActivity : AppCompatActivity() {
 
+    private var listenerBooking: ListenerRegistration? = null
     private lateinit var binding: ActivitySearchBinding
 
     private var extraOriginName = ""
@@ -32,8 +35,9 @@ class SearchActivity : AppCompatActivity() {
     private var originLatLng: LatLng? = null
     private var destinationLatLng: LatLng? = null
 
-    private var geoProvider = GeoProvider()
-    private var authProvider = AuthProvider()
+    private val geoProvider = GeoProvider()
+    private val authProvider = AuthProvider()
+    private val bookingProvider = BookingProvider()
 
     // BUSQUEDA DEL CONDUCTOR
     private var radius = 0.2
@@ -42,8 +46,6 @@ class SearchActivity : AppCompatActivity() {
     private var isDriverFound = false
     private var driverLatLng: LatLng? = null
     private var limitRadius = 20
-
-    private val bookingProvider = BookingProvider()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,8 +70,41 @@ class SearchActivity : AppCompatActivity() {
         destinationLatLng = LatLng(extraDestinationLat, extraDestinationLng)
 
         getClosesDriver()
+        checkIfDriverAccept()
     }
 
+    private fun checkIfDriverAccept(){
+        listenerBooking = bookingProvider.getBooking().addSnapshotListener{snapshot, e ->
+            if(e != null){
+                Log.d("FIRESTORE","ERROR: ${e.message}")
+                return@addSnapshotListener
+            }
+
+            if (snapshot != null && snapshot.exists()){
+                val booking = snapshot.toObject(Booking::class.java)
+                if(booking?.status == "accept"){
+                    Toast.makeText(this@SearchActivity,"Viaje Aceptado", Toast.LENGTH_SHORT).show()
+                    listenerBooking?.remove()
+                    goToMapTrip()
+                }
+                else if (booking?.status == "cancel"){
+                    Toast.makeText(this@SearchActivity,"Viaje Cancelado", Toast.LENGTH_SHORT).show()
+                    listenerBooking?.remove()
+                    goToMap()
+                }
+            }
+        }
+    }
+
+    private fun goToMapTrip(){
+        val i = Intent(this, MapTripActivity::class.java)
+        startActivity(i)
+    }
+    private fun goToMap(){
+        val i = Intent(this, MapActivity::class.java)
+        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(i)
+    }
     private fun createBooking(idDriver: String) {
 
         val booking = Booking(
@@ -136,5 +171,10 @@ class SearchActivity : AppCompatActivity() {
             }
 
         })
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        listenerBooking?.remove()
     }
 }

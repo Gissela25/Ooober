@@ -1,5 +1,7 @@
 package com.ooober.driver.fragments
 
+import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.system.Os.accept
 import android.util.Log
@@ -12,6 +14,7 @@ import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.ooober.driver.R
 import com.ooober.driver.activities.MapActivity
+import com.ooober.driver.activities.MapTripActivity
 import com.ooober.driver.models.Booking
 import com.ooober.driver.providers.AuthProvider
 import com.ooober.driver.providers.BookingProvider
@@ -50,39 +53,57 @@ class ModalButtomSheetBooking : BottomSheetDialogFragment() {
 
         txtViewOrigin.text = booking?.origin
         txtViewDestination.text = booking?.destination
-        txtViewTimeAndDistance.text = "${String.format("%.1f", booking?.time)} Min - ${String.format("%.1f",booking?.km)} Km"
+        txtViewTimeAndDistance.text =
+            "${String.format("%.1f", booking?.time)} Min - ${String.format("%.1f", booking?.km)} Km"
 
-        btnAccept.setOnClickListener {acceptBooking(booking?.idClient!!)}
-        btnCancel.setOnClickListener {cancelBooking(booking?.idClient!!)}
+        btnAccept.setOnClickListener { acceptBooking(booking?.idClient!!) }
+        btnCancel.setOnClickListener { cancelBooking(booking?.idClient!!) }
         return view
     }
 
-    private fun cancelBooking(idCliente:String) {
-            bookingProvider.updateStatus(idCliente,"cancel").addOnCompleteListener {
-                if(it.isSuccessful){
+    private fun cancelBooking(idCliente: String) {
+        bookingProvider.updateStatus(idCliente, "cancel").addOnCompleteListener {
+            if (it.isSuccessful) {
+                dismiss()
+                if (context != null) {
                     Toast.makeText(context, "Viaje cancelado", Toast.LENGTH_SHORT).show()
                 }
-                else{
-                    Toast.makeText(context, "No se pudo cancelar el viaje", Toast.LENGTH_LONG).show()
+            } else {
+                if (context != null) {
+                    Toast.makeText(context, "No se pudo cancelar el viaje", Toast.LENGTH_LONG)
+                        .show()
                 }
             }
+        }
     }
 
-    private fun acceptBooking(idCliente:String) {
-        bookingProvider.updateStatus(idCliente,"accept").addOnCompleteListener {
-            if(it.isSuccessful){
+    private fun acceptBooking(idCliente: String) {
+        bookingProvider.updateStatus(idCliente, "accept").addOnCompleteListener {
+            if (it.isSuccessful) {
                 (activity as? MapActivity)?.easyWayLocation?.endUpdates()
                 geoProvider.removeLocation(authProvider.getId())
-                Toast.makeText(context, "Viaje aceptado", Toast.LENGTH_SHORT).show()
-            }
-            else{
-                Toast.makeText(context, "No se pudo aceptar el viaje", Toast.LENGTH_LONG).show()
+                goToMapTrip()
+            } else {
+                if(context != null) {
+                    Toast.makeText(context, "No se pudo aceptar el viaje", Toast.LENGTH_LONG).show()
+                }
             }
         }
+    }
+
+    private fun goToMapTrip() {
+        val i = Intent(context, MapTripActivity::class.java)
+        context?.startActivity(i)
     }
 
     companion object {
         const val TAG = "ModalButtomSheet"
     }
 
+    override fun onDismiss(dialog: DialogInterface) {
+        super.onDismiss(dialog)
+        if (booking.idClient != null) {
+            cancelBooking(booking.idClient!!)
+        }
+    }
 }
