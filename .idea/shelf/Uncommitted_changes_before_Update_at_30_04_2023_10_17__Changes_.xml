@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]" date="1682871499849" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 30/04/2023 10:17 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" />
+    <option name="AFTER_PATH" value="OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="AFTER_PATH" value="OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/buildOutputCleanup.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" />
+    <option name="AFTER_PATH" value="OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/executionHistory.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" />
+    <option name="AFTER_PATH" value="OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17_[Changes]/fileHashes.lock" />
+  </binary>
+</changelist>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MapActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_connect"
+        android:background="@drawable/rounded_button"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+
+        />
+
+    <Button
+        android:id="@+id/btnDisconnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_Dconnect"
+        android:background="@drawable/rounded_button"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/grey"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SALIR"
+        android:background="@drawable/rounded_button"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/grey"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

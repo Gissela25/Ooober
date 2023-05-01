@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">OooberDriver</string>
+    <string name="google_maps_key" translatable="false">AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk</string>
+
+    <string name="txt_lang">Idioma de la aplicación</string>
+    <string name="lang_es">Español</string>
+    <string name="lang_en">Ingles</string>
+
+    <string name="btn_homeCreateAcc">Crear Cuenta</string>
+    <string name="btn_homeLogIn">Iniciar Sesion</string>
+
+    <string name="txt_hi">Hola de nuevo </string>
+    <string name="hint_mail">Correo Electronico </string>
+    <string name="hint_password">Contraseña</string>
+    <string name="txt_noaccount">¿No tienes cuenta?</string>
+    <string name="txt_connect">CONECTARSE</string>
+    <string name="txt_Dconnect">DESCONECTARSE</string>
+    <string name="txt_createacc">Crear una cuenta</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_Lname">Apellido</string>
+    <string name="hint_phone">Telefono</string>
+    <string name="hint_confirmpassword">Confirmar Contraseña</string>
+    <string name="txt_Doyouhaveaccount">¿Tienes Cuenta?</string>
+    <string name="txt_LogIn">Iniciar Sesion</string>
+    <string name="txt_LogInwithemail">Iniciar Sesion Con Correo</string>
+    <string name="txt_LogInwithgoogle">Iniciar Sesion Con Google</string>
+    <string name="txt_LogInwithfacebook">Iniciar Sesion Con Facebook</string>
+    <string name="txt_FirstTime">¿Es la primera vez que visitas Ooober?</string>
+    <string name="txt_setLanguage">Guardar</string>
+    <string name="txt_tLanguage">Seleccionar Lenguaje</string>
+    <string name="m_registerE">Registro Exitoso</string>
+    <string name="m_error">Ocurrio un error al almacenar los datos del usuario</string>
+    <string name="m_registerF">Registro Fallido</string>
+    <string name="m_Iname">Ingresa tu Nombre</string>
+    <string name="m_Ilastname">Ingresa tu Apellido</string>
+    <string name="m_Iemail">Ingresa tu Correo Electronico</string>
+    <string name="m_Iphone">Ingresa tu Telefono</string>
+    <string name="m_Ipassword">Ingresa tu Contraseña</string>
+    <string name="m_Icpassword">Ingresa la confirmacion de tu Contraseña</string>
+    <string name="m_Isamepassword">Las contraseñas deben coincidir</string>
+    <string name="m_Isizepassword">La contraseña debe contener al menos seis caracteres</string>
+    <string name="m_errorSignIn">Error al iniciar sesion</string>
+    <string name="m_errorSignIn2">Ocurrio  un error al ingresar</string>
+    <string name="txt_LogInwithGithub">Iniciar Sesión con Github</string>
+
+</resources>

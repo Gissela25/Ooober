@@ -1,0 +1,100 @@
+{
+  "project_info": {
+    "project_number": "868484423714",
+    "project_id": "ooober-dsm104",
+    "storage_bucket": "ooober-dsm104.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868484423714:android:126d0abf1b580356de6a7b",
+        "android_client_info": {
+          "package_name": "com.ooober.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868484423714-44ore7p91mu1nf92ov4q0ttlrc6goe3q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ooober.driver",
+            "certificate_hash": "8ea620e1b9f8fb2f508b4b0aa62a2a1fb774a1af"
+          }
+        },
+        {
+          "client_id": "868484423714-vtbh0007m43fgcb8761kupn7u7r57b1h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ooober.driver",
+            "certificate_hash": "7fd79b3e7c105c6699e6e67ab4579209b8d695a4"
+          }
+        },
+        {
+          "client_id": "868484423714-p4ljpoq2n1qfut0a7bboba7i904sbk6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9ukSdLl99KH9xasxmzNRW0Y78_YcAHZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868484423714-90p22j54juh58og2sk6ur4lrgiftrjeq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868484423714:android:e0892e4f6e5728d9de6a7b",
+        "android_client_info": {
+          "package_name": "com.ooober.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868484423714-9ahjp36rvvvenuklrd5miullpl7t33uj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ooober.user",
+            "certificate_hash": "8ea620e1b9f8fb2f508b4b0aa62a2a1fb774a1af"
+          }
+        },
+        {
+          "client_id": "868484423714-rslh3gok53u9clep9abq9kldqp9d05r6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ooober.user",
+            "certificate_hash": "7fd79b3e7c105c6699e6e67ab4579209b8d695a4"
+          }
+        },
+        {
+          "client_id": "868484423714-p4ljpoq2n1qfut0a7bboba7i904sbk6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9ukSdLl99KH9xasxmzNRW0Y78_YcAHZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868484423714-90p22j54juh58og2sk6ur4lrgiftrjeq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
