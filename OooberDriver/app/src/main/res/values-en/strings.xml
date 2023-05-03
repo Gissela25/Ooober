@@ -42,5 +42,6 @@
     <string name="m_errorSignIn">Failed to login</string>
     <string name="m_errorSignIn2">An error occurred while entering</string>
     <string name="txt_LogInwithGithub">Log In With Github</string>
+    <string name="txt_exit">GO OUT</string>
 
 </resources>

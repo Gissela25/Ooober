@@ -42,5 +42,6 @@
     <string name="m_errorSignIn">Error al iniciar sesion</string>
     <string name="m_errorSignIn2">Ocurrio  un error al ingresar</string>
     <string name="txt_LogInwithGithub">Iniciar Sesión con Github</string>
+    <string name="txt_exit">SALIR</string>
 
 </resources>
