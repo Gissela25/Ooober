@@ -11,13 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment=":c">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_map_trip.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_map_trip.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_search.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_trip_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_trip_info.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values-en/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_booking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_booking.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

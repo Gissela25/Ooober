@@ -43,5 +43,11 @@
     <string name="m_errorSignIn2">An error occurred while entering</string>
     <string name="txt_LogInwithGithub">Log In With Github</string>
     <string name="txt_exit">GO OUT</string>
-
+    <string name="txt_Requets">TRAVEL REQUEST</string>
+    <string name="txt_falsestreet">False Street</string>
+    <string name="txt_origin">Origin</string>
+    <string name="txt_destination">Destination</string>
+    <string name="txt_timeanddistance">Time and distance</string>
+    <string name="botom_accept">Accept</string>
+    <string name="botom_cancel">Cancel</string>
 </resources>
