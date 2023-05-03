@@ -43,4 +43,12 @@
     <string name="txt_PwdDoNotMatch">Password do not match</string>
     <string name="txt_SixCharacters">The password must be at least six characters</string>
     <string name="txt_AuthFalied">Authentication falied</string>
+    <string name="txt_searchingdriver">SEARCHING DRIVERS...</string>
+    <string name="txt_falsestreet">False Street</string>
+    <string name="txt_origin">Origin</string>
+    <string name="txt_destination">Destination</string>
+    <string name="txt_timeanddistance">Time and distance</string>
+    <string name="txt_price">Estimated price of the trip</string>
+    <string name="txt_confirmation">CONFIRM REQUEST</string>
+    <string name="txt_MAP">MAP TRIP</string>
 </resources>
