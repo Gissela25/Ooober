@@ -181,7 +181,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
     private fun easyDrawRoute(position: LatLng) {
         wayPoints.clear()
         wayPoints.add(myLocationlatLog!!)
-        wayPoints.add(position!!)
+        wayPoints.add(position)
         directionUtil = DirectionUtil.Builder()
             .setDirectionKey(resources.getString(R.string.google_maps_key))
             .setOrigin(myLocationlatLog!!)
