@@ -7,10 +7,8 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import android.location.Location
-import android.os.Build
+import android.os.*
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
@@ -61,6 +59,34 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
     private lateinit var directionUtil: DirectionUtil
     private var isLocationEnabled = false
     private var isCloseToOrigin = false
+
+    //Distancia
+    private var meters = 0.0
+    private var km = 0.0
+    private var previusLocation = Location("")
+    private var currentLocation = Location("")
+    private var isStartedTrip = false
+
+    //Temporizador
+    private var counter = 0
+    private var min = 0
+    private var handle = Handler(Looper.myLooper()!!)
+    private var runnable = Runnable{
+        kotlin.run {
+            counter ++
+
+            if(counter < 60) {
+                binding.textViewTimer.text = "$counter Seg"
+            }
+            else{
+                min = counter / 60
+                binding.textViewTimer.text = "$min Min $counter Seg"
+            }
+
+            startTimer()
+        }
+    }
+
     private val timer = object : CountDownTimer(30000, 1000) {
         override fun onTick(counter: Long) {
             Log.d("TIMER", "Counter: $counter")
@@ -116,6 +142,10 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
         binding.btnFinishTtrip.setOnClickListener{updateToFinish()}
     }
 
+    private fun startTimer() {
+        handle.postDelayed(runnable, 1000)
+    }
+
     val locationPermissions =
         registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permission ->
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -146,6 +176,8 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
 
     override fun onDestroy() {
         super.onDestroy()
+        easyWayLocation?.endUpdates()
+        handle.removeCallbacks(runnable)
     }
 
     private fun getDistancieBetween(originLatLng: LatLng, destinationLatLng: LatLng):Float{
@@ -303,11 +335,14 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
             bookingProvider.updateStatus(booking?.idClient!!, "started").addOnCompleteListener{
                 if(it.isSuccessful){
                     if(destinationLatLng != null) {
+                        isStartedTrip = true
                         googleMap?.clear()
                         addMarker()
                         easyDrawRoute(destinationLatLng!!)
                         addDestinationMarker()
                         markerOrigin?.remove()
+
+                        startTimer()
                     }
                     showButtonFinish()
                 }
@@ -320,15 +355,30 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
 
     private fun updateToFinish(){
             bookingProvider.updateStatus(booking?.idClient!!, "finished").addOnCompleteListener {
-                val intent = Intent(this, MapActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
+                if(it.isSuccessful)
+                {
+                    handle.removeCallbacks(runnable)
+                    isStartedTrip = false
+                    val intent = Intent(this, MapActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                }
+
             }
     }
 
     override fun currentLocation(location: Location) {
         //Lat y log de la posicion
         myLocationlatLog = LatLng(location.latitude, location.longitude)
+        currentLocation = location
+
+        if(isStartedTrip){
+            meters = meters + previusLocation.distanceTo(currentLocation)
+            km = meters / 1000
+            binding.textViewDistance.text = "$km km"
+        }
+
+        previusLocation = location
 
         googleMap?.moveCamera(
             CameraUpdateFactory.newCameraPosition(
@@ -350,6 +400,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
             getBooking()
         }
     }
+
 
     override fun locationCancelled() {
 
