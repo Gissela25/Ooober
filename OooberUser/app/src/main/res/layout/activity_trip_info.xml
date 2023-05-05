@@ -41,7 +41,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Origen"
+                    android:text="@string/txt_origin"
                     android:textSize="13sp"
                     android:textStyle="bold" />
 
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
-                    android:text="Calle falsa"
+                    android:text="@string/txt_falsestreet"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -81,7 +81,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Destino"
+                    android:text="@string/txt_destination"
                     android:textSize="13sp"
                     android:textStyle="bold" />
 
@@ -90,7 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
-                    android:text="Calle falsa"
+                    android:text="@string/txt_falsestreet"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -120,7 +120,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tiempo y distancia"
+                    android:text="@string/txt_timeanddistance"
                     android:textSize="13sp"
                     android:textStyle="bold" />
 
@@ -159,7 +159,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Precio aproximado del viaje"
+                    android:text="@string/txt_price"
                     android:textSize="13sp"
                     android:textStyle="bold" />
 
@@ -187,7 +187,7 @@
         android:layout_marginRight="60dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/rounded_button"
-        android:text="CONFIRMAR SOLICITUD" />
+        android:text="@string/txt_confirmation" />
 
     <ImageView
         android:id="@+id/imageViewBack"

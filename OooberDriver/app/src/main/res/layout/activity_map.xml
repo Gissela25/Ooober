@@ -42,7 +42,7 @@
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SALIR"
+        android:text="@string/txt_exit"
         android:background="@drawable/rounded_button"
         android:layout_gravity="bottom"
         app:backgroundTint="@color/grey"

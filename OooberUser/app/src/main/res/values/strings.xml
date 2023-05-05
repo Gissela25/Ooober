@@ -46,5 +46,13 @@
     <string name="txt_EntConfPwd">Confirma tu contraseña</string>
     <string name="txt_PwdDoNotMatch">Contraseñas no coinciden</string>
     <string name="txt_SixCharacters">La contraseña debe tener al menos 6 carácteres</string>
-    <string name="txt_AuthFalied">Atenticación fallida</string>
+    <string name="txt_AuthFalied">Autenticación fallida</string>
+    <string name="txt_searchingdriver">BUSCANDO CONDUCTORES...</string>
+    <string name="txt_falsestreet">Calle falsa</string>
+    <string name="txt_origin">Origen</string>
+    <string name="txt_destination">Destino</string>
+    <string name="txt_timeanddistance">Tiempo y distancia</string>
+    <string name="txt_price">Precio aproximado del viaje</string>
+    <string name="txt_confirmation">CONFIRMAR SOLICITUD</string>
+    <string name="txt_MAP">MAPA DE VIAJE</string>
 </resources>

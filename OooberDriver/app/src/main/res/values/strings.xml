@@ -42,5 +42,12 @@
     <string name="m_errorSignIn">Error al iniciar sesion</string>
     <string name="m_errorSignIn2">Ocurrio  un error al ingresar</string>
     <string name="txt_LogInwithGithub">Iniciar Sesión con Github</string>
-
+    <string name="txt_exit">SALIR</string>
+    <string name="txt_Requets">SOLICITUD DE VIAJE</string>
+    <string name="txt_falsestreet">Calle falsa</string>
+    <string name="txt_origin">Origen</string>
+    <string name="txt_destination">Destino</string>
+    <string name="txt_timeanddistance">Tiempo y distancia</string>
+    <string name="botom_accept">Aceptar</string>
+    <string name="botom_cancel">Cancelar</string>
 </resources>

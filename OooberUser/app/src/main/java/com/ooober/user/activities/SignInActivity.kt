@@ -59,7 +59,7 @@ class SignInActivity : AppCompatActivity() {
 
         binding.btnSfacebook.setOnClickListener {
             LoginManager.getInstance()
-                .logInWithReadPermissions(this, listOf("public_profile"))
+                .logInWithReadPermissions(this, listOf("email","public_profile"))
 
             LoginManager.getInstance()
                 .registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
@@ -95,6 +95,7 @@ class SignInActivity : AppCompatActivity() {
                             email = user?.email,
                             phone = user?.phoneNumber
                         )
+                        Log.d("FACEBOOK", "Email : ${user?.email}")
                         driverProvider.create(client).addOnCompleteListener {
                             if (it.isSuccessful) {
 

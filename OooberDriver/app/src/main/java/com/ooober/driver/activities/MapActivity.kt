@@ -48,7 +48,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     private val bookingProvider = BookingProvider()
     private val modalBooking = ModalButtomSheetBooking()
 
-    private val timer = object : CountDownTimer(30000,1000){
+     val timer = object : CountDownTimer(30000,1000){
         override fun onTick(counter: Long) {
             Log.d("TIMER","Counter: $counter")
         }
@@ -180,6 +180,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         val bundle = Bundle()
         bundle.putString("booking",booking.toJson())
         modalBooking.arguments = bundle
+        modalBooking.isCancelable = false
         modalBooking.show(supportFragmentManager,ModalButtomSheetBooking.TAG)
         timer.start()
     }
