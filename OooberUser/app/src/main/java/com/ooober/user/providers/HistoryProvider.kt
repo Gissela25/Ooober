@@ -28,9 +28,9 @@ class HistoryProvider {
         return db.whereEqualTo("idDriver",authProvider.getId())
     }
 
-    fun updateStatus(idCliente:String,status:String): Task<Void> {
-        return db.document(idCliente).update("status", status).addOnFailureListener{
-            exception -> Log.d("FIRESTORE", "ERROR: ${exception.message}")
+    fun updateCalificationToDriver(id:String,  calification:Float): Task<Void> {
+        return db.document(id).update("calificationToDriver", calification).addOnFailureListener{
+                exception -> Log.d("FIRESTORE", "ERROR: ${exception.message}")
         }
     }
 

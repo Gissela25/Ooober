@@ -4,7 +4,7 @@ import com.beust.klaxon.*
 private val klaxon = Klaxon()
 
 data class History (
-    val id: String? = null,
+    var id: String? = null,
     val idClient: String? = null,
     val idDriver: String? = null,
     val origin: String? = null,

@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="Driver">
-      <change afterPath="$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/models/History.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/providers/HistoryProvider.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/CalificationActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/models/History.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/providers/HistoryProvider.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OooberUser/app/src/main/res/drawable/ic_check.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OooberUser/app/src/main/res/drawable/ic_checkg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OooberUser/app/src/main/res/layout/activity_calification.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_04_2023_17_48__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/CalificationClientActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/CalificationClientActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/MapTripActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/MapTripActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/res/values/strings.xml" afterDir="false" />
-    </list>
+    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="get trip history" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682981403416</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="get trip history">
+      <created>1683267935253</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1683267935253</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +174,7 @@
     <MESSAGE value="LogIn with fb for Users" />
     <MESSAGE value="Facebook  details :D" />
     <MESSAGE value="Driver" />
-    <option name="LAST_COMMIT_MESSAGE" value="Driver" />
+    <MESSAGE value="get trip history" />
+    <option name="LAST_COMMIT_MESSAGE" value="get trip history" />
   </component>
 </project>
