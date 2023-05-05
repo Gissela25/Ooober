@@ -33,11 +33,12 @@ import com.ooober.driver.databinding.ActivityMapBinding
 import com.ooober.driver.databinding.ActivityMapTripBinding
 import com.ooober.driver.fragments.ModalButtomSheetBooking
 import com.ooober.driver.models.Booking
+import com.ooober.driver.models.History
 import com.ooober.driver.models.Prices
-import com.ooober.driver.providers.AuthProvider
-import com.ooober.driver.providers.BookingProvider
-import com.ooober.driver.providers.ConfigProvider
-import com.ooober.driver.providers.GeoProvider
+import com.ooober.driver.providers.*
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     DirectionUtil.DirectionCallBack {
@@ -57,6 +58,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     private var markerDriver: Marker? = null
     private val geoProvider = GeoProvider()
     private val authProvider = AuthProvider()
+    private val historyProvider = HistoryProvider()
     private val bookingProvider = BookingProvider()
     private val modalBooking = ModalButtomSheetBooking()
     private var wayPoints: ArrayList<LatLng> = ArrayList()
@@ -378,14 +380,39 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         }
     }*/
 
-    private fun updateToFinish(){
-        bookingProvider.updateStatus(booking?.idClient!!, "finished").addOnCompleteListener {
+    private fun updateToFinish() {
+        handle.removeCallbacks(runnable)
+        isStartedTrip = false
+        geoProvider.removeLocationWorking((authProvider.getId()))
+        if (min == 0) {
+            min = 1
+        }
+        getPrices(km, min.toDouble())
+    }
+
+    private fun createHistory() {
+        val history = History(
+            idDriver = authProvider.getId(),
+            idClient = booking?.idClient,
+            origin = booking?.origin,
+            destination = booking?.destination,
+            originLat = booking?.originLat,
+            originLng = booking?.originLng,
+            destinationLat = booking?.destinationLat,
+            destinationLng = booking?.destinationLng,
+            time = min,
+            km = km,
+            price = totalPrices,
+            timestamp = Date().time
+        )
+        historyProvider.create(history).addOnCompleteListener {
             if (it.isSuccessful) {
-                handle.removeCallbacks(runnable)
-                isStartedTrip = false
-                getPrices(km, min.toDouble())
-                geoProvider.removeLocationWorking((authProvider.getId()))
-                getPrices(km, min.toDouble())
+                bookingProvider.updateStatus(booking?.idClient!!, "finished")
+                    .addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            goToCalificationClient()
+                        }
+                    }
             }
         }
     }
@@ -405,8 +432,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
                 Log.d("PRICES", "total: $totalPrices")
 
                 totalPrices = if (totalPrices < 5.0) prices?.minValue!! else totalPrices
-                goToCalificationClient()
-
+                createHistory()
             }
         }
 
@@ -427,7 +453,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         if (isStartedTrip) {
             meters = meters + previusLocation.distanceTo(currentLocation)
             km = meters / 1000
-            binding.textViewDistance.text = "${String.format("%.1f",km)} Km"
+            binding.textViewDistance.text = "${String.format("%.1f", km)} Km"
         }
 
         previusLocation = location

@@ -1,31 +1,28 @@
-package com.ooober.driver.activities
+package com.ooober.user.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.ooober.driver.databinding.ActivityCalificationClientBinding
-import com.ooober.driver.models.History
-import com.ooober.driver.providers.HistoryProvider
+import com.ooober.user.databinding.ActivityCalificationBinding
+import com.ooober.user.models.History
+import com.ooober.user.providers.HistoryProvider
 
-class CalificationClientActivity : AppCompatActivity() {
+class CalificationActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityCalificationClientBinding
-    private var extraPrice= 0.0
+    private lateinit var binding: ActivityCalificationBinding
     private var historyProvider = HistoryProvider()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCalificationClientBinding.inflate(layoutInflater)
+        binding = ActivityCalificationBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        extraPrice=intent.getDoubleExtra("price", 0.0)
-        binding.textViewPrice.text = "Precio: $extraPrice"
         getHistory()
     }
 
     private fun getHistory(){
         historyProvider.getLastHistory().get().addOnSuccessListener {
-            query ->
+                query ->
             if(query != null){
                 if(query.documents.size >0)
                 {
