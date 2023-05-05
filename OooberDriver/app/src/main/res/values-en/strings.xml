@@ -50,4 +50,11 @@
     <string name="txt_timeanddistance">Time and distance</string>
     <string name="botom_accept">Accept</string>
     <string name="botom_cancel">Cancel</string>
+    <string name="txt_qualify">QUALIFY YOUR CLIENT</string>
+    <string name="txt_from">FROM</string>
+    <string name="txt_TO">TO</string>
+    <string name="txt_falseandtrip">False street and trip</string>
+    <string name="txt_upperdistance">DISTANCE AND TIME OF THE TRIP</string>
+    <string name="txt_price">PRICE</string>
+    <string name="TXT_qualify">QUALIFY</string>
 </resources>
