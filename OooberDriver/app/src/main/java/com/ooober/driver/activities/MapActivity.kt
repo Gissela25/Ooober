@@ -30,6 +30,7 @@ import com.google.android.gms.maps.model.*
 import com.google.firebase.firestore.ListenerRegistration
 import com.ooober.driver.databinding.ActivityMapBinding
 import com.ooober.driver.fragments.ModalButtomSheetBooking
+import com.ooober.driver.fragments.ModalButtomSheetMenu
 import com.ooober.driver.models.Booking
 import com.ooober.driver.providers.AuthProvider
 import com.ooober.driver.providers.BookingProvider
@@ -47,6 +48,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     private val authProvider = AuthProvider()
     private val bookingProvider = BookingProvider()
     private val modalBooking = ModalButtomSheetBooking()
+    private val modalMenu = ModalButtomSheetMenu()
 
      val timer = object : CountDownTimer(30000,1000){
         override fun onTick(counter: Long) {
@@ -68,14 +70,6 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         )
-
-        binding.btnLogout.setOnClickListener{
-            authProvider.logout()
-            val i = Intent(this, HomeActivity::class.java)
-            i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(i)
-            finish()
-        }
 
         //To get specific location
         val locationRequest = LocationRequest.create().apply {
@@ -101,6 +95,9 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
         binding.btnConnect.setOnClickListener{connectDriver()}
         binding.btnDisconnect.setOnClickListener{disconnectDriver()}
+        binding.imageViewMenu.setOnClickListener{
+            showModalMenu()
+        }
     }
 
     val locationPermissions =
@@ -130,6 +127,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             geoProvider.saveLocation(authProvider.getId(),myLocationlatLog!!)
         }
     }
+
 
     private fun checkIfDriverIsConnected() {
         geoProvider.getLocation(authProvider.getId()).addOnSuccessListener { document->
@@ -174,6 +172,10 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             }
 
         }
+    }
+
+    private fun showModalMenu(){
+        modalMenu.show(supportFragmentManager, ModalButtomSheetMenu.TAG)
     }
 
     private fun showModalBookin(booking: Booking){
