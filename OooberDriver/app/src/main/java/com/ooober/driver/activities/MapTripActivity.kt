@@ -39,7 +39,8 @@ import com.ooober.driver.providers.BookingProvider
 import com.ooober.driver.providers.ConfigProvider
 import com.ooober.driver.providers.GeoProvider
 
-class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, DirectionUtil.DirectionCallBack {
+class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
+    DirectionUtil.DirectionCallBack {
 
     private val configProvider = ConfigProvider()
     private var totalPrices = 0.0
@@ -363,7 +364,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
         }
     }
 
-    private fun updateToFinish() {
+/*    private fun updateToFinish() {
         bookingProvider.updateStatus(booking?.idClient!!, "finished").addOnCompleteListener {
             if (it.isSuccessful) {
                 handle.removeCallbacks(runnable)
@@ -375,80 +376,94 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
 
             }
         }
+    }*/
 
-        private fun getPrices(distance: Double, time: Double) {
-
-            configProvider.getPrices().addOnSuccessListener { document ->
-                if (document.exists()) {
-                    val prices =
-                        document.toObject(Prices::class.java) // DOCUMENTO CON LA INFORMACION
-
-                    val totalDistance = distance * prices?.km!! // VALOR POR KM
-                    Log.d("PRICES", "totalDistance: $totalDistance")
-                    val totalTime = time * prices?.min!! // VALOR POR MIN
-                    Log.d("PRICES", "totalTime: $totalTime")
-                    var totalPrices = totalDistance + totalTime // TOTAL
-                    Log.d("PRICES", "total: $totalPrices")
-
-                    totalPrices = if (totalPrices < 5.0) prices?.minValue!! else totalPrices
-                    goToCalificationClient()
-
-                }
-            }
-
-        }
-        private fan goToCalificationClient() {
-            val i = Intent(this, CalificationClientActivity::class.java)
-            i.putExtra("price", totalPrices)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-        }
-        override fun currentLocation(location: Location) {
-            //Lat y log de la posicion
-            myLocationlatLog = LatLng(location.latitude, location.longitude)
-            currentLocation = location
-
-            if (isStartedTrip) {
-                meters = meters + previusLocation.distanceTo(currentLocation)
-                km = meters / 1000
-                binding.textViewDistance.text = "$km km"
-            }
-
-            previusLocation = location
-
-            googleMap?.moveCamera(
-                CameraUpdateFactory.newCameraPosition(
-                    CameraPosition.builder().target(myLocationlatLog!!).zoom(15f).build()
-                )
-            )
-            addMarker()
-            saveLocation()
-
-            if (booking != null && myLocationlatLog != null) {
-                var distance = getDistancieBetween(myLocationlatLog!!, originLatLgn!!)
-                Log.d("LOCATION", "Distnacia: ${distance} m")
-                if (distance <= 300) {
-                    isCloseToOrigin = true
-                }
-            }
-            if (!isLocationEnabled) {
-                isLocationEnabled = true
-                getBooking()
+    private fun updateToFinish(){
+        bookingProvider.updateStatus(booking?.idClient!!, "finished").addOnCompleteListener {
+            if (it.isSuccessful) {
+                handle.removeCallbacks(runnable)
+                isStartedTrip = false
+                getPrices(km, min.toDouble())
+                geoProvider.removeLocationWorking((authProvider.getId()))
+                getPrices(km, min.toDouble())
             }
         }
+    }
 
+    private fun getPrices(distance: Double, time: Double) {
 
-        override fun locationCancelled() {
+        configProvider.getPrices().addOnSuccessListener { document ->
+            if (document.exists()) {
+                val prices =
+                    document.toObject(Prices::class.java) // DOCUMENTO CON LA INFORMACION
 
+                val totalDistance = distance * prices?.km!! // VALOR POR KM
+                Log.d("PRICES", "totalDistance: $totalDistance")
+                val totalTime = time * prices?.min!! // VALOR POR MIN
+                Log.d("PRICES", "totalTime: $totalTime")
+                totalPrices = totalDistance + totalTime // TOTAL
+                Log.d("PRICES", "total: $totalPrices")
+
+                totalPrices = if (totalPrices < 5.0) prices?.minValue!! else totalPrices
+                goToCalificationClient()
+
+            }
         }
-
-        override fun pathFindFinish(
-            polyLineDetailsMap: HashMap<String, PolyLineDataBean>,
-            polyLineDetailsArray: ArrayList<PolyLineDataBean>,
-        ) {
-            directionUtil.drawPath(WAY_POINT_TAG)
-        }
-
 
     }
+
+    private fun goToCalificationClient() {
+        val i = Intent(this, CalificationClientActivity::class.java)
+        i.putExtra("price", totalPrices)
+        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(i)
+    }
+
+    override fun currentLocation(location: Location) {
+        //Lat y log de la posicion
+        myLocationlatLog = LatLng(location.latitude, location.longitude)
+        currentLocation = location
+
+        if (isStartedTrip) {
+            meters = meters + previusLocation.distanceTo(currentLocation)
+            km = meters / 1000
+            binding.textViewDistance.text = "${String.format("%.1f",km)} Km"
+        }
+
+        previusLocation = location
+
+        googleMap?.moveCamera(
+            CameraUpdateFactory.newCameraPosition(
+                CameraPosition.builder().target(myLocationlatLog!!).zoom(15f).build()
+            )
+        )
+        addMarker()
+        saveLocation()
+
+        if (booking != null && myLocationlatLog != null) {
+            var distance = getDistancieBetween(myLocationlatLog!!, originLatLgn!!)
+            Log.d("LOCATION", "Distnacia: ${distance} m")
+            if (distance <= 300) {
+                isCloseToOrigin = true
+            }
+        }
+        if (!isLocationEnabled) {
+            isLocationEnabled = true
+            getBooking()
+        }
+    }
+
+
+    override fun locationCancelled() {
+
+    }
+
+    override fun pathFindFinish(
+        polyLineDetailsMap: HashMap<String, PolyLineDataBean>,
+        polyLineDetailsArray: ArrayList<PolyLineDataBean>,
+    ) {
+        directionUtil.drawPath(WAY_POINT_TAG)
+    }
+
+
 }

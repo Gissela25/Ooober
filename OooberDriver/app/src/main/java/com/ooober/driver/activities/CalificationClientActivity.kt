@@ -14,6 +14,6 @@ class CalificationClientActivity : AppCompatActivity() {
         binding = ActivityCalificationClientBinding.inflate(layoutInflater)
         setContentView(binding.root)
         extraPrice=intent.getDoubleExtra("price", 0.0)
-        binding.textViewPrice.text="Precio:$extraPrice"
+        binding.textViewPrice.text = "Precio: $extraPrice"
     }
 }
