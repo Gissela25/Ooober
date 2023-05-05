@@ -33,12 +33,16 @@ import com.ooober.driver.databinding.ActivityMapBinding
 import com.ooober.driver.databinding.ActivityMapTripBinding
 import com.ooober.driver.fragments.ModalButtomSheetBooking
 import com.ooober.driver.models.Booking
+import com.ooober.driver.models.Prices
 import com.ooober.driver.providers.AuthProvider
 import com.ooober.driver.providers.BookingProvider
+import com.ooober.driver.providers.ConfigProvider
 import com.ooober.driver.providers.GeoProvider
 
 class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, DirectionUtil.DirectionCallBack {
 
+    private val configProvider = ConfigProvider()
+    private var totalPrices = 0.0
     private var markerDestination: Marker? = null
     private var originLatLgn: LatLng? = null
     private var destinationLatLng: LatLng? = null
@@ -71,15 +75,18 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
     private var counter = 0
     private var min = 0
     private var handle = Handler(Looper.myLooper()!!)
-    private var runnable = Runnable{
+    private var runnable = Runnable {
         kotlin.run {
-            counter ++
+            counter++
 
-            if(counter < 60) {
+            if (min == 0) {
                 binding.textViewTimer.text = "$counter Seg"
+            } else {
+                binding.textViewTimer.text = "$min Min $counter Seg"
+
             }
-            else{
-                min = counter / 60
+            if (counter == 60) {
+                min = min + (counter / 60)
                 binding.textViewTimer.text = "$min Min $counter Seg"
             }
 
@@ -138,8 +145,8 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
-        binding.btnStartTrip.setOnClickListener{updateToStarted()}
-        binding.btnFinishTtrip.setOnClickListener{updateToFinish()}
+        binding.btnStartTrip.setOnClickListener { updateToStarted() }
+        binding.btnFinishTtrip.setOnClickListener { updateToFinish() }
     }
 
     private fun startTimer() {
@@ -180,7 +187,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
         handle.removeCallbacks(runnable)
     }
 
-    private fun getDistancieBetween(originLatLng: LatLng, destinationLatLng: LatLng):Float{
+    private fun getDistancieBetween(originLatLng: LatLng, destinationLatLng: LatLng): Float {
         var distance = 0.0f
         var originLocation = Location("")
         var destinationLocation = Location("")
@@ -192,14 +199,13 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
         destinationLocation.longitude = destinationLatLng.longitude
 
         distance = originLocation.distanceTo(destinationLocation)
-        return  distance
+        return distance
     }
 
-    private fun getBooking(){
+    private fun getBooking() {
         bookingProvider.getBooking().get().addOnSuccessListener { query ->
-            if(query != null)
-            {
-                if(query.size() > 0){
+            if (query != null) {
+                if (query.size() > 0) {
                     booking = query.documents[0].toObject(Booking::class.java)
                     originLatLgn = LatLng(booking?.originLat!!, booking?.originLng!!)
                     destinationLatLng = LatLng(booking?.destinationLat!!, booking?.destinationLng!!)
@@ -229,7 +235,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
         directionUtil.initPath()
     }
 
-    private fun addOriginMarker(position:LatLng) {
+    private fun addOriginMarker(position: LatLng) {
         markerOrigin = googleMap?.addMarker(
             MarkerOptions().position(position).title("Recoger aquí")
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.icons_location_person))
@@ -237,7 +243,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
     }
 
     private fun addDestinationMarker() {
-        if(destinationLatLng != null) {
+        if (destinationLatLng != null) {
             markerDestination = googleMap?.addMarker(
                 MarkerOptions().position(destinationLatLng!!).title("Lugar de Destino")
                     .icon(BitmapDescriptorFactory.fromResource(R.drawable.icons_pin))
@@ -325,16 +331,17 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
 
         }
     }
+
     private fun showButtonFinish() {
         binding.btnStartTrip.visibility = View.GONE //ocultando
         binding.btnFinishTtrip.visibility = View.VISIBLE //Mostrando
     }
 
-    private fun updateToStarted(){
-        if(isCloseToOrigin){
-            bookingProvider.updateStatus(booking?.idClient!!, "started").addOnCompleteListener{
-                if(it.isSuccessful){
-                    if(destinationLatLng != null) {
+    private fun updateToStarted() {
+        if (isCloseToOrigin) {
+            bookingProvider.updateStatus(booking?.idClient!!, "started").addOnCompleteListener {
+                if (it.isSuccessful) {
+                    if (destinationLatLng != null) {
                         isStartedTrip = true
                         googleMap?.clear()
                         addMarker()
@@ -347,71 +354,101 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
                     showButtonFinish()
                 }
             }
-        }
-        else{
-            Toast.makeText(this, "Debes estar más cerca a la poisción de recogida ",Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(
+                this,
+                "Debes estar más cerca a la poisción de recogida ",
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 
-    private fun updateToFinish(){
-            bookingProvider.updateStatus(booking?.idClient!!, "finished").addOnCompleteListener {
-                if(it.isSuccessful)
-                {
-                    handle.removeCallbacks(runnable)
-                    isStartedTrip = false
-                    val intent = Intent(this, MapActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
+    private fun updateToFinish() {
+        bookingProvider.updateStatus(booking?.idClient!!, "finished").addOnCompleteListener {
+            if (it.isSuccessful) {
+                handle.removeCallbacks(runnable)
+                isStartedTrip = false
+                easyWayLocation?.endUpdates()
+                geoProvider.removeLocationWorking(authProvider.getId())
+                getPrices(km, min.toDouble())
+
+
+            }
+        }
+
+        private fun getPrices(distance: Double, time: Double) {
+
+            configProvider.getPrices().addOnSuccessListener { document ->
+                if (document.exists()) {
+                    val prices =
+                        document.toObject(Prices::class.java) // DOCUMENTO CON LA INFORMACION
+
+                    val totalDistance = distance * prices?.km!! // VALOR POR KM
+                    Log.d("PRICES", "totalDistance: $totalDistance")
+                    val totalTime = time * prices?.min!! // VALOR POR MIN
+                    Log.d("PRICES", "totalTime: $totalTime")
+                    var totalPrices = totalDistance + totalTime // TOTAL
+                    Log.d("PRICES", "total: $totalPrices")
+
+                    totalPrices = if (totalPrices < 5.0) prices?.minValue!! else totalPrices
+                    goToCalificationClient()
+
                 }
-
             }
-    }
 
-    override fun currentLocation(location: Location) {
-        //Lat y log de la posicion
-        myLocationlatLog = LatLng(location.latitude, location.longitude)
-        currentLocation = location
-
-        if(isStartedTrip){
-            meters = meters + previusLocation.distanceTo(currentLocation)
-            km = meters / 1000
-            binding.textViewDistance.text = "$km km"
         }
+        private fan goToCalificationClient() {
+            val i = Intent(this, CalificationClientActivity::class.java)
+            i.putExtra("price", totalPrices)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+        override fun currentLocation(location: Location) {
+            //Lat y log de la posicion
+            myLocationlatLog = LatLng(location.latitude, location.longitude)
+            currentLocation = location
 
-        previusLocation = location
+            if (isStartedTrip) {
+                meters = meters + previusLocation.distanceTo(currentLocation)
+                km = meters / 1000
+                binding.textViewDistance.text = "$km km"
+            }
 
-        googleMap?.moveCamera(
-            CameraUpdateFactory.newCameraPosition(
-                CameraPosition.builder().target(myLocationlatLog!!).zoom(15f).build()
+            previusLocation = location
+
+            googleMap?.moveCamera(
+                CameraUpdateFactory.newCameraPosition(
+                    CameraPosition.builder().target(myLocationlatLog!!).zoom(15f).build()
+                )
             )
-        )
-        addMarker()
-        saveLocation()
+            addMarker()
+            saveLocation()
 
-        if(booking != null && myLocationlatLog != null) {
-            var distance = getDistancieBetween(myLocationlatLog!!, originLatLgn!!)
-            Log.d("LOCATION","Distnacia: ${distance} m")
-            if(distance <= 300){
-                isCloseToOrigin = true
+            if (booking != null && myLocationlatLog != null) {
+                var distance = getDistancieBetween(myLocationlatLog!!, originLatLgn!!)
+                Log.d("LOCATION", "Distnacia: ${distance} m")
+                if (distance <= 300) {
+                    isCloseToOrigin = true
+                }
+            }
+            if (!isLocationEnabled) {
+                isLocationEnabled = true
+                getBooking()
             }
         }
-        if(!isLocationEnabled){
-            isLocationEnabled = true
-            getBooking()
+
+
+        override fun locationCancelled() {
+
         }
+
+        override fun pathFindFinish(
+            polyLineDetailsMap: HashMap<String, PolyLineDataBean>,
+            polyLineDetailsArray: ArrayList<PolyLineDataBean>,
+        ) {
+            directionUtil.drawPath(WAY_POINT_TAG)
+        }
+
+
     }
-
-
-    override fun locationCancelled() {
-
-    }
-
-    override fun pathFindFinish(
-        polyLineDetailsMap: HashMap<String, PolyLineDataBean>,
-        polyLineDetailsArray: ArrayList<PolyLineDataBean>,
-    ) {
-        directionUtil.drawPath(WAY_POINT_TAG)
-    }
-
-
 }
