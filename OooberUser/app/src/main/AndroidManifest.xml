@@ -22,8 +22,20 @@
         android:theme="@style/Theme.OooberUser"
         tools:targetApi="31">
         <activity
+            android:name=".activities.HistoriesDetailActivity"
+            android:exported="false"
+          />
+        <activity
+            android:name=".activities.HistoriesActivity"
+            android:exported="false"
+            android:parentActivityName=".activities.MapActivity"/>
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.CalificationActivity"
             android:exported="false" />
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />

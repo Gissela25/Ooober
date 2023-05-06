@@ -39,6 +39,7 @@ import com.google.firebase.firestore.GeoPoint
 import com.google.maps.android.SphericalUtil
 import com.ooober.user.R
 import com.ooober.user.databinding.ActivityMapBinding
+import com.ooober.user.fragments.ModalButtomSheetMenu
 import com.ooober.user.models.Booking
 import com.ooober.user.models.DriverLocation
 import com.ooober.user.providers.AuthProvider
@@ -58,6 +59,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     private val authProvider = AuthProvider()
     private val clientProvider = ClientProvider()
     private val bookingProvider = BookingProvider()
+    private val modalMenu = ModalButtomSheetMenu()
 
     // GOOGLE PLACES
     private var places: PlacesClient? = null
@@ -101,7 +103,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         startGooglePlaces()
         removeBooking()
         binding.btnRequestTrip.setOnClickListener { goToTripInfo() }
-        //binding.imageViewMenu.setOnClickListener { showModalMenu() }
+        binding.imageViewMenu.setOnClickListener { showModalMenu() }
     }
 
     val locationPermissions = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permission ->
@@ -126,6 +128,9 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
     }
 
+    private fun showModalMenu(){
+        modalMenu.show(supportFragmentManager, ModalButtomSheetMenu.TAG)
+    }
     private fun removeBooking() {
         bookingProvider.getBooking().get().addOnSuccessListener {
             document->

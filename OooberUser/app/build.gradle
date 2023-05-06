@@ -68,6 +68,10 @@ dependencies {
     implementation 'com.google.maps.android:places-ktx:2.0.0'
     implementation 'com.android.volley:volley:1.2.1'
 
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.firebase:firebase-storage-ktx'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

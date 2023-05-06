@@ -9,7 +9,7 @@ data class History (
     val idDriver: String? = null,
     val origin: String? = null,
     val destination: String? = null,
-    val calificationToCliente: Double? = null,
+    val calificationToClient: Double? = null,
     val calificationToDriver: Double? = null,
     val time: Int? = null,
     val km: Double? = null,

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/green"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PERFIL DE USUARIO"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginTop="30dp"/>
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_back"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp"/>
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_person"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@color/white"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="45dp"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo Electrónico"
+            android:textColor="@color/GreyDark"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textSize="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="250dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            style="@style/EditTextGrey"
+            app:hintTextColor="@color/GreyDark"
+            app:startIconDrawable="@drawable/ic_person_small"
+            app:startIconTint="@color/GreyDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tfName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name"
+                android:textColorHint="@color/GreyDark"
+                android:inputType="text"
+                style="@style/EditTextGrey"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            style="@style/EditTextGrey"
+            app:hintTextColor="@color/GreyDark"
+            app:startIconTint="@color/GreyDark"
+            app:startIconDrawable="@drawable/ic_person_small_lastname">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tflastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_Lname"
+                android:inputType="text"
+                app:startIconTint="@color/GreyDark"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            style="@style/EditTextGrey"
+            app:hintTextColor="@color/GreyDark"
+            app:startIconTint="@color/GreyDark"
+            app:startIconDrawable="@drawable/ic_phone_white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tfPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_phone"
+                android:inputType="phone"
+                app:startIconTint="@color/GreyDark"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/rounded_button"
+        android:text="Actualizar información"
+        android:layout_gravity="bottom"
+        android:layout_margin="30dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

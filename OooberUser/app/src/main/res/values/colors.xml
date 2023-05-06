@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FED600</color>
     <color name="green">#FED600</color>
+    <color name="GreyDark">#373636</color>
 </resources>

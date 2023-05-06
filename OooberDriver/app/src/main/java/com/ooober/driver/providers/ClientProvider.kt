@@ -8,7 +8,7 @@ import com.ooober.driver.models.Client
 
 class ClientProvider {
 
-    val db = Firebase.firestore.collection("Clientes")
+    val db = Firebase.firestore.collection("Client")
 
     fun create(client: Client): Task<Void>{
         return db.document(client.id!!).set(client)
