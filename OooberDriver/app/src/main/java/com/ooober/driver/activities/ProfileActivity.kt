@@ -91,7 +91,7 @@ class ProfileActivity : AppCompatActivity() {
         driverProvider.getDriver(authProvider.getId()).addOnSuccessListener { document ->
             if(document.exists()){
                 val driver = document.toObject(Driver::class.java)
-                binding.tvEmail.text = driver?.email
+                binding.tvEmail.text = "${(driver?.email)?:""}"
                 binding.tfName.setText(driver?.name)
                 binding.tflastname.setText(driver?.lastname)
                 binding.tfPhone.setText(driver?.phone)

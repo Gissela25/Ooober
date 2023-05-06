@@ -87,7 +87,7 @@ class ProfileActivity : AppCompatActivity() {
         clientProvider.getClientById(authProvider.getId()).addOnSuccessListener { document ->
             if(document.exists()){
                 val client = document.toObject(Client::class.java)
-                binding.tvEmail.text = client?.email
+                binding.tvEmail.text = "${(client?.email)?:""}"
                 binding.tfName.setText(client?.name)
                 binding.tflastname.setText(client?.lastname)
                 binding.tfPhone.setText(client?.phone)

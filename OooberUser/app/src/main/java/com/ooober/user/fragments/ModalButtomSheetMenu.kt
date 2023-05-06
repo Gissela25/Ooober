@@ -66,7 +66,7 @@ class ModalButtomSheetMenu : BottomSheetDialogFragment() {
         clientProvider.getClientById(authProvider.getId()).addOnSuccessListener { document ->
             if (document.exists()) {
                 val client = document.toObject(Client::class.java)
-                textViewUserName?.text = "${client?.name} ${client?.lastname}"
+                textViewUserName?.text = "${client?.name} ${(client?.lastname)?:""}"
             }
         }
     }

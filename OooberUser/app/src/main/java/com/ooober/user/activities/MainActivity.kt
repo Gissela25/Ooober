@@ -9,12 +9,14 @@ import android.widget.Toast
 import com.ooober.user.R
 import com.ooober.user.databinding.ActivityMainBinding
 import com.ooober.user.providers.AuthProvider
+import com.ooober.user.providers.DriverProvider
 import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     val authProvider = AuthProvider()
+    val driverProvider = DriverProvider()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +39,14 @@ class MainActivity : AppCompatActivity() {
         if(isValidForm(email, password)){
             authProvider.login(email, password).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    goToMap()
+                    driverProvider.getDriver(authProvider.getId()).addOnSuccessListener { snapshot ->
+                        if (snapshot.exists()) {
+                            Toast.makeText(this,"Esta cuenta es de tipo driver",Toast.LENGTH_LONG).show()
+                        }
+                        else{
+                            goToMap()
+                        }
+                    }
                 }
                 else{
                     Toast.makeText(this@MainActivity, R.string.txt_SessionFailed, Toast.LENGTH_SHORT).show()

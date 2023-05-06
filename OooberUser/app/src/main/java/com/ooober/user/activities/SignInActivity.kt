@@ -13,6 +13,7 @@ import com.facebook.FacebookException
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
@@ -24,11 +25,13 @@ import com.ooober.user.databinding.ActivitySignInBinding
 import com.ooober.user.models.Client
 import com.ooober.user.providers.AuthProvider
 import com.ooober.user.providers.ClientProvider
+import com.ooober.user.providers.DriverProvider
 
 class SignInActivity : AppCompatActivity() {
 
     private val authProvider = AuthProvider()
-    private val driverProvider = ClientProvider()
+    private val clientProvider = ClientProvider()
+    private val driverProvider = DriverProvider()
     private lateinit var binding: ActivitySignInBinding
     private lateinit var client: GoogleSignInClient
     val auth: FirebaseAuth = FirebaseAuth.getInstance()
@@ -96,7 +99,7 @@ class SignInActivity : AppCompatActivity() {
                             phone = user?.phoneNumber
                         )
                         Log.d("FACEBOOK", "Email : ${user?.email}")
-                        driverProvider.create(client).addOnCompleteListener {
+                        clientProvider.create(client).addOnCompleteListener {
                             if (it.isSuccessful) {
 
                                 Log.d("FIREBASE", "Succesfuly")
@@ -142,8 +145,38 @@ class SignInActivity : AppCompatActivity() {
         startActivity(i)
     }
 
-    private fun SignGoogle() {
+    private fun signWithGoogle() {
 
+        Log.d("FIRESTORE/GOOGLE", "Succesfuly again")
+        val i = Intent(this, MapActivity::class.java)
+        i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(i)
+    }
+
+    private fun signInGoogleForFirstTime(account: GoogleSignInAccount) {
+        val client = Client(
+            id = authProvider.getId(),
+            name = account.displayName,
+            email = account.email,
+            image = account.photoUrl.toString()
+        )
+        clientProvider.create(client).addOnCompleteListener {
+            if (it.isSuccessful) {
+
+                Log.d("FIRESTORE/GOOGLE", "Succesfuly")
+                val i = Intent(this, MapActivity::class.java)
+                i.flags =
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(i)
+            } else {
+                Toast.makeText(
+                    this@SignInActivity,
+                    "Ha ocurrido un error",
+                    Toast.LENGTH_SHORT
+                ).show()
+                Log.d("FIREBASE", "Error: ${it.exception.toString()}")
+            }
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -155,29 +188,23 @@ class SignInActivity : AppCompatActivity() {
             FirebaseAuth.getInstance().signInWithCredential(credential)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        val client = Client(
-                            id = authProvider.getId(),
-                            name = account.displayName,
-                            email = account.email,
-                        )
-                        driverProvider.create(client).addOnCompleteListener {
-                            if (it.isSuccessful) {
 
-                                Log.d("FIREBASE", "Succesfuly")
-                                val i = Intent(this, MapActivity::class.java)
-                                i.flags =
-                                    Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                                startActivity(i)
-                            } else {
-                                Toast.makeText(
-                                    this@SignInActivity,
-                                    "Ocurrio  un error al ingresar",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                                Log.d("FIREBASE", "Error: ${it.exception.toString()}")
+                        driverProvider.getDriver(authProvider.getId()).addOnSuccessListener {
+                            if (it.exists()) {
+                                Toast.makeText(this,"Esta cuenta es de tipo driver",Toast.LENGTH_LONG).show()
+                            }
+                            else{
+                                clientProvider.getClientById(authProvider.getId()).addOnCompleteListener { snapshot->
+                                    val driverSnapshot = snapshot.result
+                                    if(driverSnapshot != null && driverSnapshot.exists()) {
+                                        signWithGoogle()
+                                    }
+                                    else{
+                                        signInGoogleForFirstTime(account)
+                                    }
+                                }
                             }
                         }
-
                     } else {
                         Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()
                     }

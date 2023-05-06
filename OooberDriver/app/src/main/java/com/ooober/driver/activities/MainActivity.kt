@@ -9,11 +9,13 @@ import android.widget.Toast
 import com.ooober.driver.R
 import com.ooober.driver.databinding.ActivityMainBinding
 import com.ooober.driver.providers.AuthProvider
+import com.ooober.driver.providers.ClientProvider
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val authProvider = AuthProvider()
+    private val clientProvider = ClientProvider()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +34,14 @@ class MainActivity : AppCompatActivity() {
         if(isValidForm(email, password)){
             authProvider.login(email, password).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    goToMap()
+                    clientProvider.getClientById(authProvider.getId()).addOnSuccessListener { snapshot ->
+                        if (snapshot.exists()) {
+                            Toast.makeText(this,"Esta cuenta es de tipo cliente",Toast.LENGTH_LONG).show()
+                        }
+                        else{
+                            goToMap()
+                        }
+                    }
                 }
                 else{
                     Toast.makeText(this@MainActivity,  R.string.m_errorSignIn, Toast.LENGTH_SHORT).show()
