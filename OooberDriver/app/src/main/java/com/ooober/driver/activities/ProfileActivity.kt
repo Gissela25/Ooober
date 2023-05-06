@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.WindowManager
+import android.widget.Toast
 import com.ooober.driver.databinding.ActivityProfileBinding
 import com.ooober.driver.models.Driver
 import com.ooober.driver.providers.AuthProvider
@@ -26,6 +27,36 @@ class ProfileActivity : AppCompatActivity() {
             finish()
         }
         getDriver()
+        binding.ivBack.setOnClickListener { finish() }
+        binding.btnUpdate.setOnClickListener { updateInfo() }
+    }
+
+    private fun updateInfo(){
+        val name = binding.tfName.text.toString()
+        val lastname = binding.tflastname.text.toString()
+        val phone = binding.tfPhone.text.toString()
+        val carBrand = binding.tfCarBrand.text.toString()
+        val carColor = binding.tfCarColor.text.toString()
+        val carPlate = binding.tfCarPlate.text.toString()
+
+        val driver = Driver(
+            id = authProvider.getId(),
+            name = name,
+            lastname = lastname,
+            phone = phone,
+            colorCar = carColor,
+            brandCar = carBrand,
+            plateNumber = carPlate,
+        )
+
+        driverProvider.update(driver).addOnCompleteListener {
+            if (it.isSuccessful){
+                Toast.makeText(this@ProfileActivity, "Datos actualizados correctamente", Toast.LENGTH_LONG).show()
+            }
+            else {
+                 Toast.makeText(this@ProfileActivity, "No se pudo actualizar la informacion", Toast.LENGTH_LONG).show()
+            }
+        }
     }
     private fun getDriver(){
         driverProvider.getDriver(authProvider.getId()).addOnSuccessListener { document ->

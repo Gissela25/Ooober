@@ -17,4 +17,15 @@ class DriverProvider {
     fun getDriver(idDriver:String): Task<DocumentSnapshot> {
         return db.document(idDriver).get()
     }
+
+    fun update(driver: Driver): Task<Void> {
+        val map:MutableMap<String, Any> = HashMap()
+        map["name"] = driver?.name!!
+        map["lastname"] = driver?.lastname!!
+        map["phone"] = driver?.phone!!
+        map["brandCar"] = driver?.brandCar!!
+        map["colorCar"] = driver?.colorCar!!
+        map["plateNumber"] = driver?.plateNumber!!
+        return db.document(driver?.id!!).update(map)
+    }
 }
