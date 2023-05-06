@@ -13,6 +13,14 @@
         android:layout_height="match_parent"
         android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
+    <ImageView
+        android:id="@+id/imageViewMenu"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_menu"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp" />
+
     <Button
         android:id="@+id/btnConnect"
         android:layout_width="match_parent"
@@ -38,15 +46,4 @@
         android:layout_marginRight="60dp"
         android:layout_marginLeft="60dp"
         android:visibility="gone"/>
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_exit"
-        android:background="@drawable/rounded_button"
-        android:layout_gravity="bottom"
-        app:backgroundTint="@color/grey"
-        android:layout_marginBottom="50dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginLeft="60dp" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

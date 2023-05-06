@@ -1,0 +1,28 @@
+Index: OooberDriver/.idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/OooberDriver/.idea/deploymentTargetDropDown.xml b/OooberDriver/.idea/deploymentTargetDropDown.xml
+new file mode 100644
+--- /dev/null	(date 1683393116038)
++++ b/OooberDriver/.idea/deploymentTargetDropDown.xml	(date 1683393116038)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="deploymentTargetDropDown">
++    <targetSelectedWithDropDown>
++      <Target>
++        <type value="QUICK_BOOT_TARGET" />
++        <deviceKey>
++          <Key>
++            <type value="VIRTUAL_DEVICE_PATH" />
++            <value value="C:\Users\Jony Morales\.android\avd\Main_Pixel_4_API_31.avd" />
++          </Key>
++        </deviceKey>
++      </Target>
++    </targetSelectedWithDropDown>
++    <timeTargetWasSelectedWithDropDown value="2023-05-06T17:11:52.986811800Z" />
++  </component>
++</project>
+\ No newline at end of file

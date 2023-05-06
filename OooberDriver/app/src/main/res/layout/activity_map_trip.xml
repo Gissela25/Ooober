@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,77 +8,95 @@
 
     <fragment
         android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="50dp">
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imageViewInfo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_info" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tiempo transcurrido:"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textViewTimer"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiempo transcurrido:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distancia total:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Distancia total:"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/textViewDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 km"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textViewDistance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0 km"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
+            </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
 
+
     <Button
         android:id="@+id/btnStartTrip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="INICIAR VIAJE"
-        android:background="@drawable/rounded_button"
         android:layout_gravity="bottom"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="60dp"
         android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/rounded_button"
+        android:text="INICIAR VIAJE"
 
         />
 
@@ -87,24 +104,14 @@
         android:id="@+id/btnFinishTtrip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="FINALIZAR VIAJE"
-        android:background="@drawable/rounded_button"
         android:layout_gravity="bottom"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/black"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="60dp"
         android:layout_marginLeft="60dp"
-        android:visibility="gone"/>
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SALIR"
-        android:background="@drawable/rounded_button"
-        android:layout_gravity="bottom"
-        app:backgroundTint="@color/grey"
-        android:layout_marginBottom="50dp"
         android:layout_marginRight="60dp"
-        android:layout_marginLeft="60dp" />
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/rounded_button"
+        android:text="FINALIZAR VIAJE"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:backgroundTint="@color/black" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

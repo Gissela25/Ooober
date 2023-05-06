@@ -12,6 +12,14 @@
         android:layout_height="match_parent"
         android:name="com.google.android.gms.maps.SupportMapFragment" />
 
+    <ImageView
+        android:id="@+id/imageViewMenu"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_menu"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
