@@ -32,6 +32,7 @@ import com.google.firebase.firestore.ListenerRegistration
 import com.ooober.driver.databinding.ActivityMapBinding
 import com.ooober.driver.databinding.ActivityMapTripBinding
 import com.ooober.driver.fragments.ModalButtomSheetBooking
+import com.ooober.driver.fragments.ModalButtomSheetTripinfo
 import com.ooober.driver.models.Booking
 import com.ooober.driver.models.History
 import com.ooober.driver.models.Prices
@@ -73,6 +74,9 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     private var previusLocation = Location("")
     private var currentLocation = Location("")
     private var isStartedTrip = false
+
+    //MODAL
+    private var modalTrip = ModalButtomSheetTripinfo()
 
     //Temporizador
     private var counter = 0
@@ -143,6 +147,11 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
 
         binding.btnStartTrip.setOnClickListener { updateToStarted() }
         binding.btnFinishTtrip.setOnClickListener { updateToFinish() }
+        binding.imageViewInfo.setOnClickListener { showModalInfo() }
+    }
+
+    private fun showModalInfo(){
+        modalTrip.show(supportFragmentManager, ModalButtomSheetTripinfo.TAG)
     }
 
     private fun startTimer() {
