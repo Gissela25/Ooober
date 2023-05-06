@@ -5,38 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="driverProfile">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_05_2023_20_44_[Changes]/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_05_2023_20_44_[Changes]/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_05_2023_20_44_[Changes]/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_05_2023_20_44_[Changes]/shelved.patch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/buildOutputCleanup1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/executionHistory1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/fileHashes1.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/fileHashes1.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/githubicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10_[Changes]/ugithub.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_04_2023_13_10__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_11_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_11__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/ProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/ProfileActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/models/Driver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/models/Driver.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/providers/DriverProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/providers/DriverProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/ProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/ProfileActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/providers/ClientProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/providers/ClientProvider.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

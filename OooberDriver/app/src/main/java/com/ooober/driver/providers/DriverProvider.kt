@@ -51,4 +51,15 @@ class DriverProvider {
         map["image"] = driver?.image!!
         return db.document(driver?.id!!).update(map)
     }
+
+    fun updateWithOutImage(driver: Driver): Task<Void> {
+        val map:MutableMap<String, Any> = HashMap()
+        map["name"] = driver?.name!!
+        map["lastname"] = driver?.lastname!!
+        map["phone"] = driver?.phone!!
+        map["brandCar"] = driver?.brandCar!!
+        map["colorCar"] = driver?.colorCar!!
+        map["plateNumber"] = driver?.plateNumber!!
+        return db.document(driver?.id!!).update(map)
+    }
 }

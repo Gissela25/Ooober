@@ -77,7 +77,7 @@ class ProfileActivity : AppCompatActivity() {
             }
         }
         else{
-            driverProvider.update(driver).addOnCompleteListener {
+            driverProvider.updateWithOutImage(driver).addOnCompleteListener {
                 if (it.isSuccessful){
                     Toast.makeText(this@ProfileActivity, "Datos actualizados correctamente", Toast.LENGTH_LONG).show()
                 }

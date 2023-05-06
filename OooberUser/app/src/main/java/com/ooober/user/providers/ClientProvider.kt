@@ -65,5 +65,13 @@ class ClientProvider {
         return db.document(client?.id!!).update(map)
     }
 
+    fun updateWithOutImage(client: Client): Task<Void> {
+        val map: MutableMap<String, Any> = HashMap()
+        map["name"] = client?.name!!
+        map["lastname"] = client?.lastname!!
+        map["phone"] = client?.phone!!
+        return db.document(client?.id!!).update(map)
+    }
+
 
 }
