@@ -27,7 +27,8 @@
             android:exported="false" />
         <activity
             android:name=".activities.HistoriesActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".activities.MapActivity"/>
         <activity
             android:name=".activities.CalificationClientActivity"
             android:exported="false" />

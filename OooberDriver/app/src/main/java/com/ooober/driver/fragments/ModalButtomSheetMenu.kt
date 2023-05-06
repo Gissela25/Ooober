@@ -14,10 +14,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.ooober.driver.R
-import com.ooober.driver.activities.MainActivity
-import com.ooober.driver.activities.MapActivity
-import com.ooober.driver.activities.MapTripActivity
-import com.ooober.driver.activities.ProfileActivity
+import com.ooober.driver.activities.*
 import com.ooober.driver.models.Booking
 import com.ooober.driver.models.Driver
 import com.ooober.driver.providers.AuthProvider
@@ -32,6 +29,7 @@ class ModalButtomSheetMenu : BottomSheetDialogFragment() {
     var textViewUserName: TextView? = null
     var linearLayoutLogout: LinearLayout? = null
     var linearLayoutProfile: LinearLayout? = null
+    var linearLayoutHistory: LinearLayout? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,6 +40,7 @@ class ModalButtomSheetMenu : BottomSheetDialogFragment() {
         textViewUserName = view.findViewById(R.id.textViewUserName)
         linearLayoutLogout = view.findViewById(R.id.linearLayoutLogout)
         linearLayoutProfile = view.findViewById(R.id.linearLayoutProfile)
+        linearLayoutHistory = view.findViewById(R.id.linearLayoutHistory)
 
         getDriver()
         linearLayoutLogout?.setOnClickListener {
@@ -50,11 +49,18 @@ class ModalButtomSheetMenu : BottomSheetDialogFragment() {
         linearLayoutProfile?.setOnClickListener {
            goToProfile()
         }
+        linearLayoutHistory?.setOnClickListener {
+            goToHistories()
+        }
         return view
     }
 
     private fun goToProfile(){
         val i = Intent(activity, ProfileActivity::class.java)
+        startActivity(i)
+    }
+    private fun goToHistories(){
+        val i = Intent(activity, HistoriesActivity::class.java)
         startActivity(i)
     }
 

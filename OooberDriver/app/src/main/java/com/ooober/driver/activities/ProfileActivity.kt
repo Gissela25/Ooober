@@ -9,6 +9,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import com.bumptech.glide.Glide
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.ooober.driver.databinding.ActivityProfileBinding
 import com.ooober.driver.models.Driver
@@ -98,6 +99,11 @@ class ProfileActivity : AppCompatActivity() {
                 binding.tfCarColor.setText(driver?.colorCar)
                 binding.tfCarPlate.setText(driver?.plateNumber)
 
+                if(driver?.image != null){
+                    if(driver?.image != ""){
+                        Glide.with(this).load(driver?.image).into(binding.circleImageProfile)
+                    }
+                }
             }
         }
     }

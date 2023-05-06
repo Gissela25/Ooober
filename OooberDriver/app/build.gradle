@@ -62,6 +62,7 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     implementation 'com.github.prabhat1707:EasyWayLocation:2.4'
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
 
     //Positions dependencies
     implementation 'com.github.imperiumlabs:GeoFirestore-Android:v1.4.0'
