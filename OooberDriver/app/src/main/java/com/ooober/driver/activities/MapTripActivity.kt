@@ -119,13 +119,6 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         )
 
-        binding.btnLogout.setOnClickListener {
-            authProvider.logout()
-            val i = Intent(this, HomeActivity::class.java)
-            i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(i)
-            finish()
-        }
 
         //To get specific location
         val locationRequest = LocationRequest.create().apply {

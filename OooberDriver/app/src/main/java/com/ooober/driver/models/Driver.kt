@@ -10,7 +10,7 @@ data class Driver (
     val lastname: String? = null,
     val email: String? = null,
     val phone: String? = null,
-    val image: String? = null,
+    var image: String? = null,
     val plateNumber: String? = null,
     val colorCar: String? = null,
     val brandCar: String? = null

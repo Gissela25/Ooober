@@ -47,6 +47,7 @@ dependencies {
     //Ooober Project Dependencies
     implementation 'com.beust:klaxon:5.5'
     implementation platform('com.google.firebase:firebase-bom:31.2.3')
+    implementation 'com.google.firebase:firebase-storage-ktx'
     implementation 'com.google.firebase:firebase-auth-ktx:21.3.0'
     implementation 'com.google.firebase:firebase-firestore-ktx'
     implementation 'com.google.firebase:firebase-auth:21.3.0'
@@ -64,7 +65,7 @@ dependencies {
 
     //Positions dependencies
     implementation 'com.github.imperiumlabs:GeoFirestore-Android:v1.4.0'
-
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
