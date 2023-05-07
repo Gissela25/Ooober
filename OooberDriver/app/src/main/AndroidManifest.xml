@@ -37,9 +37,6 @@
             android:name=".activities.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.MapTripActivity"
-            android:exported="false" />
-        <activity
             android:name=".activities.GithubAuthActivity"
             android:exported="false" />
         <activity
@@ -70,6 +67,18 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk" />
+
+        <service
+            android:name=".services.MyFirebaseMessagingClient"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
     </application>
 
 </manifest>

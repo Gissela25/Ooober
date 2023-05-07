@@ -39,6 +39,7 @@ import com.ooober.driver.fragments.ModalButtomSheetMenu
 import com.ooober.driver.models.Booking
 import com.ooober.driver.providers.AuthProvider
 import com.ooober.driver.providers.BookingProvider
+import com.ooober.driver.providers.DriverProvider
 import com.ooober.driver.providers.GeoProvider
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener,SensorEventListener {
@@ -51,6 +52,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener,SensorEven
     private var markerDriver: Marker? = null
     private val geoProvider= GeoProvider()
     private val authProvider = AuthProvider()
+    private val driverProvider = DriverProvider()
     private val bookingProvider = BookingProvider()
     private val modalBooking = ModalButtomSheetBooking()
     private val modalMenu = ModalButtomSheetMenu()
@@ -105,7 +107,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener,SensorEven
         )
 
         listenerBooking()
-
+        createToken()
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
@@ -142,6 +144,10 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener,SensorEven
         if(myLocationlatLog != null){
             geoProvider.saveLocation(authProvider.getId(),myLocationlatLog!!)
         }
+    }
+
+    private fun createToken(){
+        driverProvider.createToken(authProvider.getId())
     }
 
 

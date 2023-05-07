@@ -102,6 +102,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
 
         startGooglePlaces()
         removeBooking()
+        createToken()
         binding.btnRequestTrip.setOnClickListener { goToTripInfo() }
         binding.imageViewMenu.setOnClickListener { showModalMenu() }
     }
@@ -126,6 +127,10 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             }
         }
 
+    }
+
+    private fun createToken(){
+        clientProvider.createToken(authProvider.getId())
     }
 
     private fun showModalMenu(){

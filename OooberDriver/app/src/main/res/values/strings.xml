@@ -57,5 +57,6 @@
     <string name="txt_upperdistance">DISTANCIA Y TIEMPO DEL VIAJE</string>
     <string name="txt_price">PRECIO</string>
     <string name="TXT_qualify">CALIFICAR</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
 
 </resources>

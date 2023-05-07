@@ -55,4 +55,5 @@
     <string name="txt_price">Precio aproximado del viaje</string>
     <string name="txt_confirmation">CONFIRMAR SOLICITUD</string>
     <string name="txt_MAP">MAPA DE VIAJE</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
 </resources>
