@@ -61,7 +61,6 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     private val authProvider = AuthProvider()
     private val historyProvider = HistoryProvider()
     private val bookingProvider = BookingProvider()
-    private val modalBooking = ModalButtomSheetBooking()
     private var wayPoints: ArrayList<LatLng> = ArrayList()
     private val WAY_POINT_TAG = "way_point_tag"
     private lateinit var directionUtil: DirectionUtil
@@ -99,18 +98,6 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
 
             startTimer()
         }
-    }
-
-    private val timer = object : CountDownTimer(30000, 1000) {
-        override fun onTick(counter: Long) {
-            Log.d("TIMER", "Counter: $counter")
-        }
-
-        override fun onFinish() {
-            Log.d("TIMER", "FINISH")
-            modalBooking.dismiss()
-        }
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -151,7 +138,16 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     }
 
     private fun showModalInfo(){
-        modalTrip.show(supportFragmentManager, ModalButtomSheetTripinfo.TAG)
+        if(booking != null){
+            val bundle = Bundle()
+            bundle.putString("booking",booking?.toJson())
+            modalTrip.arguments = bundle
+            modalTrip.show(supportFragmentManager, ModalButtomSheetTripinfo.TAG)
+        }
+        else{
+            Toast.makeText(this,"No se pudo cargar la información", Toast.LENGTH_SHORT).show()
+        }
+
     }
 
     private fun startTimer() {
@@ -256,13 +252,6 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         }
     }
 
-    private fun showModalBookin(booking: Booking) {
-        val bundle = Bundle()
-        bundle.putString("booking", booking.toJson())
-        modalBooking.arguments = bundle
-        modalBooking.show(supportFragmentManager, ModalButtomSheetBooking.TAG)
-        timer.start()
-    }
 
     private fun addMarker() {
         val drawable = ContextCompat.getDrawable(applicationContext, R.drawable.uber_car)

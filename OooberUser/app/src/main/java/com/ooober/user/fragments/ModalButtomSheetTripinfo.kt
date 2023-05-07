@@ -1,4 +1,4 @@
-package com.ooober.driver.fragments
+package com.ooober.user.fragments
 
 import android.Manifest
 import android.content.DialogInterface
@@ -18,21 +18,21 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.ooober.driver.R
-import com.ooober.driver.activities.*
-import com.ooober.driver.models.Booking
-import com.ooober.driver.models.Client
-import com.ooober.driver.models.Driver
+import com.ooober.user.R
+import com.ooober.user.activities.*
+import com.ooober.user.models.Booking
+import com.ooober.user.models.Client
+import com.ooober.user.models.Driver
 import com.bumptech.glide.Glide
-import com.ooober.driver.providers.*
+import com.ooober.user.providers.*
 import de.hdodenhof.circleimageview.CircleImageView
 import java.lang.ref.Cleaner
 
 class ModalButtomSheetTripinfo : BottomSheetDialogFragment() {
 
-    private var client:  Client? = null
+    private var driver:  Driver? = null
     private lateinit  var booking: Booking
-    val clientProvider = ClientProvider()
+    val driverProvider = DriverProvider()
     val authProvider = AuthProvider()
     var textViewClientName :TextView? = null
     var textViewOrigin :TextView? = null
@@ -60,15 +60,15 @@ class ModalButtomSheetTripinfo : BottomSheetDialogFragment() {
         textViewOrigin?.text = booking.origin
         textViewDestination?.text = booking.destination
         imageViewPhone?.setOnClickListener {
-            if(client?.phone !=null) {
+            if(driver?.phone !=null) {
                 if(ActivityCompat.checkSelfPermission(requireActivity(),Manifest.permission.CALL_PHONE) !=    PackageManager.PERMISSION_GRANTED)
                 {
                     ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.CALL_PHONE),REQUEST_HOME_CALL)
                 }
-                call(client?.phone!!)
+                call(driver?.phone!!)
             }
         }
-        getClientInfo()
+        getDriverInfo()
         return view
     }
 
@@ -79,8 +79,8 @@ class ModalButtomSheetTripinfo : BottomSheetDialogFragment() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if(requestCode == REQUEST_HOME_CALL){
-            if(client?.phone !=null) {
-                call(client?.phone!!)
+            if(driver?.phone !=null) {
+                call(driver?.phone!!)
             }
         }
     }
@@ -95,14 +95,14 @@ class ModalButtomSheetTripinfo : BottomSheetDialogFragment() {
 
           requireActivity().startActivity(intent)
     }
-    private fun getClientInfo(){
-            clientProvider.getClientById(booking?.idClient!!).addOnSuccessListener { document ->
+    private fun getDriverInfo(){
+            driverProvider.getDriver(booking?.idDriver!!).addOnSuccessListener { document ->
                 if(document.exists()){
-                    client = document.toObject(Client::class.java)
-                    textViewClientName?.text = "${client?.name} ${(client?.lastname)?:""}"
-                    if(client?.image != null){
-                        if(client?.image != ""){
-                            Glide.with(requireActivity()).load(client?.image).into(circleImageClient!!)
+                    driver = document.toObject(Driver::class.java)
+                    textViewClientName?.text = "${driver?.name} ${(driver?.lastname)?:""}"
+                    if(driver?.image != null){
+                        if(driver?.image != ""){
+                            Glide.with(requireActivity()).load(driver?.image).into(circleImageClient!!)
                         }
                     }
                     //textViewUserName?.text = "${driver?.name} ${(driver?.lastname)?:""}"

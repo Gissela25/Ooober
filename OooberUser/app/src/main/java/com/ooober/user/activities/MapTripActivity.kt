@@ -36,6 +36,7 @@ import com.google.firebase.firestore.ListenerRegistration
 import com.ooober.user.R
 import com.ooober.user.databinding.ActivityMapBinding
 import com.ooober.user.databinding.ActivityMapTripBinding
+import com.ooober.user.fragments.ModalButtomSheetTripinfo
 //import com.ooober.user.fragments.ModalBottomSheetTripInfo
 import com.ooober.user.models.Booking
 import com.ooober.user.providers.AuthProvider
@@ -67,7 +68,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
     private val geoProvider = GeoProvider()
     private val authProvider = AuthProvider()
     private val bookingProvider = BookingProvider()
-
+    private var modalTrip  = ModalButtomSheetTripinfo()
 
     private var wayPoints: ArrayList<LatLng> = ArrayList()
     private val WAY_POINT_TAG = "way_point_tag"
@@ -96,8 +97,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
         }
 
         easyWayLocation = EasyWayLocation(this, locationRequest, false, false, this)
-
-        //binding.imageViewInfo.setOnClickListener { showModalInfo() }
+        binding.imageViewInfo.setOnClickListener { showModalInfo() }
 
 
         locationPermissions.launch(arrayOf(
@@ -128,18 +128,18 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
 
     }
 
-    private fun showModalInfo() {
-        if (booking != null) {
+    private fun showModalInfo(){
+        if(booking != null){
             val bundle = Bundle()
-            bundle.putString("booking", booking?.toJson())
-            //modalTrip.arguments = bundle
-            //modalTrip.show(supportFragmentManager, ModalBottomSheetTripInfo.TAG)
+            bundle.putString("booking",booking?.toJson())
+            modalTrip.arguments = bundle
+            modalTrip.show(supportFragmentManager, ModalButtomSheetTripinfo.TAG)
         }
-        else {
-            Toast.makeText(this, "No se pudo cargar la informacion", Toast.LENGTH_SHORT).show()
+        else{
+            Toast.makeText(this,"No se pudo cargar la información", Toast.LENGTH_SHORT).show()
         }
-    }
 
+    }
 
     private fun getLocationDriver() {
         if (booking != null) {
@@ -212,6 +212,8 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
 
         }
     }
+
+
 
     private fun finishTrip() {
         listenerDriverLocation?.remove()

@@ -4,30 +4,28 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_16_28_[Changes]/shelved.patch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2023_0_10__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_05_2023_1_19__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_16_28__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_10_17__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_15_14__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_30_04_2023_21_04__Changes_.xml" beforeDir="false" />
+    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="fixing Login(Google/User and Email) Bugs">
+      <change afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/fragments/ModalButtomSheetTripinfo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OooberUser/app/src/main/res/drawable/ic_info.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OooberUser/app/src/main/res/drawable/ic_phone.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OooberUser/app/src/main/res/layout/modal_bottom_sheet_trip_info.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/ProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/ProfileActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/SignInActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/SignInActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/fragments/ModalButtomSheetMenu.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/fragments/ModalButtomSheetMenu.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/ProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/ProfileActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/SignInActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/SignInActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/fragments/ModalButtomSheetMenu.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/fragments/ModalButtomSheetMenu.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/MapTripActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/fragments/ModalButtomSheetTripinfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/fragments/ModalButtomSheetTripinfo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberDriver/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/MapTripActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/MapTripActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/res/layout/activity_map_trip.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/res/layout/activity_map_trip.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683305989364</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixing Login(Google/User and Email) Bugs">
+      <created>1683413632422</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1683413632422</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,6 +220,7 @@
     <MESSAGE value="get trip history" />
     <MESSAGE value="calificationToDriver / calificationToClient" />
     <MESSAGE value="driverProfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="driverProfile" />
+    <MESSAGE value="fixing Login(Google/User and Email) Bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing Login(Google/User and Email) Bugs" />
   </component>
 </project>
