@@ -19,7 +19,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.ktx.Firebase
 import com.ooober.user.R
 import com.ooober.user.databinding.ActivitySignInBinding
 import com.ooober.user.models.Client
@@ -55,15 +57,16 @@ class SignInActivity : AppCompatActivity() {
             .requestEmail()
             .build()
         client = GoogleSignIn.getClient(this, options)
+        client.signOut()
         binding.btnSgoogle.setOnClickListener {
             val intent = client.signInIntent
-            startActivityForResult(intent, 10001)
+            startActivityForResult(client.signInIntent, 10001)
         }
 
         binding.btnSfacebook.setOnClickListener {
+            LoginManager.getInstance().logOut()
             LoginManager.getInstance()
                 .logInWithReadPermissions(this, listOf("email","public_profile"))
-
             LoginManager.getInstance()
                 .registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
                     override fun onSuccess(result: LoginResult) {
@@ -80,54 +83,6 @@ class SignInActivity : AppCompatActivity() {
                 })
         }
 
-    }
-
-    private fun handleFacebookAccessToken(token: AccessToken) {
-        Log.d("FACEBOOK", "handleFacebookAccessToken:$token")
-
-        val credential = FacebookAuthProvider.getCredential(token.token)
-        auth.signInWithCredential(credential)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    Log.d("FACEBOOK", "signInWithCredential:success")
-                    val user = task.result?.user
-                    if (task.isSuccessful) {
-                        val client = Client(
-                            id = authProvider.getId(),
-                            name = user?.displayName,
-                            email = user?.email,
-                            phone = user?.phoneNumber
-                        )
-                        Log.d("FACEBOOK", "Email : ${user?.email}")
-                        clientProvider.create(client).addOnCompleteListener {
-                            if (it.isSuccessful) {
-
-                                Log.d("FIREBASE", "Succesfuly")
-                                val i = Intent(this, MapActivity::class.java)
-                                i.flags =
-                                    Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                                startActivity(i)
-                            } else {
-                                Toast.makeText(
-                                    this@SignInActivity,
-                                    R.string.txt_SessionFailed,
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                                Log.d("FIREBASE", "Error: ${it.exception.toString()}")
-                            }
-                        }
-
-                    } else {
-                        // En caso de errores se imprimiran los siguintes mensajes
-                        Log.w("FACEBOOK", "signInWithCredential:failure", task.exception)
-                        Toast.makeText(
-                            baseContext, R.string.txt_AuthFalied,
-                            Toast.LENGTH_SHORT
-                        ).show()
-
-                    }
-                }
-            }
     }
 
     private fun goToLogin() {
@@ -179,10 +134,78 @@ class SignInActivity : AppCompatActivity() {
         }
     }
 
+    private fun signInFacebook(){
+        Log.d("FIREBASE", "Succesfuly")
+        val i = Intent(this, MapActivity::class.java)
+        i.flags =
+            Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(i)
+    }
+
+    private fun signInFacebookForFirstTime(user:FirebaseUser?){
+        val client = Client(
+            id = authProvider.getId(),
+            name = user?.displayName,
+            email = user?.email,
+            phone = user?.phoneNumber,
+            image = user?.photoUrl.toString()
+        )
+        Log.d("FACEBOOK", "Email : ${user?.email}")
+        clientProvider.create(client).addOnCompleteListener {
+            if (it.isSuccessful) {
+
+                Log.d("FIREBASE", "Succesfuly")
+                val i = Intent(this, MapActivity::class.java)
+                i.flags =
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(i)
+            } else {
+                Toast.makeText(
+                    this@SignInActivity,
+                    R.string.txt_SessionFailed,
+                    Toast.LENGTH_SHORT
+                ).show()
+                Log.d("FIREBASE", "Error: ${it.exception.toString()}")
+            }
+        }
+    }
+    private fun handleFacebookAccessToken(token: AccessToken) {
+        Log.d("FACEBOOK", "handleFacebookAccessToken:$token")
+
+        val credential = FacebookAuthProvider.getCredential(token.token)
+        auth.signInWithCredential(credential)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    Log.d("FACEBOOK", "signInWithCredential:success")
+                    val user = task.result?.user
+                    if (task.isSuccessful) {
+                        clientProvider.getClientById(authProvider.getId()).addOnCompleteListener { snapshot->
+                            val driverSnapshot = snapshot.result
+                            if(driverSnapshot != null && driverSnapshot.exists()) {
+                                signInFacebook()
+                            }
+                            else{
+                                signInFacebookForFirstTime(user)
+                            }
+                        }
+                    } else {
+                        // En caso de errores se imprimiran los siguintes mensajes
+                        Log.w("FACEBOOK", "signInWithCredential:failure", task.exception)
+                        Toast.makeText(
+                            baseContext, R.string.txt_AuthFalied,
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                    }
+                }
+            }
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 10001) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            try {
             val account = task.getResult(ApiException::class.java)
             val credential = GoogleAuthProvider.getCredential(account.idToken, null)
             FirebaseAuth.getInstance().signInWithCredential(credential)
@@ -210,6 +233,10 @@ class SignInActivity : AppCompatActivity() {
                     }
 
                 }
+            } catch (e: ApiException) {
+
+                Log.d("GOOGLE", "Google sign in failed", e)
+            }
         }
         callbackManager.onActivityResult(requestCode, resultCode, data)
     }

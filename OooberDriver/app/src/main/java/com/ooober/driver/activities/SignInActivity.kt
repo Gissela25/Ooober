@@ -41,16 +41,17 @@ class SignInActivity : AppCompatActivity() {
         binding.btnESignIn.setOnClickListener { goToLogin() }
         binding.GosignIn.setOnClickListener { goToRegister() }
         binding.btnLanguage.setOnClickListener { goToSetLanguage() }
-        binding.btnSGithub.setOnClickListener { }
 
-        val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
-            .requestEmail()
-            .build()
-        client = GoogleSignIn.getClient(this, options)
+
         binding.btnSgoogle.setOnClickListener {
+            val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build()
+            client = GoogleSignIn.getClient(this, options)
+            client.signOut()
             val intent = client.signInIntent
-            startActivityForResult(intent, 10001)
+            startActivityForResult(intent, GOOGLE_SIGN_IN)
         }
 
     }
@@ -111,8 +112,9 @@ class SignInActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 10001) {
+        if (requestCode == GOOGLE_SIGN_IN) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            try {
             val account = task.getResult(ApiException::class.java)
             val credential = GoogleAuthProvider.getCredential(account.idToken, null)
             FirebaseAuth.getInstance().signInWithCredential(credential)
@@ -141,8 +143,13 @@ class SignInActivity : AppCompatActivity() {
                     }
 
                 }
+            } catch (e: ApiException) {
+                Log.d("GOOGLE", "Google sign in failed", e)
+            }
         }
     }
 
-
+    companion object {
+        private const val GOOGLE_SIGN_IN = 2
+    }
 }

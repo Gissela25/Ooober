@@ -73,7 +73,7 @@ class ModalButtomSheetMenu : BottomSheetDialogFragment() {
 
     private fun goToMain(){
         authProvider.logout()
-        val i = Intent(activity, MainActivity::class.java)
+        val i = Intent(activity, HomeActivity::class.java)
         i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(i)
     }
