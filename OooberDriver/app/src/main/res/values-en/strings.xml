@@ -57,4 +57,14 @@
     <string name="txt_upperdistance">DISTANCE AND TIME OF THE TRIP</string>
     <string name="txt_price">PRICE</string>
     <string name="TXT_qualify">QUALIFY</string>
+    <string name="txt_username">USER NAME</string>
+    <string name="txt_pickplace">Pick Up Place</string>
+    <string name="txt_tripdate">Trip Date</string>
+    <string name="txt_Qobteined">Qualification obtained </string>
+    <string name="txt_customerrating">Customer Rating</string>
+    <string name="txt_travelcost">Travel Cost</string>
+    <string name="txt_elapsedtime">Elapsed Time:</string>
+    <string name="txt_totaldistance">Total Distance:</string>
+    <string name="txt_starttrip">START TRIP</string>
+    <string name="txt_finishtrip">FINISH TRIP</string>
 </resources>

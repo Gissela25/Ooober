@@ -41,7 +41,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tiempo transcurrido:"
+                    android:text="@string/txt_elapsedtime"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -66,7 +66,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Distancia total:"
+                    android:text="@string/txt_totaldistance"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -96,7 +96,7 @@
         android:layout_marginRight="60dp"
         android:layout_marginBottom="100dp"
         android:background="@drawable/rounded_button"
-        android:text="INICIAR VIAJE"
+        android:text="@string/txt_starttrip"
 
         />
 
@@ -109,7 +109,7 @@
         android:layout_marginRight="60dp"
         android:layout_marginBottom="100dp"
         android:background="@drawable/rounded_button"
-        android:text="FINALIZAR VIAJE"
+        android:text="@string/txt_finishtrip"
         android:textColor="@color/white"
         android:visibility="gone"
         app:backgroundTint="@color/black" />

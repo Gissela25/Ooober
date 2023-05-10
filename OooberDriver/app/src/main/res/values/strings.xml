@@ -58,5 +58,16 @@
     <string name="txt_price">PRECIO</string>
     <string name="TXT_qualify">CALIFICAR</string>
     <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="txt_username">NOMBRE DE USUARIO</string>
+    <string name="txt_pickplace">Lugar de recogida</string>
+    <string name="txt_tripdate">Fecha del viaje</string>
+    <string name="txt_Qobteined">Calificacion obtenida</string>
+    <string name="txt_customerrating">Calificacion del Cliente</string>
+    <string name="txt_travelcost">Costo Del Viaje</string>
+    <string name="txt_elapsedtime">Tiempo transcurrido:</string>
+    <string name="txt_totaldistance">Distancia Total:</string>
+    <string name="txt_starttrip">INICIAR VIAJE</string>
+    <string name="txt_finishtrip">FINALIZAR VIAJE</string>
+
 
 </resources>
