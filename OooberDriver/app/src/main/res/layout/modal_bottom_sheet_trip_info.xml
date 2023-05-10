@@ -32,7 +32,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Recoger en"
+                    android:text="@string/txt_pickupin"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
@@ -41,7 +41,7 @@
                     android:id="@+id/textViewOrigin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Origen"
+                    android:text="@string/txt_origin"
                     android:textSize="15sp"
                     />
 
@@ -73,7 +73,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LLevar a"
+                    android:text="@string/txt_taketo"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
@@ -82,7 +82,7 @@
                     android:id="@+id/textViewDestination"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Destino"
+                    android:text="@string/txt_destination"
                     android:textSize="15sp"
                     />
 
@@ -128,7 +128,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cliente"
+                    android:text="@string/txt_customer"
                     android:textSize="17sp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
@@ -137,7 +137,7 @@
                     android:id="@+id/textViewClientName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nombre del cliente"
+                    android:text="@string/txt_customername"
                     android:textSize="15sp"
                     />
 

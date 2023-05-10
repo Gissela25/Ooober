@@ -68,6 +68,19 @@
     <string name="txt_totaldistance">Distancia Total:</string>
     <string name="txt_starttrip">INICIAR VIAJE</string>
     <string name="txt_finishtrip">FINALIZAR VIAJE</string>
+    <string name="txt_userprofileUpper">PERFIL DE USUARIO</string>
+    <string name="txt_carbrand">Marca del vehículo</string>
+    <string name="txt_carcolor">Color del Carro</string>
+    <string name="txt_vehicleplate">Placa del vehículo</string>
+    <string name="txt_update">Actualizar Informacion</string>
+    <string name="txt_userprofilename">Nombre del Usuario</string>
+    <string name="txt_profile">Perfil</string>
+    <string name="txt_Historial">Historial</string>
+    <string name="txt_logout">Cerrar Sesion</string>
+    <string name="txt_pickupin">Recoger en</string>
+    <string name="txt_taketo">Llevar a</string>
+    <string name="txt_customer">Cliente</string>
+    <string name="txt_customername">Nombre del Cliente</string>
 
 
 </resources>
