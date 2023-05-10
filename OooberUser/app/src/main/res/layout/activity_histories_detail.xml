@@ -21,7 +21,7 @@
             android:id="@+id/textViewName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NOMBRE DE USUARIO"
+            android:text="@string/txt_username"
             android:textAlignment="center"
             android:textColor="@color/GreyDark"
             android:textStyle="bold"
@@ -52,7 +52,7 @@
             android:id="@+id/textViewEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="correo elctronico"
+            android:text="@string/hint_mail"
             android:textColor="@color/GreyDark"
             android:layout_gravity="bottom"
             android:gravity="center"
@@ -93,7 +93,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lugar de recogida"
+                    android:text="@string/txt_pickplace"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>
@@ -102,7 +102,7 @@
                     android:id="@+id/textViewOrigin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Origen"
+                    android:text="@string/txt_origin"
                     android:textSize="15sp"/>
 
             </LinearLayout>
@@ -133,7 +133,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Destino"
+                    android:text="@string/txt_destination"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>
@@ -142,7 +142,7 @@
                     android:id="@+id/textViewDestination"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Destino"
+                    android:text="@string/txt_destination"
                     android:textSize="15sp"/>
 
             </LinearLayout>
@@ -173,7 +173,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fecha del viaje"
+                    android:text="@string/txt_tripdate"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>
@@ -212,7 +212,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calificacion obtenida"
+                    android:text="@string/txt_Qobteined"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>
@@ -251,7 +251,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calificacion del cliente"
+                    android:text="@string/txt_customerrating"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>
@@ -290,7 +290,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tiempo y distancia"
+                    android:text="@string/txt_upperdistance"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>
@@ -329,7 +329,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Precio del viaje"
+                    android:text="@string/txt_travelcost"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>

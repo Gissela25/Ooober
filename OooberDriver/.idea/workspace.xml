@@ -11,12 +11,17 @@
   <component name="ChangeListManager">
     <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment=":c">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/cardview_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/cardview_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_trip_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_trip_info.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_calification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_calification.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_histories_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_histories_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_map_trip.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_map_trip.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/cardview_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/cardview_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/modal_bottom_sheet_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/modal_bottom_sheet_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/modal_bottom_sheet_trip_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/modal_bottom_sheet_trip_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values-en/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +112,7 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "last_directory_selection": "C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver/app/src/main/res/drawable",
-    "last_opened_file_path": "C:/wamp64/www/Ooober/OooberDriver",
+    "last_opened_file_path": "C:/wamp64/www/Ooober/OooberUser",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",

@@ -18,7 +18,7 @@
             android:id="@+id/textViewUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre del usuario"
+            android:text="@string/txt_userprofilename"
             android:textSize="18sp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
@@ -46,7 +46,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Perfil" />
+                    android:text="@string/txt_profile" />
 
             </LinearLayout>
 
@@ -66,7 +66,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Historial" />
+                    android:text="@string/txt_Historial" />
 
             </LinearLayout>
 
@@ -86,7 +86,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cerrar sesion" />
+                    android:text="@string/txt_logout" />
 
             </LinearLayout>
 

@@ -56,4 +56,34 @@
     <string name="txt_confirmation">CONFIRMAR SOLICITUD</string>
     <string name="txt_MAP">MAPA DE VIAJE</string>
     <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="txt_ratedriver">CALIFICA A TU CONDUCTOR</string>
+    <string name="txt_from">DESDE</string>
+    <string name="txt_price_alone">PRECIO</string>
+    <string name="txt_TO">HASTA</string>
+    <string name="TXT_qualify">CALIFICAR</string>
+    <string name="txt_falseandtrip">Calle falsa con carrera falsa</string>
+    <string name="txt_username">NOMBRE DE USUARIO</string>
+    <string name="txt_upperdistance">DISTANCIA Y TIEMPO DEL VIAJE</string>
+    <string name="txt_pickplace">Lugar de recogida</string>
+    <string name="txt_tripdate">Fecha del viaje</string>
+    <string name="txt_Qobteined">Calificacion Obtenida</string>
+    <string name="txt_customerrating">Calificacion del Cliente</string>
+    <string name="txt_travelcost">Costo Del Viaje</string>
+    <string name="txt_tripstatus">ESTADO DEL VIAJE</string>
+    <string name="txt_userprofileUpper">PERFIL DE USUARIO</string>
+    <string name="txt_update">Actualizar Informacion</string>
+    <string name="txt_userprofilename">Nombre del Usuario</string>
+    <string name="txt_profile">Perfil</string>
+    <string name="txt_Historial">Historial</string>
+    <string name="txt_logout">Cerrar Sesion</string>
+    <string name="txt_pickupin">Recoger en</string>
+    <string name="txt_taketo">Llevar a</string>
+    <string name="txt_customer">Cliente</string>
+    <string name="txt_customername">Nombre del Cliente</string>
+    <string name="txt_driver">Conductor</string>
+    <string name="txt_yourdriver">Tu Conductor</string>
+
+
+
+
 </resources>
