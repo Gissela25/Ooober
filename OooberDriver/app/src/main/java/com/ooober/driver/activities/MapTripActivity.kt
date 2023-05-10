@@ -20,6 +20,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
@@ -37,10 +38,11 @@ import com.ooober.driver.databinding.ActivityMapBinding
 import com.ooober.driver.databinding.ActivityMapTripBinding
 import com.ooober.driver.fragments.ModalButtomSheetBooking
 import com.ooober.driver.fragments.ModalButtomSheetTripinfo
-import com.ooober.driver.models.Booking
-import com.ooober.driver.models.History
-import com.ooober.driver.models.Prices
+import com.ooober.driver.models.*
 import com.ooober.driver.providers.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
@@ -48,6 +50,7 @@ import kotlin.collections.HashMap
 class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     DirectionUtil.DirectionCallBack, SensorEventListener {
 
+    private var client: Client? = null
     private val configProvider = ConfigProvider()
     private var totalPrices = 0.0
     private var markerDestination: Marker? = null
@@ -65,6 +68,8 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     private val authProvider = AuthProvider()
     private val historyProvider = HistoryProvider()
     private val bookingProvider = BookingProvider()
+    private val notificationProvider = NotificationProvider()
+    private val clientProvider = ClientProvider()
     private var wayPoints: ArrayList<LatLng> = ArrayList()
     private val WAY_POINT_TAG = "way_point_tag"
     private lateinit var directionUtil: DirectionUtil
@@ -153,6 +158,50 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         binding.imageViewInfo.setOnClickListener { showModalInfo() }
     }
 
+
+    private fun getClientInfo(){
+        clientProvider.getClientById(booking?.idClient!!).addOnSuccessListener { document ->
+            if(document.exists()){
+                client = document.toObject(Client::class.java)
+            }
+        }
+    }
+
+
+    private  fun sendNotification(status: String){
+
+        val map = HashMap<String,String>()
+        map.put("title","ESTADO DEL VIAJE")
+        map.put("body",status)
+        val body = FCMBody(
+            to = client?.token!!,
+            priority = "high",
+            ttl = "4500s",
+            data = map
+        )
+
+        notificationProvider.sendNotification(body).enqueue(object : Callback<FCMResponse> {
+            override fun onResponse(call: Call<FCMResponse>, response: Response<FCMResponse>) {
+                if(response.body() != null){
+                    if(response.body()!!.success ==1){
+                        Toast.makeText(this@MapTripActivity, "Se envió la notificación", Toast.LENGTH_SHORT).show()
+                    }
+                    else{
+                        Toast.makeText(this@MapTripActivity, "No se envió la notificación", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                else{
+                    Toast.makeText(this@MapTripActivity, "Hubo un error enviando la notificación", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<FCMResponse>, t: Throwable) {
+                Log.d("NOTIFICATION","ERROR: ${t.message}")
+            }
+
+        })
+    }
+
     private fun showModalInfo(){
         if(booking != null){
             val bundle = Bundle()
@@ -198,8 +247,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         }
     }
 
-
-
+ 
     private fun getDistancieBetween(originLatLng: LatLng, destinationLatLng: LatLng): Float {
         var distance = 0.0f
         var originLocation = Location("")
@@ -224,6 +272,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
                     destinationLatLng = LatLng(booking?.destinationLat!!, booking?.destinationLng!!)
                     easyDrawRoute(originLatLgn!!)
                     addOriginMarker(originLatLgn!!)
+                    getClientInfo()
                 }
             }
         }
@@ -343,6 +392,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
                         addMarker()
                         easyDrawRoute(destinationLatLng!!)
                         addDestinationMarker()
+                        sendNotification("Viaje iniciado")
                         markerOrigin?.remove()
 
                         startTimer()
@@ -403,6 +453,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
                 bookingProvider.updateStatus(booking?.idClient!!, "finished")
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
+                            sendNotification("Viaje terminado")
                             goToCalificationClient()
                         }
                     }

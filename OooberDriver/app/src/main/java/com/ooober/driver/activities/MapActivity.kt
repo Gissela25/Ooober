@@ -19,6 +19,7 @@ import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -37,10 +38,12 @@ import com.ooober.driver.databinding.ActivityMapBinding
 import com.ooober.driver.fragments.ModalButtomSheetBooking
 import com.ooober.driver.fragments.ModalButtomSheetMenu
 import com.ooober.driver.models.Booking
-import com.ooober.driver.providers.AuthProvider
-import com.ooober.driver.providers.BookingProvider
-import com.ooober.driver.providers.DriverProvider
-import com.ooober.driver.providers.GeoProvider
+import com.ooober.driver.models.FCMBody
+import com.ooober.driver.models.FCMResponse
+import com.ooober.driver.providers.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener,SensorEventListener {
 
@@ -54,6 +57,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener,SensorEven
     private val authProvider = AuthProvider()
     private val driverProvider = DriverProvider()
     private val bookingProvider = BookingProvider()
+    private val notificationProvider = NotificationProvider()
     private val modalBooking = ModalButtomSheetBooking()
     private val modalMenu = ModalButtomSheetMenu()
 

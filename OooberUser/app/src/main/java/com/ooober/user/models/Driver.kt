@@ -14,7 +14,8 @@ data class Driver (
     var image: String? = null,
     val plateNumber: String? = null,
     val colorCar: String? = null,
-    val brandCar: String? = null
+    val brandCar: String? = null,
+    val token: String? = null
 ) {
 
 
