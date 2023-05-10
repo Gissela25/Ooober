@@ -53,4 +53,16 @@ class NotificationHelper(base:Context):ContextWrapper(base){
             .setSmallIcon(R.mipmap.ic_launcher)
             .setStyle(NotificationCompat.BigTextStyle().bigText(body).setBigContentTitle(title))
     }
+
+    fun getNotificationActions(title:String, body:String, acceptAction:NotificationCompat.Action, cancelAction:NotificationCompat.Action): NotificationCompat.Builder{
+        return NotificationCompat.Builder(applicationContext, CHANNEL_ID)
+            .setContentTitle(title)
+            .setContentText(body)
+            .setAutoCancel(true)
+            .setColor(Color.YELLOW)
+            .setSmallIcon(R.mipmap.ic_launcher)
+            .addAction(acceptAction)
+            .addAction(cancelAction)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(body).setBigContentTitle(title))
+    }
 }

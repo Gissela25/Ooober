@@ -91,6 +91,7 @@ class SearchActivity : AppCompatActivity() {
             ttl = "4500s",
             data = map
         )
+        map.put("idBooking",authProvider.getId())
 
         notificationProvider.sendNotification(body).enqueue(object : Callback<FCMResponse> {
             override fun onResponse(call: Call<FCMResponse>, response: Response<FCMResponse>) {

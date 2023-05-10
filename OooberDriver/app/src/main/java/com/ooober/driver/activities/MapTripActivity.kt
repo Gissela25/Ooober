@@ -389,7 +389,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
                     if (destinationLatLng != null) {
                         isStartedTrip = true
                         googleMap?.clear()
-                        addMarker()
+                        addDirectionMarker(myLocationlatLog!!,angle)
                         easyDrawRoute(destinationLatLng!!)
                         addDestinationMarker()
                         sendNotification("Viaje iniciado")
