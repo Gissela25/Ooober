@@ -335,7 +335,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             }
 
             override fun onError(p0: Status) {
-                TODO("Not yet implemented")
+
             }
         })
     }
@@ -362,7 +362,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             }
 
             override fun onError(p0: Status) {
-                TODO("Not yet implemented")
+
             }
         })
     }

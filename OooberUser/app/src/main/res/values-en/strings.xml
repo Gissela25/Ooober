@@ -78,7 +78,7 @@
     <string name="txt_driver">Driver</string>
     <string name="txt_yourdriver">Your Driver</string>
     <string name="txt_userprofile">USER PROFILE</string>
-    <string name="txtTitlehistories">travel record</string>
+    <string name="txtTitlehistories">Travel record</string>
     <string name="txtToastIdHistoryNull">History id is null.</string>
     <string name="txtToastFailedToUpdateRating">Failed to update rating</string>
     <string name="txtToastNoRecordFound">No record found</string>
@@ -100,4 +100,5 @@
     <string name="txtAcceptedTrip">Accepted trip</string>
     <string name="txtRejectedTrip">Rejected trip</string>
     <string name="txtSearcDriver">A driver has been found</string>
+    <string name="txtOneMomentAgo">One moment ago</string>
 </resources>

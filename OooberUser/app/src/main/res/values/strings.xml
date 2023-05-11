@@ -105,5 +105,6 @@
     <string name="txtAcceptedTrip">Viaje aceptado</string>
     <string name="txtRejectedTrip">Viaje rechazado</string>
     <string name="txtSearcDriver" > Se ha encontrado un conductor</string>
+    <string name="txtOneMomentAgo">Hace un momento</string>
 
 </resources>

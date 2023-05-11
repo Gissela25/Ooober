@@ -27,19 +27,19 @@ object RelativeTime : Application() {
         // TODO: localize
         val diff = now - time
         return if (diff < MINUTE_MILLIS) {
-            "Hace un momento"
+            "${ctx!!.getString(R.string.txtOneMomentAgo)}"
         } else if (diff < 2 * MINUTE_MILLIS) {
-            "Hace un minuto"
+            "${ctx!!.getString(R.string.txtOneMinuteAgo)}"
         } else if (diff < 50 * MINUTE_MILLIS) {
-            "Hace "+ diff / MINUTE_MILLIS + " minutos"
+            "" + diff / MINUTE_MILLIS + " ${ctx!!.getString(R.string.txtXMinutesAgo)}"
         } else if (diff < 90 * MINUTE_MILLIS) {
-            "Hace un hora"
+            "${ctx!!.getString(R.string.txtOneHourAgo)}"
         } else if (diff < 24 * HOUR_MILLIS) {
-            "Hace " + diff / HOUR_MILLIS + " horas"
+            "" + diff / HOUR_MILLIS + " ${ctx!!.getString(R.string.txtHoursAgo)}"
         } else if (diff < 48 * HOUR_MILLIS) {
-            "Ayer"
+            ""+  ctx!!.getString(R.string.txtYesterday)
         } else {
-            "Hace " + diff / DAY_MILLIS + " dias"
+            "" + diff / DAY_MILLIS +  " ${ctx!!.getString(R.string.txtDaysAgo)}"
         }
     }
 
@@ -60,9 +60,9 @@ object RelativeTime : Application() {
         return if (diff < 24 * HOUR_MILLIS) {
             formatter.format(Date(time))
         } else if (diff < 48 * HOUR_MILLIS) {
-            "Ayer"
+            ""+  ctx!!.getString(R.string.txtYesterday)
         } else {
-            "Hace" + diff / DAY_MILLIS + " dias"
+            "" + diff / DAY_MILLIS + " ${ctx!!.getString(R.string.txtDaysAgo)}"
         }
     }
 }

@@ -98,6 +98,7 @@
     <string name="txtDaysAgo">días atrás</string>
     <string name="txtToastFailedToUplaoded">No se pudo cargar la información</string>
     <string name="txtToastNearbyToPickUp">Debes estar más cerca a la poisción de recogida</string>
+    <string name="txtOneMomentAgo">Hace un momento</string>
 
 
 </resources>
