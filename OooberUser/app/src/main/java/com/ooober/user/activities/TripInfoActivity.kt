@@ -113,7 +113,7 @@ class TripInfoActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
             startActivity(i)
         }
         else{
-            Toast.makeText(this, "Debes seleccionar el origen y el destino", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, R.string.txtToastSelectDistanceAndDestination, Toast.LENGTH_LONG).show()
         }
 
 

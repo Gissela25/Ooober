@@ -2,6 +2,7 @@ package com.ooober.user.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.bumptech.glide.Glide
 import com.google.firebase.firestore.ktx.toObject
 import com.ooober.user.R
@@ -50,17 +51,23 @@ class HistoriesDetailActivity : AppCompatActivity() {
     }
 
     private fun getDriverInfo(id:String){
-        DriverProvider.getDriver(id).addOnSuccessListener { document ->
-            if(document.exists()){
-                val driver = document.toObject(Driver::class.java)
-                binding.textViewEmail.text = driver?.email
-                binding.textViewName.text = "${driver?.name} ${driver?.lastname}"
-                if(driver?.image != null){
-                    if(driver?.image != ""){
-                        Glide.with(this).load(driver?.image).into(binding.circleImageProfile)
+        try {
+            DriverProvider.getDriver(id).addOnSuccessListener { document ->
+                if(document.exists()){
+                    val driver = document.toObject(Driver::class.java)
+                    binding.textViewEmail.text = driver?.email
+                    binding.textViewName.text = "${driver?.name} ${driver?.lastname}"
+                    if(driver?.image != null){
+                        if(driver?.image != ""){
+                            Glide.with(this).load(driver?.image).into(binding.circleImageProfile)
+                        }
                     }
                 }
             }
         }
+        catch(e:Exception){
+            Log.d("ERROR", e.message.toString())
+        }
+
     }
 }

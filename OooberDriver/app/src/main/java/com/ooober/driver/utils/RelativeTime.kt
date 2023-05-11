@@ -2,6 +2,7 @@ package com.ooober.driver.utils
 
 import android.app.Application
 import android.content.Context
+import com.ooober.driver.R
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -30,9 +31,9 @@ object RelativeTime : Application() {
         } else if (diff < 2 * MINUTE_MILLIS) {
             "Hace un minuto"
         } else if (diff < 50 * MINUTE_MILLIS) {
-            "Hace " + diff / MINUTE_MILLIS + " minutos"
+            "Hace "+ diff / MINUTE_MILLIS + " minutos"
         } else if (diff < 90 * MINUTE_MILLIS) {
-            "Hace una hora"
+            "Hace un hora"
         } else if (diff < 24 * HOUR_MILLIS) {
             "Hace " + diff / HOUR_MILLIS + " horas"
         } else if (diff < 48 * HOUR_MILLIS) {
@@ -61,7 +62,7 @@ object RelativeTime : Application() {
         } else if (diff < 48 * HOUR_MILLIS) {
             "Ayer"
         } else {
-            "Hace " + diff / DAY_MILLIS + " dias"
+            "Hace" + diff / DAY_MILLIS + " dias"
         }
     }
 }

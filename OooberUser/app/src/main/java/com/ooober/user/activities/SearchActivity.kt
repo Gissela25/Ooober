@@ -97,14 +97,14 @@ class SearchActivity : AppCompatActivity() {
             override fun onResponse(call: Call<FCMResponse>, response: Response<FCMResponse>) {
                 if(response.body() != null){
                     if(response.body()!!.success ==1){
-                        Toast.makeText(this@SearchActivity, "Se envió la notificación", Toast.LENGTH_SHORT).show()
+                      Log.d("NOTIFICATION","Se envió la notification")
                     }
                     else{
-                        Toast.makeText(this@SearchActivity, "No se envió la notificación", Toast.LENGTH_SHORT).show()
+                        Log.d("NOTIFICATION","No se envió la notification")
                     }
                 }
                 else{
-                    Toast.makeText(this@SearchActivity, "Hubo un error enviando la notificación", Toast.LENGTH_SHORT).show()
+                    Log.d("NOTIFICATION","Hubo un error al enviar la notification")
                 }
             }
 
@@ -125,12 +125,12 @@ class SearchActivity : AppCompatActivity() {
             if (snapshot != null && snapshot.exists()){
                 val booking = snapshot.toObject(Booking::class.java)
                 if(booking?.status == "accept"){
-                    Toast.makeText(this@SearchActivity,"Viaje Aceptado", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SearchActivity,R.string.txtAcceptedTrip, Toast.LENGTH_SHORT).show()
                     listenerBooking?.remove()
                     goToMapTrip()
                 }
                 else if (booking?.status == "cancel"){
-                    Toast.makeText(this@SearchActivity,"Viaje Cancelado", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SearchActivity,R.string.txtRejectedTrip, Toast.LENGTH_SHORT).show()
                     listenerBooking?.remove()
                     goToMap()
                 }
@@ -165,10 +165,10 @@ class SearchActivity : AppCompatActivity() {
 
         bookingProvider.create(booking).addOnCompleteListener {
             if (it.isSuccessful) {
-                Toast.makeText(this@SearchActivity, "Datos del viaje creados", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@SearchActivity, R.string.txtSearcDriver, Toast.LENGTH_LONG).show()
             }
             else {
-                Toast.makeText(this@SearchActivity, "Error al crear los datos", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@SearchActivity, R.string.txtError, Toast.LENGTH_LONG).show()
             }
         }
     }

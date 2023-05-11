@@ -112,6 +112,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
             }
             if (counter == 60) {
                 min = min + (counter / 60)
+                counter=0
                 binding.textViewTimer.text = "$min Min $counter Seg"
             }
 
@@ -184,14 +185,14 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
             override fun onResponse(call: Call<FCMResponse>, response: Response<FCMResponse>) {
                 if(response.body() != null){
                     if(response.body()!!.success ==1){
-                        Toast.makeText(this@MapTripActivity, "Se envió la notificación", Toast.LENGTH_SHORT).show()
+                       Log.d("Notification","Se envió la notificacion")
                     }
                     else{
-                        Toast.makeText(this@MapTripActivity, "No se envió la notificación", Toast.LENGTH_SHORT).show()
+                        Log.d("Notification","No se envió la notificacion")
                     }
                 }
                 else{
-                    Toast.makeText(this@MapTripActivity, "Hubo un error enviando la notificación", Toast.LENGTH_SHORT).show()
+                    Log.d("Notification","Hubo un error al enviar la notificacion")
                 }
             }
 
@@ -210,7 +211,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
             modalTrip.show(supportFragmentManager, ModalButtomSheetTripinfo.TAG)
         }
         else{
-            Toast.makeText(this,"No se pudo cargar la información", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,R.string.txtToastFailedToUplaoded, Toast.LENGTH_SHORT).show()
         }
 
     }
@@ -403,7 +404,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         } else {
             Toast.makeText(
                 this,
-                "Debes estar más cerca a la poisción de recogida ",
+                R.string.txtToastNearbyToPickUp,
                 Toast.LENGTH_LONG
             ).show()
         }

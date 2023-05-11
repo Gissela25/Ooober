@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 if (it.isSuccessful) {
                     driverProvider.getDriver(authProvider.getId()).addOnSuccessListener { snapshot ->
                         if (snapshot.exists()) {
-                            Toast.makeText(this,"Esta cuenta es de tipo driver",Toast.LENGTH_LONG).show()
+                            Toast.makeText(this,R.string.txtToastThisAccountIsDriverType,Toast.LENGTH_LONG).show()
                         }
                         else{
                             goToMap()

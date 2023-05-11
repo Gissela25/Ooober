@@ -136,7 +136,9 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener, Direc
             modalTrip.show(supportFragmentManager, ModalButtomSheetTripinfo.TAG)
         }
         else{
-            Toast.makeText(this,"No se pudo cargar la información", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MapTripActivity,
+                R.string.txtToastFailedToUplaoded
+                , Toast.LENGTH_SHORT).show()
         }
 
     }

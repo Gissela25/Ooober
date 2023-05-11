@@ -2,6 +2,7 @@ package com.ooober.driver.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.bumptech.glide.Glide
 import com.google.firebase.firestore.ktx.toObject
 import com.ooober.driver.R
@@ -48,17 +49,22 @@ class HistoriesDetailActivity : AppCompatActivity() {
     }
 
     private fun getClientInfo(id:String){
-        ClientProvider.getClientById(id).addOnSuccessListener { document ->
-            if(document.exists()){
-                val client = document.toObject(Client::class.java)
-                binding.textViewEmail.text = client?.email
-                binding.textViewName.text = "${client?.name} ${client?.lastname}"
-                if(client?.image != null){
-                    if(client?.image != ""){
-                        Glide.with(this).load(client?.image).into(binding.circleImageProfile)
+        try{
+            ClientProvider.getClientById(id).addOnSuccessListener { document ->
+                if(document.exists()){
+                    val client = document.toObject(Client::class.java)
+                    binding.textViewEmail.text = client?.email
+                    binding.textViewName.text = "${client?.name} ${client?.lastname}"
+                    if(client?.image != null){
+                        if(client?.image != ""){
+                            Glide.with(this).load(client?.image).into(binding.circleImageProfile)
+                        }
                     }
                 }
             }
+        }catch(e:Exception){
+            Log.d("ERROR", e.message.toString())
         }
+
     }
 }

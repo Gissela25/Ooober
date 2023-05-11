@@ -57,13 +57,13 @@ class RegisterActivity : AppCompatActivity() {
                             goToMap()
                         }
                         else{
-                            Toast.makeText(this@RegisterActivity, "${R.string.txt_SomethingWasWrong} ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@RegisterActivity, R.string.txt_SomethingWasWrong, Toast.LENGTH_SHORT).show()
                             Log.d("FIREBASE", "Error: ${it.exception.toString()}")
                         }
                     }
                 }
                 else{
-                    Toast.makeText(this@RegisterActivity, "${R.string.txt_SignUpF} ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@RegisterActivity, R.string.txt_SignUpF, Toast.LENGTH_SHORT).show()
                     Log.d("FIREBASE", "Error: ${it.exception.toString()}")
                 }
             }

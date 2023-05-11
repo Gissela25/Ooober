@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 if (it.isSuccessful) {
                     clientProvider.getClientById(authProvider.getId()).addOnSuccessListener { snapshot ->
                         if (snapshot.exists()) {
-                            Toast.makeText(this,"Esta cuenta es de tipo cliente",Toast.LENGTH_LONG).show()
+                            Toast.makeText(this,R.string.txtToastThisAccountIsClientType,Toast.LENGTH_LONG).show()
                         }
                         else{
                             goToMap()

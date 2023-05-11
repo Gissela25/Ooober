@@ -123,7 +123,7 @@ class SignInActivity : AppCompatActivity() {
 
                         clientProvider.getClientById(authProvider.getId()).addOnSuccessListener {
                             if (it.exists()) {
-                                Toast.makeText(this,"Esta cuenta es de tipo cliente",Toast.LENGTH_LONG).show()
+                                Toast.makeText(this,R.string.txtToastThisAccountIsClientType,Toast.LENGTH_LONG).show()
                             }
                             else{
                                 driverProvider.getDriver(authProvider.getId()).addOnCompleteListener { snapshot->
@@ -139,7 +139,7 @@ class SignInActivity : AppCompatActivity() {
                         }
 
                     } else {
-                        Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()
+                        Log.d("TaskException","Error:${task.exception?.message}")
                     }
 
                 }

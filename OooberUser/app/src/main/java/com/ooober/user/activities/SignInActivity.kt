@@ -126,7 +126,7 @@ class SignInActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(
                     this@SignInActivity,
-                    "Ha ocurrido un error",
+                    R.string.txtError,
                     Toast.LENGTH_SHORT
                 ).show()
                 Log.d("FIREBASE", "Error: ${it.exception.toString()}")
@@ -214,7 +214,7 @@ class SignInActivity : AppCompatActivity() {
 
                         driverProvider.getDriver(authProvider.getId()).addOnSuccessListener {
                             if (it.exists()) {
-                                Toast.makeText(this,"Esta cuenta es de tipo driver",Toast.LENGTH_LONG).show()
+                                Toast.makeText(this,R.string.txtToastThisAccountIsDriverType,Toast.LENGTH_LONG).show()
                             }
                             else{
                                 clientProvider.getClientById(authProvider.getId()).addOnCompleteListener { snapshot->
@@ -229,7 +229,7 @@ class SignInActivity : AppCompatActivity() {
                             }
                         }
                     } else {
-                        Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()
+                        Log.d("TaskException","Error:${task.exception?.message}")
                     }
 
                 }

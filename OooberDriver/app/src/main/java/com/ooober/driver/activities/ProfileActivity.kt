@@ -11,6 +11,7 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import com.bumptech.glide.Glide
 import com.github.dhaval2404.imagepicker.ImagePicker
+import com.ooober.driver.R
 import com.ooober.driver.databinding.ActivityProfileBinding
 import com.ooober.driver.models.Driver
 import com.ooober.driver.providers.AuthProvider
@@ -66,10 +67,10 @@ class ProfileActivity : AppCompatActivity() {
                     driver.image = imageUrl
                     driverProvider.update(driver).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            Toast.makeText(this@ProfileActivity, "Datos actualizados correctamente", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@ProfileActivity,  R.string.txtToastUpdatedData, Toast.LENGTH_LONG).show()
                         }
                         else {
-                            Toast.makeText(this@ProfileActivity, "No se pudo actualizar la informacion", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@ProfileActivity, R.string.txtToastFailedToUpdateInformation, Toast.LENGTH_LONG).show()
                         }
                     }
                     Log.d("STORAGE", "$imageUrl")
@@ -79,10 +80,10 @@ class ProfileActivity : AppCompatActivity() {
         else{
             driverProvider.updateWithOutImage(driver).addOnCompleteListener {
                 if (it.isSuccessful){
-                    Toast.makeText(this@ProfileActivity, "Datos actualizados correctamente", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@ProfileActivity,  R.string.txtToastUpdatedData, Toast.LENGTH_LONG).show()
                 }
                 else {
-                    Toast.makeText(this@ProfileActivity, "No se pudo actualizar la informacion", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@ProfileActivity, R.string.txtToastFailedToUpdateInformation, Toast.LENGTH_LONG).show()
                 }
             }
         }
@@ -119,10 +120,10 @@ class ProfileActivity : AppCompatActivity() {
             binding.circleImageProfile.setImageURI(fileUri)
         }
         else if(resultCode == ImagePicker.RESULT_ERROR ){
-            Toast.makeText(this,ImagePicker.getError(data), Toast.LENGTH_LONG).show()
+           Log.d("ImagePicker","Error:${ImagePicker.getError(data)}")
         }
         else{
-            Toast.makeText(this,"Tarea cancelada", Toast.LENGTH_LONG).show()
+            Log.d("ImagePicker","No se seleccionó ninguna imagen")
         }
     }
     private fun selectImage(){
