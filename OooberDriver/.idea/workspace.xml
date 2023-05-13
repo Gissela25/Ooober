@@ -10,32 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment=":c">
-      <change afterPath="$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/ForgotPassActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_pass.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/HistoriesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/HistoriesActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/HistoriesDetailActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/HistoriesDetailActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_location_grey.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_location_grey.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_my_location_grey.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_my_location_grey.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_phone.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_phone.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_power.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_power.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_timer_grey.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_timer_grey.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_histories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_histories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_booking.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_booking.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_trip_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/modal_bottom_sheet_trip_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/ProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/ProfileActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\gisse\.android\avd\Pixel_4_API_33_U_1.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\horus\.android\avd\Pixel_5_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -119,7 +115,7 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "last_directory_selection": "C:/Users/Jony Morales/AndroidStudioProjects/Ooober/OooberDriver/app/src/main/res/drawable",
-    "last_opened_file_path": "C:/Users/gisse/OneDrive/Escritorio/DSM/Proyecto - DSM/OooberUser",
+    "last_opened_file_path": "D:/Source/Android/Ooober/OooberDriver",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
@@ -132,6 +128,9 @@
       <recent name="C:\Users\gisse\OneDrive\Escritorio\DSM\Proyecto - DSM\OooberDriver\app\src\main\res\drawable" />
       <recent name="C:\Users\gisse\OneDrive\Escritorio\DSM\Proyecto - DSM\OooberDriver\app\src\main\res\layout" />
       <recent name="C:\Users\Jony Morales\AndroidStudioProjects\Ooober\OooberDriver\app\src\main\res\layout" />
+    </key>
+    <key name="android.template.-1069637558">
+      <recent name="com.ooober.driver.activities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jony Morales\AndroidStudioProjects\Ooober\OooberDriver\app\src\main\res\drawable" />

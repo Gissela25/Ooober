@@ -11,6 +11,7 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import com.bumptech.glide.Glide
 import com.github.dhaval2404.imagepicker.ImagePicker
+import com.google.firebase.auth.FirebaseAuth
 import com.ooober.driver.R
 import com.ooober.driver.databinding.ActivityProfileBinding
 import com.ooober.driver.models.Driver
@@ -40,6 +41,8 @@ class ProfileActivity : AppCompatActivity() {
         binding.ivBack.setOnClickListener { finish() }
         binding.btnUpdate.setOnClickListener { updateInfo() }
         binding.circleImageProfile.setOnClickListener{selectImage()}
+        binding.btnVerifyEmail.setOnClickListener { verifyUserEmail() }
+
     }
 
     private fun updateInfo(){
@@ -130,6 +133,22 @@ class ProfileActivity : AppCompatActivity() {
         ImagePicker.with(this)
             .crop().compress(1024).maxResultSize(1080,1080).createIntent { intent->
                 startImageForResult.launch(intent)
+            }
+    }
+
+    private fun verifyUserEmail(){
+        val auth = FirebaseAuth.getInstance()
+        val user = auth.currentUser
+        val userEmail = user?.email
+
+        user?.sendEmailVerification()
+            ?.addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(applicationContext, "${resources.getString(R.string.txt_resetPassMailSent)} $userEmail", Toast.LENGTH_LONG).show()
+                }
+                else{
+                    Toast.makeText(applicationContext, "Error",Toast.LENGTH_LONG).show()
+                }
             }
     }
 

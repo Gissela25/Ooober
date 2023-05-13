@@ -98,4 +98,9 @@
     <string name="txtToastFailedToUplaoded">Could not load the information</string>
     <string name="txtToastNearbyToPickUp">You should be closer to the pickup position.</string>
     <string name="txtOneMomentAgo">One moment ago</string>
+
+    <string name="txt_fogotPass">Forgot Password</string>
+    <string name="txt_btnResetPass">Reset Password</string>
+    <string name="txt_resetPassMailSent">An Email has been sent to</string>
+    <string name="txt_VerifyEmail">Send email verification.</string>
 </resources>
