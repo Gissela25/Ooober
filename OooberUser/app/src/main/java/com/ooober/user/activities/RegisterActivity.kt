@@ -111,6 +111,7 @@ class RegisterActivity : AppCompatActivity() {
         }
         if (password != Cpassword) {
             Toast.makeText(this, R.string.txt_PwdDoNotMatch, Toast.LENGTH_SHORT).show()
+            return false
         }
         if (password.length < 6) {
             Toast.makeText(
