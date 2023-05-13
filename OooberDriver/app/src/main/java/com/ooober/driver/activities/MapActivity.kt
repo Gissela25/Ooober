@@ -41,9 +41,9 @@ import com.ooober.driver.models.Booking
 import com.ooober.driver.models.FCMBody
 import com.ooober.driver.models.FCMResponse
 import com.ooober.driver.providers.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+//import retrofit2.Call
+//import retrofit2.Callback
+//import retrofit2.Response
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener,SensorEventListener {
 

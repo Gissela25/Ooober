@@ -14,14 +14,14 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/green"/>
+            android:background="@color/black"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/txt_userprofile"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/yellow"
             android:textStyle="bold"
             android:textSize="22sp"
             android:layout_marginTop="30dp"/>
@@ -40,7 +40,7 @@
             android:id="@+id/circleImageProfile"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:src="@drawable/ic_person"
+            android:src="@drawable/ic_baseline_person_24_white"
             app:civ_border_width="3dp"
             app:civ_border_color="@color/white"
             android:layout_gravity="bottom|center"
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/hint_mail"
-            android:textColor="@color/GreyDark"
+            android:textColor="@color/white"
             android:layout_gravity="bottom"
             android:gravity="center"
             android:textStyle="italic"
@@ -61,6 +61,7 @@
     </FrameLayout>
 
     <LinearLayout
+        android:background="@color/black"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -74,19 +75,19 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/GreyDark"
-            app:startIconDrawable="@drawable/ic_person_small"
-            app:startIconTint="@color/GreyDark">
+            app:hintTextColor="@color/yellow"
+            app:startIconDrawable="@drawable/ic_baseline_person_24_white"
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tfName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_name"
-                android:textColorHint="@color/GreyDark"
+                android:textColorHint="@color/white"
                 android:inputType="text"
                 style="@style/EditTextGrey"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="13sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -98,17 +99,17 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/GreyDark"
-            app:startIconTint="@color/GreyDark"
-            app:startIconDrawable="@drawable/ic_person_small_lastname">
+            app:hintTextColor="@color/yellow"
+            app:startIconTint="@color/white"
+            app:startIconDrawable="@drawable/ic_lastname_white">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tflastname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_Lname"
                 android:inputType="text"
-                app:startIconTint="@color/GreyDark"
-                android:textColor="@color/black"
+                app:startIconTint="@color/white"
+                android:textColor="@color/white"
                 android:textSize="13sp"
                 />
         </com.google.android.material.textfield.TextInputLayout>
@@ -120,18 +121,19 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/GreyDark"
-            app:startIconTint="@color/GreyDark"
-            app:startIconDrawable="@drawable/ic_phone_white">
+            app:hintTextColor="@color/yellow"
+            app:startIconTint="@color/white"
+            app:startIconDrawable="@drawable/ic_sphone_white">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tfPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_phone"
                 android:inputType="phone"
-                app:startIconTint="@color/GreyDark"
-                android:textColor="@color/black"
-                android:textSize="13sp" />
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:startIconTint="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -141,9 +143,9 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/GreyDark"
-            app:startIconTint="@color/GreyDark"
-            app:startIconDrawable="@drawable/ic_car">
+            app:hintTextColor="@color/yellow"
+            app:startIconTint="@color/white"
+            app:startIconDrawable="@drawable/ic_car_white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tfCarBrand"
@@ -151,8 +153,8 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/txt_carbrand"
                 android:inputType="text"
-                app:startIconTint="@color/GreyDark"
-                android:textColor="@color/black"
+                app:startIconTint="@color/white"
+                android:textColor="@color/white"
                 android:textSize="13sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -162,10 +164,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
-            app:hintTextColor="@color/GreyDark"
+            app:hintTextColor="@color/yellow"
             style="@style/EditTextGrey"
-            app:startIconTint="@color/GreyDark"
-            app:startIconDrawable="@drawable/ic_color">
+            app:startIconTint="@color/white"
+            app:startIconDrawable="@drawable/ic_color_white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tfCarColor"
@@ -173,8 +175,8 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/txt_carcolor"
                 android:inputType="text"
-                app:startIconTint="@color/GreyDark"
-                android:textColor="@color/black"
+                app:startIconTint="@color/white"
+                android:textColor="@color/white"
                 android:textSize="13sp"
                 tools:ignore="DuplicateIds" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -186,9 +188,9 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/GreyDark"
-            app:startIconTint="@color/GreyDark"
-            app:startIconDrawable="@drawable/ic_number"
+            app:hintTextColor="@color/yellow"
+            app:startIconTint="@color/white"
+            app:startIconDrawable="@drawable/ic_placa_white"
             >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tfCarPlate"
@@ -196,8 +198,8 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/txt_vehicleplate"
                 android:inputType="text"
-                android:textColor="@color/black"
-                app:startIconTint="@color/GreyDark"
+                android:textColor="@color/white"
+                app:startIconTint="@color/white"
                 android:textSize="13sp"
                 tools:ignore="DuplicateIds" />
         </com.google.android.material.textfield.TextInputLayout>
