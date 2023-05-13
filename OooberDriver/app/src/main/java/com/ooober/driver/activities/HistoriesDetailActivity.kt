@@ -3,6 +3,7 @@ package com.ooober.driver.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager
 import com.bumptech.glide.Glide
 import com.google.firebase.firestore.ktx.toObject
 import com.ooober.driver.R
@@ -22,6 +23,7 @@ class HistoriesDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHistoriesDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
         extraId = intent.getStringExtra("id")!!
         getHistory()
