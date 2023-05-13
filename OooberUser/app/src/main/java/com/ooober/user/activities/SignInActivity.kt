@@ -46,6 +46,8 @@ class SignInActivity : AppCompatActivity() {
         binding.btnESignIn.setOnClickListener { goToLogin() }
         binding.GosignIn.setOnClickListener { goToRegister() }
         binding.btnLanguage.setOnClickListener { goToSetLanguage() }
+        binding.btnForgotPass.setOnClickListener { goToForgotPass() }
+
 
         val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -140,7 +142,10 @@ class SignInActivity : AppCompatActivity() {
         val i = Intent(this, SettingsActivity::class.java)
         startActivity(i)
     }
-
+    private fun goToForgotPass(){
+        val i = Intent(this, ForgotPassActivity::class.java)
+        startActivity(i)
+    }
     private fun SignGoogle() {
 
     }

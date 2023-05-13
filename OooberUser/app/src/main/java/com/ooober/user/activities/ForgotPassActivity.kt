@@ -1,4 +1,4 @@
-package com.ooober.driver.activities
+package com.ooober.user.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,13 +7,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.ooober.driver.R
+import com.ooober.user.R
 import com.google.firebase.auth.FirebaseAuth
 
 class ForgotPassActivity : AppCompatActivity() {
     val auth = FirebaseAuth.getInstance()
-    lateinit var btnResetPass:Button
+    lateinit var btnResetPass : Button
     lateinit var btnGoSign : TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_pass)
@@ -42,6 +43,5 @@ class ForgotPassActivity : AppCompatActivity() {
         val i = Intent(this, SignInActivity::class.java)
         startActivity(i)
     }
-
 
 }

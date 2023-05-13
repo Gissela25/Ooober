@@ -43,4 +43,8 @@
     <string name="txt_PwdDoNotMatch">Password do not match</string>
     <string name="txt_SixCharacters">The password must be at least six characters</string>
     <string name="txt_AuthFalied">Authentication falied</string>
+
+    <string name="txt_fogotPass">Forgot Password</string>
+    <string name="txt_btnResetPass">Reset Password</string>
+    <string name="txt_resetPassMailSent">An Email has been sent to</string>
 </resources>

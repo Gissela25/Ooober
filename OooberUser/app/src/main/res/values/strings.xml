@@ -47,4 +47,8 @@
     <string name="txt_PwdDoNotMatch">Contraseñas no coinciden</string>
     <string name="txt_SixCharacters">La contraseña debe tener al menos 6 carácteres</string>
     <string name="txt_AuthFalied">Atenticación fallida</string>
+
+    <string name="txt_fogotPass">Olvide mi contraseña</string>
+    <string name="txt_btnResetPass">Reset contraseña</string>
+    <string name="txt_resetPassMailSent">Se envio un correo a</string>
 </resources>
