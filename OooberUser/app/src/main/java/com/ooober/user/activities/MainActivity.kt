@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.goSignUp.setOnClickListener { goToRegister() }
         binding.btnSingIn.setOnClickListener { login() }
+        binding.goForgotPass.setOnClickListener { goToForgotPass() }
     }
 
     private fun login() {
@@ -76,6 +77,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToRegister() {
         val i = Intent(this, RegisterActivity::class.java)
+        startActivity(i)
+    }
+    private fun goToForgotPass(){
+        val i = Intent(this, ForgotPassActivity::class.java)
         startActivity(i)
     }
 

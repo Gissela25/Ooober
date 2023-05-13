@@ -101,4 +101,10 @@
     <string name="txtRejectedTrip">Rejected trip</string>
     <string name="txtSearcDriver">A driver has been found</string>
     <string name="txtOneMomentAgo">One moment ago</string>
+
+    <string name="txt_fogotPass">Forgot Password</string>
+    <string name="txt_btnResetPass">Reset Password</string>
+    <string name="txt_resetPassMailSent">An Email has been sent to</string>
+    <string name="txt_VerifyEmail">Send email verification.</string>
+
 </resources>

@@ -134,6 +134,17 @@
                 android:textSize="13sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/btnVerifyEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:clickable="true"
+            android:text="@string/txt_VerifyEmail"
+            android:textColor="#B89D0A"
+            android:textStyle="bold" />
+
 
     </LinearLayout>
 

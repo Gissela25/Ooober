@@ -89,7 +89,7 @@
     <string name="txtToastNoRecordFound">No se encontró un historial</string>
     <string name="txtToastUpdatedData">Datos actualizados correctamente</string>
     <string name="txtToastFailedToUpdateInformation">No se pudo actualizar la información</string>
-    <string name="txtToastThisAccountIsClientType" >Esta cuenta es de tipo cliente</string>
+    <string name="txtToastThisAccountIsClientType">Esta cuenta es de tipo cliente</string>
     <string name="txtRelativeTimeMomentAgo">Hace un momento</string>
     <string name="txtOneMinuteAgo">Hace un minuto</string>
     <string name="txtXMinutesAgo">minutos atrás</string>
@@ -104,7 +104,12 @@
     <string name="txtToastSelectDistanceAndDestination">Debes seleccionar el origen y el destino</string>
     <string name="txtAcceptedTrip">Viaje aceptado</string>
     <string name="txtRejectedTrip">Viaje rechazado</string>
-    <string name="txtSearcDriver" > Se ha encontrado un conductor</string>
+    <string name="txtSearcDriver"> Se ha encontrado un conductor</string>
     <string name="txtOneMomentAgo">Hace un momento</string>
+
+    <string name="txt_fogotPass">Olvide mi contraseña</string>
+    <string name="txt_btnResetPass">Reset contraseña</string>
+    <string name="txt_resetPassMailSent">Se envio un correo a</string>
+    <string name="txt_VerifyEmail">Enviar verificacion al correo.</string>
 
 </resources>
