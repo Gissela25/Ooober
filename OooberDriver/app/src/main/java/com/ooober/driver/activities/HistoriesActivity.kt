@@ -23,7 +23,7 @@ class HistoriesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHistoriesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
         val linearLayouManager = LinearLayoutManager(this)
         binding.recyclerViewHistories.layoutManager = linearLayouManager
 

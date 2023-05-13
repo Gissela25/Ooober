@@ -11,6 +11,7 @@
         android:layout_height="240dp"
         android:orientation="vertical"
         android:gravity="center"
+        android:background="@color/black"
         >
 
         <LinearLayout
@@ -35,7 +36,7 @@
                     android:text="@string/txt_pickupin"
                     android:textSize="17sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/yellow"/>
 
                 <TextView
                     android:id="@+id/textViewOrigin"
@@ -43,6 +44,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/txt_origin"
                     android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
                     />
 
             </LinearLayout>
@@ -74,9 +77,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/txt_taketo"
+                    android:textColor="@color/yellow"
                     android:textSize="17sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textViewDestination"
@@ -84,6 +87,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/txt_destination"
                     android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
                     />
 
             </LinearLayout>
@@ -98,7 +103,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/grey"
+            android:background="@color/white"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
@@ -116,7 +121,7 @@
                 android:id="@+id/circleImageClient"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_person"/>
+                android:src="@drawable/ic_baseline_person_24_white"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -131,7 +136,7 @@
                     android:text="@string/txt_customer"
                     android:textSize="17sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/yellow"/>
 
                 <TextView
                     android:id="@+id/textViewClientName"
@@ -139,6 +144,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/txt_customername"
                     android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
                     />
 
             </LinearLayout>
