@@ -39,6 +39,7 @@ class SignInActivity : AppCompatActivity() {
         binding.GosignIn.setOnClickListener { goToRegister() }
         binding.btnLanguage.setOnClickListener { goToSetLanguage() }
         binding.btnSGithub.setOnClickListener { goToGithubAuth()}
+        binding.btnForgotPass.setOnClickListener { goToForgotPass() }
 
         val options = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -69,6 +70,10 @@ class SignInActivity : AppCompatActivity() {
 
     private fun goToSetLanguage() {
         val i = Intent(this, SettingsActivity::class.java)
+        startActivity(i)
+    }
+    private fun goToForgotPass(){
+        val i = Intent(this, ForgotPassActivity::class.java)
         startActivity(i)
     }
 

@@ -16,6 +16,9 @@
         android:theme="@style/Theme.OooberDriver"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ForgotPassActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.MapTripActivity"
             android:exported="false" />
         <activity
