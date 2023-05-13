@@ -11,16 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment=":c">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/HistoriesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/HistoriesActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/utils/RelativeTime.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/utils/RelativeTime.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/HistoriesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/HistoriesActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/utils/RelativeTime.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/utils/RelativeTime.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values-en/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/RegisterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/RegisterActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_calification_client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_calification_client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/RegisterActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/RegisterActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
