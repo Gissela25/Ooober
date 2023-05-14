@@ -41,7 +41,7 @@ class ProfileActivity : AppCompatActivity() {
         binding.ivBack.setOnClickListener { finish() }
         binding.btnUpdate.setOnClickListener { updateInfo() }
         binding.circleImageProfile.setOnClickListener{selectImage()}
-        binding.btnVerifyEmail.setOnClickListener { verifyUserEmail() }
+        //binding.btnVerifyEmail.setOnClickListener { verifyUserEmail() }
 
     }
 

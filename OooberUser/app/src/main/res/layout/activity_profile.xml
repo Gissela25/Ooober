@@ -74,16 +74,16 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/GreyDark"
+            app:hintTextColor="@color/black"
             app:startIconDrawable="@drawable/ic_person_small"
-            app:startIconTint="@color/GreyDark">
+            app:startIconTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tfName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_name"
-                android:textColorHint="@color/GreyDark"
+                android:textColorHint="@color/black"
                 android:inputType="text"
                 style="@style/EditTextGrey"
                 android:textColor="@color/black"
@@ -133,18 +133,6 @@
                 android:textColor="@color/black"
                 android:textSize="13sp" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/btnVerifyEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textAlignment="center"
-            android:clickable="true"
-            android:text="@string/txt_VerifyEmail"
-            android:textColor="#B89D0A"
-            android:textStyle="bold" />
-
 
     </LinearLayout>
 
