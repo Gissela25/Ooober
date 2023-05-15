@@ -51,11 +51,11 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 
 >[Manual usuario OOOBER](https://drive.google.com/file/d/1N-r338nDdCO1riPEAzcq07b9Hds-Pzgd/view?usp=sharing)
 
->[Manual tecnico OOOBER](https://drive.google.com/file/d/1wdD1lYXr7ILvGMeJ0hCq0ZUcGPXStjfE/view?usp=sharing)
+>[Manual tecnico OOOBER](https://drive.google.com/file/d/1GWauhd_JyXa7LXMqV8Q5eL1JMppI4wgH/view?usp=sharing)
 
 >[Manual Usuario OOOBER DRIVER](https://drive.google.com/file/d/158OjoMsmGrRsqeCtxXhbzY8QhelvpvjT/view?usp=sharing)
 
->[Manual tecnico OOOBER DRIVER](https://drive.google.com/file/d/1f37W6omHXg24HBCZvRPOa1yszZYbCcZe/view?usp=sharing)
+>[Manual tecnico OOOBER DRIVER](https://drive.google.com/file/d/1bhMTCDVV30eEouUsHg3zmmEcB1gXn911/view?usp=sharing)
 
 >[Tablero Trello Segunda Fase](https://trello.com/invite/b/l4YYgLjv/ATTI4231982b5b8e32dd3bd595213c07abe220E83DF0/segunda-fase)
 
