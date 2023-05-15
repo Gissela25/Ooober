@@ -63,4 +63,4 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 
 >[Comercial](https://www.youtube.com/watch?v=mdb6uA-96-U)
 
->[Sitio Wev](https://www.youtube.com/watch?v=mdb6uA-96-U](https://gissela25.github.io/SmartIdea/index.html)
+>[Sitio Web](https://gissela25.github.io/SmartIdea/index.html)
