@@ -23,6 +23,10 @@ class ForgotPassActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_pass)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        )
 
         btnResetPass = findViewById<Button>(R.id.btn_ResetPass)
         btnGoSign = findViewById<TextView>(R.id.btn_GosignIn)
@@ -38,6 +42,7 @@ class ForgotPassActivity : AppCompatActivity() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(applicationContext, "${resources.getString(R.string.txt_resetPassMailSent)} $emailAddress",Toast.LENGTH_LONG).show()
+                    goSignIn()
                 } else {
                     Toast.makeText(applicationContext, "Error",Toast.LENGTH_LONG).show()
                 }

@@ -3,7 +3,7 @@
     <string name="google_maps_key">AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk</string>
 
     <string name="lang_es">Español</string>
-    <string name="lang_en">Ingles de la aplicación</string>
+    <string name="lang_en">Ingles</string>
     <string name="txt_lang">Idioma de la aplicación</string>
     <string name="facebook_app_id" translatable="false">737288371330155</string>
     <string name="fb_login_protocol_scheme" translatable="false">fb737288371330155</string>
@@ -108,8 +108,10 @@
     <string name="txtOneMomentAgo">Hace un momento</string>
 
     <string name="txt_fogotPass">Olvide mi contraseña</string>
-    <string name="txt_btnResetPass">Reset contraseña</string>
+    <string name="txt_btnResetPass">Recuperar contraseña</string>
     <string name="txt_resetPassMailSent">Se envio un correo a</string>
     <string name="txt_VerifyEmail">Enviar verificacion al correo.</string>
+    <string name="txt_emailforgot">Restablecer la contraseña</string>
+    <string name="txt">Escribe la dirección de correo electronico asociada a tu cuenta y te enviaremos un enlace para que puedas restablecer tu contraseña.</string>
 
 </resources>

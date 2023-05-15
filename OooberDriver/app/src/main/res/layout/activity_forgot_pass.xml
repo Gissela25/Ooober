@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.SignInActivity">
+    tools:context=".activities.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -14,6 +14,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/black" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="680dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_gravity="center">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.3"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,62 +37,70 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:text="@string/txt_fogotPass"
+                android:layout_marginTop="20dp"
+                android:text="@string/txt_emailforgot"
                 android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textColor="@color/yellow"
+                android:textSize="26sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/txtEdit_emailForgot"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:inputType="textEmailAddress"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="200dp"
-                android:layout_marginEnd="10dp"
-                android:background="@color/white"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:hint="@string/hint_mail"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/txt"
+                android:textAlignment="gravity"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                app:startIconDrawable="@drawable/ic_email_white"
+                app:startIconTint="@color/white"
+                android:layout_marginTop="30dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtEdit_emailForgot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_mail"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_ResetPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginRight="30dp"
-                android:background="@drawable/border_button"
-                android:paddingLeft="10dp"
-                android:text="@string/txt_btnResetPass"
-                android:textAllCaps="false"
-                android:textColor="@color/white" />
+                android:background="@drawable/rounded_button"
+                android:text="@string/txt_emailforgot" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="48dp"
-                    android:layout_marginTop="150dp"
-                    android:text="@string/txt_Doyouhaveaccount"
-                    android:textColor="@color/white" />
 
                 <TextView
                     android:id="@+id/btn_GosignIn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="150dp"
-                    android:clickable="true"
                     android:text="@string/btn_homeLogIn"
                     android:textColor="@color/yellow"
-                    android:textStyle="bold" />
-
+                    android:layout_marginStart="125dp"
+                    android:layout_marginTop="30dp"
+                    android:textStyle="bold"
+                    android:clickable="true"/>
             </LinearLayout>
 
         </LinearLayout>

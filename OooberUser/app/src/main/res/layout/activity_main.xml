@@ -112,7 +112,7 @@
                     android:id="@+id/goSignUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_noaccount"
+                    android:text="@string/btn_homeCreateAcc"
                     android:textColor="@color/yellow"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="200dp"

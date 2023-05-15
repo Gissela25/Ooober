@@ -104,5 +104,8 @@
     <string name="txt_btnResetPass">Reset contraseña</string>
     <string name="txt_resetPassMailSent">Se envio un correo a</string>
     <string name="txt_VerifyEmail">Enviar verificacion al correo.</string>
+    <string name="txt_emailforgot">Restablecer la contraseña</string>
+    <string name="txt">Escribe la dirección de correo electronico asociada a tu cuenta y te enviaremos un enlace para que puedas restablecer tu contraseña.</string>
+
 
 </resources>

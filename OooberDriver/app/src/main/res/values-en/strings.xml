@@ -103,4 +103,8 @@
     <string name="txt_btnResetPass">Reset Password</string>
     <string name="txt_resetPassMailSent">An Email has been sent to</string>
     <string name="txt_VerifyEmail">Send email verification.</string>
+    <string name="txt_emailforgot">Reset your password.</string>
+    <string name="txt">Enter the email address associated with your account and we will send you a link so you can reset your password.</string>
+
+
 </resources>
