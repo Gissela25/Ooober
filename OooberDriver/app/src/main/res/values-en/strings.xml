@@ -57,4 +57,54 @@
     <string name="txt_upperdistance">DISTANCE AND TIME OF THE TRIP</string>
     <string name="txt_price">PRICE</string>
     <string name="TXT_qualify">QUALIFY</string>
+    <string name="txt_username">USER NAME</string>
+    <string name="txt_pickplace">Pick Up Place</string>
+    <string name="txt_tripdate">Trip Date</string>
+    <string name="txt_Qobteined">Qualification Obtained </string>
+    <string name="txt_customerrating">Customer Rating</string>
+    <string name="txt_travelcost">Travel Cost</string>
+    <string name="txt_elapsedtime">Elapsed Time:</string>
+    <string name="txt_totaldistance">Total Distance:</string>
+    <string name="txt_starttrip">START TRIP</string>
+    <string name="txt_finishtrip">FINISH TRIP</string>
+    <string name="txt_userprofileUpper">USER PROFILE</string>
+    <string name="txt_carbrand">Vehicle Brand</string>
+    <string name="txt_carcolor">Car Color</string>
+    <string name="txt_vehicleplate">Vehicle Plate</string>
+    <string name="txt_update">Update Information</string>
+    <string name="txt_userprofilename">User Name</string>
+    <string name="txt_profile">Profile</string>
+    <string name="txt_Historial">Record</string>
+    <string name="txt_logout">Log Out</string>
+    <string name="txt_pickupin">Pick up in </string>
+    <string name="txt_taketo">Take to</string>
+    <string name="txt_customer">Customer</string>
+    <string name="txt_customername">Customer Name</string>
+    <string name="txt_userprofile">USER PROFILE</string>
+    <string name="txtTitlehistories">Travel record</string>
+    <string name="txtToastIdHistoryNull">History id is null.</string>
+    <string name="txtToastFailedToUpdateRating">Failed to update rating</string>
+    <string name="txtToastNoRecordFound">No record found</string>
+    <string name="txtToastUpdatedData">Data successfully updated</string>
+    <string name="txtToastFailedToUpdateInformation">Failed to update information</string>
+    <string name="txtToastThisAccountIsClientType">This account is customer type</string>
+    <string name="txtRelativeTimeMomentAgo">A moment ago</string>
+    <string name="txtOneMinuteAgo">One minute ago</string>
+    <string name="txtXMinutesAgo">minutes ago</string>
+    <string name="txtOneHourAgo">An hour ago</string>
+    <string name="txtHoursAgo">hours ago</string>
+    <string name="txtYesterday">Yesterday</string>
+    <string name="txtDaysAgo">days ago</string>
+    <string name="txtToastFailedToUplaoded">Could not load the information</string>
+    <string name="txtToastNearbyToPickUp">You should be closer to the pickup position.</string>
+    <string name="txtOneMomentAgo">One moment ago</string>
+
+    <string name="txt_fogotPass">Forgot Password</string>
+    <string name="txt_btnResetPass">Reset Password</string>
+    <string name="txt_resetPassMailSent">An Email has been sent to</string>
+    <string name="txt_VerifyEmail">Send email verification.</string>
+    <string name="txt_emailforgot">Reset your password.</string>
+    <string name="txt">Enter the email address associated with your account and we will send you a link so you can reset your password.</string>
+
+
 </resources>

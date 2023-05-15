@@ -4,27 +4,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="driverProfile">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_10__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_11_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2023_13_11__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/deploymentTargetDropDown.xml" afterDir="false" />
+    <list default="true" id="70d1792b-b2ef-48a0-874d-efa0d709b0e5" name="Changes" comment="Counter and strings...">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/ProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/ProfileActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/providers/DriverProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/providers/DriverProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/ProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/ProfileActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/providers/ClientProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/providers/ClientProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/HistoriesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/activities/HistoriesActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/utils/RelativeTime.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/java/com/ooober/driver/utils/RelativeTime.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values-en/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberDriver/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/HistoriesActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/HistoriesActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/activities/MapActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/utils/RelativeTime.kt" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/java/com/ooober/user/utils/RelativeTime.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/res/values-en/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OooberUser/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OooberUser/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,17 +41,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jony Morales/Desktop/Guia11/SQLiteApp&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/Jony Morales/AndroidStudioProjects/Ooober",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -182,7 +173,63 @@
       <option name="project" value="LOCAL" />
       <updated>1683305989364</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixing Login(Google/User and Email) Bugs">
+      <created>1683413632422</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1683413632422</updated>
+    </task>
+    <task id="LOCAL-00018" summary="displaying client and driver information">
+      <created>1683421044002</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1683421044002</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Sensors to MapActivity.kt and MapTripActivity.kt">
+      <created>1683429272528</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1683429272528</updated>
+    </task>
+    <task id="LOCAL-00020" summary="notifications and tokens">
+      <created>1683436575971</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1683436575971</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Details: Facebook login , Google login, and other errors in SignInActivity.kt">
+      <created>1683533444312</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1683533444312</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Notifications (Drivers/Users) (Trip status and Trip request)">
+      <created>1683685934311</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1683685934311</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Notifications Actions">
+      <created>1683695031882</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1683695031882</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Counter and strings...">
+      <created>1683791392416</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1683791392416</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +259,14 @@
     <MESSAGE value="get trip history" />
     <MESSAGE value="calificationToDriver / calificationToClient" />
     <MESSAGE value="driverProfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="driverProfile" />
+    <MESSAGE value="fixing Login(Google/User and Email) Bugs" />
+    <MESSAGE value="displaying client and driver information" />
+    <MESSAGE value="Sensors to MapActivity.kt and MapTripActivity.kt" />
+    <MESSAGE value="notifications and tokens" />
+    <MESSAGE value="Details: Facebook login , Google login, and other errors in SignInActivity.kt" />
+    <MESSAGE value="Notifications (Drivers/Users) (Trip status and Trip request)" />
+    <MESSAGE value="Notifications Actions" />
+    <MESSAGE value="Counter and strings..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Counter and strings..." />
   </component>
 </project>

@@ -53,13 +53,13 @@ class RegisterActivity : AppCompatActivity() {
                             goToMap()
                         }
                         else{
-                            Toast.makeText(this@RegisterActivity, "${R.string.m_error} ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@RegisterActivity, R.string.m_error, Toast.LENGTH_SHORT).show()
                             Log.d("FIREBASE", "Error: ${it.exception.toString()}")
                         }
                     }
                 }
                 else{
-                    Toast.makeText(this@RegisterActivity, "${R.string.m_registerF} ${it.exception.toString()}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@RegisterActivity, R.string.m_registerF, Toast.LENGTH_SHORT).show()
                     Log.d("FIREBASE", "Error: ${it.exception.toString()}")
                 }
             }
@@ -107,6 +107,7 @@ class RegisterActivity : AppCompatActivity() {
         }
         if (password != Cpassword) {
             Toast.makeText(this, R.string.m_Isamepassword, Toast.LENGTH_SHORT).show()
+            return false
         }
         if (password.length < 6) {
             Toast.makeText(

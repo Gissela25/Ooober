@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PERFIL DE USUARIO"
+            android:text="@string/txt_userprofileUpper"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -50,7 +50,7 @@
             android:id="@+id/tvEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Correo Electrónico"
+            android:text="@string/hint_mail"
             android:textColor="@color/GreyDark"
             android:layout_gravity="bottom"
             android:gravity="center"
@@ -74,16 +74,16 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="15dp"
             style="@style/EditTextGrey"
-            app:hintTextColor="@color/GreyDark"
+            app:hintTextColor="@color/black"
             app:startIconDrawable="@drawable/ic_person_small"
-            app:startIconTint="@color/GreyDark">
+            app:startIconTint="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tfName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_name"
-                android:textColorHint="@color/GreyDark"
+                android:textColorHint="@color/black"
                 android:inputType="text"
                 style="@style/EditTextGrey"
                 android:textColor="@color/black"
@@ -134,7 +134,6 @@
                 android:textSize="13sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
     </LinearLayout>
 
     <Button
@@ -146,7 +145,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/rounded_button"
-        android:text="Actualizar información"
+        android:text="@string/txt_update"
         android:layout_gravity="bottom"
         android:layout_margin="30dp"/>
 

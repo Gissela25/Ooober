@@ -6,6 +6,10 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import android.location.Location
 import android.os.*
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +20,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
@@ -33,17 +38,19 @@ import com.ooober.driver.databinding.ActivityMapBinding
 import com.ooober.driver.databinding.ActivityMapTripBinding
 import com.ooober.driver.fragments.ModalButtomSheetBooking
 import com.ooober.driver.fragments.ModalButtomSheetTripinfo
-import com.ooober.driver.models.Booking
-import com.ooober.driver.models.History
-import com.ooober.driver.models.Prices
+import com.ooober.driver.models.*
 import com.ooober.driver.providers.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
 class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
-    DirectionUtil.DirectionCallBack {
+    DirectionUtil.DirectionCallBack, SensorEventListener {
 
+    private var client: Client? = null
     private val configProvider = ConfigProvider()
     private var totalPrices = 0.0
     private var markerDestination: Marker? = null
@@ -61,7 +68,8 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     private val authProvider = AuthProvider()
     private val historyProvider = HistoryProvider()
     private val bookingProvider = BookingProvider()
-    private val modalBooking = ModalButtomSheetBooking()
+    private val notificationProvider = NotificationProvider()
+    private val clientProvider = ClientProvider()
     private var wayPoints: ArrayList<LatLng> = ArrayList()
     private val WAY_POINT_TAG = "way_point_tag"
     private lateinit var directionUtil: DirectionUtil
@@ -77,6 +85,16 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
 
     //MODAL
     private var modalTrip = ModalButtomSheetTripinfo()
+
+
+    //SENSOR CAMER
+    private var angle = 0
+    private val rotationMatrix = FloatArray(16)
+    private var sensorManager:SensorManager ?= null
+    private var vectSensor:Sensor ?= null
+    private var declination = 0.0f
+    private var isFistTimeOnResume = false
+    private var isFistLocation = false
 
     //Temporizador
     private var counter = 0
@@ -94,23 +112,12 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
             }
             if (counter == 60) {
                 min = min + (counter / 60)
+                counter=0
                 binding.textViewTimer.text = "$min Min $counter Seg"
             }
 
             startTimer()
         }
-    }
-
-    private val timer = object : CountDownTimer(30000, 1000) {
-        override fun onTick(counter: Long) {
-            Log.d("TIMER", "Counter: $counter")
-        }
-
-        override fun onFinish() {
-            Log.d("TIMER", "FINISH")
-            modalBooking.dismiss()
-        }
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -132,6 +139,8 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
             smallestDisplacement = 1f
 
         }
+        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager?
+        vectSensor = sensorManager?.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)
         //Instance to get location
         easyWayLocation = EasyWayLocation(this, locationRequest, false, false, this)
         locationPermissions.launch(
@@ -150,8 +159,61 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         binding.imageViewInfo.setOnClickListener { showModalInfo() }
     }
 
+
+    private fun getClientInfo(){
+        clientProvider.getClientById(booking?.idClient!!).addOnSuccessListener { document ->
+            if(document.exists()){
+                client = document.toObject(Client::class.java)
+            }
+        }
+    }
+
+
+    private  fun sendNotification(status: String){
+
+        val map = HashMap<String,String>()
+        map.put("title","ESTADO DEL VIAJE")
+        map.put("body",status)
+        val body = FCMBody(
+            to = client?.token!!,
+            priority = "high",
+            ttl = "4500s",
+            data = map
+        )
+
+        notificationProvider.sendNotification(body).enqueue(object : Callback<FCMResponse> {
+            override fun onResponse(call: Call<FCMResponse>, response: Response<FCMResponse>) {
+                if(response.body() != null){
+                    if(response.body()!!.success ==1){
+                       Log.d("Notification","Se envió la notificacion")
+                    }
+                    else{
+                        Log.d("Notification","No se envió la notificacion")
+                    }
+                }
+                else{
+                    Log.d("Notification","Hubo un error al enviar la notificacion")
+                }
+            }
+
+            override fun onFailure(call: Call<FCMResponse>, t: Throwable) {
+                Log.d("NOTIFICATION","ERROR: ${t.message}")
+            }
+
+        })
+    }
+
     private fun showModalInfo(){
-        modalTrip.show(supportFragmentManager, ModalButtomSheetTripinfo.TAG)
+        if(booking != null){
+            val bundle = Bundle()
+            bundle.putString("booking",booking?.toJson())
+            modalTrip.arguments = bundle
+            modalTrip.show(supportFragmentManager, ModalButtomSheetTripinfo.TAG)
+        }
+        else{
+            Toast.makeText(this,R.string.txtToastFailedToUplaoded, Toast.LENGTH_SHORT).show()
+        }
+
     }
 
     private fun startTimer() {
@@ -186,12 +248,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        easyWayLocation?.endUpdates()
-        handle.removeCallbacks(runnable)
-    }
-
+ 
     private fun getDistancieBetween(originLatLng: LatLng, destinationLatLng: LatLng): Float {
         var distance = 0.0f
         var originLocation = Location("")
@@ -216,6 +273,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
                     destinationLatLng = LatLng(booking?.destinationLat!!, booking?.destinationLng!!)
                     easyDrawRoute(originLatLgn!!)
                     addOriginMarker(originLatLgn!!)
+                    getClientInfo()
                 }
             }
         }
@@ -256,13 +314,6 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         }
     }
 
-    private fun showModalBookin(booking: Booking) {
-        val bundle = Bundle()
-        bundle.putString("booking", booking.toJson())
-        modalBooking.arguments = bundle
-        modalBooking.show(supportFragmentManager, ModalButtomSheetBooking.TAG)
-        timer.start()
-    }
 
     private fun addMarker() {
         val drawable = ContextCompat.getDrawable(applicationContext, R.drawable.uber_car)
@@ -282,22 +333,12 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     }
 
     //Traer imagen
-    private fun getMarkerFromDrawable(drawable: Drawable): BitmapDescriptor {
-        val canvas = Canvas()
-        val bitmap = Bitmap.createBitmap(
-            70,
-            150,
-            Bitmap.Config.ARGB_8888
-        )
-        canvas.setBitmap(bitmap)
-        drawable.setBounds(0, 0, 70, 150)
-        drawable.draw(canvas)
-        return BitmapDescriptorFactory.fromBitmap(bitmap)
-    }
+
 
     override fun onMapReady(map: GoogleMap) {
         googleMap = map
         googleMap?.uiSettings?.isZoomControlsEnabled = true
+        startSensor()
         // easyWayLocation?.startLocation()
         if (ActivityCompat.checkSelfPermission(
                 this,
@@ -349,9 +390,10 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
                     if (destinationLatLng != null) {
                         isStartedTrip = true
                         googleMap?.clear()
-                        addMarker()
+                        addDirectionMarker(myLocationlatLog!!,angle)
                         easyDrawRoute(destinationLatLng!!)
                         addDestinationMarker()
+                        sendNotification("Viaje iniciado")
                         markerOrigin?.remove()
 
                         startTimer()
@@ -362,7 +404,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
         } else {
             Toast.makeText(
                 this,
-                "Debes estar más cerca a la poisción de recogida ",
+                R.string.txtToastNearbyToPickUp,
                 Toast.LENGTH_LONG
             ).show()
         }
@@ -412,6 +454,7 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
                 bookingProvider.updateStatus(booking?.idClient!!, "finished")
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
+                            sendNotification("Viaje terminado")
                             goToCalificationClient()
                         }
                     }
@@ -460,12 +503,25 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
 
         previusLocation = location
 
+        //if(!isFistLocation){
+        //    isFistLocation = true
+        //    googleMap?.moveCamera(
+        //        CameraUpdateFactory.newCameraPosition(
+        //            CameraPosition.builder().target(myLocationlatLog!!).zoom(19f).build()
+        //        )
+        //    )
+        //}
+        //googleMap?.moveCamera(
+        //    CameraUpdateFactory.newCameraPosition(
+        //        CameraPosition.builder().target(myLocationlatLog!!).build()
+        //    )
+        //)
         googleMap?.moveCamera(
             CameraUpdateFactory.newCameraPosition(
-                CameraPosition.builder().target(myLocationlatLog!!).zoom(15f).build()
+                CameraPosition.builder().target(myLocationlatLog!!).zoom(19f).build()
             )
         )
-        addMarker()
+        addDirectionMarker(myLocationlatLog!!,angle)
         saveLocation()
 
         if (booking != null && myLocationlatLog != null) {
@@ -492,6 +548,98 @@ class MapTripActivity : AppCompatActivity(), OnMapReadyCallback, Listener,
     ) {
         directionUtil.drawPath(WAY_POINT_TAG)
     }
+
+    private fun getMarkerFromDrawable(drawable: Drawable): BitmapDescriptor {
+        val canvas = Canvas()
+        val bitmap = Bitmap.createBitmap(
+            120,
+            120,
+            Bitmap.Config.ARGB_8888
+        )
+        canvas.setBitmap(bitmap)
+        drawable.setBounds(0, 0, 120, 120)
+        drawable.draw(canvas)
+        return BitmapDescriptorFactory.fromBitmap(bitmap)
+    }
+
+    private fun updateCamera(bearing:Float){
+        val oldPos = googleMap?.cameraPosition
+        val pos = CameraPosition.builder(oldPos!!).bearing(bearing).tilt(50f).build()
+        googleMap?.moveCamera(CameraUpdateFactory.newCameraPosition(pos))
+        if(myLocationlatLog != null){
+            addDirectionMarker(myLocationlatLog!!, angle )
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        easyWayLocation?.endUpdates()
+        bookingListener?.remove()
+        stopSensor()
+    }
+    private fun addDirectionMarker(latLng: LatLng,angle:Int){
+        val circleDrawable = ContextCompat.getDrawable(applicationContext,R.drawable.ic_up_arrow_circle)
+        val markerIcon = getMarkerFromDrawable(circleDrawable!!)
+        if(markerDriver != null){
+            markerDriver?.remove()
+        }
+        markerDriver = googleMap?.addMarker(
+            MarkerOptions()
+                .position(latLng)
+                .anchor(0.5f,0.5f)
+                .rotation(angle.toFloat())
+                .flat(true)
+                .icon(markerIcon)
+        )
+    }
+
+
+    override fun onSensorChanged(event: SensorEvent) {
+        if(event.sensor.type == Sensor.TYPE_ROTATION_VECTOR)
+        {
+            SensorManager.getRotationMatrixFromVector(rotationMatrix, event.values)
+            val orientation = FloatArray(3)
+            SensorManager.getOrientation(rotationMatrix, orientation)
+            if(Math.abs(Math.toDegrees(orientation[0].toDouble()) - angle ) >0.8){
+                val bearing = Math.toDegrees(orientation[0].toDouble()).toFloat() + declination
+                updateCamera(bearing)
+
+            }
+            angle = Math.toDegrees(orientation[0].toDouble()).toInt()
+        }
+    }
+
+    private fun startSensor(){
+        if(sensorManager != null){
+            sensorManager?.registerListener(this, vectSensor, SensorManager.SENSOR_STATUS_ACCURACY_LOW)
+        }
+    }
+
+    private fun stopSensor(){
+        sensorManager?.unregisterListener(this)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        stopSensor()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if(!isFistTimeOnResume){
+            isFistTimeOnResume = true
+        }
+        else{
+            startSensor()
+        }
+    }
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
+
+    }
+
+
+
+
 
 
 }

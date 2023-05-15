@@ -57,5 +57,55 @@
     <string name="txt_upperdistance">DISTANCIA Y TIEMPO DEL VIAJE</string>
     <string name="txt_price">PRECIO</string>
     <string name="TXT_qualify">CALIFICAR</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="txt_username">NOMBRE DE USUARIO</string>
+    <string name="txt_pickplace">Lugar de recogida</string>
+    <string name="txt_tripdate">Fecha del viaje</string>
+    <string name="txt_Qobteined">Calificacion Obtenida</string>
+    <string name="txt_customerrating">Calificacion del Cliente</string>
+    <string name="txt_travelcost">Costo Del Viaje</string>
+    <string name="txt_elapsedtime">Tiempo transcurrido:</string>
+    <string name="txt_totaldistance">Distancia Total:</string>
+    <string name="txt_starttrip">INICIAR VIAJE</string>
+    <string name="txt_finishtrip">FINALIZAR VIAJE</string>
+    <string name="txt_userprofileUpper">PERFIL DE USUARIO</string>
+    <string name="txt_carbrand">Marca del vehículo</string>
+    <string name="txt_carcolor">Color del Carro</string>
+    <string name="txt_vehicleplate">Placa del vehículo</string>
+    <string name="txt_update">Actualizar Informacion</string>
+    <string name="txt_userprofilename">Nombre del Usuario</string>
+    <string name="txt_profile">Perfil</string>
+    <string name="txt_Historial">Historial</string>
+    <string name="txt_logout">Cerrar Sesion</string>
+    <string name="txt_pickupin">Recoger en</string>
+    <string name="txt_taketo">Llevar a</string>
+    <string name="txt_customer">Cliente</string>
+    <string name="txt_customername">Nombre del Cliente</string>
+    <string name="txt_userprofile">PERFIL DEL USUARIO</string>
+    <string name="txtTitlehistories">Historial de Viajes</string>
+    <string name="txtToastIdHistoryNull">El id del historial es nulo</string>
+    <string name="txtToastFailedToUpdateRating">Error al actualizar la calificación</string>
+    <string name="txtToastNoRecordFound">No se encontró un historial</string>
+    <string name="txtToastUpdatedData">Datos actualizados correctamente</string>
+    <string name="txtToastFailedToUpdateInformation">No se pudo actualizar la información</string>
+    <string name="txtToastThisAccountIsClientType">Esta cuenta es de tipo cliente</string>
+    <string name="txtRelativeTimeMomentAgo">Hace un momento</string>
+    <string name="txtOneMinuteAgo">Hace un minuto</string>
+    <string name="txtXMinutesAgo">minutos atrás</string>
+    <string name="txtOneHourAgo">Hace una hora</string>
+    <string name="txtHoursAgo">horas atrás</string>
+    <string name="txtYesterday">Ayer</string>
+    <string name="txtDaysAgo">días atrás</string>
+    <string name="txtToastFailedToUplaoded">No se pudo cargar la información</string>
+    <string name="txtToastNearbyToPickUp">Debes estar más cerca a la poisción de recogida</string>
+    <string name="txtOneMomentAgo">Hace un momento</string>
+
+    <string name="txt_fogotPass">Olvide mi contraseña</string>
+    <string name="txt_btnResetPass">Reset contraseña</string>
+    <string name="txt_resetPassMailSent">Se envio un correo a</string>
+    <string name="txt_VerifyEmail">Enviar verificacion al correo.</string>
+    <string name="txt_emailforgot">Restablecer la contraseña</string>
+    <string name="txt">Escribe la dirección de correo electronico asociada a tu cuenta y te enviaremos un enlace para que puedas restablecer tu contraseña.</string>
+
 
 </resources>

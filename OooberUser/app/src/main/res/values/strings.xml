@@ -3,7 +3,7 @@
     <string name="google_maps_key">AIzaSyDrn0vVdLHVoVCwEPyg2KlpJ5nOPidSLzk</string>
 
     <string name="lang_es">Español</string>
-    <string name="lang_en">Ingles de la aplicación</string>
+    <string name="lang_en">Ingles</string>
     <string name="txt_lang">Idioma de la aplicación</string>
     <string name="facebook_app_id" translatable="false">737288371330155</string>
     <string name="fb_login_protocol_scheme" translatable="false">fb737288371330155</string>
@@ -55,4 +55,63 @@
     <string name="txt_price">Precio aproximado del viaje</string>
     <string name="txt_confirmation">CONFIRMAR SOLICITUD</string>
     <string name="txt_MAP">MAPA DE VIAJE</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="txt_ratedriver">CALIFICA A TU CONDUCTOR</string>
+    <string name="txt_from">DESDE</string>
+    <string name="txt_price_alone">PRECIO</string>
+    <string name="txt_TO">HASTA</string>
+    <string name="TXT_qualify">CALIFICAR</string>
+    <string name="txt_falseandtrip">Calle falsa con carrera falsa</string>
+    <string name="txt_username">NOMBRE DE USUARIO</string>
+    <string name="txt_upperdistance">DISTANCIA Y TIEMPO DEL VIAJE</string>
+    <string name="txt_pickplace">Lugar de recogida</string>
+    <string name="txt_tripdate">Fecha del viaje</string>
+    <string name="txt_Qobteined">Calificacion Obtenida</string>
+    <string name="txt_customerrating">Calificacion del Cliente</string>
+    <string name="txt_travelcost">Costo Del Viaje</string>
+    <string name="txt_tripstatus">ESTADO DEL VIAJE</string>
+    <string name="txt_userprofileUpper">PERFIL DE USUARIO</string>
+    <string name="txt_update">Actualizar Informacion</string>
+    <string name="txt_userprofilename">Nombre del Usuario</string>
+    <string name="txt_profile">Perfil</string>
+    <string name="txt_Historial">Historial</string>
+    <string name="txt_logout">Cerrar Sesion</string>
+    <string name="txt_pickupin">Recoger en</string>
+    <string name="txt_taketo">Llevar a</string>
+    <string name="txt_customer">Cliente</string>
+    <string name="txt_customername">Nombre del Cliente</string>
+    <string name="txt_driver">Conductor</string>
+    <string name="txt_yourdriver">Tu Conductor</string>
+    <string name="txt_userprofile">PERFIL DEL USUARIO</string>
+    <string name="txtTitlehistories">Historial de Viajes</string>
+    <string name="txtToastIdHistoryNull">El id del historial es nulo</string>
+    <string name="txtToastFailedToUpdateRating">Error al actualizar la calificación</string>
+    <string name="txtToastNoRecordFound">No se encontró un historial</string>
+    <string name="txtToastUpdatedData">Datos actualizados correctamente</string>
+    <string name="txtToastFailedToUpdateInformation">No se pudo actualizar la información</string>
+    <string name="txtToastThisAccountIsClientType">Esta cuenta es de tipo cliente</string>
+    <string name="txtRelativeTimeMomentAgo">Hace un momento</string>
+    <string name="txtOneMinuteAgo">Hace un minuto</string>
+    <string name="txtXMinutesAgo">minutos atrás</string>
+    <string name="txtOneHourAgo">Hace una hora</string>
+    <string name="txtHoursAgo">horas atrás</string>
+    <string name="txtYesterday">Ayer</string>
+    <string name="txtDaysAgo">días atrás</string>
+    <string name="txtToastFailedToUplaoded">No se pudo cargar la información</string>
+    <string name="txtToastNearbyToPickUp">Debes estar más cerca a la poisción de recogida</string>
+    <string name="txtToastThisAccountIsDriverType">Esta cuenta es de tipo driver</string>
+    <string name="txtError">Ha ocurrido un error</string>
+    <string name="txtToastSelectDistanceAndDestination">Debes seleccionar el origen y el destino</string>
+    <string name="txtAcceptedTrip">Viaje aceptado</string>
+    <string name="txtRejectedTrip">Viaje rechazado</string>
+    <string name="txtSearcDriver"> Se ha encontrado un conductor</string>
+    <string name="txtOneMomentAgo">Hace un momento</string>
+
+    <string name="txt_fogotPass">Olvide mi contraseña</string>
+    <string name="txt_btnResetPass">Recuperar contraseña</string>
+    <string name="txt_resetPassMailSent">Se envio un correo a</string>
+    <string name="txt_VerifyEmail">Enviar verificacion al correo.</string>
+    <string name="txt_emailforgot">Restablecer la contraseña</string>
+    <string name="txt">Escribe la dirección de correo electronico asociada a tu cuenta y te enviaremos un enlace para que puedas restablecer tu contraseña.</string>
+
 </resources>

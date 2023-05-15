@@ -66,14 +66,14 @@ class ModalButtomSheetMenu : BottomSheetDialogFragment() {
         clientProvider.getClientById(authProvider.getId()).addOnSuccessListener { document ->
             if (document.exists()) {
                 val client = document.toObject(Client::class.java)
-                textViewUserName?.text = "${client?.name} ${client?.lastname}"
+                textViewUserName?.text = "${client?.name} ${(client?.lastname)?:""}"
             }
         }
     }
 
     private fun goToMain(){
         authProvider.logout()
-        val i = Intent(activity, MainActivity::class.java)
+        val i = Intent(activity, HomeActivity::class.java)
         i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(i)
     }

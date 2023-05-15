@@ -6,6 +6,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
 //import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageTask
@@ -36,6 +37,16 @@ class ClientProvider {
             Log.d("STORAGE", "ERROR: ${it.message}")
         }
     }
+
+    fun createToken(idClient: String){
+        FirebaseMessaging.getInstance().token.addOnCompleteListener {
+            if(it.isSuccessful){
+                val token = it.result //TOKEN
+                updateToken(idClient, token)
+            }
+        }
+    }
+
 
     fun getImageUrl(): Task<Uri> {
         return storage.downloadUrl

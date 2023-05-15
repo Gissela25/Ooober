@@ -9,11 +9,13 @@ import android.widget.Toast
 import com.ooober.driver.R
 import com.ooober.driver.databinding.ActivityMainBinding
 import com.ooober.driver.providers.AuthProvider
+import com.ooober.driver.providers.ClientProvider
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val authProvider = AuthProvider()
+    private val clientProvider = ClientProvider()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.goSignUp.setOnClickListener { goToRegister() }
         binding.btnSingIn.setOnClickListener { login() }
+        binding.goForgotPass.setOnClickListener { goToForgotPass() }
+
     }
 
     private fun login() {
@@ -32,7 +36,14 @@ class MainActivity : AppCompatActivity() {
         if(isValidForm(email, password)){
             authProvider.login(email, password).addOnCompleteListener {
                 if (it.isSuccessful) {
-                    goToMap()
+                    clientProvider.getClientById(authProvider.getId()).addOnSuccessListener { snapshot ->
+                        if (snapshot.exists()) {
+                            Toast.makeText(this,R.string.txtToastThisAccountIsClientType,Toast.LENGTH_LONG).show()
+                        }
+                        else{
+                            goToMap()
+                        }
+                    }
                 }
                 else{
                     Toast.makeText(this@MainActivity,  R.string.m_errorSignIn, Toast.LENGTH_SHORT).show()
@@ -62,6 +73,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToRegister() {
         val i = Intent(this, RegisterActivity::class.java)
+        startActivity(i)
+    }
+
+    private fun goToForgotPass(){
+        val i = Intent(this, ForgotPassActivity::class.java)
         startActivity(i)
     }
 

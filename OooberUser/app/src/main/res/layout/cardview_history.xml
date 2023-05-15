@@ -34,7 +34,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lugar de recogida"
+                    android:text="@string/txt_pickplace"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>
@@ -43,7 +43,7 @@
                     android:id="@+id/textViewOrigin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Origen"
+                    android:text="@string/txt_origin"
                     android:textSize="15sp"/>
 
             </LinearLayout>
@@ -74,7 +74,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Destino"
+                    android:text="@string/txt_destination"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>
@@ -83,7 +83,7 @@
                     android:id="@+id/textViewDestination"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Destino"
+                    android:text="@string/txt_destination"
                     android:textSize="15sp"/>
 
             </LinearLayout>
@@ -114,7 +114,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fecha del viaje"
+                    android:text="@string/txt_tripdate"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>

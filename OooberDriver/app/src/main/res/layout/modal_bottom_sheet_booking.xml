@@ -12,6 +12,7 @@
         android:layout_height="300dp"
         android:orientation="vertical"
         android:layout_gravity="bottom"
+        android:background="@color/black"
         >
 
         <TextView
@@ -22,7 +23,8 @@
             android:textStyle="bold"
             android:textSize="20sp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/yellow"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,13 +51,15 @@
                     android:layout_height="wrap_content"
                     android:text="@string/txt_origin"
                     android:textSize="13sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/txtViewOrigin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/txt_falsestreet"
+                    android:textColor="@color/yellow"
                     android:maxLines="2"
                     android:textSize="14sp"
                     />
@@ -91,7 +95,9 @@
                     android:layout_height="wrap_content"
                     android:text="@string/txt_destination"
                     android:textSize="13sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
 
                 <TextView
                     android:id="@+id/txtViewDestination"
@@ -100,6 +106,7 @@
                     android:text="@string/txt_falsestreet"
                     android:maxLines="2"
                     android:textSize="14sp"
+                    android:textColor="@color/yellow"
                     />
 
             </LinearLayout>
@@ -115,12 +122,11 @@
 
             <ImageView
                 android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_timer_grey"
+                android:layout_height="19dp"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_marginTop="5dp"
-                />
+                android:layout_marginRight="30dp"
+                android:src="@drawable/ic_timer_grey" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -132,7 +138,8 @@
                     android:layout_height="wrap_content"
                     android:text="@string/txt_timeanddistance"
                     android:textSize="13sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/txtViewTimeAndDistance"
@@ -141,6 +148,7 @@
                     android:text="00:00"
                     android:maxLines="2"
                     android:textSize="14sp"
+                    android:textColor="@color/yellow"
                     />
 
             </LinearLayout>
@@ -169,6 +177,7 @@
             android:background="@drawable/rounded_button"
             android:layout_marginBottom="10dp"
             android:layout_marginRight="5dp"
+            android:textColor="@color/black"
 
             />
 
@@ -179,8 +188,7 @@
             android:layout_weight="1"
             android:text="@string/botom_cancel"
             android:background="@drawable/rounded_button"
-            app:backgroundTint="@color/black"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="5dp"
             />

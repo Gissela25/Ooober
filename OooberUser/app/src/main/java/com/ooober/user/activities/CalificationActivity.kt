@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
+import com.ooober.user.R
 import com.ooober.user.databinding.ActivityCalificationBinding
 import com.ooober.user.models.History
 import com.ooober.user.providers.HistoryProvider
@@ -32,7 +33,7 @@ class CalificationActivity : AppCompatActivity() {
                 updateCalification(history?.id!!)
             }
             else{
-                Toast.makeText(this,"El id del historial es nulo",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,R.string.txtToastIdHistoryNull,Toast.LENGTH_LONG).show()
             }
         }
         getHistory()
@@ -44,7 +45,8 @@ class CalificationActivity : AppCompatActivity() {
                 goToMap()
             }
             else{
-                Toast.makeText(this@CalificationActivity,"Error al actualizar la calificación",Toast.LENGTH_LONG).show()
+                Toast.makeText(this@CalificationActivity,
+                    R.string.txtToastFailedToUpdateRating,Toast.LENGTH_LONG).show()
             }
         }
     }
@@ -70,7 +72,7 @@ class CalificationActivity : AppCompatActivity() {
                     Log.d("FIRESTORE","History: ${history?.toJson()}")
                 }
                 else{
-                    Toast.makeText(this,"No se encontró un historial",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,R.string.txtToastNoRecordFound,Toast.LENGTH_LONG).show()
                 }
             }
         }

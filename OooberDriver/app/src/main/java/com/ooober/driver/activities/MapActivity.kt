@@ -6,6 +6,11 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
+import android.hardware.GeomagneticField
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import android.location.Location
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +19,7 @@ import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -32,11 +38,14 @@ import com.ooober.driver.databinding.ActivityMapBinding
 import com.ooober.driver.fragments.ModalButtomSheetBooking
 import com.ooober.driver.fragments.ModalButtomSheetMenu
 import com.ooober.driver.models.Booking
-import com.ooober.driver.providers.AuthProvider
-import com.ooober.driver.providers.BookingProvider
-import com.ooober.driver.providers.GeoProvider
+import com.ooober.driver.models.FCMBody
+import com.ooober.driver.models.FCMResponse
+import com.ooober.driver.providers.*
+//import retrofit2.Call
+//import retrofit2.Callback
+//import retrofit2.Response
 
-class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
+class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener,SensorEventListener {
 
     private  var bookingListener: ListenerRegistration? = null
     private lateinit var binding: ActivityMapBinding
@@ -46,9 +55,20 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     private var markerDriver: Marker? = null
     private val geoProvider= GeoProvider()
     private val authProvider = AuthProvider()
+    private val driverProvider = DriverProvider()
     private val bookingProvider = BookingProvider()
+    private val notificationProvider = NotificationProvider()
     private val modalBooking = ModalButtomSheetBooking()
     private val modalMenu = ModalButtomSheetMenu()
+
+    //SENSOR CAMER
+    private var angle = 0
+    private val rotationMatrix = FloatArray(16)
+    private var sensorManager:SensorManager ?= null
+    private var vectSensor:Sensor ?= null
+    private var declination = 0.0f
+    private var isFistTimeOnResume = false
+    private var isFistLocation = false
 
      val timer = object : CountDownTimer(30000,1000){
         override fun onTick(counter: Long) {
@@ -79,6 +99,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
             smallestDisplacement = 1f
 
         }
+        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager?
+        vectSensor = sensorManager?.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)
         //Instance to get location
         easyWayLocation = EasyWayLocation(this, locationRequest, false, false, this)
         locationPermissions.launch(
@@ -89,7 +111,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         )
 
         listenerBooking()
-
+        createToken()
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
@@ -128,6 +150,10 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         }
     }
 
+    private fun createToken(){
+        driverProvider.createToken(authProvider.getId())
+    }
+
 
     private fun checkIfDriverIsConnected() {
         geoProvider.getLocation(authProvider.getId()).addOnSuccessListener { document->
@@ -145,15 +171,9 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-    }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        easyWayLocation?.endUpdates()
-        bookingListener?.remove()
-    }
+
+
 
     private fun listenerBooking(){
         bookingListener = bookingProvider.getBooking().addSnapshotListener{snapshot, e ->
@@ -205,23 +225,13 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     }
 
     //Traer imagen
-    private fun getMarkerFromDrawable(drawable: Drawable): BitmapDescriptor {
-        val canvas = Canvas()
-        val bitmap = Bitmap.createBitmap(
-            70,
-            150,
-            Bitmap.Config.ARGB_8888
-        )
-        canvas.setBitmap(bitmap)
-        drawable.setBounds(0, 0, 70, 150)
-        drawable.draw(canvas)
-        return BitmapDescriptorFactory.fromBitmap(bitmap)
-    }
+
 
     override fun onMapReady(map: GoogleMap) {
         googleMap = map
         googleMap?.uiSettings?.isZoomControlsEnabled = true
        // easyWayLocation?.startLocation()
+        startSensor()
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -279,17 +289,119 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, Listener {
     override fun currentLocation(location: Location) {
         //Lat y log de la posicion
         myLocationlatLog = LatLng(location.latitude, location.longitude)
+        val field = GeomagneticField(
+            location.latitude.toFloat(),
+            location.longitude.toFloat(),
+            location.altitude.toFloat(),
+            System.currentTimeMillis()
+        )
 
+        declination = field.declination
+       //if(!isFistLocation){
+       //    isFistLocation = true
+       //    googleMap?.moveCamera(
+       //        CameraUpdateFactory.newCameraPosition(
+       //            CameraPosition.builder().target(myLocationlatLog!!).zoom(19f).build()
+       //        )
+       //    )
+       //}
         googleMap?.moveCamera(
             CameraUpdateFactory.newCameraPosition(
-                CameraPosition.builder().target(myLocationlatLog!!).zoom(15f).build()
+                CameraPosition.builder().target(myLocationlatLog!!).zoom(19f).build()
             )
         )
-        addMarker()
+        addDirectionMarker(myLocationlatLog!!,angle)
         saveLocation()
     }
 
     override fun locationCancelled() {
+
+    }
+    private fun getMarkerFromDrawable(drawable: Drawable): BitmapDescriptor {
+        val canvas = Canvas()
+        val bitmap = Bitmap.createBitmap(
+            120,
+            120,
+            Bitmap.Config.ARGB_8888
+        )
+        canvas.setBitmap(bitmap)
+        drawable.setBounds(0, 0, 120, 120)
+        drawable.draw(canvas)
+        return BitmapDescriptorFactory.fromBitmap(bitmap)
+    }
+
+    private fun updateCamera(bearing:Float){
+        val oldPos = googleMap?.cameraPosition
+        val pos = CameraPosition.builder(oldPos!!).bearing(bearing).tilt(50f).build()
+        googleMap?.moveCamera(CameraUpdateFactory.newCameraPosition(pos))
+        if(myLocationlatLog != null){
+            addDirectionMarker(myLocationlatLog!!, angle )
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        easyWayLocation?.endUpdates()
+        bookingListener?.remove()
+        stopSensor()
+    }
+    private fun addDirectionMarker(latLng: LatLng,angle:Int){
+        val circleDrawable = ContextCompat.getDrawable(applicationContext,R.drawable.ic_up_arrow_circle)
+        val markerIcon = getMarkerFromDrawable(circleDrawable!!)
+        if(markerDriver != null){
+                markerDriver?.remove()
+        }
+        markerDriver = googleMap?.addMarker(
+            MarkerOptions()
+                .position(latLng)
+                .anchor(0.5f,0.5f)
+                .rotation(angle.toFloat())
+                .flat(true)
+                .icon(markerIcon)
+        )
+    }
+
+
+    override fun onSensorChanged(event: SensorEvent) {
+        if(event.sensor.type == Sensor.TYPE_ROTATION_VECTOR)
+        {
+            SensorManager.getRotationMatrixFromVector(rotationMatrix, event.values)
+            val orientation = FloatArray(3)
+            SensorManager.getOrientation(rotationMatrix, orientation)
+            if(Math.abs(Math.toDegrees(orientation[0].toDouble()) - angle ) >0.8){
+                val bearing = Math.toDegrees(orientation[0].toDouble()).toFloat() + declination
+                updateCamera(bearing)
+
+            }
+            angle = Math.toDegrees(orientation[0].toDouble()).toInt()
+        }
+    }
+
+    private fun startSensor(){
+        if(sensorManager != null){
+            sensorManager?.registerListener(this, vectSensor,SensorManager.SENSOR_STATUS_ACCURACY_LOW)
+        }
+    }
+
+    private fun stopSensor(){
+        sensorManager?.unregisterListener(this)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        stopSensor()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if(!isFistTimeOnResume){
+            isFistTimeOnResume = true
+        }
+        else{
+            startSensor()
+        }
+    }
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
 
     }
 

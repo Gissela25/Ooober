@@ -2,15 +2,28 @@
     <!-- Base application theme. -->
     <style name="Theme.OooberUser" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/green</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
         <!-- Customize your theme here. -->
+
+    </style>
+
+
+    <style name="EditTextGrey" parent="TextAppearance.AppCompat">
+        <item name="colorControlNormal">@color/GreyDark</item>
+        <item name="colorControlActivated">@color/GreyDark</item>
+        <item name="colorControlHighlight">@color/GreyDark</item>
+        <item name="android:textColorHint">@color/GreyDark</item>
     </style>
 </resources>

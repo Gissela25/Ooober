@@ -13,10 +13,14 @@ import com.google.firebase.firestore.ListenerRegistration
 import com.ooober.user.R
 import com.ooober.user.databinding.ActivitySearchBinding
 import com.ooober.user.models.Booking
-import com.ooober.user.providers.AuthProvider
-import com.ooober.user.providers.BookingProvider
-import com.ooober.user.providers.GeoProvider
+import com.ooober.user.models.Driver
+import com.ooober.user.models.FCMBody
+import com.ooober.user.models.FCMResponse
+import com.ooober.user.providers.*
 import org.imperiumlabs.geofirestore.callbacks.GeoQueryEventListener
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class SearchActivity : AppCompatActivity() {
 
@@ -38,11 +42,13 @@ class SearchActivity : AppCompatActivity() {
     private val geoProvider = GeoProvider()
     private val authProvider = AuthProvider()
     private val bookingProvider = BookingProvider()
+    private val notificationProvider = NotificationProvider()
+    private val driverProvider = DriverProvider()
 
     // BUSQUEDA DEL CONDUCTOR
     private var radius = 0.2
     private var idDriver = ""
-    //private var driver: Driver? = null
+    private var driver: Driver? = null
     private var isDriverFound = false
     private var driverLatLng: LatLng? = null
     private var limitRadius = 20
@@ -73,6 +79,42 @@ class SearchActivity : AppCompatActivity() {
         checkIfDriverAccept()
     }
 
+    private  fun sendNotification(){
+
+        val map = HashMap<String,String>()
+        map.put("title","SOLICITUD DE VIAJE")
+        map.put("body","Un cliente está solicitando un viaje a ${String.format("%.1f", extraDistance)} km " +
+                "y ${String.format("%.1f", extraTime)} min")
+        val body = FCMBody(
+            to = driver?.token!!,
+            priority = "high",
+            ttl = "4500s",
+            data = map
+        )
+        map.put("idBooking",authProvider.getId())
+
+        notificationProvider.sendNotification(body).enqueue(object : Callback<FCMResponse> {
+            override fun onResponse(call: Call<FCMResponse>, response: Response<FCMResponse>) {
+                if(response.body() != null){
+                    if(response.body()!!.success ==1){
+                      Log.d("NOTIFICATION","Se envió la notification")
+                    }
+                    else{
+                        Log.d("NOTIFICATION","No se envió la notification")
+                    }
+                }
+                else{
+                    Log.d("NOTIFICATION","Hubo un error al enviar la notification")
+                }
+            }
+
+            override fun onFailure(call: Call<FCMResponse>, t: Throwable) {
+                Log.d("NOTIFICATION","ERROR: ${t.message}")
+            }
+
+        })
+    }
+
     private fun checkIfDriverAccept(){
         listenerBooking = bookingProvider.getBooking().addSnapshotListener{snapshot, e ->
             if(e != null){
@@ -83,12 +125,12 @@ class SearchActivity : AppCompatActivity() {
             if (snapshot != null && snapshot.exists()){
                 val booking = snapshot.toObject(Booking::class.java)
                 if(booking?.status == "accept"){
-                    Toast.makeText(this@SearchActivity,"Viaje Aceptado", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SearchActivity,R.string.txtAcceptedTrip, Toast.LENGTH_SHORT).show()
                     listenerBooking?.remove()
                     goToMapTrip()
                 }
                 else if (booking?.status == "cancel"){
-                    Toast.makeText(this@SearchActivity,"Viaje Cancelado", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@SearchActivity,R.string.txtRejectedTrip, Toast.LENGTH_SHORT).show()
                     listenerBooking?.remove()
                     goToMap()
                 }
@@ -123,14 +165,21 @@ class SearchActivity : AppCompatActivity() {
 
         bookingProvider.create(booking).addOnCompleteListener {
             if (it.isSuccessful) {
-                Toast.makeText(this@SearchActivity, "Datos del viaje creados", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@SearchActivity, R.string.txtSearcDriver, Toast.LENGTH_LONG).show()
             }
             else {
-                Toast.makeText(this@SearchActivity, "Error al crear los datos", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@SearchActivity, R.string.txtError, Toast.LENGTH_LONG).show()
             }
         }
     }
-
+    private fun getDriverInfo() {
+        driverProvider.getDriver(idDriver).addOnSuccessListener { document->
+            if(document.exists()){
+                driver = document.toObject(Driver::class.java)
+                sendNotification()
+            }
+        }
+    }
     private fun getClosesDriver(){
         geoProvider.getNearbyDrivers(originLatLng!!, radius).addGeoQueryEventListener(object: GeoQueryEventListener {
             override fun onGeoQueryError(exception: Exception) {
@@ -155,6 +204,7 @@ class SearchActivity : AppCompatActivity() {
                 if(!isDriverFound){
                     isDriverFound = true
                     idDriver = documentID
+                    getDriverInfo()
                     Log.d("FIRESTORE","Conductor id: $idDriver")
                     driverLatLng = LatLng(location.latitude, location.longitude)
                     binding.textViewSearch.text = "CONDUCTOR ENCONTRADO\nESPERANDO RESPUESTA"

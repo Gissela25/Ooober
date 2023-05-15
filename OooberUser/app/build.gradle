@@ -52,6 +52,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore-ktx'
     implementation 'com.beust:klaxon:5.5'
     implementation 'com.google.android.gms:play-services-auth:20.5.0'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
 
     //Maps dependencies
     implementation 'com.google.maps.android:maps-ktx:3.2.0'
@@ -63,7 +64,9 @@ dependencies {
     implementation 'com.github.prabhat1707:EasyWayLocation:2.4'
     implementation 'com.github.imperiumlabs:GeoFirestore-Android:v1.4.0'
     implementation 'com.airbnb.android:lottie:5.2.0'
-
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     //Places
     implementation 'com.google.maps.android:places-ktx:2.0.0'
     implementation 'com.android.volley:volley:1.2.1'

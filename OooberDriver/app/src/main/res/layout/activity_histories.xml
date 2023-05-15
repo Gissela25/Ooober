@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.HistoriesActivity">
+    tools:context=".activities.HistoriesActivity"
+    android:background="@color/black">
 
     <!--    <include layout="@layout/toolbar" />-->
 
@@ -16,6 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/black"
             />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -24,7 +26,6 @@
         android:id="@+id/recyclerViewHistories"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="55dp"
-        />
+        android:layout_marginTop="55dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

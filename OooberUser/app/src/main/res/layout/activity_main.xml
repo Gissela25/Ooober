@@ -95,7 +95,6 @@
                 android:layout_marginTop="50dp"
                 android:background="@drawable/rounded_button"
                 />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -113,15 +112,29 @@
                     android:id="@+id/goSignUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/txt_noaccount"
+                    android:text="@string/btn_homeCreateAcc"
                     android:textColor="@color/yellow"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="200dp"
                     android:textStyle="bold"
                     android:clickable="true"/>
-
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <TextView
+                    android:id="@+id/goForgotPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:textAlignment="center"
+                    android:clickable="true"
+                    android:text="@string/txt_fogotPass"
+                    android:textColor="@color/yellow"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
 
     </FrameLayout>
