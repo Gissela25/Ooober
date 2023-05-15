@@ -55,7 +55,7 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 
 >[Manual Usuario OOOBER DRIVER](https://drive.google.com/file/d/158OjoMsmGrRsqeCtxXhbzY8QhelvpvjT/view?usp=sharing)
 
->[Manual tecnic OOOBER DRIVER](https://drive.google.com/file/d/1f37W6omHXg24HBCZvRPOa1yszZYbCcZe/view?usp=sharing)
+>[Manual tecnico OOOBER DRIVER](https://drive.google.com/file/d/1f37W6omHXg24HBCZvRPOa1yszZYbCcZe/view?usp=sharing)
 
 >[Tablero Trello Segunda Fase](https://trello.com/invite/b/l4YYgLjv/ATTI4231982b5b8e32dd3bd595213c07abe220E83DF0/segunda-fase)
 
