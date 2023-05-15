@@ -49,12 +49,18 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 
 > [Documento Primer Avance](https://drive.google.com/file/d/1E_lgPc7cNiLXpOvKuuJ0yXaOEGhIrH6T/view?usp=sharing)
 
->[Manual usuario OOOBER](https://drive.google.com/file/d/1yFWHS1qFXyAM54rh2ih2R_E1kyjCM6Iw/view?usp=sharing)
+>[Manual usuario OOOBER](https://drive.google.com/file/d/1N-r338nDdCO1riPEAzcq07b9Hds-Pzgd/view?usp=sharing)
 
->[Manual tecnico OOOBER](https://drive.google.com/file/d/1yFWHS1qFXyAM54rh2ih2R_E1kyjCM6Iw/view?usp=sharing)
+>[Manual tecnico OOOBER](https://drive.google.com/file/d/1wdD1lYXr7ILvGMeJ0hCq0ZUcGPXStjfE/view?usp=sharing)
 
->[Manual Usuario OOOBER DRIVER](https://drive.google.com/file/d/1bNuFBVpelHJIGzJxf585ZBaLNqFK7f_X/view?usp=sharing)
+>[Manual Usuario OOOBER DRIVER](https://drive.google.com/file/d/158OjoMsmGrRsqeCtxXhbzY8QhelvpvjT/view?usp=sharing)
 
->[Manual tecnic OOOBER DRIVER](https://drive.google.com/file/d/1r5nKxNLOI6WEJImGriG0Xy0GGu_iWRaN/view?usp=sharing)
+>[Manual tecnico OOOBER DRIVER](https://drive.google.com/file/d/1f37W6omHXg24HBCZvRPOa1yszZYbCcZe/view?usp=sharing)
 
 >[Tablero Trello Segunda Fase](https://trello.com/invite/b/l4YYgLjv/ATTI4231982b5b8e32dd3bd595213c07abe220E83DF0/segunda-fase)
+
+>[Tablero Trello Tercera Fase](https://trello.com/invite/b/M6SGZ4Xe/ATTId85bf2f0addb3762bb34db0b6a15366269010D7A/tercera-fase)
+
+>[Comercial](https://www.youtube.com/watch?v=mdb6uA-96-U)
+
+>[Sitio Web](https://gissela25.github.io/SmartIdea/index.html)
