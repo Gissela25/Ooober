@@ -58,3 +58,9 @@ Este proyecto utiliza la licencia Reconocimiento-No Comercial-Sin Derivados 2.5(
 >[Manual tecnic OOOBER DRIVER](https://drive.google.com/file/d/1r5nKxNLOI6WEJImGriG0Xy0GGu_iWRaN/view?usp=sharing)
 
 >[Tablero Trello Segunda Fase](https://trello.com/invite/b/l4YYgLjv/ATTI4231982b5b8e32dd3bd595213c07abe220E83DF0/segunda-fase)
+
+>[Tablero Trello Segunda Fase](https://trello.com/invite/b/M6SGZ4Xe/ATTI8dcc877b3acd12edd0ded40d1d54d849DF5BB6D7/tercera-fase)
+
+>[Comercial](https://www.youtube.com/watch?v=mdb6uA-96-U)
+
+>[Sitio Wev](https://www.youtube.com/watch?v=mdb6uA-96-U](https://gissela25.github.io/SmartIdea/index.html)
