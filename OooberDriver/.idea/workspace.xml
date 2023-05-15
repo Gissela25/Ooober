@@ -10,27 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7aa49cb3-f406-424b-b805-464742b76ddb" name="Changes" comment=":c">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_pass.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_pass.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/ForgotPassActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/ForgotPassActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SettingsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/java/com/ooober/user/activities/SettingsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_calification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_calification.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_forgot_pass.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_forgot_pass.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values-en/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values-en/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OooberUser/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/ForgotPassActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ooober/driver/activities/ForgotPassActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -12,9 +12,6 @@ import android.widget.Toast
 import com.ooober.driver.R
 import com.google.firebase.auth.FirebaseAuth
 
-
-
-
 class ForgotPassActivity : AppCompatActivity() {
 
     private val auth = FirebaseAuth.getInstance()
